@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import TopTracks from '../components/TopTracks';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">My Portfolio</a>
         </h1>
       </main>
-      {/* <Spotify /> */}
+      <TopTracks />
 
       <footer className={styles.footer}>
         <a
