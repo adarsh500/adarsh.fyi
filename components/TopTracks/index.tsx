@@ -7,17 +7,24 @@ const TopTracks = () => {
   const fetchTopTracks = async () => {
     const res = await fetch('api/getTopTracks');
     const data = await res.json();
-    setTracks(data);
+    console.log(data.tracks);
+    setTracks(data.tracks);
   };
 
   useEffect(() => {
     fetchTopTracks();
   }, []);
 
+  console.log(tracks[0]);
   return (
     <div className={styles.topTracksWrapper}>
       <h2>Adarsh's Top Tracks</h2>
-      <div></div>
+      <div>
+        {tracks.map((track: any, id) => (
+          <h1 key={id}>{track.artist}</h1>
+        ))}
+        {/* {tracks[0]} */}
+      </div>
     </div>
   );
 };
