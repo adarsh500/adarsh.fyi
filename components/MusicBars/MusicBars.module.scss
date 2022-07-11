@@ -1,0 +1,70 @@
+.icon {
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 30px;
+  height: 18px;
+  margin-right: 12px;
+
+  & > span {
+    width: 6px;
+    height: 100%;
+    background-color: green;
+    border-radius: 2px;
+    transform-origin: bottom;
+    transition: opacity 0.3s ease-out;
+    animation: bounce 2.2s ease infinite alternate;
+    content: '';
+    margin-right: 2px;
+
+    &:nth-of-type(2) {
+      animation-delay: -2.2s;
+    }
+
+    &:nth-of-type(3) {
+      animation-delay: -3.7s;
+    }
+
+    &:nth-of-type(4) {
+      animation-delay: -5.2s;
+    }
+
+    &:nth-of-type(4) {
+      animation-delay: -6.7s;
+    }
+  }
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+@keyframes bounce {
+  10% {
+    transform: scaleY(0.3);
+  }
+
+  30% {
+    transform: scaleY(1);
+  }
+
+  60% {
+    transform: scaleY(0.5);
+  }
+
+  80% {
+    transform: scaleY(0.75);
+  }
+
+  100% {
+    transform: scaleY(0.6);
+  }
+}

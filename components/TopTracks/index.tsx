@@ -21,7 +21,9 @@ const TopTracks = () => {
       <h2>Adarsh's Top Tracks</h2>
       <div>
         {tracks.map((track: any, id) => (
-          <h1 key={id}>{track.artist}</h1>
+          <a class={styles.trackItem} key={id} href={track.songUrl}>
+            {track.title}
+          </a>
         ))}
         {/* {tracks[0]} */}
       </div>

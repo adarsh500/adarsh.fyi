@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import TopTracks from '../components/TopTracks';
+import NowPlaying from '../components/NowPlaying';
+
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -18,6 +20,7 @@ export default function Home() {
         </h1>
       </main>
       <TopTracks />
+      <NowPlaying />
 
       <footer className={styles.footer}>
         <a
