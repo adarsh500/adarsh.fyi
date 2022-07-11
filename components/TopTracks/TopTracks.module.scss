@@ -1,0 +1,11 @@
+.topTracksWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trackItem {
+  display: flex;
+  flex-direction: column;
+}
