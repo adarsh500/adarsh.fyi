@@ -1,0 +1,61 @@
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .kenobi {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(167, 163, 163);
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.center {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+}
+.center h1 {
+  user-select: none;
+  font-size: 100px;
+  color: black;
+  background: repeating-linear-gradient(
+    -45deg,
+    red 0%,
+    rgb(0, 255, 0) 14.28%,
+    rgb(0, 255, 255) 21.4%,
+    cyan 28.56%,
+    blue 35.7%,
+    magenta 42.84%,
+    red 50%
+  );
+  background-size: 600vw 600vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: slide 20s linear infinite forwards;
+}
+@keyframes slide {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 600vw;
+  }
+}
