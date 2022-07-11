@@ -15,7 +15,7 @@ const index = () => {
             width={64}
             height={64}
           ></Image>
-        </div>
+        </div> 
         {/* <h1 className={styles.title}>
           I'm <a href="https://nextjs.org">Adarsh Sulegai</a>
         </h1> */}
