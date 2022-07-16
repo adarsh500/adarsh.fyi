@@ -2,16 +2,53 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   .title {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin-left: 12px;
+    text-align: center;
+    width: 150px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 500;
   }
 }
 
+.currentTrack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .trackInfo {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trackTitle {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 4px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .trackArtist {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+
 .track {
-  // background-color: lightgray;
+  display: flex;
   border-radius: 24px;
   padding: 8px 18px;
 }

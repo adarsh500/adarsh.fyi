@@ -1,6 +1,25 @@
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import MusicBars from '../MusicBars';
 import styles from './NowPlaying.module.scss';
+
+const CurrentTrack = ({ props }: any) => {
+  console.log('props', props);
+  const { albumImageUrl, songUrl, artist, title } = props;
+  console.log(albumImageUrl);
+
+  return (
+    <div className={styles.currentTrack}>
+      <Image src={albumImageUrl} height={64} width={64}></Image>
+      <div className={styles.trackInfo}>
+        <a className={styles.trackTitle} href={songUrl}>
+          {title}
+        </a>
+        <p className={styles.trackArtist}>{artist}</p>
+      </div>
+    </div>
+  );
+};
 
 const index = () => {
   const [currentTrack, setCurrentTrack] = useState({});
@@ -21,10 +40,11 @@ const index = () => {
   console.log('current', currentTrack);
   return (
     <div className={styles.nowPlaying}>
-      <p className={styles.title}>Currently vibing to  -&#32;</p>
-      <div className={styles.track}>
+      <Image src="/../public/spotify.png" height={36} width={36} />
+      <h3 className={styles.title}>Listening to</h3>
+      <div className={`${styles.track} ${styles.slideRight}`}>
         <MusicBars />
-        <a href={currentTrack.songUrl}>{currentTrack.title}</a>
+        <CurrentTrack props={currentTrack} />
       </div>
     </div>
   );
