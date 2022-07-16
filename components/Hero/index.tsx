@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import Background from '../background';
 
-// import styles from '../../styles/Home.module.scss';
 import styles from './Hero.module.scss';
 
 const index = () => {
@@ -15,7 +15,7 @@ const index = () => {
             width={64}
             height={64}
           ></Image>
-        </div> 
+        </div>
         {/* <h1 className={styles.title}>
           I'm <a href="https://nextjs.org">Adarsh Sulegai</a>
         </h1> */}
