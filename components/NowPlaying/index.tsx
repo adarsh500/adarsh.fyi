@@ -10,7 +10,7 @@ const CurrentTrack = ({ props }: any) => {
 
   return (
     <div className={styles.currentTrack}>
-      <Image src={albumImageUrl} height={64} width={64}></Image>
+      <Image src={albumImageUrl} height={58} width={58}></Image>
       <div className={styles.trackInfo}>
         <a className={styles.trackTitle} href={songUrl}>
           {title}
@@ -34,18 +34,18 @@ const index = () => {
     fetchNowPlaying();
   }, []);
 
-  if (!currentTrack?.isPlaying) {
-    return;
-  }
   console.log('current', currentTrack);
   return (
     <div className={styles.nowPlaying}>
-      <Image src="/../public/spotify.png" height={36} width={36} />
-      <h3 className={styles.title}>Listening to</h3>
-      <div className={`${styles.track} ${styles.slideRight}`}>
-        <MusicBars />
-        <CurrentTrack props={currentTrack} />
-      </div>
+      <Image src="/../public/spotify.png" height={38} width={38} />
+      {currentTrack.isPlaying ? (
+        <div className={styles.track}>
+          <CurrentTrack props={currentTrack} />
+          <MusicBars />
+        </div>
+      ) : (
+        <p className={styles.notListening}>Not Listening</p>
+      )}
     </div>
   );
 };

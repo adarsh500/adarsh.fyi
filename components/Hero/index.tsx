@@ -9,7 +9,7 @@ const index = () => {
     <div>
       <main className={styles.main}>
         <div className={styles.kenobi}>
-          <p>Hello there </p>
+          <p>Hello there</p>
           <Image
             src="/../public/waving-hand.png"
             width={64}

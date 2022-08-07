@@ -8,7 +8,22 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  background: url('../public/grid.svg');
+  // background: url('../public/grid.svg');
+  // background: #020408c9;
+  background: rgb(17, 17, 19);
+
+  background-image: linear-gradient(#161616 1px, transparent 1px),
+    linear-gradient(to right, #161616 1px, transparent 1px);
+  background-size: 55px 55px;
+  // opacity: 0.99;
+  // style={{
+  //         width: '1200px',
+  //         height: '630px',
+  //         padding: '80px',
+  //         background: 'var(--bg)',
+  //
+  //         // backgroundSize: '2em 2em, 4em 4em',
+  //       }}
 }
 
 a {
