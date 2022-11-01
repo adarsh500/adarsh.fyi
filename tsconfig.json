@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@context/*": ["context/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"],
+      "@icons/*": ["components/icons/*"]
+    },
     "target": "ES2016",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

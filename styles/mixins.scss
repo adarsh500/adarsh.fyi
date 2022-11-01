@@ -1,3 +1,14 @@
+$mobile-xs-max-width: 1024px;
+$dark-mode: true;
+
+@mixin dark-mode {
+  @if ($dark-mode) {
+    @media (prefers-color-scheme: dark) {
+      @content;
+    }
+  }
+}
+
 @mixin font-size($size, $line-height) {
   font-size: #{$size}px;
   line-height: #{$line-height}px;

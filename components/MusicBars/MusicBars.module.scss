@@ -1,15 +1,21 @@
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .icon {
   position: relative;
   display: inline-flex;
   justify-content: space-between;
   width: 30px;
   height: 18px;
-  margin-right: 12px;
+  margin-left: 18px;
 
   & > span {
     width: 6px;
     height: 100%;
-    background-color: green;
+    background-color: #1db954;
     border-radius: 2px;
     transform-origin: bottom;
     transition: opacity 0.3s ease-out;
@@ -29,9 +35,13 @@
       animation-delay: -5.2s;
     }
 
-    &:nth-of-type(4) {
+    &:nth-of-type(5) {
       animation-delay: -6.7s;
     }
+
+    // &:nth-of-type(4) {
+    //   animation-delay: -7.2s;
+    // }
   }
 }
 

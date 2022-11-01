@@ -142,31 +142,24 @@ input:-webkit-autofill:active,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px white inset !important;
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
-  color: var(--primary-black);
 }
 
 html,
 body {
   min-height: 100vh;
-  font-family: 'GalanoGrotesque', san-serif;
   font-weight: normal;
   font-size: 14px !important;
   line-height: 1.42857143 !important;
-  color: var(--primary-black) !important;
-  background-color: var(--main-background) !important;
-  //min-height: 500px;
-  //@include mobile {
+  color: var(--) !important;
+  // background-color: var(--main-background) !important;
+  // min-height: 500px;
+  // @include mobile {
   //  overflow: auto;
-  //}
+  //};
 }
 
-// Address
-address {
-  font-style: normal;
-}
-
-// SVG
 svg {
   display: block;
 }

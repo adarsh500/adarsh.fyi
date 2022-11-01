@@ -1,5 +1,81 @@
-@import 'reset';
-@import 'mixins';
+@import './reset.scss';
+@import './mixins.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --success: #10b981;
+  --primary: #026bdc;
+  --border-light: #f3f3f3;
+  --border-dark: #444;
+
+  --error: rgb(216, 96, 96);
+  --border-radius-small: 4px;
+  --border-radius-medium: 6px;
+  --border-radius-large: 8px;
+  --primary-gradient: linear-gradient(to right, #007fff, #0059b2);
+
+  //background
+  --background-dark: #171717;
+  --background-light: #ffffff;
+  --blur-background-light: rgba(255, 255, 255, 0.75);
+  --blur-background-dark: rgba(17, 17, 17, 0.75);
+
+  //font-colors
+  --dark-text-primary: #ffffff;
+  --dark-text-secondary: #b1b1b1;
+  --light-text-primary: #000000;
+  --light-text-secondary: #898989;
+
+  --shadow-color: 0deg 0% 61%;
+  --shadow-elevation-low: 0px 0.3px 0.3px hsl(var(--shadow-color) / 0.35),
+    0px 0.5px 0.6px -1.2px hsl(var(--shadow-color) / 0.35),
+    0px 1.2px 1.3px -2.5px hsl(var(--shadow-color) / 0.35);
+  --shadow-elevation-medium: 0px 0.3px 0.3px hsl(var(--shadow-color) / 0.3),
+    0px 0.8px 0.9px -0.6px hsl(var(--shadow-color) / 0.3),
+    0px 1.6px 1.8px -1.2px hsl(var(--shadow-color) / 0.3),
+    -0.1px 3.2px 3.6px -1.9px hsl(var(--shadow-color) / 0.3),
+    -0.1px 6.1px 6.9px -2.5px hsl(var(--shadow-color) / 0.3);
+  --shadow-elevation-high: 0px 0.3px 0.3px hsl(var(--shadow-color) / 0.28),
+    0px 1.5px 1.7px -0.3px hsl(var(--shadow-color) / 0.28),
+    -0.1px 2.6px 2.9px -0.6px hsl(var(--shadow-color) / 0.28),
+    -0.1px 4px 4.5px -0.8px hsl(var(--shadow-color) / 0.28),
+    -0.1px 5.9px 6.6px -1.1px hsl(var(--shadow-color) / 0.28),
+    -0.2px 8.4px 9.5px -1.4px hsl(var(--shadow-color) / 0.28),
+    -0.3px 12px 13.5px -1.7px hsl(var(--shadow-color) / 0.28),
+    -0.4px 16.8px 18.9px -1.9px hsl(var(--shadow-color) / 0.28),
+    -0.6px 23.1px 26px -2.2px hsl(var(--shadow-color) / 0.28),
+    -0.7px 31.1px 35px -2.5px hsl(var(--shadow-color) / 0.28);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: var(--dark-text-primary);
+    background: var(--background-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: var(--light-text-primary);
+    background: var(--background-light);
+  }
+}
 
 html,
 body {
@@ -8,14 +84,22 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-  background: url('../public/grid.svg');
-}
+  // background: url('../public/grid.svg');
+  // background: #000000c9;
+  // background: var(--background-light);
+  // background: rgb(17, 17, 17);
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  // background-image: linear-gradient(#3a3a3a3d 1px, transparent 1px),
+  //   linear-gradient(to right, #3a3a3a3d 1px, transparent 1px);
+  background-image: linear-gradient(#cbcbcb5a 1px, transparent 1px),
+    linear-gradient(to right, #cbcbcb5a 1px, transparent 1px);
+  background-size: 90px 90px;
+  // style={{
+  //         width: '1200px',
+  //         height: '630px',
+  //         padding: '80px',
+  //         background: 'var(--bg)',
 
-* {
-  box-sizing: border-box;
+  //         // backgroundSize: '2em 2em, 4em 4em',
+  //       }}
 }

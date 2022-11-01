@@ -1,9 +1,46 @@
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import MusicBars from '../MusicBars';
+import MusicBars from '@components/MusicBars';
 import styles from './NowPlaying.module.scss';
 
-const index = () => {
-  const [currentTrack, setCurrentTrack] = useState({});
+interface NotPlaying {
+  isPlaying: false;
+}
+
+interface Playing {
+  albumImageUrl: string;
+  artist: string;
+  title: string;
+  songUrl: string;
+  album: string;
+  isPlaying: true;
+}
+
+interface Track {
+  artist: string;
+  songUrl: string;
+  title: string;
+}
+
+const CurrentTrack = ({ props }: any) => {
+  const { albumImageUrl, songUrl, artist, title } = props;
+
+  return (
+    <div className={styles.currentTrack}>
+      <Image src={albumImageUrl} height={44} width={44}></Image>
+      <div className={styles.trackInfo}>
+        <a className={styles.trackTitle} href={songUrl}>
+          {title}
+        </a>
+        <p className={styles.trackArtist}>{artist}</p>
+      </div>
+    </div>
+  );
+};
+
+const NowPlaying = () => {
+  const [expanded, setExpanded] = useState(false);
+  const [currentTrack, setCurrentTrack] = useState<NotPlaying | Playing>({});
 
   const fetchNowPlaying = async () => {
     const track = await fetch('api/getNowPlaying');
@@ -15,19 +52,26 @@ const index = () => {
     fetchNowPlaying();
   }, []);
 
-  if (!currentTrack?.isPlaying) {
-    return;
-  }
-  console.log('current', currentTrack);
   return (
     <div className={styles.nowPlaying}>
-      <p className={styles.title}>Currently vibing to  -&#32;</p>
-      <div className={styles.track}>
-        <MusicBars />
-        <a href={currentTrack.songUrl}>{currentTrack.title}</a>
-      </div>
+      {/* {expanded ? : null} */}
+      <Image
+        src="/../public/spotify.png"
+        height={44}
+        width={44}
+        onClick={() => setExpanded(!expanded)}
+      />
+      {currentTrack.isPlaying ? (
+        expanded ? (
+          <div className={styles.track}>
+            <CurrentTrack props={currentTrack} />
+            <MusicBars />
+          </div>
+        ) : null
+      ) : // <p className={styles.notListening}>Not Listening</p>
+      null}
     </div>
   );
 };
 
-export default index;
+export default NowPlaying;

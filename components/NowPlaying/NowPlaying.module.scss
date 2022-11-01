@@ -1,17 +1,67 @@
+@import '@styles/mixins.scss';
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // display: none;
+}
+
 .nowPlaying {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+  padding: 12px 0;
 
   .title {
+    margin-left: 12px;
+    text-align: center;
+    width: 150px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 500;
   }
 }
 
+.notListening {
+  margin-left: 16px;
+  font-size: 20px;
+  list-style: 26px;
+  font-weight: 400;
+}
+
+.currentTrack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .trackInfo {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trackTitle {
+    @include font-size-weight(16, 20, 500);
+    text-align: left;
+    margin-bottom: 4px;
+    color: var(--dark-text-primary);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .trackArtist {
+    color: var(--dark-text-secondary);
+    @include font-size-weight(12, 14, 300);
+    text-align: left;
+  }
+}
+
 .track {
-  // background-color: lightgray;
+  display: flex;
   border-radius: 24px;
-  padding: 8px 18px;
+  padding: 0 18px;
 }
