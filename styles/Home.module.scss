@@ -1,10 +1,11 @@
-// .container {
-//   padding: 0 2rem;
-// }
+@import '@styles/mixins.scss';
+
+.container {
+  min-height: 100vh;
+  padding: 3rem 20rem 4rem 20rem;
+}
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -17,8 +18,6 @@
   flex-direction: column;
   flex: 1;
   padding: 2rem 0;
-  // border-top: 1px solid #eaeaea;
-  background-color: #eaeaea;
   justify-content: center;
   align-items: center;
 }
@@ -114,6 +113,26 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  position: sticky;
+  padding: 20px 24px;
+  border-radius: 40px;
+  background-color: #171717;
+  bottom: 1rem;
+  left: 1rem;
+  backdrop-filter: blur(20px) saturate(132%);
+  -webkit-backdrop-filter: blur(18px) saturate(132%);
+
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+
+  @include dark-mode {
+    background-color: rgba(17, 17, 17, 0.75);
   }
 }
 

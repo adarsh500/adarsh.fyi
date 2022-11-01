@@ -1,5 +1,8 @@
-@import 'reset';
-@import 'mixins';
+@import './reset.scss';
+@import './mixins.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --success: #10b981;
@@ -16,6 +19,8 @@
   //background
   --background-dark: #171717;
   --background-light: #ffffff;
+  --blur-background-light: rgba(255, 255, 255, 0.75);
+  --blur-background-dark: rgba(17, 17, 17, 0.75);
 
   //font-colors
   --dark-text-primary: #ffffff;
@@ -42,6 +47,14 @@
     -0.4px 16.8px 18.9px -1.9px hsl(var(--shadow-color) / 0.28),
     -0.6px 23.1px 26px -2.2px hsl(var(--shadow-color) / 0.28),
     -0.7px 31.1px 35px -2.5px hsl(var(--shadow-color) / 0.28);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -72,28 +85,21 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   // background: url('../public/grid.svg');
-  // background: #020408c9;
-  background: rgb(17, 17, 17);
+  // background: #000000c9;
+  // background: var(--background-light);
+  // background: rgb(17, 17, 17);
 
-  background-image: linear-gradient(#161616 1px, transparent 1px),
-    linear-gradient(to right, #161616 1px, transparent 1px);
-  background-size: 80px 80px;
-  // opacity: 0.99;
+  // background-image: linear-gradient(#3a3a3a3d 1px, transparent 1px),
+  //   linear-gradient(to right, #3a3a3a3d 1px, transparent 1px);
+  background-image: linear-gradient(#cbcbcb5a 1px, transparent 1px),
+    linear-gradient(to right, #cbcbcb5a 1px, transparent 1px);
+  background-size: 90px 90px;
   // style={{
   //         width: '1200px',
   //         height: '630px',
   //         padding: '80px',
   //         background: 'var(--bg)',
-  //
+
   //         // backgroundSize: '2em 2em, 4em 4em',
   //       }}
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
