@@ -1,3 +1,5 @@
+@import '@styles/mixins.scss';
+
 .info {
   display: flex;
   flex-direction: row;
@@ -11,6 +13,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  padding: 12px 0;
 
   .title {
     margin-left: 12px;
@@ -41,20 +44,18 @@
   }
 
   .trackTitle {
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: 500;
+    @include font-size-weight(16, 20, 500);
     text-align: left;
     margin-bottom: 4px;
+    color: var(--dark-text-primary);
     &:hover {
       text-decoration: underline;
     }
   }
 
   .trackArtist {
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 300;
+    color: var(--dark-text-secondary);
+    @include font-size-weight(12, 14, 300);
     text-align: left;
   }
 }
@@ -62,5 +63,5 @@
 .track {
   display: flex;
   border-radius: 24px;
-  padding: 8px 18px;
+  padding: 0 18px;
 }

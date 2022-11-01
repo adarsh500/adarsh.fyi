@@ -23,6 +23,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       })
     );
 
-  console.log(res.json({ tracks }));
   return res.status(200).json({ tracks });
 };

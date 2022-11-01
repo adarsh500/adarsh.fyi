@@ -17,16 +17,11 @@ export default function Home() {
       <div className={styles.bk}>
         <Hero />
         <TopTracks />
+        <div className={styles.nowPlaying}>
+          <NowPlaying />
+        </div>
       </div>
-      <footer className={styles.footer}>
-        <NowPlaying />
-        <br />
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
   );
 }

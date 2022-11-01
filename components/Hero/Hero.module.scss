@@ -1,3 +1,5 @@
+@import '@styles/mixins.scss';
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -27,29 +29,40 @@
 }
 
 .center {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
 }
-.center h1 {
+.rainbowText {
   user-select: none;
-  font-size: 100px;
-  color: black;
+  // font-size: 100px;
+  // font-weight: 700;
+  @include font-size-weight(100, 150, 650);
+  // color: black;
+  // background: repeating-linear-gradient(
+  //   -45deg,
+  //   red 0%,
+  //   rgb(0, 255, 0) 14.28%,
+  //   rgb(0, 255, 255) 21.4%,
+  //   cyan 28.56%,
+  //   blue 35.7%,
+  //   magenta 42.84%,
+  //   red 50%
+  // );
   background: repeating-linear-gradient(
     -45deg,
-    red 0%,
-    rgb(0, 255, 0) 14.28%,
+    rgb(223, 31, 108) 0%,
     rgb(0, 255, 255) 21.4%,
     cyan 28.56%,
-    blue 35.7%,
-    magenta 42.84%,
+    rgb(17, 47, 181) 35.7%,
+    rgb(223, 31, 108) 42.84%,
     red 50%
   );
   background-size: 600vw 600vw;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  animation: slide 20s linear infinite forwards;
+  animation: slide 30s linear infinite forwards;
 }
 @keyframes slide {
   0% {
