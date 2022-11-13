@@ -17,13 +17,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="">
+      <div id="about">
         <Hero />
         <Hero />
-        {/* <TopTracks /> */}
-        <div className={styles.nowPlaying}>
-          <NowPlaying />
-        </div>
+        <TopTracks />
+      </div>
+
+      <div className={styles.nowPlaying}>
+        <NowPlaying />
       </div>
       {/* <footer className={styles.footer}></footer> */}
     </div>

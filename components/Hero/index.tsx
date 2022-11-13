@@ -19,7 +19,7 @@ const Hero = () => {
         // )}
         >
           <div className={styles.center}>
-            {/* <p>Hi i'm</p> */}
+            {/* <p className={styles.secondaryText}>Hi i'm</p> */}
             <p className={styles.rainbowText}>Adarsh Sulegai.</p>
             <p className={styles.tagline}>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.

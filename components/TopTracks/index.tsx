@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import styles from './TopTracks.module.scss';
+import { Track } from '../../types/shared';
 
-const TrackItem = (props) => {
-  const { track, id } = props;
+interface TrackItem {
+  track: Track;
+}
+
+const TrackItem = ({ track }: TrackItem) => {
   return (
     <div>
-      <a className={styles.trackItem} key={id} href={track.songUrl}>
+      <a className={styles.trackItem} href={track.songUrl}>
         {track.title}
       </a>
       <hr></hr>
