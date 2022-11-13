@@ -37,7 +37,7 @@
   font-size: 4rem;
 }
 
-.center {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,7 +52,7 @@
     }
   }
 
-  .rainbowText {
+  .primaryText {
     // user-select: none;
     @include font-size-weight(100, 150, 650);
     // background: repeating-linear-gradient(
@@ -86,8 +86,8 @@
   }
 
   .tagline {
-    @include font-size-weight(26, 20, 400);
-    margin-bottom: 58px;
+    @include font-size-weight(32, 36, 500);
+    margin-bottom: 36px;
     text-align: left;
 
     @include dark-mode {
@@ -103,6 +103,13 @@
     @include dark-mode {
       color: var(--dark-text-primary);
     }
+  }
+
+  .cta {
+    margin: 30px 0;
+    padding: 10px 40px;
+    border: 1px solid white;
+    border-radius: 44px;
   }
 }
 

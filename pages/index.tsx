@@ -19,8 +19,9 @@ export default function Home() {
       <Navbar />
       <div id="about">
         <Hero />
-        <Hero />
-        <TopTracks />
+      </div>
+      <div id="projects">
+        
       </div>
 
       <div className={styles.nowPlaying}>

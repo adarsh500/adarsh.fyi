@@ -18,20 +18,20 @@ const Hero = () => {
         //   // 'absolute'
         // )}
         >
-          <div className={styles.center}>
+          <div className={styles.container}>
             {/* <p className={styles.secondaryText}>Hi i'm</p> */}
-            <p className={styles.rainbowText}>Adarsh Sulegai.</p>
+            <p className={styles.primaryText}>Adarsh Sulegai.</p>
             <p className={styles.tagline}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Praesentium, nihil
+              Lorem ipsum, dolor sit amet consectetur adipisicing Praesentium
             </p>
-
             <p className={styles.about}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
               maiores quas deserunt error quaerat laboriosam? Et ab blanditiis
               omnis dignissimos ipsum aliquam autem doloribus adipisci libero
-              possimus. Libero, obcaecati incidunt!
+              possimus. Libero, obcaecati.
             </p>
+
+            <button className={styles.cta}>Say Hi!</button>
           </div>
         </div>
       </main>
