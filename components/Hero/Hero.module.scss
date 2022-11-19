@@ -1,5 +1,28 @@
 @import '@styles/mixins.scss';
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
 .main {
   flex: 1;
   min-height: 90vh;
@@ -11,17 +34,25 @@
 
 .title {
   margin: 0;
-  line-height: 1.15;
   font-size: 4rem;
 }
 
-.center {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 
-  .rainbowText {
+  .secondaryText {
+    @include font-size-weight(20, 24, 400);
+    text-align: left;
+
+    @include dark-mode {
+      color: var(--dark-text-primary);
+    }
+  }
+
+  .primaryText {
     // user-select: none;
     @include font-size-weight(100, 150, 650);
     // background: repeating-linear-gradient(
@@ -34,28 +65,51 @@
     //   magenta 42.84%,
     //   red 50%
     // );
-    background: repeating-linear-gradient(
-      -45deg,
-      rgb(223, 31, 108) 0%,
-      rgb(0, 255, 255) 10%,
-      rgb(0, 102, 255) 30%,
-      rgb(27, 65, 234) 40%,
-      rgb(223, 31, 108) 50%
-    );
-    background-size: 600vw 600vw;
+    // background: repeating-linear-gradient(
+    //   -45deg,
+    //   rgb(223, 31, 108) 0%,
+    //   rgb(0, 255, 255) 10%,
+    //   rgb(0, 102, 255) 30%,
+    //   rgb(27, 65, 234) 40%,
+    //   rgb(223, 31, 108) 50%
+    // );
+    // background-size: 600vw 600vw;
+
+    // animation: slide 7s linear infinite forwards;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+    // animation: glow 1s ease-in-out infinite alternate;
+
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    animation: slide 7s linear infinite forwards;
   }
 
-  .tagLine {
-    word-wrap: break-word;
-    @include font-size-weight(18, 30, 400);
+  .tagline {
+    @include font-size-weight(32, 36, 500);
+    margin-bottom: 36px;
     text-align: left;
 
     @include dark-mode {
       color: var(--dark-text-primary);
     }
+  }
+
+  .about {
+    word-wrap: break-word;
+    @include font-size-weight(20, 30, 400);
+    text-align: left;
+
+    @include dark-mode {
+      color: var(--dark-text-primary);
+    }
+  }
+
+  .cta {
+    margin: 30px 0;
+    padding: 10px 40px;
+    border: 1px solid white;
+    border-radius: 44px;
   }
 }
 

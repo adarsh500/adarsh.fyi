@@ -4,7 +4,7 @@ import MusicBars from '@components/MusicBars';
 import styles from './NowPlaying.module.scss';
 
 interface NotPlaying {
-  isPlaying: false;
+  isPlaying?: false;
 }
 
 interface Playing {
@@ -14,12 +14,6 @@ interface Playing {
   songUrl: string;
   album: string;
   isPlaying: true;
-}
-
-interface Track {
-  artist: string;
-  songUrl: string;
-  title: string;
 }
 
 const CurrentTrack = ({ props }: any) => {

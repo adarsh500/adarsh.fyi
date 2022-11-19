@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import styles from './TopTracks.module.scss';
+import { Track } from '../../types/shared';
 
-const TrackItem = (props) => {
-  const { track, id } = props;
+interface TrackItem {
+  track: Track;
+}
+
+const TrackItem = ({ track }: TrackItem) => {
   return (
     <div>
-      <a className={styles.trackItem} key={id} href={track.songUrl}>
+      <a className={styles.trackItem} href={track.songUrl}>
         {track.title}
       </a>
       <hr></hr>
@@ -19,7 +23,6 @@ const TopTracks = () => {
   const fetchTopTracks = async () => {
     const res = await fetch('api/getTopTracks');
     const data = await res.json();
-    console.log(data.tracks);
     setTracks(data.tracks);
   };
 
@@ -27,7 +30,6 @@ const TopTracks = () => {
     fetchTopTracks();
   }, []);
 
-  console.log(tracks[0]);
   return (
     <div className={styles.topTracksWrapper}>
       <h2>Adarsh's Top Tracks</h2>

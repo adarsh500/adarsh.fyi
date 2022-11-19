@@ -1,0 +1,81 @@
+@import '@styles/mixins.scss';
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  top: 0;
+  padding: 10px 20px;
+  border-radius: 40px;
+  background-color: #171717;
+  bottom: 1rem;
+  left: 1rem;
+  backdrop-filter: blur(10px) saturate(232%);
+  -webkit-backdrop-filter: blur(18px) saturate(132%);
+  background-color: rgba(17, 17, 17, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  @include font-size-weight(18, 24, 400);
+  color: darkgray;
+
+  .item {
+    list-style-type: none;
+    padding: 10px 16px;
+
+    &Active {
+      list-style-type: none;
+      padding: 10px 20px;
+      border-radius: 40px;
+      // padding: 5px 20px;
+      border: 1px solid var(--border-dark);
+      color: var(--dark-text-primary);
+    }
+  }
+
+  .leftNav {
+    display: flex;
+    align-items: center;
+
+    .glow {
+      border-radius: 100%;
+      @include content-size(24, 24);
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 30px 30px;
+      animation: gradient 7s ease infinite;
+      animation: spin 4s linear infinite;
+    }
+  }
+
+  .rightNav {
+    display: flex;
+    align-items: center;
+  }
+}

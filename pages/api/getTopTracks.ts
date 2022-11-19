@@ -4,8 +4,6 @@ import { getTopTracks } from '../../utils/spotify';
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const response = await getTopTracks();
   const { items } = await response.json();
-  console.log(items);
-  console.log(typeof items);
 
   const tracks = items
     .slice(0, 10)
