@@ -1,12 +1,10 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import TopTracks from '../components/TopTracks';
 import NowPlaying from '../components/NowPlaying';
 import Hero from '../components/Hero';
-import clsx from 'clsx';
 
 import styles from '../styles/Home.module.scss';
 import Navbar from '@components/Navbar';
+import ProjectCard from '@components/ProjectCard';
 
 export default function Home() {
   return (
@@ -17,11 +15,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div id="about">
+      <div id={styles.about}>
         <Hero />
       </div>
-      <div id="projects">
-        
+      <div id={styles.projects}>
+        <h2 className={styles.subTitle}>01. Featured Projects</h2>
+        <div className={styles.projectWrapper}>
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </div>
       </div>
 
       <div className={styles.nowPlaying}>

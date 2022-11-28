@@ -1,0 +1,8 @@
+.projectCard {
+  width: calc(100% / 3 - 24px);
+  //   width: 310px;
+  margin: 24px 24px 0 0;
+  border: 1px solid white;
+  border-radius: var(--border-radius-large);
+  padding: 24px 12px;
+}

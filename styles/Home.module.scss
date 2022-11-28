@@ -150,3 +150,19 @@
   // border-radius: 12px;
   // border: 1px solid rgba(255, 255, 255, 0.125);
 }
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  .subTitle {
+    @include font-size-weight(50, 70, 600);
+  }
+
+  .projectWrapper {
+    width: 100%;
+    display: flex;
+  }
+}

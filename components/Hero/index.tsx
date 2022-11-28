@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.scss';
+import { HiOutlineLink } from 'react-icons/hi';
 
 const Hero = () => {
   return (
@@ -30,8 +31,13 @@ const Hero = () => {
               omnis dignissimos ipsum aliquam autem doloribus adipisci libero
               possimus. Libero, obcaecati.
             </p>
-
-            <button className={styles.cta}>Say Hi!</button>
+            <div className={styles.ctaWrapper}>
+              <button className={styles.invertedCta}>
+                Get résume
+                <HiOutlineLink className={styles.icon} />
+              </button>
+              <button className={styles.cta}>Say Hi!</button>
+            </div>
           </div>
         </div>
       </main>
