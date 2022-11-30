@@ -19,11 +19,11 @@ export default function Home() {
         <Hero />
       </div>
       <div id={styles.projects}>
-        <h2 className={styles.subTitle}>01. Featured Projects</h2>
+        <h2 className={styles.subTitle}>01.&nbsp; Featured Projects</h2>
         <div className={styles.projectWrapper}>
           <ProjectCard />
           <ProjectCard />
-          <ProjectCard />
+          {/* <ProjectCard /> */}
         </div>
       </div>
 

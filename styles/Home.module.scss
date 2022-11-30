@@ -158,11 +158,13 @@
   align-items: flex-start;
 
   .subTitle {
-    @include font-size-weight(50, 70, 600);
+    @include font-size-weight(55, 70, 600);
   }
 
   .projectWrapper {
     width: 100%;
     display: flex;
+    justify-content: flex-start;
+    margin: 6rem 0;
   }
 }
