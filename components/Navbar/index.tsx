@@ -1,4 +1,4 @@
-import React from 'react';
+import { MdExpandMore } from 'react-icons/md';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -10,8 +10,13 @@ const Navbar = () => {
       <div className={styles.rightNav}>
         <li className={styles.itemActive}>About</li>
         <li className={styles.item}>Work</li>
-        <li className={styles.item}>Projects</li>
-        <li className={styles.item}>Resume</li>
+        <a className={styles.item} href="#projects">
+          Projects
+        </a>
+        <li className={styles.item}>
+          More
+          <MdExpandMore className={styles.icon} />
+        </li>
       </div>
     </nav>
   );

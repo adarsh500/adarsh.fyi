@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Hero.module.scss';
 import { HiOutlineLink } from 'react-icons/hi';
+import { FiTwitter } from 'react-icons/fi';
 
 const Hero = () => {
   return (
@@ -23,20 +24,23 @@ const Hero = () => {
             {/* <p className={styles.secondaryText}>Hi i'm</p> */}
             <p className={styles.primaryText}>Adarsh Sulegai.</p>
             <p className={styles.tagline}>
-              Lorem ipsum, dolor sit amet consectetur adipisicing Praesentium
+              Obsessed with crafting beautiful experiences for the web 🛠
             </p>
             <p className={styles.about}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-              maiores quas deserunt error quaerat laboriosam? Et ab blanditiis
-              omnis dignissimos ipsum aliquam autem doloribus adipisci libero
-              possimus. Libero, obcaecati.
+              20 y/o full-stack developer currently working as a SDE-Intern
+              @CloudSEK, previously i worked as a Frontend Developer Intern
+              @Dukaan. I study Computer Science at DSCE, Bangalore. When i'm not
+              writing code, you can find me talking about bikes 🏍, mechanical
+              keyboards 🎮 and star wars ✨
             </p>
             <div className={styles.ctaWrapper}>
               <button className={styles.invertedCta}>
                 Get résume
                 <HiOutlineLink className={styles.icon} />
               </button>
-              <button className={styles.cta}>Say Hi!</button>
+              <button className={styles.cta}>
+                Say hi! <FiTwitter className={styles.icon} />
+              </button>
             </div>
           </div>
         </div>

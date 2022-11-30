@@ -69,11 +69,11 @@ a {
 
 @media (prefers-color-scheme: light) {
   html {
-    color-scheme: light;
+    color-scheme: dark;
   }
   body {
-    color: var(--light-text-primary);
-    background: var(--background-light);
+    color: var(--dark-text-primary);
+    background: var(--background-dark);
   }
 }
 
@@ -98,8 +98,10 @@ body {
 
   // background-image: linear-gradient(#3a3a3a3d 1px, transparent 1px),
   //   linear-gradient(to right, #3a3a3a3d 1px, transparent 1px);
-  background-image: linear-gradient(#0000000e 1px, transparent 1px),
-    linear-gradient(to right, #0000000e 1px, transparent 1px);
+  // background-image: linear-gradient(#0000000e 1px, transparent 1px),
+  //   linear-gradient(to right, #0000000e 1px, transparent 1px);
+  background-image: linear-gradient(#cbcbcb0e 1px, transparent 1px),
+    linear-gradient(to right, #cbcbcb0e 1px, transparent 1px);
   background-size: 90px 90px;
   // style={{
   //         width: '1200px',

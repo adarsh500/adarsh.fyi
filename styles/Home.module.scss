@@ -156,6 +156,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin: 8rem 0;
 
   .subTitle {
     @include font-size-weight(55, 70, 600);

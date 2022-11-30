@@ -35,7 +35,7 @@
   justify-content: space-between;
   top: 20px;
   padding: 10px 20px;
-  border-radius: 40px;
+  border-radius: var(--border-radius-large);
   background-color: #171717;
   bottom: 1rem;
   left: 1rem;
@@ -47,13 +47,22 @@
   color: darkgray;
 
   .item {
+    display: flex;
+    align-items: center;
     list-style-type: none;
     padding: 10px 16px;
+
+    .icon {
+      height: 14px;
+      width: 14px;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
 
     &Active {
       list-style-type: none;
       padding: 10px 20px;
-      border-radius: 40px;
+      border-radius: var(--border-radius-large);
       // padding: 5px 20px;
       border: 1px solid var(--border-dark);
       color: var(--dark-text-primary);

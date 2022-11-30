@@ -33,9 +33,13 @@ const ProjectCard = () => {
               <HiArrowTopRightOnSquare />
             </a>
           </div>
-          <div className={styles.headerLink}>
+          <a
+            href="https://github.com/adarsh500/mark"
+            target="_blank"
+            className={styles.headerLink}
+          >
             <VscGithubInverted className="icon" />
-          </div>
+          </a>
         </div>
         <div className={styles.description}>
           a super useful bookmark management web app with sleek UI and dark mode
@@ -50,10 +54,10 @@ const ProjectCard = () => {
             <SiMongodb className={styles.stackItem} />
             <SiTypescript className={styles.stackItem} />
           </div>
-          <button className={styles.expand}>
+          {/* <button className={styles.expand}>
             <p>Expand</p>
             <MdExpandMore className={styles.icon} />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

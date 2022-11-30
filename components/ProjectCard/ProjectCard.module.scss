@@ -18,6 +18,7 @@
   -webkit-backdrop-filter: blur(18px) saturate(132%);
   background-color: rgba(17, 17, 17, 0.75);
   // border: 1px solid rgba(255, 255, 255, 0.125);
+  border: var(--border-dark);
 
   .image {
     border-radius: var(--border-radius-large);
@@ -27,7 +28,7 @@
     // display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 16px 14px;
+    padding: 20px 20px 20px 22px;
 
     .header {
       display: flex;
