@@ -6,8 +6,8 @@
       "@context/*": ["context/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
-      "@icons/*": ["components/icons/*"],
-      "@types/*": ["types/*"]
+      "@types/*": ["types/*"],
+      "@icons/*": ["icons/*"]
     },
     "target": "ES2016",
     "lib": ["dom", "dom.iterable", "esnext"],
