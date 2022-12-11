@@ -3,20 +3,26 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 450px;
   margin-right: 56px;
   border: 1px solid #f3f3f3;
   border-radius: var(--border-radius-large);
   min-height: 400px;
 
   background-color: #171717;
-  bottom: 1rem;
-  left: 1rem;
   backdrop-filter: blur(18px) saturate(132%);
   -webkit-backdrop-filter: blur(18px) saturate(132%);
-  background-color: rgba(17, 17, 17, 0.75);
-  // border: 1px solid rgba(255, 255, 255, 0.125);
-  border: var(--border-dark);
+  background-color: rgba(17, 17, 17, 0.5);
+  border: 1px solid #333;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    transform: scale(1.045);
+    transition: all 0.3s ease-out;
+  }
 
   .image {
     border-radius: var(--border-radius-large);

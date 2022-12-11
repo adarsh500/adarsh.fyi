@@ -35,11 +35,9 @@
   position: sticky;
   justify-content: space-between;
   top: 20px;
-  padding: 10px 20px;
+  padding: 16px 20px;
   border-radius: var(--border-radius-large);
   background-color: #171717;
-  bottom: 1rem;
-  left: 1rem;
   backdrop-filter: blur(10px) saturate(232%);
   -webkit-backdrop-filter: blur(18px) saturate(132%);
   background-color: rgba(17, 17, 17, 0.75);
@@ -88,5 +86,47 @@
   .rightNav {
     display: flex;
     align-items: center;
+
+    .cmd {
+      list-style-type: none;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      backdrop-filter: blur(10px) saturate(232%);
+      -webkit-backdrop-filter: blur(18px) saturate(132%);
+      background-color: rgba(17, 17, 17, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      border-radius: var(--border-radius-large);
+    }
+
+    .secondary {
+      backdrop-filter: blur(10px) saturate(232%);
+      -webkit-backdrop-filter: blur(18px) saturate(132%);
+      background-color: rgba(17, 17, 17, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px 0;
+      padding: 10px 40px;
+      margin-right: 20px;
+      border: 1px solid white;
+      border-radius: var(--border-radius-large);
+    }
+
+    .primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px 0;
+      padding: 10px 40px;
+      margin-right: 20px;
+      border: 1px solid white;
+      background-color: white;
+      color: black;
+      border-radius: var(--border-radius-large);
+    }
   }
 }

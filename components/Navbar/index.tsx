@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { MdExpandMore } from 'react-icons/md';
+import { FiCommand } from 'react-icons/fi';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -21,6 +22,10 @@ const Navbar = () => {
         <li className={styles.item}>
           More
           <MdExpandMore className={styles.icon} />
+        </li>
+        <li className={styles.cmd}>
+          <FiCommand />
+          {/* &nbsp;K */}
         </li>
       </div>
     </nav>

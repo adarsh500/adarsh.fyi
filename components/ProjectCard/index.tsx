@@ -29,9 +29,7 @@ const ProjectCard = () => {
             target="_blank"
           >
             <p>Mark3</p>
-            <a>
-              <HiArrowTopRightOnSquare />
-            </a>
+            <HiArrowTopRightOnSquare />
           </a>
           <a
             href="https://github.com/adarsh500/mark"

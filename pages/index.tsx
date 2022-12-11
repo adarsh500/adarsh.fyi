@@ -1,10 +1,11 @@
 import Head from 'next/head';
-import NowPlaying from '../components/NowPlaying';
-import Hero from '../components/Hero';
+import NowPlaying from '@components/NowPlaying';
+import Hero from '@components/Hero';
 
-import styles from '../styles/Home.module.scss';
+import styles from '@styles/Home.module.scss';
 import Navbar from '@components/Navbar';
 import ProjectCard from '@components/ProjectCard';
+import Experience from '@components/Experience';
 
 export default function Home() {
   return (
@@ -26,10 +27,11 @@ export default function Home() {
 
       <div className={styles.section}>
         <h2 className={styles.subTitle}>02.&nbsp; Work Experience 👨🏻‍💻</h2>
-        <div className={styles.work}></div>
+        <div className={styles.work}>
+          <Experience />
+          <Experience />
+        </div>
       </div>
-
-      <div className={styles.work}></div>
 
       <div className={styles.nowPlaying}>
         <NowPlaying />

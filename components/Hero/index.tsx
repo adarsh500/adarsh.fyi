@@ -19,7 +19,7 @@ const Hero = () => {
         <div className={styles.container}>
           <p className={styles.title}>Adarsh Sulegai.</p>
           <p className={styles.tagline}>
-            Obsessed with crafting beautiful experiences for the web 🛠
+            Obsessed with crafting beautiful experiences for the web
           </p>
           <p className={styles.about}>
             20 y/o full-stack developer working as an SDE Intern @CloudSEK,
