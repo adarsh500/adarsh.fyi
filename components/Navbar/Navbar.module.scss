@@ -30,6 +30,7 @@
 }
 
 .navbar {
+  z-index: 1;
   display: flex;
   position: sticky;
   justify-content: space-between;
@@ -51,6 +52,7 @@
     align-items: center;
     list-style-type: none;
     padding: 10px 16px;
+    @include font-size-weight(18, 22, 500);
 
     .icon {
       height: 14px;

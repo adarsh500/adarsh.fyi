@@ -11,25 +11,25 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Adarsh Sulegai</title>
-        <meta name="description" content="Adarsh's portfolio website" />
+        <meta name="description" content="Adarsh's portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div id={styles.about}>
-        <Hero />
-      </div>
-      <div id={styles.projects}>
-        <h2 className={styles.subTitle}>01.&nbsp; Featured Projects</h2>
+      <Hero />
+      <div className={styles.section}>
+        <h2 className={styles.subTitle}>01.&nbsp; Featured Projects 🛠</h2>
         <div className={styles.projectWrapper}>
           <ProjectCard />
           <ProjectCard />
-          {/* <ProjectCard /> */}
         </div>
       </div>
 
-      <div className={styles.work}>
-
+      <div className={styles.section}>
+        <h2 className={styles.subTitle}>02.&nbsp; Work Experience 👨🏻‍💻</h2>
+        <div className={styles.work}></div>
       </div>
+
+      <div className={styles.work}></div>
 
       <div className={styles.nowPlaying}>
         <NowPlaying />

@@ -87,7 +87,6 @@ body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  scroll-snap-type: mandatory;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
@@ -100,7 +99,7 @@ body {
   //   linear-gradient(to right, #3a3a3a3d 1px, transparent 1px);
   // background-image: linear-gradient(#0000000e 1px, transparent 1px),
   //   linear-gradient(to right, #0000000e 1px, transparent 1px);
-  background-image: linear-gradient(#cbcbcb0e 1px, transparent 1px),
+  background-image: repeating-linear-gradient(#cbcbcb0e 1px, transparent 1px),
     linear-gradient(to right, #cbcbcb0e 1px, transparent 1px);
   background-size: 90px 90px;
   // style={{

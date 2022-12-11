@@ -2,7 +2,8 @@
 
 .container {
   min-height: 100vh;
-  padding: 2rem 25rem 3rem 25rem;
+  padding: 2rem 27rem 2rem 27rem;
+  text-align: left;
 }
 
 .main {
@@ -48,7 +49,7 @@
 
 .title,
 .description {
-  text-align: center;
+  // text-align: center;
 }
 
 .description {
@@ -151,21 +152,25 @@
   // border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
-#projects {
+.subTitle {
+  @include font-size-weight(42, 40, 600);
+}
+
+.section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 8rem 0;
+  margin: 4rem 0;
+}
 
-  .subTitle {
-    @include font-size-weight(55, 70, 600);
-  }
+.projectWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 3rem 0;
+  padding: 10px;
+}
 
-  .projectWrapper {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    margin: 6rem 0;
-  }
+.work {
 }

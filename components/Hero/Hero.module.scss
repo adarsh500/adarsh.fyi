@@ -25,16 +25,19 @@
 
 .main {
   flex: 1;
-  min-height: 90vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.title {
-  margin: 0;
-  font-size: 4rem;
+  word-wrap: break-word;
+  @include font-size-weight(20, 30, 400);
+  text-align: left;
+  padding: 10px;
+  @include dark-mode {
+    color: var(--dark-text-primary);
+  }
+  margin-top: 30px;
 }
 
 .container {
@@ -42,6 +45,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  // margin-top: 60px;
 
   .secondaryText {
     @include font-size-weight(20, 24, 400);
@@ -52,9 +56,9 @@
     }
   }
 
-  .primaryText {
+  .title {
     // user-select: none;
-    @include font-size-weight(100, 150, 650);
+    @include font-size-weight(100, 120, 700);
     // background: repeating-linear-gradient(
     //   -45deg,
     //   red 0%,
@@ -86,9 +90,8 @@
   }
 
   .tagline {
-    @include font-size-weight(32, 36, 500);
-    margin-bottom: 36px;
-    text-align: left;
+    @include font-size-weight(28, 32, 500);
+    margin-bottom: 20px;
 
     @include dark-mode {
       color: var(--dark-text-primary);
@@ -96,13 +99,9 @@
   }
 
   .about {
-    word-wrap: break-word;
-    @include font-size-weight(20, 30, 400);
-    text-align: left;
-
-    @include dark-mode {
-      color: var(--dark-text-primary);
-    }
+    max-width: 95%;
+    color: rgb(210, 210, 210);
+    @include font-size-weight(22, 28, 400);
   }
 
   .ctaWrapper {
@@ -116,7 +115,10 @@
       vertical-align: middle;
     }
 
-    .cta {
+    .secondary {
+      backdrop-filter: blur(10px) saturate(232%);
+      -webkit-backdrop-filter: blur(18px) saturate(132%);
+      background-color: rgba(17, 17, 17, 0.75);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -127,7 +129,7 @@
       border-radius: var(--border-radius-large);
     }
 
-    .invertedCta {
+    .primary {
       display: flex;
       align-items: center;
       justify-content: center;

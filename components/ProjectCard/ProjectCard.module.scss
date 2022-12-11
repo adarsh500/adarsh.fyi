@@ -1,15 +1,13 @@
 @import '@styles/mixins';
 
 .projectCard {
-  // width: calc(100% / 3 - 24px);
   display: flex;
   flex-direction: column;
-  width: 320px;
-  margin-right: 48px;
+  width: 400px;
+  margin-right: 56px;
   border: 1px solid #f3f3f3;
   border-radius: var(--border-radius-large);
-  // max-width: 100%;
-  min-height: 300px;
+  min-height: 400px;
 
   background-color: #171717;
   bottom: 1rem;
@@ -22,13 +20,13 @@
 
   .image {
     border-radius: var(--border-radius-large);
+    aspect-ratio: 4/3;
   }
 
   .body {
-    // display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 20px 20px 20px 22px;
+    padding: 20px;
 
     .header {
       display: flex;
@@ -37,7 +35,7 @@
       align-items: center;
 
       &Title {
-        @include font-size-weight(20, 26, 600);
+        @include font-size-weight(22, 28, 700);
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -56,12 +54,13 @@
 
     .description {
       margin: 10px 0;
-      @include font-size-weight(16, 26, 300);
+      @include font-size-weight(18, 24, 400);
+      color: #aaaaaa;
       @include line-clamp(3);
     }
 
     .footer {
-      margin-top: 26px;
+      margin-top: 32px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;

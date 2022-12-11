@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { MdExpandMore } from 'react-icons/md';
 import styles from './Navbar.module.scss';
 
@@ -8,11 +9,15 @@ const Navbar = () => {
         <span className={styles.glow}></span>
       </div>
       <div className={styles.rightNav}>
-        <li className={styles.itemActive}>About</li>
-        <li className={styles.item}>Work</li>
-        <a className={styles.item} href="#projects">
-          Projects
-        </a>
+        <Link href="/about">
+          <a className={styles.item}>About</a>
+        </Link>
+        <Link href="/work">
+          <a className={styles.item}>Work</a>
+        </Link>
+        <Link href="/projects">
+          <a className={styles.item}>Projects</a>
+        </Link>
         <li className={styles.item}>
           More
           <MdExpandMore className={styles.icon} />

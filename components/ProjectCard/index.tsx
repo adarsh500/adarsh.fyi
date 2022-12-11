@@ -1,11 +1,7 @@
-import React, { ReactComponentElement } from 'react';
 import styles from './ProjectCard.module.scss';
 import Image from 'next/image';
 import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
-import { BsArrowsAngleExpand } from 'react-icons/bs';
 import { VscGithubInverted } from 'react-icons/vsc';
-import { MdExpandMore } from 'react-icons/md';
-import { TbBrandNextjs } from 'react-icons/tb';
 import { SiNextdotjs, SiReact, SiMongodb, SiTypescript } from 'react-icons/si';
 import { DiSass } from 'react-icons/di';
 import Link from 'next/link';
@@ -27,12 +23,16 @@ const ProjectCard = () => {
       />
       <div className={styles.body}>
         <div className={styles.header}>
-          <div className={styles.headerTitle}>
+          <a
+            className={styles.headerTitle}
+            href="https://mark3.vercel.app"
+            target="_blank"
+          >
             <p>Mark3</p>
-            <a href="https://mark3.vercel.app" target="_blank">
+            <a>
               <HiArrowTopRightOnSquare />
             </a>
-          </div>
+          </a>
           <a
             href="https://github.com/adarsh500/mark"
             target="_blank"
