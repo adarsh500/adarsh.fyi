@@ -20,6 +20,10 @@
   @include font-size-weight(18, 24, 400);
   transition: all 0.3s ease;
 
+  &:hover {
+    transform: scale(1.03);
+  }
+
   .left {
     margin-right: 28px;
 
@@ -38,7 +42,7 @@
       align-items: center;
 
       .primary {
-        @include font-size-weight(20, 26, 500);
+        @include font-size-weight(22, 26, 500);
       }
 
       .secondary {
