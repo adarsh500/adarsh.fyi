@@ -11,9 +11,9 @@
   --border-dark: #444;
 
   --error: rgb(216, 96, 96);
-  --border-radius-small: 4px;
-  --border-radius-medium: 6px;
-  --border-radius-large: 8px;
+  --border-radius-small: 6px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 12px;
   --primary-gradient: linear-gradient(to right, #007fff, #0059b2);
 
   //background
@@ -24,7 +24,7 @@
 
   //font-colors
   --dark-text-primary: #ffffff;
-  --dark-text-secondary: #b1b1b1;
+  --dark-text-secondary: #a9a9aa;
   --light-text-primary: #000000;
   --light-text-secondary: #898989;
 
@@ -69,11 +69,11 @@ a {
 
 @media (prefers-color-scheme: light) {
   html {
-    color-scheme: light;
+    color-scheme: dark;
   }
   body {
-    color: var(--light-text-primary);
-    background: var(--background-light);
+    color: var(--dark-text-primary);
+    background: var(--background-dark);
   }
 }
 
@@ -87,7 +87,6 @@ body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  scroll-snap-type: mandatory;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
@@ -98,9 +97,11 @@ body {
 
   // background-image: linear-gradient(#3a3a3a3d 1px, transparent 1px),
   //   linear-gradient(to right, #3a3a3a3d 1px, transparent 1px);
-  background-image: linear-gradient(#0000000e 1px, transparent 1px),
-    linear-gradient(to right, #0000000e 1px, transparent 1px);
-  background-size: 90px 90px;
+  // background-image: linear-gradient(#0000000e 1px, transparent 1px),
+  //   linear-gradient(to right, #0000000e 1px, transparent 1px);
+  background-image: linear-gradient(#cbcbcb0e 1px, transparent 1px),
+    linear-gradient(to right, #cbcbcb0e 1px, transparent 1px);
+  background-size: 100px 100px;
   // style={{
   //         width: '1200px',
   //         height: '630px',
@@ -114,4 +115,10 @@ body {
     background-image: linear-gradient(#cbcbcb0e 1px, transparent 1px),
       linear-gradient(to right, #cbcbcb0e 1px, transparent 1px);
   }
+}
+
+.icon {
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
 }

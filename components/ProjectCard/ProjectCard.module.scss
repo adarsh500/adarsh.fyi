@@ -1,0 +1,102 @@
+@import '@styles/mixins';
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  margin-right: 56px;
+  border: 1px solid #f3f3f3;
+  border-radius: var(--border-radius-large);
+  min-height: 400px;
+
+  background-color: #171717;
+  backdrop-filter: blur(18px) saturate(132%);
+  -webkit-backdrop-filter: blur(18px) saturate(132%);
+  background-color: rgba(17, 17, 17, 0.5);
+  border: 1px solid #333;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    transform: scale(1.045);
+    transition: all 0.3s ease-out;
+  }
+
+  .image {
+    border-radius: var(--border-radius-large);
+    aspect-ratio: 4/3;
+  }
+
+  .body {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &Title {
+        @include font-size-weight(22, 28, 700);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p {
+          margin-right: 8px;
+        }
+      }
+
+      &Link {
+        height: 18px;
+        width: 18px;
+        vertical-align: middle;
+      }
+    }
+
+    .description {
+      margin: 10px 0;
+      @include font-size-weight(18, 24, 400);
+      color: #aaaaaa;
+      @include line-clamp(3);
+    }
+
+    .footer {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .stack {
+        display: flex;
+
+        &Item {
+          margin-right: 10px;
+          height: 18px;
+          width: 18px;
+          vertical-align: middle;
+        }
+      }
+
+      .expand {
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        background-color: rgb(41, 41, 41);
+        border-radius: var(--border-radius-large);
+      }
+    }
+  }
+}
+
+.icon {
+  height: 14px;
+  width: 14px;
+  vertical-align: middle;
+  margin-left: 2px;
+}

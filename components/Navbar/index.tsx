@@ -1,4 +1,6 @@
-import React from 'react';
+import Link from 'next/link';
+import { MdExpandMore } from 'react-icons/md';
+import { FiCommand } from 'react-icons/fi';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -8,10 +10,23 @@ const Navbar = () => {
         <span className={styles.glow}></span>
       </div>
       <div className={styles.rightNav}>
-        <li className={styles.itemActive}>About</li>
-        <li className={styles.item}>Work</li>
-        <li className={styles.item}>Projects</li>
-        <li className={styles.item}>Resume</li>
+        <Link href="/about">
+          <a className={styles.item}>About</a>
+        </Link>
+        <Link href="/work">
+          <a className={styles.item}>Work</a>
+        </Link>
+        <Link href="/projects">
+          <a className={styles.item}>Projects</a>
+        </Link>
+        <li className={styles.item}>
+          More
+          <MdExpandMore className={styles.icon} />
+        </li>
+        <li className={styles.cmd}>
+          <FiCommand />
+          {/* &nbsp;K */}
+        </li>
       </div>
     </nav>
   );

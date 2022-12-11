@@ -44,26 +44,26 @@ const NowPlaying = () => {
 
   useEffect(() => {
     fetchNowPlaying();
-  }, []);
+  }, [expanded]);
 
   return (
     <div className={styles.nowPlaying}>
-      {/* {expanded ? : null} */}
       <Image
         src="/../public/spotify.png"
         height={44}
         width={44}
         onClick={() => setExpanded(!expanded)}
       />
-      {currentTrack.isPlaying ? (
-        expanded ? (
+      {expanded ? (
+        currentTrack.isPlaying ? (
           <div className={styles.track}>
             <CurrentTrack props={currentTrack} />
             <MusicBars />
           </div>
-        ) : null
-      ) : // <p className={styles.notListening}>Not Listening</p>
-      null}
+        ) : (
+          <p className={styles.paused}>Not listening</p>
+        )
+      ) : null}
     </div>
   );
 };
