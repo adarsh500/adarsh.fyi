@@ -1,9 +1,5 @@
 @import './reset.scss';
 @import './mixins.scss';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --success: #10b981;
   --primary: #026bdc;
@@ -13,7 +9,7 @@
   --error: rgb(216, 96, 96);
   --border-radius-small: 6px;
   --border-radius-medium: 8px;
-  --border-radius-large: 12px;
+  --border-radius-large: 16px;
   --primary-gradient: linear-gradient(to right, #007fff, #0059b2);
 
   //background
@@ -55,6 +51,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+#__next {
+  background: linear-gradient(
+    rgb(19, 21, 25),
+    rgb(11, 13, 15) 20%,
+    transparent
+  );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -101,7 +105,7 @@ body {
   //   linear-gradient(to right, #0000000e 1px, transparent 1px);
   background-image: linear-gradient(#cbcbcb0e 1px, transparent 1px),
     linear-gradient(to right, #cbcbcb0e 1px, transparent 1px);
-  background-size: 100px 100px;
+  background-size: 72px 72px;
   // style={{
   //         width: '1200px',
   //         height: '630px',
@@ -110,10 +114,12 @@ body {
 
   //         // backgroundSize: '2em 2em, 4em 4em',
   //       }}
-
+  // background:
+  // width: 820px;
+  // margin: 0 auto;
   @include dark-mode {
-    background-image: linear-gradient(#cbcbcb0e 1px, transparent 1px),
-      linear-gradient(to right, #cbcbcb0e 1px, transparent 1px);
+    background-image: linear-gradient(rgba(45, 52, 64, 0.5) 1px, transparent 0),
+      linear-gradient(90deg, rgba(45, 52, 64, 0.5) 1px, #0b0d0f 0);
   }
 }
 

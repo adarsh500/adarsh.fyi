@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import styles from './Experience.module.scss';
-import Image from 'next/image';
-import Dukaan from 'icons/dukaan';
 import Dukaan2 from 'icons/Dukaan2';
 
 const Experience = () => {

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { MdExpandMore } from 'react-icons/md';
 import { FiCommand } from 'react-icons/fi';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -8,6 +9,9 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.leftNav}>
         <span className={styles.glow}></span>
+        <button className={styles.sidebar}>
+          <GiHamburgerMenu />
+        </button>
       </div>
       <div className={styles.rightNav}>
         <Link href="/about">
@@ -19,7 +23,7 @@ const Navbar = () => {
         <Link href="/projects">
           <a className={styles.item}>Projects</a>
         </Link>
-        <li className={styles.item}>
+        <li className={styles.lastItem}>
           More
           <MdExpandMore className={styles.icon} />
         </li>

@@ -2,13 +2,22 @@
 
 .container {
   min-height: 100vh;
-  padding: 2rem 25.5rem 2rem 27rem;
+  // padding: 2rem 25.5rem 2rem 27rem;
   text-align: left;
+
+  @include mobile {
+    padding: 0rem;
+  }
+
+  @include desktop {
+    width: 820px;
+    margin: 0 auto;
+  }
 }
 
 .code {
   background: #fafafa;
-  border-radius: 5px;
+  border-radius: var(--border-radius-large);
   padding: 0.75rem;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
@@ -53,6 +62,10 @@
   justify-content: flex-start;
   margin: 3rem 0;
   padding: 10px;
+
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .work {

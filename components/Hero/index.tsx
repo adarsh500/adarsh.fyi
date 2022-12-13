@@ -22,9 +22,22 @@ const Hero = () => {
             Obsessed with crafting beautiful experiences for the web
           </p>
           <p className={styles.about}>
+            {/* 20 y/o full-stack developer working as an SDE Intern
+            <b>
+              <a href="https://cloudsek.com/" target="_blank">
+                {' '}
+                @CloudSEK
+              </a>
+            </b>
+            , previously i worked as a Frontend Developer Intern
+            <b>
+              <a href="https://mydukaan.io/" target="_blank">
+                {' '}
+                @Dukaan
+              </a>
+            </b> */}
             20 y/o full-stack developer working as an SDE Intern @CloudSEK,
-            previously i worked as a Frontend Developer Intern @Dukaan. I study
-            CS at DSCE.
+            previously i worked as a Frontend Developer Intern @Dukaan.
           </p>
           <div className={styles.ctaWrapper}>
             <button className={styles.primary}>
