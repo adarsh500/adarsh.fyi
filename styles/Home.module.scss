@@ -1,52 +1,7 @@
 @import '@styles/mixins.scss';
 
-.container {
-  min-height: 100vh;
-  text-align: left;
-
-  @include mobile {
-    padding: 0rem;
-  }
-
-  @include desktop {
-    width: 820px;
-    margin: 0 auto;
-  }
-}
-
-.code {
-  background: #fafafa;
-  border-radius: var(--border-radius-large);
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-.nowPlaying {
-  position: fixed;
-  padding: 0px 12px;
-  border-radius: 40px;
-  background-color: #171717;
-  bottom: 1rem;
-  left: 1rem;
-  backdrop-filter: blur(18px) saturate(132%);
-  -webkit-backdrop-filter: blur(18px) saturate(132%);
-  background-color: rgba(17, 17, 17, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.125);
-
-  @include mobile {
-    // right: 1rem;
-  }
-}
-
 .subTitle {
-  @include font-size-weight(42, 40, 600);
+  @include font-size-weight(38, 42, 700);
 
   @include mobile {
     @include font-size-weight(28, 32, 600);
@@ -54,7 +9,7 @@
 }
 
 .section {
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,7 +17,7 @@
   margin: 4rem 0;
 
   @include mobile {
-    margin: 3rem 0;
+    margin: 2rem 1rem;
   }
 }
 
@@ -70,8 +25,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin-top: 3.5rem;
-  // padding: 10px;
+  margin-top: 2.5rem;
 
   @include mobile {
     flex-direction: column;
@@ -91,5 +45,22 @@
     flex-direction: column;
     margin-top: 3rem;
     padding: 0;
+  }
+}
+
+.spotify {
+  display: none;
+  margin: 2rem 1rem;
+  padding: 0 1.5rem;
+
+  @include mobile {
+    display: block;
+    border: 1px solid #f3f3f3;
+    border-radius: var(--border-radius-large);
+    background-color: #171717;
+    backdrop-filter: blur(18px) saturate(132%);
+    -webkit-backdrop-filter: blur(18px) saturate(132%);
+    background-color: rgba(17, 17, 17, 0.5);
+    border: 1px solid #333;
   }
 }

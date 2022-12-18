@@ -5,7 +5,15 @@ import { VscGithubInverted } from 'react-icons/vsc';
 import { SiNextdotjs, SiReact, SiMongodb, SiTypescript } from 'react-icons/si';
 import { DiSass } from 'react-icons/di';
 
-const ProjectCard = () => {
+type ProjectProps = {
+  title: string;
+  link: string;
+  description: string;
+  githubUrl: string;
+};
+
+const ProjectCard = (props: ProjectProps) => {
+  const { title, link, description, githubUrl } = props;
   return (
     <div className={styles.projectCard}>
       <Image
@@ -22,26 +30,15 @@ const ProjectCard = () => {
       />
       <div className={styles.body}>
         <div className={styles.header}>
-          <a
-            className={styles.headerTitle}
-            href="https://mark3.vercel.app"
-            target="_blank"
-          >
-            <p>Mark3</p>
+          <a className={styles.headerTitle} href={link} target="_blank">
+            <p>{title}</p>
             <HiArrowTopRightOnSquare />
           </a>
-          <a
-            href="https://github.com/adarsh500/mark"
-            target="_blank"
-            className={styles.headerLink}
-          >
+          <a href={githubUrl} target="_blank" className={styles.headerLink}>
             <VscGithubInverted className="icon" />
           </a>
         </div>
-        <div className={styles.description}>
-          a super useful bookmark management web app with sleek UI and dark mode
-          a super useful bookmark management web app with sleek UI and dark mode
-        </div>
+        <div className={styles.description}>{description}</div>
 
         <div className={styles.footer}>
           <div className={styles.stack}>

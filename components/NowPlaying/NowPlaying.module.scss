@@ -10,10 +10,21 @@
 
 .nowPlaying {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  padding: 12px 0;
+  padding: 10px 0;
+  width: 100%;
+
+  .icon {
+    height: 32px;
+    width: 32px;
+
+    @include mobile {
+      height: 28px;
+      width: 28px;
+    }
+  }
 
   .title {
     margin-left: 12px;
@@ -26,6 +37,14 @@
 
   .paused {
     margin: 0 18px;
+
+    width: 100%;
+    justify-content: space-between;
+
+    @include mobile {
+      margin: 0;
+      margin-left: 24px;
+    }
   }
 }
 
@@ -52,6 +71,7 @@
     text-align: left;
     margin-bottom: 4px;
     color: var(--dark-text-primary);
+    @include line-clamp(1);
     &:hover {
       text-decoration: underline;
     }
@@ -61,11 +81,19 @@
     color: var(--dark-text-secondary);
     @include font-size-weight(12, 14, 300);
     text-align: left;
+    @include line-clamp(1);
   }
 }
 
 .track {
   display: flex;
   border-radius: var(--border-radius-large);
-  padding: 0 18px;
+  margin: 0 24px;
+  width: 100%;
+  justify-content: space-between;
+
+  @include mobile {
+    margin: 0;
+    margin-left: 24px;
+  }
 }

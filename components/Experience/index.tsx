@@ -26,8 +26,8 @@ const Experience = () => {
             </div>
             <div className={styles.headerRight}>
               <p className={styles.primary}>Apr 2022 - June 2022</p>
-              <p className={styles.primaryMobile}>Apr '22 - June '22</p>
-              <p className={styles.secondary}>Bangalore, India</p>
+              <p className={styles.primaryMobile}>Apr - June '22</p>
+              <p className={styles.secondary}>Bangalore</p>
             </div>
           </div>
           <div className={styles.body}>

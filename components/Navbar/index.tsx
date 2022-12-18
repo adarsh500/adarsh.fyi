@@ -3,6 +3,24 @@ import { MdExpandMore } from 'react-icons/md';
 import { FiCommand } from 'react-icons/fi';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import styles from './Navbar.module.scss';
+import { useRouter } from 'next/router';
+import cn from 'classnames';
+
+type NavItemProps = {
+  href: string;
+  text: string;
+};
+
+const NavItem = ({ href, text }: NavItemProps) => {
+  const router = useRouter();
+  const isActive = router.asPath === href;
+
+  return (
+    <Link href={href}>
+      <a className={isActive ? styles.itemActive : styles.item}>{text}</a>
+    </Link>
+  );
+};
 
 const Navbar = () => {
   return (
@@ -15,19 +33,12 @@ const Navbar = () => {
         </button> */}
       </div>
       <div className={styles.rightNav}>
-        <Link href="/about">
-          <a className={styles.item}>About</a>
-        </Link>
-        <Link href="/work">
-          <a className={styles.item}>Work</a>
-        </Link>
-        <Link href="/projects">
-          <a className={styles.item}>Projects</a>
-        </Link>
-        <li className={styles.lastItem}>
-          More
-          {/* <MdExpandMore className={styles.icon} /> */}
-        </li>
+        <NavItem href="/" text="Home" />
+        <NavItem href="/about" text="About" />
+        <NavItem href="/work" text="Work" />
+        <NavItem href="/projects" text="Projects" />
+        <NavItem href="/more" text="More" />
+
         <li className={styles.cmd}>
           <FiCommand />
           {/* &nbsp;K */}

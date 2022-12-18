@@ -92,7 +92,7 @@
           }
 
           @include mobile {
-            @include font-size-weight(20, 24, 500);
+            @include font-size-weight(18, 24, 500);
           }
         }
 
@@ -100,6 +100,10 @@
           @include font-size-weight(18, 24, 400);
           // color: #a9a9a9;
           color: var(--dark-text-secondary);
+
+          @include mobile {
+            @include font-size-weight(14, 20, 400);
+          }
         }
 
         &Left {
@@ -122,8 +126,12 @@
       li {
         list-style-type: disc;
         margin-bottom: 6px;
-        @include font-size-weight(16, 24, 400);
+        @include font-size-weight(17, 26, 400);
         color: var(--dark-text-secondary);
+
+        @include mobile {
+          @include font-size-weight(16, 22, 400);
+        }
       }
     }
   }
@@ -154,7 +162,7 @@
       align-items: center;
 
       .primary {
-        @include font-size-weight(20, 26, 500);
+        @include font-size-weight(18, 24, 500);
 
         @include mobile {
           display: none;
@@ -167,7 +175,7 @@
         }
 
         @include mobile {
-          @include font-size-weight(20, 24, 500);
+          @include font-size-weight(18, 24, 500);
         }
       }
 
@@ -175,6 +183,10 @@
         @include font-size-weight(18, 24, 400);
         // color: #a9a9a9;
         color: var(--dark-text-secondary);
+
+        @include mobile {
+          @include font-size-weight(14, 20, 400);
+        }
       }
 
       &Left {
@@ -197,11 +209,11 @@
     li {
       list-style-type: disc;
       margin-bottom: 6px;
-      @include font-size-weight(18, 24, 400);
+      @include font-size-weight(17, 26, 400);
       color: var(--dark-text-secondary);
 
       @include mobile {
-        @include font-size-weight(16, 24, 400);
+        @include font-size-weight(16, 22, 400);
       }
     }
   }

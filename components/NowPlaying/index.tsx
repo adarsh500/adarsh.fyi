@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import MusicBars from '@components/MusicBars';
 import styles from './NowPlaying.module.scss';
+import { SiSpotify } from 'react-icons/si';
 
 interface NotPlaying {
   isPlaying?: false;
@@ -18,10 +19,9 @@ interface Playing {
 
 const CurrentTrack = ({ props }: any) => {
   const { albumImageUrl, songUrl, artist, title } = props;
-
   return (
     <div className={styles.currentTrack}>
-      <Image src={albumImageUrl} height={44} width={44}></Image>
+      <Image src={albumImageUrl} height={40} width={40}></Image>
       <div className={styles.trackInfo}>
         <a className={styles.trackTitle} href={songUrl}>
           {title}
@@ -39,7 +39,7 @@ const NowPlaying = () => {
   const fetchNowPlaying = async () => {
     const track = await fetch('api/getNowPlaying');
     const data = await track.json();
-    setCurrentTrack(data);
+    // setCurrentTrack(data);
   };
 
   useEffect(() => {
@@ -47,21 +47,17 @@ const NowPlaying = () => {
   }, [expanded]);
 
   return (
-    <div className={styles.nowPlaying}>
-      {/* <Image
-        src="/../public/spotify.png"
-        height={44}
-        width={44}
-        onClick={() => setExpanded(!expanded)}
-      /> */}
-      {expanded ? (
-        currentTrack.isPlaying ? (
+    <div className={styles.nowPlaying} onClick={() => setExpanded(!expanded)}>
+      <SiSpotify className={styles.icon} />
+      {!expanded ? (
+        currentTrack?.isPlaying ? (
           <div className={styles.track}>
             <CurrentTrack props={currentTrack} />
             <MusicBars />
           </div>
         ) : (
-          <p className={styles.paused}>Not listening</p>
+          // <p className={styles.paused}>Not listening</p>
+          <></>
         )
       ) : null}
     </div>

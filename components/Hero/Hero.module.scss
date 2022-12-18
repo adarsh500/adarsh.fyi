@@ -25,7 +25,6 @@
 
 .main {
   flex: 1;
-  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,16 +32,16 @@
   word-wrap: break-word;
   @include font-size-weight(20, 30, 400);
   text-align: left;
-  padding: 24px 16px;
+  margin: 6rem 0;
+
   @include dark-mode {
     color: var(--dark-text-primary);
   }
-  margin-top: 3rem;
 
   @include mobile {
-    padding: 1.5rem;
-    margin-top: 3rem;
-    min-height: 20vh;
+    padding: 1.5rem 1rem;
+    margin: 2rem 0 1rem 0;
+    // min-height: 20vh;
   }
 }
 
@@ -62,22 +61,33 @@
   }
 
   .tagline {
-    @include font-size-weight(32, 32, 500);
-    margin-bottom: 32px;
+    @include font-size-weight(28, 36, 500);
+    margin-bottom: 20px;
 
     @include dark-mode {
       color: var(--dark-text-primary);
     }
 
     @include mobile {
-      margin-bottom: 24px;
-      @include font-size-weight(22, 30, 400);
+      display: none;
+    }
+
+    &Mobile {
+      @include desktop {
+        display: none;
+      }
+
+      @include mobile {
+        margin-bottom: 18px;
+        @include font-size-weight(20, 28, 400);
+        display: block;
+      }
     }
   }
 
   .title {
     // user-select: none;
-    @include font-size-weight(90, 110, 700);
+    @include font-size-weight(72, 80, 700);
     // background: repeating-linear-gradient(
     //   -45deg,
     //   red 0%,
@@ -109,17 +119,18 @@
     background-clip: text;
 
     @include mobile {
-      @include font-size-weight(46, 70, 700);
+      @include font-size-weight(36, 44, 700);
     }
   }
 
   .about {
-    max-width: 95%;
+    max-width: 82%;
     color: rgb(210, 210, 210);
     color: var(--dark-text-secondary);
     @include font-size-weight(22, 34, 400);
 
     @include mobile {
+      max-width: 100%;
       @include font-size-weight(18, 28, 400);
     }
 
