@@ -47,3 +47,20 @@
     padding: 0;
   }
 }
+
+.spotify {
+  display: none;
+  margin: 2rem 1.5rem;
+  padding: 0 1.5rem;
+
+  @include mobile {
+    display: block;
+    border: 1px solid #f3f3f3;
+    border-radius: var(--border-radius-large);
+    background-color: #171717;
+    backdrop-filter: blur(18px) saturate(132%);
+    -webkit-backdrop-filter: blur(18px) saturate(132%);
+    background-color: rgba(17, 17, 17, 0.5);
+    border: 1px solid #333;
+  }
+}

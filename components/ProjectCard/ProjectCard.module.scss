@@ -3,7 +3,7 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  margin-right: 64px;
+  margin-right: 48px;
   border: 1px solid #f3f3f3;
   border-radius: var(--border-radius-large);
   min-height: 400px;
@@ -85,7 +85,7 @@
     }
 
     .footer {
-      margin-top: 32px;
+      margin-top: 16px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;

@@ -71,16 +71,17 @@
     display: flex;
     align-items: center;
     list-style-type: none;
-    padding: 10px 0 10px 16px;
-    @include font-size-weight(18, 22, 500);
+    padding: 0.5rem 0.75rem;
+    @include font-size-weight(18, 24, 500);
+    color: var(dark-text-secondary);
 
     &:last-child {
       padding-right: 0;
     }
 
     @include mobile {
-      padding: 4px 10px;
-      @include font-size-weight(16, 22, 400);
+      padding: 4px 8px;
+      @include font-size-weight(16, 22, 500);
     }
 
     .icon {
@@ -92,11 +93,15 @@
 
     &Active {
       list-style-type: none;
-      padding: 10px 20px;
-      border-radius: var(--border-radius-large);
-      // padding: 5px 20px;
-      border: 1px solid var(--border-dark);
-      color: var(--dark-text-primary);
+      padding: 6px 12px;
+      border-radius: var(--border-radius-medium);
+      @include font-size-weight(19, 24, 500);
+      color: white;
+
+      @include mobile {
+        padding: 4px 8px;
+        @include font-size-weight(18, 22, 500);
+      }
     }
   }
 

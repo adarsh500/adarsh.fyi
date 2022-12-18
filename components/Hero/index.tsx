@@ -11,7 +11,7 @@ const Hero = () => {
             Crafting beautiful experiences for the web
           </p>
           <p className={styles.about}>
-            20 y/o full-stack developer working as an SDE Intern @
+            I'm a 20 y/o full-stack developer working as an SDE Intern @
             <a
               href="https://cloudsek.com/"
               target="_blank"
@@ -19,7 +19,7 @@ const Hero = () => {
             >
               CloudSEK
             </a>
-            , I previously worked as a Frontend Developer Intern @
+            , previously I worked as a Frontend Developer Intern @
             <a
               href="https://mydukaan.io/"
               target="_blank"
