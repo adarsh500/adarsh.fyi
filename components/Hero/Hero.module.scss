@@ -25,7 +25,7 @@
 
 .main {
   flex: 1;
-  min-height: 50vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,11 +33,17 @@
   word-wrap: break-word;
   @include font-size-weight(20, 30, 400);
   text-align: left;
-  padding: 10px;
+  padding: 24px 16px;
   @include dark-mode {
     color: var(--dark-text-primary);
   }
-  margin-top: 30px;
+  margin-top: 3rem;
+
+  @include mobile {
+    padding: 1.5rem;
+    margin-top: 3rem;
+    min-height: 20vh;
+  }
 }
 
 .container {
@@ -45,7 +51,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  // margin-top: 60px;
 
   .secondaryText {
     @include font-size-weight(20, 24, 400);
@@ -56,9 +61,23 @@
     }
   }
 
+  .tagline {
+    @include font-size-weight(32, 32, 500);
+    margin-bottom: 32px;
+
+    @include dark-mode {
+      color: var(--dark-text-primary);
+    }
+
+    @include mobile {
+      margin-bottom: 24px;
+      @include font-size-weight(22, 30, 400);
+    }
+  }
+
   .title {
     // user-select: none;
-    @include font-size-weight(100, 120, 700);
+    @include font-size-weight(90, 110, 700);
     // background: repeating-linear-gradient(
     //   -45deg,
     //   red 0%,
@@ -87,21 +106,26 @@
 
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-  }
+    background-clip: text;
 
-  .tagline {
-    @include font-size-weight(28, 32, 500);
-    margin-bottom: 20px;
-
-    @include dark-mode {
-      color: var(--dark-text-primary);
+    @include mobile {
+      @include font-size-weight(46, 70, 700);
     }
   }
 
   .about {
     max-width: 95%;
     color: rgb(210, 210, 210);
-    @include font-size-weight(22, 28, 400);
+    color: var(--dark-text-secondary);
+    @include font-size-weight(22, 34, 400);
+
+    @include mobile {
+      @include font-size-weight(18, 28, 400);
+    }
+
+    .link {
+      text-decoration: underline;
+    }
   }
 
   .ctaWrapper {
@@ -109,8 +133,8 @@
     @include font-size-weight(16, 24, 400);
 
     .icon {
-      height: 18px;
-      width: 18px;
+      height: 14px;
+      width: 14px;
       margin-left: 6px;
       vertical-align: middle;
     }
@@ -132,6 +156,11 @@
       &:hover {
         transform: scale(1.045);
       }
+
+      @include mobile {
+        margin: 20px 0;
+        padding: 8px 12px;
+      }
     }
 
     .primary {
@@ -149,6 +178,13 @@
 
       &:hover {
         transform: scale(1.07);
+      }
+
+      @include mobile {
+        margin: 20px 0;
+        padding: 8px 12px;
+        margin-right: 12px;
+        @include font-size-weight(16, 20, 400);
       }
     }
   }

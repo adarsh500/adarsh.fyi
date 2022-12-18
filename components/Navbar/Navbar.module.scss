@@ -45,12 +45,43 @@
   @include font-size-weight(18, 24, 400);
   color: darkgray;
 
+  @include mobile {
+    position: sticky;
+    top: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 0;
+    padding: 16px 12px;
+  }
+
+  .lastItem {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 10px 0 10px 16px;
+    @include font-size-weight(18, 22, 500);
+
+    @include mobile {
+      padding: 4px 0 4px 10px;
+      @include font-size-weight(16, 22, 400);
+    }
+  }
+
   .item {
     display: flex;
     align-items: center;
     list-style-type: none;
-    padding: 10px 16px;
+    padding: 10px 0 10px 16px;
     @include font-size-weight(18, 22, 500);
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @include mobile {
+      padding: 4px 10px;
+      @include font-size-weight(16, 22, 400);
+    }
 
     .icon {
       height: 14px;
@@ -73,6 +104,27 @@
     display: flex;
     align-items: center;
 
+    .sidebar {
+      display: none;
+
+      @include mobile {
+        display: inline-block;
+        background-color: rgba(17, 17, 17, 0.75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin: 30px 0;
+        padding: 6px;
+        border: 1px solid var(--border-dark);
+        border-radius: var(--border-radius-medium);
+      }
+
+      .icon {
+        height: 18px;
+        width: 18px;
+      }
+    }
+
     .glow {
       border-radius: 100%;
       @include content-size(24, 24);
@@ -80,6 +132,10 @@
       background-size: 30px 30px;
       animation: gradient 7s ease infinite;
       animation: spin 4s linear infinite;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
@@ -90,21 +146,24 @@
     .cmd {
       list-style-type: none;
       padding: 8px;
+      margin-left: 12px;
       display: flex;
       align-items: center;
-      backdrop-filter: blur(10px) saturate(232%);
-      -webkit-backdrop-filter: blur(18px) saturate(132%);
       background-color: rgba(17, 17, 17, 0.75);
       display: flex;
       align-items: center;
       justify-content: center;
       border: 1px solid rgba(255, 255, 255, 0.125);
-      border-radius: var(--border-radius-large);
+      border-radius: 12px;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     .secondary {
-      backdrop-filter: blur(10px) saturate(232%);
-      -webkit-backdrop-filter: blur(18px) saturate(132%);
+      // backdrop-filter: blur(10px) saturate(232%);
+      // -webkit-backdrop-filter: blur(18px) saturate(132%);
       background-color: rgba(17, 17, 17, 0.75);
       display: flex;
       align-items: center;

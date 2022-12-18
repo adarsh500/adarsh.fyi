@@ -15,13 +15,23 @@
   background-color: rgba(17, 17, 17, 0.5);
   border: 1px solid #333;
 
+  @include mobile {
+    width: 100%;
+    flex-direction: row;
+    margin-right: 0;
+    margin-bottom: 32px;
+    min-height: min-content;
+  }
+
   &:last-child {
     margin-right: 0;
+    margin-bottom: 0;
   }
 
   &:hover {
-    transform: scale(1.045);
-    transition: all 0.3s ease-out;
+    transform: scale(1.04);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 14px rgba(27, 64, 156, 0.543);
   }
 
   .image {
@@ -32,7 +42,7 @@
   .body {
     flex-direction: column;
     justify-content: flex-end;
-    padding: 20px;
+    padding: 18px;
 
     .header {
       display: flex;
@@ -41,13 +51,17 @@
       align-items: center;
 
       &Title {
-        @include font-size-weight(22, 28, 700);
+        @include font-size-weight(22, 28, 600);
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
         p {
           margin-right: 8px;
+        }
+
+        @include mobile {
+          @include font-size-weight(20, 24, 600);
         }
       }
 
@@ -60,9 +74,15 @@
 
     .description {
       margin: 10px 0;
-      @include font-size-weight(18, 24, 400);
+      @include font-size-weight(18, 26, 400);
       color: #aaaaaa;
       @include line-clamp(3);
+
+      @include mobile {
+        margin: 12px 0;
+        @include line-clamp(3);
+        @include font-size-weight(16, 24, 400);
+      }
     }
 
     .footer {
@@ -71,6 +91,10 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+
+      @include mobile {
+        margin-top: 22px;
+      }
 
       .stack {
         display: flex;

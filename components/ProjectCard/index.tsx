@@ -4,7 +4,6 @@ import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
 import { VscGithubInverted } from 'react-icons/vsc';
 import { SiNextdotjs, SiReact, SiMongodb, SiTypescript } from 'react-icons/si';
 import { DiSass } from 'react-icons/di';
-import Link from 'next/link';
 
 const ProjectCard = () => {
   return (

@@ -66,6 +66,6 @@
 
 .track {
   display: flex;
-  border-radius: 24px;
+  border-radius: var(--border-radius-large);
   padding: 0 18px;
 }

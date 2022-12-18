@@ -48,12 +48,12 @@ const NowPlaying = () => {
 
   return (
     <div className={styles.nowPlaying}>
-      <Image
+      {/* <Image
         src="/../public/spotify.png"
         height={44}
         width={44}
         onClick={() => setExpanded(!expanded)}
-      />
+      /> */}
       {expanded ? (
         currentTrack.isPlaying ? (
           <div className={styles.track}>

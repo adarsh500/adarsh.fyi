@@ -1,9 +1,5 @@
 @import './reset.scss';
 @import './mixins.scss';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --success: #10b981;
   --primary: #026bdc;
@@ -13,7 +9,7 @@
   --error: rgb(216, 96, 96);
   --border-radius-small: 6px;
   --border-radius-medium: 8px;
-  --border-radius-large: 12px;
+  --border-radius-large: 16px;
   --primary-gradient: linear-gradient(to right, #007fff, #0059b2);
 
   //background
@@ -24,7 +20,7 @@
 
   //font-colors
   --dark-text-primary: #ffffff;
-  --dark-text-secondary: #a9a9aa;
+  --dark-text-secondary: #a9a9a9;
   --light-text-primary: #000000;
   --light-text-secondary: #898989;
 
@@ -57,6 +53,14 @@ a {
   box-sizing: border-box;
 }
 
+#__next {
+  background: linear-gradient(
+    rgb(19, 21, 25),
+    rgb(11, 13, 15) 20%,
+    transparent
+  );
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -67,9 +71,19 @@ a {
   }
 }
 
+// @media (prefers-color-scheme: light) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: var(--light-text-primary);
+//     background: var(--background-light);
+//   }
+// }
+
 @media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
     color: var(--dark-text-primary);
@@ -99,9 +113,9 @@ body {
   //   linear-gradient(to right, #3a3a3a3d 1px, transparent 1px);
   // background-image: linear-gradient(#0000000e 1px, transparent 1px),
   //   linear-gradient(to right, #0000000e 1px, transparent 1px);
-  background-image: linear-gradient(#cbcbcb0e 1px, transparent 1px),
-    linear-gradient(to right, #cbcbcb0e 1px, transparent 1px);
-  background-size: 100px 100px;
+  // background-image: linear-gradient(#cbcbcb0e 1px, transparent 1px),
+  //   linear-gradient(to right, #cbcbcb0e 1px, transparent 1px);
+  // background-size: 84px 84px;
   // style={{
   //         width: '1200px',
   //         height: '630px',
@@ -110,11 +124,13 @@ body {
 
   //         // backgroundSize: '2em 2em, 4em 4em',
   //       }}
-
-  @include dark-mode {
-    background-image: linear-gradient(#cbcbcb0e 1px, transparent 1px),
-      linear-gradient(to right, #cbcbcb0e 1px, transparent 1px);
-  }
+  // background:
+  // width: 820px;
+  // margin: 0 auto;
+  // @include dark-mode {
+    background-image: linear-gradient(rgba(45, 52, 64, 0.5) 1px, transparent 0),
+      linear-gradient(90deg, rgba(45, 52, 64, 0.5) 1px, #0b0d0f 0);
+  // }
 }
 
 .icon {

@@ -6,6 +6,7 @@ import styles from '@styles/Home.module.scss';
 import Navbar from '@components/Navbar';
 import ProjectCard from '@components/ProjectCard';
 import Experience from '@components/Experience';
+import Footer from '@components/Footer';
 
 export default function Home() {
   return (
@@ -33,10 +34,11 @@ export default function Home() {
         </div>
       </div>
 
+      <Footer />
+
       <div className={styles.nowPlaying}>
         <NowPlaying />
       </div>
-      {/* <footer className={styles.footer}></footer> */}
     </div>
   );
 }

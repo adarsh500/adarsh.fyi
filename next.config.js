@@ -3,6 +3,7 @@ const nextConfig = {
   images: {
     domains: ['i.scdn.co', 'og-image.vercel.app'],
   },
+  plugins: [],
   reactStrictMode: true,
   swcMinify: true,
 };
