@@ -71,6 +71,7 @@
     text-align: left;
     margin-bottom: 4px;
     color: var(--dark-text-primary);
+    @include line-clamp(1);
     &:hover {
       text-decoration: underline;
     }
@@ -80,6 +81,7 @@
     color: var(--dark-text-secondary);
     @include font-size-weight(12, 14, 300);
     text-align: left;
+    @include line-clamp(1);
   }
 }
 

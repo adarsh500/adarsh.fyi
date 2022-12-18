@@ -69,8 +69,19 @@
     }
 
     @include mobile {
-      margin-bottom: 18px;
-      @include font-size-weight(22, 30, 400);
+      display: none;
+    }
+
+    &Mobile {
+      @include desktop {
+        display: none;
+      }
+
+      @include mobile {
+        margin-bottom: 18px;
+        @include font-size-weight(20, 28, 400);
+        display: block;
+      }
     }
   }
 
@@ -108,7 +119,7 @@
     background-clip: text;
 
     @include mobile {
-      @include font-size-weight(46, 56, 700);
+      @include font-size-weight(36, 44, 700);
     }
   }
 

@@ -10,6 +10,9 @@ const Hero = () => {
           <p className={styles.tagline}>
             Crafting beautiful experiences for the web
           </p>
+          <p className={styles.taglineMobile}>
+            Crafting rich experiences for the web
+          </p>
           <p className={styles.about}>
             I'm a 20 y/o full-stack developer working as an SDE Intern @
             <a
