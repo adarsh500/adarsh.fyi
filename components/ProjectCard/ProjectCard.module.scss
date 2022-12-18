@@ -3,8 +3,7 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  width: 450px;
-  margin-right: 56px;
+  margin-right: 64px;
   border: 1px solid #f3f3f3;
   border-radius: var(--border-radius-large);
   min-height: 400px;
@@ -74,7 +73,7 @@
 
     .description {
       margin: 10px 0;
-      @include font-size-weight(18, 26, 400);
+      @include font-size-weight(17, 26, 400);
       color: #aaaaaa;
       @include line-clamp(3);
 

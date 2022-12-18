@@ -12,25 +12,21 @@ const Hero = () => {
           </p>
           <p className={styles.about}>
             20 y/o full-stack developer working as an SDE Intern @
-            <b>
-              <a
-                href="https://cloudsek.com/"
-                target="_blank"
-                className={styles.link}
-              >
-                CloudSEK
-              </a>
-            </b>
+            <a
+              href="https://cloudsek.com/"
+              target="_blank"
+              className={styles.link}
+            >
+              CloudSEK
+            </a>
             , I previously worked as a Frontend Developer Intern @
-            <b>
-              <a
-                href="https://mydukaan.io/"
-                target="_blank"
-                className={styles.link}
-              >
-                Dukaan
-              </a>
-            </b>
+            <a
+              href="https://mydukaan.io/"
+              target="_blank"
+              className={styles.link}
+            >
+              Dukaan
+            </a>
           </p>
         </div>
       </div>
