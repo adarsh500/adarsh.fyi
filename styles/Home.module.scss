@@ -45,12 +45,12 @@
   @include font-size-weight(42, 40, 600);
 
   @include mobile {
-    @include font-size-weight(30, 34, 600);
+    @include font-size-weight(28, 32, 600);
   }
 }
 
 .section {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,7 +67,7 @@
   display: flex;
   justify-content: flex-start;
   margin-top: 3rem;
-  padding: 10px;
+  // padding: 10px;
 
   @include mobile {
     flex-direction: column;
@@ -81,7 +81,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
-  padding: 10px;
+  // padding: 10px;
 
   @include mobile {
     flex-direction: column;

@@ -42,7 +42,7 @@
   .body {
     flex-direction: column;
     justify-content: flex-end;
-    padding: 20px;
+    padding: 18px;
 
     .header {
       display: flex;
@@ -51,13 +51,17 @@
       align-items: center;
 
       &Title {
-        @include font-size-weight(22, 28, 700);
+        @include font-size-weight(22, 28, 600);
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
         p {
           margin-right: 8px;
+        }
+
+        @include mobile {
+          @include font-size-weight(20, 24, 600);
         }
       }
 
@@ -73,6 +77,12 @@
       @include font-size-weight(18, 24, 400);
       color: #aaaaaa;
       @include line-clamp(3);
+
+      @include mobile {
+        margin: 12px 0;
+        @include line-clamp(3);
+        @include font-size-weight(16, 24, 400);
+      }
     }
 
     .footer {
@@ -81,6 +91,10 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+
+      @include mobile {
+        margin-top: 22px;
+      }
 
       .stack {
         display: flex;

@@ -40,6 +40,7 @@
   margin-top: 3rem;
 
   @include mobile {
+    padding: 1.5rem;
     margin-top: 3rem;
     min-height: 20vh;
   }
@@ -50,7 +51,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  // margin-top: 60px;
 
   .secondaryText {
     @include font-size-weight(20, 24, 400);
