@@ -17,7 +17,7 @@
   margin: 4rem 0;
 
   @include mobile {
-    margin: 2rem 1.5rem;
+    margin: 2rem 1rem;
   }
 }
 
@@ -50,7 +50,7 @@
 
 .spotify {
   display: none;
-  margin: 2rem 1.5rem;
+  margin: 2rem 1rem;
   padding: 0 1.5rem;
 
   @include mobile {
