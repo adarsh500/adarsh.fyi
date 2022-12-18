@@ -74,7 +74,7 @@
 
     .description {
       margin: 10px 0;
-      @include font-size-weight(18, 24, 400);
+      @include font-size-weight(18, 26, 400);
       color: #aaaaaa;
       @include line-clamp(3);
 

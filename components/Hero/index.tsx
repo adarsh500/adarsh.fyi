@@ -8,7 +8,7 @@ const Hero = () => {
         <div className={styles.container}>
           <p className={styles.title}>Adarsh Sulegai.</p>
           <p className={styles.tagline}>
-            Obsessed with crafting beautiful experiences for the web
+            Crafting beautiful experiences for the web
           </p>
           <p className={styles.about}>
             20 y/o full-stack developer working as an SDE Intern @
@@ -21,7 +21,7 @@ const Hero = () => {
                 CloudSEK
               </a>
             </b>
-            , previously i worked as a Frontend Developer Intern @
+            , I previously worked as a Frontend Developer Intern @
             <b>
               <a
                 href="https://mydukaan.io/"

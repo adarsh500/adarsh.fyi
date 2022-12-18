@@ -20,7 +20,7 @@
 
   //font-colors
   --dark-text-primary: #ffffff;
-  --dark-text-secondary: #a9a9aa;
+  --dark-text-secondary: #a9a9a9;
   --light-text-primary: #000000;
   --light-text-secondary: #898989;
 
@@ -71,9 +71,19 @@ a {
   }
 }
 
+// @media (prefers-color-scheme: light) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: var(--light-text-primary);
+//     background: var(--background-light);
+//   }
+// }
+
 @media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
     color: var(--dark-text-primary);
@@ -117,10 +127,10 @@ body {
   // background:
   // width: 820px;
   // margin: 0 auto;
-  @include dark-mode {
+  // @include dark-mode {
     background-image: linear-gradient(rgba(45, 52, 64, 0.5) 1px, transparent 0),
       linear-gradient(90deg, rgba(45, 52, 64, 0.5) 1px, #0b0d0f 0);
-  }
+  // }
 }
 
 .icon {

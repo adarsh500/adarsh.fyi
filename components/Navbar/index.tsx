@@ -9,9 +9,10 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.leftNav}>
         <span className={styles.glow}></span>
-        <button className={styles.sidebar}>
-          <GiHamburgerMenu />
-        </button>
+
+        {/* <button className={styles.sidebar}>
+          <GiHamburgerMenu className={styles.icon} />
+        </button> */}
       </div>
       <div className={styles.rightNav}>
         <Link href="/about">
@@ -25,7 +26,7 @@ const Navbar = () => {
         </Link>
         <li className={styles.lastItem}>
           More
-          <MdExpandMore className={styles.icon} />
+          {/* <MdExpandMore className={styles.icon} /> */}
         </li>
         <li className={styles.cmd}>
           <FiCommand />

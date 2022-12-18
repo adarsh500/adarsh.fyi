@@ -10,7 +10,6 @@ const Experience = () => {
   };
 
   return (
-    // <div className={styles.vertical}>
     <div className={styles.card}>
       <div className={expanded ? styles.experienceExpanded : styles.experience}>
         <div className={styles.left}>
@@ -67,7 +66,6 @@ const Experience = () => {
         </button>
       </div>
     </div>
-    // </div>
   );
 };
 

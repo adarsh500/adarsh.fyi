@@ -62,21 +62,22 @@
   }
 
   .tagline {
-    @include font-size-weight(28, 32, 400);
-    margin-bottom: 20px;
+    @include font-size-weight(32, 32, 500);
+    margin-bottom: 32px;
 
     @include dark-mode {
       color: var(--dark-text-primary);
     }
 
     @include mobile {
+      margin-bottom: 24px;
       @include font-size-weight(22, 30, 400);
     }
   }
 
   .title {
     // user-select: none;
-    @include font-size-weight(90, 120, 700);
+    @include font-size-weight(90, 110, 700);
     // background: repeating-linear-gradient(
     //   -45deg,
     //   red 0%,
@@ -115,7 +116,8 @@
   .about {
     max-width: 95%;
     color: rgb(210, 210, 210);
-    @include font-size-weight(22, 28, 400);
+    color: var(--dark-text-secondary);
+    @include font-size-weight(22, 34, 400);
 
     @include mobile {
       @include font-size-weight(18, 28, 400);

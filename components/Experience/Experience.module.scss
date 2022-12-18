@@ -15,6 +15,8 @@
   padding: 12px 0;
   @include font-size-weight(16, 22, 300);
   color: var(--dark-text-secondary);
+  border-bottom-left-radius: var(--border-radius-large);
+  border-bottom-right-radius: var(--border-radius-large);
 }
 
 .card {
@@ -29,7 +31,7 @@
   flex-direction: row;
   padding: 32px 24px;
   border-radius: var(--border-radius-large);
-  height: 250px;
+  height: 240px;
   overflow: hidden;
   background-color: #171717;
   background-color: rgba(17, 17, 17, 0.75);
@@ -120,7 +122,7 @@
       li {
         list-style-type: disc;
         margin-bottom: 6px;
-        @include font-size-weight(18, 24, 400);
+        @include font-size-weight(16, 24, 400);
         color: var(--dark-text-secondary);
       }
     }
@@ -128,7 +130,7 @@
 
   @include mobile {
     margin-left: 0;
-    height: 220px;  
+    height: 220px;
     padding: 18px;
   }
 
@@ -152,7 +154,7 @@
       align-items: center;
 
       .primary {
-        @include font-size-weight(18, 24, 500);
+        @include font-size-weight(20, 26, 500);
 
         @include mobile {
           display: none;
@@ -197,6 +199,10 @@
       margin-bottom: 6px;
       @include font-size-weight(18, 24, 400);
       color: var(--dark-text-secondary);
+
+      @include mobile {
+        @include font-size-weight(16, 24, 400);
+      }
     }
   }
 }
