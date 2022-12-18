@@ -2,7 +2,6 @@
 
 .container {
   min-height: 100vh;
-  // padding: 2rem 25.5rem 2rem 27rem;
   text-align: left;
 
   @include mobile {
@@ -40,31 +39,40 @@
   -webkit-backdrop-filter: blur(18px) saturate(132%);
   background-color: rgba(17, 17, 17, 0.75);
   border: 1px solid rgba(255, 255, 255, 0.125);
-  // border-radius: 12px;
-  // border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 .subTitle {
   @include font-size-weight(42, 40, 600);
+
+  @include mobile {
+    @include font-size-weight(30, 34, 600);
+  }
 }
 
 .section {
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin: 4rem 0;
+
+  @include mobile {
+    margin: 3rem 0;
+  }
 }
 
 .projectWrapper {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin: 3rem 0;
+  margin-top: 3rem;
   padding: 10px;
 
   @include mobile {
     flex-direction: column;
+    margin-top: 3rem;
+    padding: 0;
   }
 }
 
@@ -72,6 +80,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 3rem 0;
+  margin-top: 3rem;
   padding: 10px;
+
+  @include mobile {
+    flex-direction: column;
+    margin-top: 3rem;
+    padding: 0;
+  }
 }

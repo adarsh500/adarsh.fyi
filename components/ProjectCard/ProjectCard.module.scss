@@ -17,15 +17,21 @@
 
   @include mobile {
     width: 100%;
+    flex-direction: row;
+    margin-right: 0;
+    margin-bottom: 32px;
+    min-height: min-content;
   }
 
   &:last-child {
     margin-right: 0;
+    margin-bottom: 0;
   }
 
   &:hover {
-    transform: scale(1.045);
-    transition: all 0.3s ease-out;
+    transform: scale(1.04);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 14px rgba(27, 64, 156, 0.543);
   }
 
   .image {

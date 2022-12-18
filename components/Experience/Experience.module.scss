@@ -9,7 +9,7 @@
   margin-bottom: 30px;
   border-radius: var(--border-radius-large);
   height: 250px;
-  overflow: hidden;
+  overflow: scroll;
 
   border-radius: var(--border-radius-large);
   background-color: #171717;
@@ -20,12 +20,24 @@
   @include font-size-weight(18, 24, 400);
   transition: all 0.3s ease;
 
+  @include mobile {
+    margin-left: 0;
+    margin-bottom: 32px;
+    padding: 22px;
+  }
+
   &:hover {
     transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 14px rgba(27, 64, 156, 0.543);
   }
 
   .left {
     margin-right: 28px;
+
+    @include mobile {
+      display: none;
+    }
 
     .logo {
       // padding: 20px;
