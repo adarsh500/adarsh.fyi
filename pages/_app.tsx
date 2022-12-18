@@ -1,3 +1,4 @@
+import Layout from '@components/Layout';
 import { AppProps } from 'next/app';
 import '../styles/globals.scss';
 
@@ -7,7 +8,9 @@ import '../styles/globals.scss';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     // <main className={inter.className}>
-    <Component {...pageProps} />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
     // </main>
   );
 }

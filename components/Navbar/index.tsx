@@ -24,10 +24,9 @@ const Navbar = () => {
         <Link href="/projects">
           <a className={styles.item}>Projects</a>
         </Link>
-        <li className={styles.lastItem}>
-          More
-          {/* <MdExpandMore className={styles.icon} /> */}
-        </li>
+        <Link href="/projects">
+          <a className={styles.item}>More</a>
+        </Link>
         <li className={styles.cmd}>
           <FiCommand />
           {/* &nbsp;K */}
