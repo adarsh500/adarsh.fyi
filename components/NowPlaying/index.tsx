@@ -21,7 +21,7 @@ const CurrentTrack = ({ props }: any) => {
   const { albumImageUrl, songUrl, artist, title } = props;
   return (
     <div className={styles.currentTrack}>
-      <Image src={albumImageUrl} height={40} width={40}></Image>
+      {/* <Image src={albumImageUrl} height={40} width={40}></Image> */}
       <div className={styles.trackInfo}>
         <a className={styles.trackTitle} href={songUrl}>
           {title}
@@ -39,7 +39,7 @@ const NowPlaying = () => {
   const fetchNowPlaying = async () => {
     const track = await fetch('api/getNowPlaying');
     const data = await track.json();
-    // setCurrentTrack(data);
+    setCurrentTrack(data);
   };
 
   useEffect(() => {

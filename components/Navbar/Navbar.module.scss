@@ -80,8 +80,8 @@
     }
 
     @include mobile {
-      padding: 4px 8px;
-      @include font-size-weight(16, 22, 500);
+      padding: 2px 4px;
+      @include font-size-weight(16, 22, 400);
     }
 
     .icon {
@@ -100,7 +100,7 @@
 
       @include mobile {
         padding: 4px 8px;
-        @include font-size-weight(18, 22, 500);
+        @include font-size-weight(16, 22, 500);
       }
     }
   }

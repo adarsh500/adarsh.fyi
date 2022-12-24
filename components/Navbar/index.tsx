@@ -39,10 +39,9 @@ const Navbar = () => {
         <NavItem href="/projects" text="Projects" />
         <NavItem href="/more" text="More" />
 
-        <li className={styles.cmd}>
+        {/* <li className={styles.cmd}>
           <FiCommand />
-          {/* &nbsp;K */}
-        </li>
+        </li> */}
       </div>
     </nav>
   );

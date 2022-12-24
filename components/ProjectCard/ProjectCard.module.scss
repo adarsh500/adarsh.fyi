@@ -50,7 +50,7 @@
       align-items: center;
 
       &Title {
-        @include font-size-weight(22, 28, 600);
+        @include font-size-weight(22, 28, 500);
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -60,7 +60,7 @@
         }
 
         @include mobile {
-          @include font-size-weight(20, 24, 600);
+          @include font-size-weight(20, 24, 500);
         }
       }
 

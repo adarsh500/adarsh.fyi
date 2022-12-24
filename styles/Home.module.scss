@@ -1,10 +1,10 @@
 @import '@styles/mixins.scss';
 
 .subTitle {
-  @include font-size-weight(38, 42, 700);
+  @include font-size-weight(34, 38, 600);
 
   @include mobile {
-    @include font-size-weight(28, 32, 600);
+    @include font-size-weight(26, 30, 600);
   }
 }
 
@@ -25,11 +25,11 @@
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
 
   @include mobile {
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding: 0;
   }
 }
@@ -38,12 +38,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 3.5rem;
+  margin-top: 3rem;
   // padding: 10px;
 
   @include mobile {
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding: 0;
   }
 }
