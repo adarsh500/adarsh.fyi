@@ -3,7 +3,7 @@ import styles from '@styles/Home.module.scss';
 import ProjectCard from '@components/ProjectCard';
 import Experience from '@components/Experience';
 import NowPlaying from '@components/NowPlaying';
-import Dukaan from '@icons/Dukaan';
+import Dukaan from 'icons/Dukaan';
 import CloudSEK from '@icons/CloudSEK';
 
 const projects = [
