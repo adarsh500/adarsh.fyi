@@ -6,7 +6,8 @@
   margin-right: 48px;
   border: 1px solid #f3f3f3;
   border-radius: var(--border-radius-large);
-  min-height: 400px;
+  min-height: min-content;
+  width: 50%;
 
   background-color: #171717;
   backdrop-filter: blur(18px) saturate(132%);

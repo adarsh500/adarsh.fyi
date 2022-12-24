@@ -1,9 +1,27 @@
 import React, { useState } from 'react';
 import styles from './Experience.module.scss';
-import Dukaan2 from 'icons/Dukaan2';
 
-const Experience = () => {
+type ExperienceProps = {
+  company: string;
+  role: string;
+  location: string;
+  duration: string;
+  shortDuration: string;
+  logo: any;
+  description: string[];
+};
+
+const Experience = (props: ExperienceProps) => {
   const [expanded, setExpanded] = useState(false);
+  const {
+    company,
+    role,
+    location,
+    duration,
+    shortDuration,
+    description,
+    logo,
+  } = props;
 
   const expandSection = () => {
     setExpanded(!expanded);
@@ -13,49 +31,26 @@ const Experience = () => {
     <div className={styles.card}>
       <div className={expanded ? styles.experienceExpanded : styles.experience}>
         <div className={styles.left}>
-          <div className={styles.logo}>
-            <Dukaan2 />
-          </div>
+          <div className={styles.logo}>{logo()}</div>
         </div>
         <div className={styles.right}>
           <div className={styles.header}>
             <div className={styles.headerLeft}>
-              <p className={styles.primary}>Dukaan</p>
-              <p className={styles.primaryMobile}>Dukaan</p>
-              <p className={styles.secondary}>Frontend Developer Intern</p>
+              <p className={styles.primary}>{company}</p>
+              <p className={styles.primaryMobile}>{company}</p>
+              <p className={styles.secondary}>{role}</p>
             </div>
             <div className={styles.headerRight}>
-              <p className={styles.primary}>Apr 2022 - June 2022</p>
-              <p className={styles.primaryMobile}>Apr - June '22</p>
-              <p className={styles.secondary}>Bangalore</p>
+              <p className={styles.primary}>{duration}</p>
+              <p className={styles.primaryMobile}>{shortDuration}</p>
+              <p className={styles.secondary}>{location}</p>
             </div>
           </div>
           <div className={styles.body}>
             <ul>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-                dolore aliquid earum deleniti, tenetur temporibus
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-                dolore aliquid earum deleniti, tenetur temporibus nihil quisquam
-                praesentium,
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-                dolore aliquid earum deleniti, tenetur temporibus nihil quisquam
-                praesentium,
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-                dolore aliquid earum deleniti, tenetur temporibus nihil quisquam
-                praesentium,
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-                dolore aliquid earum deleniti, tenetur temporibus nihil quisquam
-                praesentium,
-              </li>
+              {description?.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
         </div>

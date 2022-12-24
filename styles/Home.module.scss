@@ -17,7 +17,7 @@
   margin: 4rem 0;
 
   @include mobile {
-    margin: 2rem 1rem;
+    margin: 1rem 1rem;
   }
 }
 
@@ -62,5 +62,6 @@
     -webkit-backdrop-filter: blur(18px) saturate(132%);
     background-color: rgba(17, 17, 17, 0.5);
     border: 1px solid #333;
+    margin-top: 0;
   }
 }
