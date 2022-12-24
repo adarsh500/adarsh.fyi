@@ -18,22 +18,28 @@ interface Playing {
 }
 
 const CurrentTrack = ({ props }: any) => {
-  const { albumImageUrl, songUrl, artist, title } = props;
+  const { songUrl, artist, title, isPlaying } = props;
   return (
     <div className={styles.currentTrack}>
       {/* <Image src={albumImageUrl} height={40} width={40}></Image> */}
       <div className={styles.trackInfo}>
-        <a className={styles.trackTitle} href={songUrl}>
-          {title}
-        </a>
-        <p className={styles.trackArtist}>{artist}</p>
+        {isPlaying ? (
+          <>
+            <a className={styles.trackTitle} href={songUrl}>
+              {title}
+            </a>
+            <p className={styles.trackArtist}>{artist}</p>
+          </>
+        ) : (
+          <p className={styles.trackTitle}>Not listening</p>
+        )}
       </div>
     </div>
   );
 };
 
 const NowPlaying = () => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const [currentTrack, setCurrentTrack] = useState<NotPlaying | Playing>({});
 
   const fetchNowPlaying = async () => {
@@ -49,17 +55,10 @@ const NowPlaying = () => {
   return (
     <div className={styles.nowPlaying} onClick={() => setExpanded(!expanded)}>
       <SiSpotify className={styles.icon} />
-      {!expanded ? (
-        currentTrack?.isPlaying ? (
-          <div className={styles.track}>
-            <CurrentTrack props={currentTrack} />
-            <MusicBars />
-          </div>
-        ) : (
-          // <p className={styles.paused}>Not listening</p>
-          <></>
-        )
-      ) : null}
+      <div className={styles.track}>
+        <CurrentTrack props={currentTrack} />
+        {currentTrack?.isPlaying && <MusicBars />}
+      </div>
     </div>
   );
 };

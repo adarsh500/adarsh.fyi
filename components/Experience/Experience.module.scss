@@ -20,6 +20,7 @@
 }
 
 .card {
+  width: 100%;
   margin-bottom: 30px;
   border-radius: var(--border-radius-large);
   border: 1px solid rgba(255, 255, 255, 0.125);
@@ -39,6 +40,7 @@
   border-bottom: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+
 
   &Expanded {
     display: flex;
@@ -68,6 +70,7 @@
     }
 
     .right {
+      width: 100% !important;
       display: flex;
       flex-direction: column;
 
@@ -138,7 +141,7 @@
 
   @include mobile {
     margin-left: 0;
-    height: 220px;
+    height: min-content;
     padding: 18px;
   }
 
@@ -151,6 +154,7 @@
   }
 
   .right {
+    width: 100%;
     display: flex;
     flex-direction: column;
 

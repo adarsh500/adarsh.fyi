@@ -9,8 +9,8 @@ const Dukaan = () => {
       x="0px"
       y="0px"
       viewBox="0 0 340 340"
-      height="52px"
-      width="52px"
+      height="48px"
+      width="48px"
     >
       <g>
         <g>

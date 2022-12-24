@@ -10,6 +10,8 @@ const projects = [
   {
     title: 'Mark3',
     link: 'https://mark3.vercel.app',
+    imageUrl:
+      'https://og-image.vercel.app/**mark3**.png?theme=dark&md=1&fontSize=150px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg',
     description: `a bookmark management web app with sleek UI and dark mode
           which helps you seamlessly manage your bookmarks across browsers and devices`,
     githubUrl: 'https://github.com/adarsh500/mark',
@@ -18,6 +20,9 @@ const projects = [
   {
     title: 'Cal.ndr',
     link: 'https://cal-nu.vercel.app',
+    imageUrl:
+      'https://og-image.vercel.app/**cal.ndr**.png?theme=dark&md=1&fontSize=150px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg',
+
     description: `an open source events scheduling tool that makes booking and managing events a breeze`,
     githubUrl: 'https://github.com/adarsh500/cal.ndr',
   },
@@ -32,10 +37,9 @@ const work = [
     shortDuration: `Nov - Present`,
     logo: CloudSEK,
     description: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolore aliquid earum deleniti, tenetur temporibus',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolore aliquid earum deleniti, tenetur temporibus',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolore aliquid earum deleniti, tenetur temporibus',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolore aliquid earum deleniti, tenetur temporibus',
+      'Working as an SDE Intern on the core platform team to build new features and improve the product.',
+      'Check back later for more details',
+      '* INSERT CRICKET NOISES *',
     ],
   },
   {

@@ -10,15 +10,16 @@ type ProjectProps = {
   link: string;
   description: string;
   githubUrl: string;
+  imageUrl: string;
 };
 
 const ProjectCard = (props: ProjectProps) => {
-  const { title, link, description, githubUrl } = props;
+  const { title, link, description, githubUrl, imageUrl } = props;
   return (
     <div className={styles.projectCard}>
       <Image
         className={styles.image}
-        src="https://og-image.vercel.app/mark3.vercel.app.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg"
+        src={imageUrl}
         width={250}
         height={150}
         placeholder="blur"

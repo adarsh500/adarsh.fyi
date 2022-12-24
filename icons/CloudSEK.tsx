@@ -3,8 +3,8 @@ import React from 'react';
 const CloudSEK = () => {
   return (
     <svg
-      width="46px"
-      height="46px"
+      width="42px"
+      height="42px"
       viewBox="0 0 53 53"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -7,12 +7,6 @@ const Hero = () => {
       <div>
         <div className={styles.container}>
           <p className={styles.title}>Adarsh Sulegai.</p>
-          {/* <p className={styles.tagline}>
-            Crafting beautiful experiences for the web
-          </p> */}
-          {/* <p className={styles.taglineMobile}>
-            Crafting rich experiences for the web
-          </p> */}
           <p className={styles.about}>
             I'm a 20 y/o full-stack developer working as an SDE Intern at{' '}
             <a
@@ -28,8 +22,9 @@ const Hero = () => {
               target="_blank"
               className={styles.link}
             >
-              Dukaan
+              Dukaan.
             </a>
+            {' '}I craft beautiful experiences for the web.
           </p>
         </div>
       </div>
