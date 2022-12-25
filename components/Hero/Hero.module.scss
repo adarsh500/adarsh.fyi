@@ -118,7 +118,7 @@
     background-clip: text;
 
     @include mobile {
-      @include font-size-weight(52, 60, 800);
+      @include font-size-weight(44, 52, 800);
     }
   }
 
