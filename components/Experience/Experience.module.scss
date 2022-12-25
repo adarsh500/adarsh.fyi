@@ -41,7 +41,6 @@
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 
-
   &Expanded {
     display: flex;
     flex-direction: row;
@@ -70,7 +69,7 @@
     }
 
     .right {
-      width: 100% !important;
+      width: 100%;
       display: flex;
       flex-direction: column;
 
@@ -141,7 +140,7 @@
 
   @include mobile {
     margin-left: 0;
-    height: min-content;
+    height: 220px;
     padding: 18px;
   }
 
@@ -154,7 +153,7 @@
   }
 
   .right {
-    width: 100%;
+     width: 100%;
     display: flex;
     flex-direction: column;
 

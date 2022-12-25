@@ -11,15 +11,16 @@ type ProjectProps = {
   description: string;
   githubUrl: string;
   imageUrl: string;
+  og: string;
 };
 
 const ProjectCard = (props: ProjectProps) => {
-  const { title, link, description, githubUrl, imageUrl } = props;
+  const { title, link, description, githubUrl, imageUrl, og } = props;
   return (
     <div className={styles.projectCard}>
       <Image
         className={styles.image}
-        src={imageUrl}
+        src={og}
         width={250}
         height={150}
         placeholder="blur"

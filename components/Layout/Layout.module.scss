@@ -1,7 +1,6 @@
 @import '@styles/mixins.scss';
 
 .container {
-  min-height: 100vh;
   text-align: left;
 
   @include mobile {

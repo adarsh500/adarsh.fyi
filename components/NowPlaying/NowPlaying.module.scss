@@ -21,8 +21,8 @@
   }
 
   .icon {
-    height: 32px;
-    width: 32px;
+    height: 42px;
+    width: 42px;
 
     @include mobile {
       height: 28px;
@@ -78,7 +78,8 @@
   .trackTitle {
     @include font-size-weight(16, 20, 500);
     text-align: left;
-    margin-bottom: 4px;
+    // margin-bottom: 4px;
+
     color: var(--dark-text-primary);
     @include line-clamp(1);
     &:hover {
@@ -97,7 +98,7 @@
 .track {
   display: flex;
   border-radius: var(--border-radius-large);
-  margin: 0 24px;
+  margin: 0 12px;
   width: 100%;
   justify-content: space-between;
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Hero.module.scss';
 
 const Hero = () => {
@@ -23,8 +22,8 @@ const Hero = () => {
               className={styles.link}
             >
               Dukaan.
-            </a>
-            {' '}I craft beautiful experiences for the web.
+            </a>{' '}
+            I craft beautiful experiences for the web.
           </p>
         </div>
       </div>
