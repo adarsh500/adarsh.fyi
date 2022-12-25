@@ -22,6 +22,11 @@
     margin-right: 0;
   }
 
+  @include mobile {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
   .title {
     @include font-size-weight(22, 28, 500);
     display: flex;
