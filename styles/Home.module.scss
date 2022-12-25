@@ -13,10 +13,10 @@
 }
 
 .subTitle {
-  @include font-size-weight(34, 38, 600);
+  @include font-size-weight(34, 38, 700);
 
   @include mobile {
-    @include font-size-weight(26, 30, 600);
+    @include font-size-weight(26, 30, 700);
   }
 }
 

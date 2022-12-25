@@ -58,11 +58,11 @@
     display: flex;
     align-items: center;
     list-style-type: none;
-    padding: 10px 0 10px 16px;
+    padding: 0.5rem 0 0.5rem 0.75rem;
     @include font-size-weight(18, 22, 500);
 
     @include mobile {
-      padding: 4px 0 4px 10px;
+      padding: 4px 0 4px 6px;
       @include font-size-weight(16, 22, 400);
     }
   }
@@ -80,7 +80,7 @@
     }
 
     @include mobile {
-      padding: 2px 4px;
+      padding: 4px 6px;
       @include font-size-weight(16, 22, 400);
     }
 

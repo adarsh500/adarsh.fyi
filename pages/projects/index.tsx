@@ -6,9 +6,13 @@ const Projects = () => {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        {projects.map((project) => (
-          <ProjectCard {...project} />
-        ))}
+        <p className={styles.title}>Projects</p>
+
+        <div className={styles.projects}>
+          {projects.map((project) => (
+            <ProjectCard {...project} />
+          ))}
+        </div>
       </div>
     </main>
   );
