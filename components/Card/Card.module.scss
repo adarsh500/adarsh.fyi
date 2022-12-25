@@ -1,0 +1,52 @@
+@import '@styles/mixins.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 32px 32px 0;
+  border: 1px solid #f3f3f3;
+  border-radius: var(--border-radius-large);
+  min-height: min-content;
+  width: calc(50% - 16px);
+  padding: 18px;
+  background-color: rgba(17, 17, 17, 0.5);
+  border: 1px solid #333;
+
+  &:hover {
+    transform: scale(1.04);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 14px rgba(27, 64, 156, 0.543);
+  }
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .title {
+    @include font-size-weight(22, 28, 500);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+      margin-right: 8px;
+    }
+
+    @include mobile {
+      @include font-size-weight(20, 24, 500);
+    }
+  }
+
+  .description {
+    margin-top: 10px;
+    @include font-size-weight(17, 26, 400);
+    color: #aaaaaa;
+    @include line-clamp(1);
+
+    @include mobile {
+      margin-top: 12px 0;
+      @include line-clamp(1);
+      @include font-size-weight(16, 22, 400);
+    }
+  }
+}

@@ -41,7 +41,7 @@ const About = () => {
           <br />
           <br />
           You can often find me talking about tech, mechanical keyboards and
-          Star Wars. 
+          Star Wars.
           <br />
           <br />
           If you have an interesting project or if you want to collab on a
