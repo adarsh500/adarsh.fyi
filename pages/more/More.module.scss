@@ -10,6 +10,7 @@
 
   @include dark-mode {
     color: var(--dark-text-primary);
+    
   }
 
   @include mobile {
