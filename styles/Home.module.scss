@@ -21,15 +21,14 @@
 }
 
 .section {
-  padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 4rem 0;
+  margin: 5rem 0;
 
   @include mobile {
-    margin: 1rem 1rem;
+    margin: 4rem 1rem;
   }
 }
 
@@ -44,6 +43,14 @@
     margin-top: 2rem;
     padding: 0;
   }
+}
+
+.carousel {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .work {
