@@ -6,6 +6,11 @@ import NowPlaying from '@components/NowPlaying';
 
 import { work } from '@components/Content/work';
 import { projects } from '@components/Content/projects';
+import { skills } from '@components/Content/skills';
+import Glider from 'react-glider';
+import 'glider-js/glider.min.css';
+import TechCard from '@components/TechCard';
+import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
 
 const Home = () => (
   <>
@@ -15,6 +20,30 @@ const Home = () => (
       <div className={styles.projectWrapper}>
         {projects.slice(0, 2).map((project) => (
           <ProjectCard {...project} />
+        ))}
+      </div>
+    </div>
+
+    <div className={styles.section}>
+      <h2 className={styles.subTitle}>Tech I work with</h2>
+
+      {/* <Glider
+        draggable
+        hasArrows
+        slidesToShow={5}
+        slidesToScroll={1}
+        rewind
+        iconLeft={<GrFormPrevious className={styles.navIcons} />}
+        iconRight={<GrFormNext className={styles.navIcons} />}
+      >
+        {skills.map((skill) => (
+          <TechCard {...skill} />
+        ))}
+      </Glider> */}
+
+      <div className={styles.carousel}>
+        {skills.map((skill) => (
+          <TechCard {...skill} />
         ))}
       </div>
     </div>

@@ -13,7 +13,7 @@
   --primary-gradient: linear-gradient(to right, #007fff, #0059b2);
 
   //background
-  --background-dark: #171717;
+  --background-dark: rgba(17, 17, 17, 0.5);
   --background-light: #ffffff;
   --blur-background-light: rgba(255, 255, 255, 0.75);
   --blur-background-dark: rgba(17, 17, 17, 0.75);
@@ -128,8 +128,8 @@ body {
   // width: 820px;
   // margin: 0 auto;
   // @include dark-mode {
-    background-image: linear-gradient(rgba(45, 52, 64, 0.5) 1px, transparent 0),
-      linear-gradient(90deg, rgba(45, 52, 64, 0.5) 1px, #0b0d0f 0);
+  background-image: linear-gradient(rgba(45, 52, 64, 0.5) 1px, transparent 0),
+    linear-gradient(90deg, rgba(45, 52, 64, 0.5) 1px, #0b0d0f 0);
   // }
 }
 
@@ -137,4 +137,17 @@ body {
   height: 18px;
   width: 18px;
   vertical-align: middle;
+}
+
+.techIcon {
+  height: 48px;
+  width: 48px !important;
+  margin: 0 !important;
+  width: 100%;
+  vertical-align: middle;
+
+  @include mobile {
+    height: 32px;
+    width: 32px !important;
+  }
 }
