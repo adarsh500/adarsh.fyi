@@ -57,7 +57,7 @@
   }
 
   .date {
-    margin-top: 6px;
+    margin-top: 8px;
     color: var(--dark-text-secondary);
     @include font-size-weight(16, 22, 400);
     @include line-clamp(1);
