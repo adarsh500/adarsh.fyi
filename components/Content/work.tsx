@@ -11,8 +11,9 @@ export const work = [
     logo: CloudSEK,
     description: [
       'Working as an SDE Intern on the core platform team to build new features and improve the product.',
-      'Check back later for more details',
-      '* INSERT CRICKET NOISES *',
+      'Optimized events page by refactoring state management which reduced re-renders and loading times by 50%',
+      'Single-handedly migrating a micro-service to monorepo, which improved maintainability and reduced build  times.',
+      'Tech Stack used: NestJS, ReactJS, NextJS, Typescript, NodeJS React Query, Jest.',
     ],
   },
   {

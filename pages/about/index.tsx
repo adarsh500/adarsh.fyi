@@ -35,9 +35,13 @@ const About = () => {
           </a>
           , contributing to open source or practicing DSA.
           <br />
-          <br />
-          I absolutely love working with NextJs, React, and Typescript. I'm also
-          learning backend development on the side.
+          <br />I absolutely love working with NextJs, React, and Typescript.
+          I'm also learning backend development on the side. You can find my
+          resume{' '}
+          <a href="https://drive.google.com/file/d/1x35AKUlYyGMhfqAL0zIC1njdJ6TSflo-/view?usp=sharing" className={styles.link}>
+            here
+          </a>
+          .
           <br />
           <br />
           You can often find me talking about tech, mechanical keyboards and

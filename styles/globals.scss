@@ -5,6 +5,7 @@
   --primary: #026bdc;
   --border-light: #f3f3f3;
   --border-dark: #444;
+  --link: #52a9ff;
 
   --error: rgb(216, 96, 96);
   --border-radius-small: 6px;
@@ -150,4 +151,8 @@ body {
     height: 32px;
     width: 32px !important;
   }
+}
+
+.link {
+  color: var(--link);
 }

@@ -135,7 +135,23 @@
     }
 
     .link {
-      text-decoration: underline;
+      background: -webkit-linear-gradient(-45deg, #23a6d5, #23d5ab);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
+
+    .redGradient {
+      background: -webkit-linear-gradient(-75deg, #ee7752, #e73c7e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
+
+    .blueGradient {
+      background: -webkit-linear-gradient(-75deg, #23a6d5, #23d5ab);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-weight: 500;
     }
   }

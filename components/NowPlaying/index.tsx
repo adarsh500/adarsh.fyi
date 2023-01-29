@@ -18,10 +18,10 @@ interface Playing {
 }
 
 const CurrentTrack = ({ props }: any) => {
-  const { songUrl, artist, title, isPlaying } = props;
+  const { songUrl, artist, title, isPlaying, albumImageUrl } = props;
   return (
     <div className={styles.currentTrack}>
-      {/* <Image src={albumImageUrl} height={40} width={40}></Image> */}
+      {/* <Image src={albumImageUrl} height={40} width={40}/> */}
       <div className={styles.trackInfo}>
         {isPlaying ? (
           <>
