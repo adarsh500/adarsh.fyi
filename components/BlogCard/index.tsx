@@ -1,6 +1,6 @@
 import styles from './BlogCard.module.scss';
-import Image from 'next/image';
-import firstpost from '../../assets/thumbnails/firstpost.png';
+import Link from 'next/link';
+import { TbBook } from 'react-icons/tb';
 
 type Blog = {
   title: string;
@@ -8,19 +8,34 @@ type Blog = {
   description: string;
   thumbnail: string;
   tags: string[];
+  slug: string;
+  readingTime: string;
 };
 
 const BlogCard = (props: Blog) => {
-  const { title, date, description, thumbnail, tags } = props;
+  const { title, date, description, thumbnail, tags, slug, readingTime } =
+    props;
+  console.log('this props', props);
 
   return (
     <div className={styles.blog}>
-      <div className={styles.image}>
-        <Image src={firstpost} height={200} width={380} />
-      </div>
       <div className={styles.content}>
-        <h3 className={styles.title}>{title}</h3>
+        <div className={styles.head}>
+          <h3 className={styles.title}>{title}</h3>
+          <div className={styles.readingTime}>
+            <TbBook className={styles.icon} />
+            <p>{readingTime}</p>
+          </div>
+        </div>
+        <p className={styles.date}>{date}</p>
         <p className={styles.description}>{description}</p>
+        <div className={styles.footer}>
+          <div className={styles.tags}>
+            {tags.map((tag) => (
+              <p className={styles.tag}>#{tag}</p>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -3,18 +3,41 @@ import * as path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 import BlogCard from '@components/BlogCard';
+import readingTime from 'reading-time';
 
 const index = (props: { posts: any }) => {
   const { posts } = props;
-  console.log(posts);
 
   return (
     <main className={styles.main}>
       <div className={styles.container}>
         <p className={styles.title}>Blogs</p>
-        {posts.map((post: any) => (
-          <BlogCard {...post.frontMatter} slug={post.slug} />
-        ))}
+        <div className={styles.blogs}>
+          {posts.map((post: any) => (
+            <>
+              <BlogCard
+                {...post.frontMatter}
+                slug={post.slug}
+                readingTime={post.readingTime}
+              />
+              <BlogCard
+                {...post.frontMatter}
+                slug={post.slug}
+                readingTime={post.readingTime}
+              />
+              <BlogCard
+                {...post.frontMatter}
+                slug={post.slug}
+                readingTime={post.readingTime}
+              />
+              <BlogCard
+                {...post.frontMatter}
+                slug={post.slug}
+                readingTime={post.readingTime}
+              />
+            </>
+          ))}
+        </div>
       </div>
     </main>
   );
@@ -31,7 +54,8 @@ export const getStaticProps = async () => {
 
     return {
       frontMatter,
-      slug: fileName.split('.')[0],
+      slug: '/blog/' + fileName.split('.')[0],
+      readingTime: readingTime(fullPath).text,
     };
   });
 

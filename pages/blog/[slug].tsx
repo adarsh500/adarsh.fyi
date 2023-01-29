@@ -1,5 +1,11 @@
+import styles from './Blog.module.scss';
+
 const index = () => {
-  return <div>index</div>;
+  <main className={styles.main}>
+    <div className={styles.container}>
+      
+    </div>
+  </main>;
 };
 
 export default index;

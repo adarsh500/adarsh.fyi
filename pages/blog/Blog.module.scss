@@ -6,7 +6,7 @@
   justify-content: center;
   word-wrap: break-word;
   @include font-size-weight(20, 30, 400);
-  margin: 6rem 0 12rem 0;
+  margin: 6rem 0 6rem 0;
 
   @include dark-mode {
     color: var(--dark-text-primary);
@@ -28,11 +28,7 @@
     @include font-size-weight(48, 54, 800);
   }
 
-  .more {
-    margin: 3rem 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+  .blogs {
+    margin: 1rem 0;
   }
 }
