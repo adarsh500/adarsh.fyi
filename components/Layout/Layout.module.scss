@@ -15,8 +15,8 @@
 
 .nowPlaying {
   position: fixed;
-  padding: 0px 12px;
-  border-radius: 40px;
+  padding: 1rem;
+  border-radius: var(--border-radius-large);
   background-color: #171717;
   bottom: 1rem;
   left: 1rem;

@@ -1,0 +1,28 @@
+@import '@styles/mixins.scss';
+
+.blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border: 1px solid #333;
+  border-radius: var(--border-radius-large);
+  background-color: rgba(17, 17, 17, 0.5);
+  margin: 1rem 0;
+
+  .image {
+    margin-right: 2rem;
+    border-radius: var(--border-radius-large);
+  }
+
+  .title {
+    @include font-size-weight(18, 24, 600);
+  }
+
+  .description {
+    margin-top: 12px;
+    color: var(--dark-text-secondary);
+    @include font-size-weight(16, 22, 400);
+    @include line-clamp(3);
+  }
+}

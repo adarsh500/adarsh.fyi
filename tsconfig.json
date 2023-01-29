@@ -7,7 +7,7 @@
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
       "@types/*": ["types/*"],
-      "@icons/*": ["icons/*"]
+      "@icons/*": ["assets/icons/*"]
     },
     "target": "ES2016",
     "lib": ["dom", "dom.iterable", "esnext"],

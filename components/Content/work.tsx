@@ -1,5 +1,5 @@
-import Dukaan from '@icons/Dukaan';
-import CloudSEK from '@icons/CloudSEK';
+import Dukaan from 'assets/icons/Dukaan';
+import CloudSEK from 'assets/icons/CloudSEK';
 
 export const work = [
   {
