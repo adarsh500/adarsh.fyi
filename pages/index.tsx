@@ -9,7 +9,7 @@ import { projects } from '@components/Content/projects';
 import { skills } from '@components/Content/skills';
 import TechCard from '@components/TechCard';
 
-const Home = () => (
+const Home = (props: any) => (
   <>
     <Hero />
     <div className={styles.section}>
@@ -47,3 +47,9 @@ const Home = () => (
 );
 
 export default Home;
+
+export const getStaticProps = async () => {
+  return {
+    props: {},
+  };
+};

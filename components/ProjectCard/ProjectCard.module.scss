@@ -31,6 +31,22 @@
     box-shadow: 0 5px 14px rgba(27, 64, 156, 0.543);
   }
 
+  .mainIcon {
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+    margin-right: 1rem;
+
+    color: var(--link);
+    border: 1px solid var(--link);
+
+    // color: var(--mint);
+    // border: 1px solid var(--mint);
+
+    border-radius: var(--border-radius-medium);
+    padding: 0.5rem;
+  }
+
   .image {
     border-radius: var(--border-radius-large);
     aspect-ratio: 4/3;
@@ -48,6 +64,12 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+
+      .main {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
 
       &Title {
         @include font-size-weight(22, 28, 500);
@@ -120,6 +142,7 @@
 .icon {
   height: 14px;
   width: 14px;
+  color: white;
   vertical-align: middle;
   margin-left: 2px;
 }
