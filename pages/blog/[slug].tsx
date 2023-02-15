@@ -1,58 +1,52 @@
-import styles from './Blog.module.scss';
-import * as path from 'path';
-import fs from 'fs';
-import matter from 'gray-matter';
-import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemote } from 'next-mdx-remote';
-import SyntaxHighlighter from 'react-syntax-highlighter';
+import Head from 'next/head';
+import Link from 'next/link';
+import { format, parseISO } from 'date-fns';
+import { allPosts } from 'contentlayer/generated';
 
-const components = { SyntaxHighlighter };
-
-const index = (props: any) => {
-  const { frontMatter, slug, mdxSource } = props;
-  const { title, date, description, thumbnail, tags } = frontMatter;
-  return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <h1>{title}</h1>
-        <MDXRemote {...mdxSource} components={components} />
-      </div>
-    </main>
-  );
-};
-
-export default index;
-
-export const getStaticPaths = async () => {
-  const files = fs.readdirSync(path.join('posts'));
-
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace('.mdx', ''),
-    },
-  }));
-
+export async function getStaticPaths() {
+  const paths = allPosts.map((post) => post.url);
   return {
     paths,
     fallback: false,
   };
-};
+}
 
-export const getStaticProps = async ({ params }: any) => {
-  const { slug } = params;
-  const markdownWithMeta = fs.readFileSync(
-    path.join('posts', slug + '.mdx'),
-    'utf-8'
-  );
-
-  const { data: frontMatter, content } = matter(markdownWithMeta);
-  const mdxSource = await serialize(content);
-
+export async function getStaticProps({ params }: any) {
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   return {
     props: {
-      frontMatter,
-      slug,
-      mdxSource,
+      post,
     },
   };
+}
+
+const PostLayout = ({ post }: any) => {
+  return (
+    <>
+      {/* <Head>
+        <title>{post.title}</title>
+      </Head>
+      <article className="mx-auto max-w-2xl py-16">
+        <div className="mb-6 text-center">
+          <Link href="/">
+            <a className="text-center text-sm font-bold uppercase text-blue-700">
+              Home
+            </a>
+          </Link>
+        </div>
+        <div className="mb-6 text-center">
+          <h1 className="mb-1 text-3xl font-bold">{post.title}</h1>
+          <time dateTime={post.date} className="text-sm text-slate-600">
+            {format(parseISO(post.date), 'LLLL d, yyyy')}
+          </time>
+        </div>
+        <div
+          className="cl-post-body"
+          dangerouslySetInnerHTML={{ __html: post.body.html }}
+        />
+      </article> */}
+    </>
+  );
 };
+
+export default PostLayout;

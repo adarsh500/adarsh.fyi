@@ -19,12 +19,11 @@ const Hero = () => {
             <a
               href="https://mydukaan.io/"
               target="_blank"
-              className={styles.redGradient}
+              className={styles.link}
             >
               Dukaan
             </a>{' '}
-            <br />
-            I craft beautiful experiences for the web.
+            <br />I craft beautiful experiences for the web.
           </p>
         </div>
       </div>

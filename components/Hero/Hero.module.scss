@@ -116,6 +116,7 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    color: white;
 
     @include mobile {
       @include font-size-weight(44, 52, 800);
@@ -135,9 +136,7 @@
     }
 
     .link {
-      background: -webkit-linear-gradient(-45deg, #23a6d5, #23d5ab);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: white;
       font-weight: 500;
     }
 

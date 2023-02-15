@@ -37,13 +37,13 @@ const ProjectCard = (props: ProjectProps) => {
         <div className={styles.description}>{description}</div>
 
         <div className={styles.footer}>
-          <div className={styles.stack}>
+          {/* <div className={styles.stack}>
             <SiNextdotjs className={styles.stackItem} />
             <SiReact className={styles.stackItem} />
             <DiSass className={styles.stackItem} />
             <SiMongodb className={styles.stackItem} />
             <SiTypescript className={styles.stackItem} />
-          </div>
+          </div> */}
           {/* <button className={styles.expand}>
             <p>Expand</p>
             <MdExpandMore className={styles.icon} />
