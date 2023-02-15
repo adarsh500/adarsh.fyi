@@ -26,7 +26,7 @@
 
   .name {
     margin-top: 0.5rem;
-    @include font-size-weight(16, 24, 500);
+    @include font-size-weight(16, 24, 400);
     color: var(--dark-text-secondary);
 
     @include mobile {
