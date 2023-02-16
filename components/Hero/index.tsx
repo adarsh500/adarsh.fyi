@@ -15,15 +15,15 @@ const Hero = () => {
             >
               CloudSEK
             </a>
-            , previously I worked as a Frontend Developer Intern at{' '}
+            , previously I worked as a Frontend developer at{' '}
             <a
               href="https://mydukaan.io/"
               target="_blank"
               className={styles.link}
             >
-              Dukaan.
+              Dukaan
             </a>{' '}
-            I craft beautiful experiences for the web.
+            <br />I craft beautiful experiences for the web.
           </p>
         </div>
       </div>

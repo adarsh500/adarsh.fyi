@@ -18,10 +18,10 @@ interface Playing {
 }
 
 const CurrentTrack = ({ props }: any) => {
-  const { songUrl, artist, title, isPlaying } = props;
+  const { songUrl, artist, title, isPlaying, albumImageUrl } = props;
   return (
     <div className={styles.currentTrack}>
-      {/* <Image src={albumImageUrl} height={40} width={40}></Image> */}
+      {/* <Image src={props?.albumImageUrl} height={52} width={52} /> */}
       <div className={styles.trackInfo}>
         {isPlaying ? (
           <>
@@ -39,7 +39,6 @@ const CurrentTrack = ({ props }: any) => {
 };
 
 const NowPlaying = () => {
-  const [expanded, setExpanded] = useState(true);
   const [currentTrack, setCurrentTrack] = useState<NotPlaying | Playing>({});
 
   const fetchNowPlaying = async () => {
@@ -50,10 +49,10 @@ const NowPlaying = () => {
 
   useEffect(() => {
     fetchNowPlaying();
-  }, [expanded]);
+  }, []);
 
   return (
-    <div className={styles.nowPlaying} onClick={() => setExpanded(!expanded)}>
+    <div className={styles.nowPlaying}>
       <SiSpotify className={styles.icon} />
       <div className={styles.track}>
         <CurrentTrack props={currentTrack} />

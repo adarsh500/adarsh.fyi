@@ -1,10 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import './reset.scss';
 @import './mixins.scss';
+
 :root {
   --success: #10b981;
   --primary: #026bdc;
   --border-light: #f3f3f3;
   --border-dark: #444;
+  --link: #52a9ff;
+  --mint: rgb(0, 255, 149);
 
   --error: rgb(216, 96, 96);
   --border-radius-small: 6px;
@@ -17,6 +24,7 @@
   --background-light: #ffffff;
   --blur-background-light: rgba(255, 255, 255, 0.75);
   --blur-background-dark: rgba(17, 17, 17, 0.75);
+  --tag: #026bdc;
 
   //font-colors
   --dark-text-primary: #ffffff;
@@ -150,4 +158,8 @@ body {
     height: 32px;
     width: 32px !important;
   }
+}
+
+.link {
+  color: var(--link);
 }

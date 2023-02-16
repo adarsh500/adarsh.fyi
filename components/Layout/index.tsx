@@ -4,12 +4,19 @@ import Head from 'next/head';
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
 import NowPlaying from '@components/NowPlaying';
+import { useRouter } from 'next/router';
 
 type LayoutProps = {
   children: JSX.Element;
 };
 
 const Layout = (props: LayoutProps) => {
+  const router = useRouter();
+  const hide =
+    router.pathname === '/blog/[slug]' || router.pathname === '/blog'
+      ? true
+      : false;
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,10 +26,12 @@ const Layout = (props: LayoutProps) => {
       </Head>
       <Navbar />
       {props?.children}
+      {!hide && (
+        <div className={styles.nowPlaying}>
+          <NowPlaying />
+        </div>
+      )}
       <Footer />
-      <div className={styles.nowPlaying}>
-        <NowPlaying />
-      </div>
     </div>
   );
 };

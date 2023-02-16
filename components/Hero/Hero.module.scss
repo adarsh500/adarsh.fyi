@@ -116,6 +116,7 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    color: white;
 
     @include mobile {
       @include font-size-weight(44, 52, 800);
@@ -135,7 +136,21 @@
     }
 
     .link {
-      text-decoration: underline;
+      color: white;
+      font-weight: 500;
+    }
+
+    .redGradient {
+      background: -webkit-linear-gradient(-75deg, #ee7752, #e73c7e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
+
+    .blueGradient {
+      background: -webkit-linear-gradient(-75deg, #23a6d5, #23d5ab);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-weight: 500;
     }
   }

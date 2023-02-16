@@ -3,11 +3,11 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  margin: 0 48px 48px 0;
+  margin: 0 36px 36px 0;
   border: 1px solid #f3f3f3;
   border-radius: var(--border-radius-large);
   min-height: min-content;
-  width: calc(50% - 24px);
+  width: calc(50% - 18px);
 
   background-color: #171717;
   background-color: rgba(17, 17, 17, 0.5);
@@ -31,6 +31,22 @@
     box-shadow: 0 5px 14px rgba(27, 64, 156, 0.543);
   }
 
+  .mainIcon {
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+    margin-right: 1rem;
+
+    color: var(--link);
+    border: 1px solid var(--link);
+
+    // color: var(--mint);
+    // border: 1px solid var(--mint);
+
+    border-radius: var(--border-radius-medium);
+    padding: 0.5rem;
+  }
+
   .image {
     border-radius: var(--border-radius-large);
     aspect-ratio: 4/3;
@@ -49,11 +65,25 @@
       justify-content: space-between;
       align-items: center;
 
+      .main {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
       &Title {
         @include font-size-weight(22, 28, 500);
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
+        .icon {
+          height: 14px;
+          width: 14px;
+          color: white;
+          vertical-align: middle;
+          margin-left: 2px;
+        }
 
         p {
           margin-right: 8px;
@@ -115,11 +145,4 @@
       }
     }
   }
-}
-
-.icon {
-  height: 14px;
-  width: 14px;
-  vertical-align: middle;
-  margin-left: 2px;
 }

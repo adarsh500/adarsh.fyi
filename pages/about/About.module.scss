@@ -37,7 +37,7 @@
     @include font-size-weight(18, 32, 400);
 
     .link {
-      text-decoration: dotted;
+      color: var(--link);
     }
   }
 }

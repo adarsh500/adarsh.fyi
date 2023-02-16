@@ -35,8 +35,9 @@ const Navbar = () => {
       <div className={styles.rightNav}>
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />
+        <NavItem href="/blog" text="Blog" />
         {/* <NavItem href="/work" text="Work" /> */}
-        <NavItem href="/projects" text="Projects" />
+        {/* <NavItem href="/projects" text="Projects" /> */}
         <NavItem href="/more" text="More" />
 
         {/* <li className={styles.cmd}>

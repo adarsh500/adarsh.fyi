@@ -1,11 +1,11 @@
 @import '@styles/mixins.scss';
 
 .card {
-  text-align: center !important;
-  margin: 1.5rem !important;
+  text-align: center;
+  margin: 1rem;
 
   @include mobile {
-    margin: 0.5rem !important;
+    margin: 0.5rem ;
     &:nth-child(n + 9) {
       display: none;
     }
@@ -15,12 +15,10 @@
     border: 1px solid var(--border-dark);
     padding: 2rem;
     border-radius: var(--border-radius-large);
-    margin: 0 !important;
     width: min-content;
     background-color: var(--background-dark);
 
     @include mobile {
-      margin: 0 !important;
       width: min-content;
       padding: 1rem;
     }
@@ -28,8 +26,8 @@
 
   .name {
     margin-top: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
+    @include font-size-weight(16, 24, 400);
+    color: var(--dark-text-secondary);
 
     @include mobile {
       font-size: 12px;
