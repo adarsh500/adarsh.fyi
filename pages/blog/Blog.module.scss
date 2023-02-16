@@ -31,8 +31,73 @@
   .blogs {
     margin: 1rem 0;
   }
-  .time {
-    @include font-size-weight(16, 20, 400);
-    margin: 0.5rem 0;
+
+  .subRow {
+    margin-top: 0.75rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--dark-text-secondary);
+
+    .time {
+      @include font-size-weight(16, 20, 500);
+      margin: 0.5rem 0;
+    }
+
+    .readingTime {
+      @include font-size-weight(16, 20, 400);
+      margin: 0.5rem 0;
+    }
+  }
+
+  .blog {
+    margin-top: 2.5rem;
+    color: var(--dark-text-secondary);
+    @include font-size-weight(18, 32, 400);
+
+    h1 {
+      @include font-size-weight(30, 36, 600);
+      margin: 0.5rem 0;
+    }
+
+    h2 {
+      @include font-size-weight(28, 34, 600);
+      margin: 0.5rem 0;
+    }
+
+    h3 {
+      @include font-size-weight(26, 32, 600);
+      margin: 0.5rem 0;
+    }
+    [data-rehype-pretty-code-title] {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      border: 1px solid var(--border-dark);
+      border-bottom: none;
+      background-color: #1c1c1c;
+      padding: 0.75rem 1rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        Liberation Mono, Courier New, monospace;
+      @include font-size-weight(14, 24, 400);
+    }
+
+    pre {
+      padding: 1.5rem;
+      border-radius: var(--border-radius-medium);
+      border: 1px solid var(--border-dark);
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      background-color: #171717 !important;
+      @include font-size-weight(14, 24, 400);
+
+      @include mobile {
+        padding: 1rem;
+      }
+    }
+
+    p {
+      margin: 1.25rem 0;
+    }
   }
 }

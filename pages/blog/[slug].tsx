@@ -17,25 +17,17 @@ const PostLayout = ({ post }: any) => {
       {/* <article className="mx-auto max-w-2xl py-16"> */}
       <article className={styles.container}>
         <p className={styles.title}>{post.title}</p>
-        <time dateTime={post.date} className={styles.time}>
-          {format(parseISO(post.date), 'LLLL d, yyyy')}
-        </time>
-        {/* <div
-          className={styles.blogs}
-          dangerouslySetInnerHTML={{ __html: post.body.html }}
-        > */}
-        <MDXContent  />
-        {/* </div> */}
-      </article>
-      {/* <div className="mb-6 text-center"></div>
-        <div className="mb-6 text-center">
-          <h1 className="mb-1 text-3xl font-bold">{post.title}</h1>
-          
+        <div className={styles.subRow}>
+          <time dateTime={post.date} className={styles.time}>
+            Adarsh Sulegai / {format(parseISO(post.date), 'LLLL d, yyyy')}
+          </time>
+          <p className={styles.readingTime}>{post.readingTime.text}</p>
         </div>
-        <div
-          className="cl-post-body"
-        />
-      </article> */}
+
+        <div className={styles.blog}>
+          <MDXContent components={{ MyButton }} />
+        </div>
+      </article>
     </main>
   );
 };

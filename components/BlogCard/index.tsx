@@ -24,14 +24,16 @@ const BlogCard = (props: Blog) => {
         <div className={styles.content}>
           <div className={styles.head}>
             <h3 className={styles.title}>{title}</h3>
-            <div className={styles.readingTime}>
+            {/* <div className={styles.readingTime}>
               <TbBook className={styles.icon} />
-              <p>{readingTime}</p>
-            </div>
+            </div> */}
           </div>
           <p className={styles.date}>
             {format(parseISO(date), 'LLLL d, yyyy')}
+            &nbsp;&#8901; &nbsp;
+            {readingTime.text}
           </p>
+
           <p className={styles.description}>{description}</p>
           <div className={styles.footer}>
             <div className={styles.tags}>

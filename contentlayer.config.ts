@@ -3,6 +3,7 @@ import remarkGfm from 'remark-gfm';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import readingTime from 'reading-time';
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -36,6 +37,10 @@ export const Post = defineDocumentType(() => ({
       type: 'string',
       resolve: (post) => `/blog/${post._raw.flattenedPath}`,
     },
+    readingTime: {
+      type: 'json',
+      resolve: (doc) => readingTime(doc.body.raw),
+    },
   },
 }));
 
@@ -50,6 +55,8 @@ export default makeSource({
         rehypePrettyCode,
         {
           theme: 'one-dark-pro',
+          keepBackground: true,
+
           onVisitLine(node: { children: string | any[] }) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted
@@ -57,16 +64,16 @@ export default makeSource({
               node.children = [{ type: 'text', value: ' ' }];
             }
           },
-          // onVisitHighlightedLine(node: {
-          //   properties: { className: string[] };
-          // }) {
-          //   node.properties.className.push('line--highlighted');
-          // },
-          // onVisitHighlightedWord(node: {
-          //   properties: { className: string[] };
-          // }) {
-          //   node.properties.className = ['word--highlighted'];
-          // },
+          onVisitHighlightedLine(node: {
+            properties: { className: string[] };
+          }) {
+            node.properties.className.push('line--highlighted');
+          },
+          onVisitHighlightedWord(node: {
+            properties: { className: string[] };
+          }) {
+            node.properties.className = ['word--highlighted'];
+          },
         },
       ],
       [
