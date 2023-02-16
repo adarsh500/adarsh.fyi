@@ -1,10 +1,14 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { format, parseISO } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
+import { useMDXComponent } from 'next-contentlayer/hooks';
 import styles from './Blog.module.scss';
 
+const MyButton: React.FC = () => <button>Click me</button>;
+
 const PostLayout = ({ post }: any) => {
+  const MDXContent = useMDXComponent(post.body.code);
+
   return (
     <main className={styles.main}>
       <Head>
@@ -13,13 +17,15 @@ const PostLayout = ({ post }: any) => {
       {/* <article className="mx-auto max-w-2xl py-16"> */}
       <article className={styles.container}>
         <p className={styles.title}>{post.title}</p>
-        <time dateTime={post.date} className="text-sm text-slate-600">
+        <time dateTime={post.date} className={styles.time}>
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
-        <div
+        {/* <div
           className={styles.blogs}
           dangerouslySetInnerHTML={{ __html: post.body.html }}
-        ></div>
+        > */}
+        <MDXContent  />
+        {/* </div> */}
       </article>
       {/* <div className="mb-6 text-center"></div>
         <div className="mb-6 text-center">

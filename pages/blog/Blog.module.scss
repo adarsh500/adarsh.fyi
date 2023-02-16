@@ -31,4 +31,8 @@
   .blogs {
     margin: 1rem 0;
   }
+  .time {
+    @include font-size-weight(16, 20, 400);
+    margin: 0.5rem 0;
+  }
 }

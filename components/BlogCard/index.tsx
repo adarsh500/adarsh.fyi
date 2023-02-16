@@ -1,6 +1,7 @@
 import styles from './BlogCard.module.scss';
 import Link from 'next/link';
 import { TbBook } from 'react-icons/tb';
+import { format, parseISO } from 'date-fns';
 
 type Blog = {
   title: string;
@@ -28,7 +29,9 @@ const BlogCard = (props: Blog) => {
               <p>{readingTime}</p>
             </div>
           </div>
-          <p className={styles.date}>{date}</p>
+          <p className={styles.date}>
+            {format(parseISO(date), 'LLLL d, yyyy')}
+          </p>
           <p className={styles.description}>{description}</p>
           <div className={styles.footer}>
             <div className={styles.tags}>
