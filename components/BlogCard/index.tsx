@@ -10,7 +10,9 @@ type Blog = {
   thumbnail: string;
   tags: string[];
   slug: string;
-  readingTime: string;
+  readingTime: {
+    text: string;
+  };
 };
 
 const BlogCard = (props: Blog) => {
