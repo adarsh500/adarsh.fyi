@@ -1,5 +1,5 @@
 export type Track = {
-    artist: string;
-    songUrl: string;
-    title: string;
-}
+  artist: string;
+  songUrl: string;
+  title: string;
+};

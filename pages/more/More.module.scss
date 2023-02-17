@@ -1,4 +1,4 @@
-@import '@styles/mixins';
+@import "@styles/mixins";
 
 .main {
   display: flex;
@@ -10,7 +10,6 @@
 
   @include dark-mode {
     color: var(--dark-text-primary);
-    
   }
 
   @include mobile {

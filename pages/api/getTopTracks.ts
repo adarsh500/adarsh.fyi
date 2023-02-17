@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getTopTracks } from '../../utils/spotify';
+import { NextApiRequest, NextApiResponse } from "next";
+import { getTopTracks } from "../../utils/spotify";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const response = await getTopTracks();
@@ -15,7 +15,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       }) => ({
         artist: track.artists
           .map((artist: { name: any }) => artist.name)
-          .join(', '),
+          .join(", "),
         songUrl: track.external_urls.spotify,
         title: track.name,
       })

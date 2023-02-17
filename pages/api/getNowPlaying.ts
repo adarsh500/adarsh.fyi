@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getNowPlaying } from '../../utils/spotify';
+import { NextApiRequest, NextApiResponse } from "next";
+import { getNowPlaying } from "../../utils/spotify";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const response = await getNowPlaying();
@@ -13,7 +13,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const title = song.item.name;
   const artist = song.item.artists
     .map((artist: { name: any }) => artist.name)
-    .join(', ');
+    .join(", ");
   const album = song.item.album.name;
   const albumImageUrl = song.item.album.images[0].url;
   const songUrl = song.item.external_urls.spotify;
