@@ -3,6 +3,7 @@ import { format, parseISO } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import styles from './Blog.module.scss';
+import Image from 'next/image';
 
 const MyButton: React.FC = () => <button>Click me</button>;
 
@@ -14,7 +15,6 @@ const PostLayout = ({ post }: any) => {
       <Head>
         <title>{post.title}</title>
       </Head>
-      {/* <article className="mx-auto max-w-2xl py-16"> */}
       <article className={styles.container}>
         <p className={styles.title}>{post.title}</p>
         <div className={styles.subRow}>
@@ -25,7 +25,7 @@ const PostLayout = ({ post }: any) => {
         </div>
 
         <div className={styles.blog}>
-          <MDXContent components={{ MyButton }} />
+          <MDXContent components={{ MyButton, Image }} />
         </div>
       </article>
     </main>

@@ -10,10 +10,8 @@ export const work = [
     shortDuration: `Nov - Present`,
     logo: CloudSEK,
     description: [
-      'Working as an SDE Intern on the core platform team to build new features and improve the product.',
-      'Optimized events page by refactoring state management which reduced re-renders and loading times by 50%',
-      'Single-handedly migrating a micro-service to monorepo, which improved maintainability and reduced build  times.',
-      'Tech Stack used: NestJS, ReactJS, NextJS, Typescript, NodeJS React Query, Jest.',
+      `Working as an SDE Intern on the core platform team to build new features and improve the product. 
+       Shipping and maintaining features on the platform. `,
     ],
   },
   {
@@ -24,11 +22,8 @@ export const work = [
     shortDuration: `Apr - June '22`,
     logo: Dukaan,
     description: [
-      'Worked as a Front-End developer on the core product to develop new features and polish the user experience.',
-      'Rolled out new features for review plugins like filtering, sorting reviews, and pagination.',
-      'Incorporated theming-engine which improved performance and reduced app size',
-      'Revamped one of the most popular themes on the app - Matrix',
-      'Tech Stack used: ReactJS, NextJS, Javascript, Nunjucks, and SASS',
+      `Worked as a Front-End developer on the core product to develop new features and 
+      polish the user experience. Shipped some cool stuff with review plugin and themes. `,
     ],
   },
 ];

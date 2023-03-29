@@ -29,7 +29,7 @@ const Experience = (props: ExperienceProps) => {
 
   return (
     <div className={styles.card}>
-      <div className={expanded ? styles.experienceExpanded : styles.experience}>
+      <div className={styles.experience}>
         <div className={styles.left}>
           <div className={styles.logo}>{logo()}</div>
         </div>
@@ -47,18 +47,11 @@ const Experience = (props: ExperienceProps) => {
             </div>
           </div>
           <div className={styles.body}>
-            <ul>
-              {description?.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
+            {description?.map((item, index) => (
+              <p key={index}>{item}</p>
+            ))}
           </div>
         </div>
-      </div>
-      <div>
-        <button className={styles.expand} onClick={expandSection}>
-          {!expanded ? 'expand' : 'collapse'}
-        </button>
       </div>
     </div>
   );

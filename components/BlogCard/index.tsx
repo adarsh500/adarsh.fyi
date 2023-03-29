@@ -16,7 +16,6 @@ type Blog = {
 };
 
 const BlogCard = (props: Blog) => {
-  console.log('blog card props', props);
   const { title, date, description, thumbnail, tags, slug, readingTime } =
     props;
 
