@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import { MdExpandMore } from 'react-icons/md';
-import { FiCommand } from 'react-icons/fi';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import styles from './Navbar.module.scss';
-import { useRouter } from 'next/router';
-import cn from 'classnames';
+import Link from "next/link";
+import { MdExpandMore } from "react-icons/md";
+import { FiCommand } from "react-icons/fi";
+import { GiHamburgerMenu } from "react-icons/gi";
+import styles from "./Navbar.module.scss";
+import { useRouter } from "next/router";
+import cn from "classnames";
 
 type NavItemProps = {
   href: string;

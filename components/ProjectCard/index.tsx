@@ -1,11 +1,11 @@
-import styles from './ProjectCard.module.scss';
-import Image from 'next/image';
-import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
-import { VscGithubInverted } from 'react-icons/vsc';
-import { SiNextdotjs, SiReact, SiMongodb, SiTypescript } from 'react-icons/si';
-import { DiSass } from 'react-icons/di';
-import { GrLinkNext } from 'react-icons/gr';
-import Mark from '@icons/Mark';
+import styles from "./ProjectCard.module.scss";
+import Image from "next/image";
+import { HiArrowTopRightOnSquare } from "react-icons/hi2";
+import { VscGithubInverted } from "react-icons/vsc";
+import { SiNextdotjs, SiReact, SiMongodb, SiTypescript } from "react-icons/si";
+import { DiSass } from "react-icons/di";
+import { GrLinkNext } from "react-icons/gr";
+import Mark from "@icons/Mark";
 
 type ProjectProps = {
   title: string;

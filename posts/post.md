@@ -2,8 +2,8 @@
 title: Lorem Ipsum
 date: 2021-12-24
 description: "Here's a short guide on setting up Tailwind CSS lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ."
-thumbnailUrl: '/tailwindcss-thumbnail.jpg'
-tags: ['tailwindcss', 'styling']
+thumbnailUrl: "/tailwindcss-thumbnail.jpg"
+tags: ["tailwindcss", "styling"]
 ---
 
 Ullamco et nostrud magna commodo nostrud occaecat quis pariatur id ipsum. Ipsum

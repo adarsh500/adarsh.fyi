@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import { format, parseISO } from 'date-fns';
-import { allPosts } from 'contentlayer/generated';
-import { useMDXComponent } from 'next-contentlayer/hooks';
-import styles from './Blog.module.scss';
-import Image from 'next/image';
+import Head from "next/head";
+import { format, parseISO } from "date-fns";
+import { allPosts } from "contentlayer/generated";
+import { useMDXComponent } from "next-contentlayer/hooks";
+import styles from "./Blog.module.scss";
+import Image from "next/image";
 
 const MyButton: React.FC = () => <button>Click me</button>;
 
@@ -19,7 +19,7 @@ const PostLayout = ({ post }: any) => {
         <p className={styles.title}>{post.title}</p>
         <div className={styles.subRow}>
           <time dateTime={post.date} className={styles.time}>
-            Adarsh Sulegai / {format(parseISO(post.date), 'LLLL d, yyyy')}
+            Adarsh Sulegai / {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
           <p className={styles.readingTime}>{post.readingTime.text}</p>
         </div>

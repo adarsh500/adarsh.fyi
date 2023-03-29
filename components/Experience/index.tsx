@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styles from './Experience.module.scss';
+import React, { useState } from "react";
+import styles from "./Experience.module.scss";
 
 type ExperienceProps = {
   company: string;

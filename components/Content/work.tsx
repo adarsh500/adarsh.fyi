@@ -1,12 +1,12 @@
-import Dukaan from 'assets/icons/Dukaan';
-import CloudSEK from 'assets/icons/CloudSEK';
+import Dukaan from "assets/icons/Dukaan";
+import CloudSEK from "assets/icons/CloudSEK";
 
 export const work = [
   {
-    company: 'CloudSEK',
-    role: 'SDE Intern',
-    location: 'Bangalore',
-    duration: 'Nov 2022 - Present',
+    company: "CloudSEK",
+    role: "SDE Intern",
+    location: "Bangalore",
+    duration: "Nov 2022 - Present",
     shortDuration: `Nov - Present`,
     logo: CloudSEK,
     description: [
@@ -15,10 +15,10 @@ export const work = [
     ],
   },
   {
-    company: 'Dukaan',
-    role: 'Frontend Developer Intern',
-    location: 'Bangalore',
-    duration: 'Apr 2022 - June 2022',
+    company: "Dukaan",
+    role: "Frontend Developer Intern",
+    location: "Bangalore",
+    duration: "Apr 2022 - June 2022",
     shortDuration: `Apr - June '22`,
     logo: Dukaan,
     description: [
