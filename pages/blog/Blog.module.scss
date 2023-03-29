@@ -1,4 +1,4 @@
-@import '@styles/mixins';
+@import "@styles/mixins";
 
 .main {
   display: flex;
@@ -58,18 +58,19 @@
 
     h1 {
       @include font-size-weight(30, 36, 600);
-      margin: 0.5rem 0;
+      margin: 1.5rem 0;
     }
 
     h2 {
       @include font-size-weight(28, 34, 600);
-      margin: 0.5rem 0;
+      margin: 3rem 0 1rem 0;
     }
 
     h3 {
       @include font-size-weight(26, 32, 600);
-      margin: 0.5rem 0;
+      margin: 2rem 0;
     }
+
     [data-rehype-pretty-code-title] {
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
@@ -83,11 +84,12 @@
     }
 
     pre {
+      margin: 1rem 0;
       padding: 1.5rem;
       border-radius: var(--border-radius-medium);
       border: 1px solid var(--border-dark);
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
+      // border-top-right-radius: 0;
+      // border-top-left-radius: 0;
       background-color: #171717 !important;
       @include font-size-weight(14, 24, 400);
 
@@ -98,6 +100,10 @@
 
     p {
       margin: 1.25rem 0;
+    }
+
+    a {
+      color: var(--link);
     }
   }
 }
