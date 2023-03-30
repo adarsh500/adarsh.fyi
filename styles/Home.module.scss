@@ -25,10 +25,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 5rem 0;
+  margin: 4rem 0;
 
   @include mobile {
-    margin: 4rem 1rem;
+    margin: 3rem 1rem;
   }
 }
 

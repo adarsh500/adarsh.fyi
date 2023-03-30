@@ -126,9 +126,8 @@
   .about {
     margin-top: 16px;
     max-width: 90%;
-    color: rgb(210, 210, 210);
     color: var(--dark-text-secondary);
-    @include font-size-weight(22, 34, 400);
+    @include font-size-weight(22, 36, 400);
 
     @include mobile {
       max-width: 100%;

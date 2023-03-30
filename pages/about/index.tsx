@@ -38,7 +38,10 @@ const About = () => {
           <br />I absolutely love working with NextJs, React, and Typescript.
           I'm also learning backend development on the side. You can find my
           resume{' '}
-          <a href="https://drive.google.com/file/d/1x35AKUlYyGMhfqAL0zIC1njdJ6TSflo-/view?usp=sharing" className={styles.link}>
+          <a
+            href="https://drive.google.com/file/d/1x35AKUlYyGMhfqAL0zIC1njdJ6TSflo-/view?usp=sharing"
+            className={styles.link}
+          >
             here
           </a>
           .
@@ -49,7 +52,7 @@ const About = () => {
           <br />
           <br />
           If you have an interesting project or if you want to collab on a
-          hackathon or just want to say hi, feel free to reach out to me is via{' '}
+          hackathon or just want to say hi, feel free to reach out to me via{' '}
           <a
             href="https://twitter.com/adarshsulegai50"
             target="_blank"

@@ -26,7 +26,7 @@
   }
 
   &:hover {
-    transform: scale(1.04);
+    transform: scale(1.01);
     transition: all 0.3s ease-in-out;
     box-shadow: 0 5px 14px rgba(27, 64, 156, 0.543);
   }
@@ -96,8 +96,8 @@
 
     .description {
       margin: 1rem 0;
-      @include font-size-weight(17, 26, 400);
-      color: #aaaaaa;
+      @include font-size-weight(18, 26, 400);
+      color: var(--dark-text-secondary);
       @include line-clamp(3);
 
       @include mobile {

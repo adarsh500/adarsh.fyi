@@ -2,6 +2,9 @@
 
 .container {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   @include mobile {
     padding: 0rem;

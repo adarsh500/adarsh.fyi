@@ -1,4 +1,4 @@
-@import "@styles/mixins";
+@import '@styles/mixins';
 
 // .vertical {
 //   display: flex;
@@ -38,9 +38,7 @@
   background-color: #171717;
   background-color: rgba(17, 17, 17, 0.75);
   @include font-size-weight(18, 24, 400);
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: var(--border-radius-large);
 
   @include mobile {
     margin-left: 0;
@@ -90,7 +88,7 @@
         color: var(--dark-text-secondary);
 
         @include mobile {
-          @include font-size-weight(14, 20, 400);
+          @include font-size-weight(16, 20, 400);
         }
       }
 
@@ -108,7 +106,8 @@
       margin-top: 24px;
 
       @include mobile {
-        margin-top: 24px;
+        margin-top: 16px;
+        @include font-size-weight(16, 22, 400);
       }
     }
 

@@ -28,7 +28,7 @@
 
   //font-colors
   --dark-text-primary: #ffffff;
-  --dark-text-secondary: #a9a9a9;
+  --dark-text-secondary: rgba(255, 255, 255, 0.8);
   --light-text-primary: #000000;
   --light-text-secondary: #898989;
 
@@ -67,6 +67,8 @@ a {
     rgb(11, 13, 15) 20%,
     transparent
   );
+  display: flex;
+  flex-direction: column;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -108,6 +110,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  height: 100vh;
   scroll-behavior: smooth;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -136,8 +139,7 @@ body {
   // width: 820px;
   // margin: 0 auto;
   // @include dark-mode {
-  background-image: linear-gradient(rgba(45, 52, 64, 0.5) 1px, transparent 0),
-    linear-gradient(90deg, rgba(45, 52, 64, 0.5) 1px, #0b0d0f 0);
+
   // }
 }
 
