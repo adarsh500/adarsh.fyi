@@ -1,4 +1,4 @@
-@import "@styles/mixins";
+@import '@styles/mixins';
 
 .main {
   display: flex;
@@ -15,6 +15,7 @@
   @include mobile {
     padding: 1.5rem 1rem;
     margin: 3rem 0 3rem 0;
+    @include font-size-weight(18, 30, 400);
   }
 }
 

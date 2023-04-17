@@ -41,7 +41,6 @@
   @include mobile {
     padding: 1.5rem 1rem;
     margin: 2rem 0 1rem 0;
-    // min-height: 20vh;
   }
 }
 
@@ -119,7 +118,7 @@
     color: white;
 
     @include mobile {
-      @include font-size-weight(44, 52, 800);
+      @include font-size-weight(46, 54, 800);
     }
   }
 
@@ -223,26 +222,4 @@
   100% {
     background-position-x: 600vw;
   }
-}
-
-.gradient {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #be123c;
-  --tw-gradient-to: rgb(190 18 60 / 0);
-  --tw-gradient-to: #7e22ce;
-  // opacity: 0.6;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-from: #93c5fd;
-  --tw-gradient-to: rgb(147 197 253 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  aspect-ratio: 1 / 1;
-  // z-index: -50;
-  width: 100%;
-  max-width: 1024px;
-  --tw-blur: blur(64px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-    var(--tw-sepia) var(--tw-drop-shadow);
-  bottom: calc(100% - 200px);
-  // position: fixed;
 }

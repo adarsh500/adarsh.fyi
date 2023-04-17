@@ -4,18 +4,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   word-wrap: break-word;
   @include font-size-weight(20, 30, 400);
-  margin: 6rem 0 12rem 0;
+  margin: 6rem 0 6rem 0;
+  flex: 1;
 
   @include dark-mode {
     color: var(--dark-text-primary);
-    
   }
 
   @include mobile {
     padding: 1.5rem 1rem;
     margin: 3rem 0 3rem 0;
+    @include font-size-weight(18, 30, 400);
   }
 }
 

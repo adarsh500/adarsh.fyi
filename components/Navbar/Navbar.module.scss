@@ -97,6 +97,7 @@
       border-radius: var(--border-radius-medium);
       @include font-size-weight(19, 24, 500);
       color: white;
+      // background-color: ;
 
       @include mobile {
         padding: 4px 8px;
