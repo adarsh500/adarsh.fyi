@@ -8,7 +8,7 @@
   word-wrap: break-word;
   @include font-size-weight(20, 32, 400);
   text-align: left;
-  margin: 6rem 0 6rem 0;
+  margin: 3rem 0 6rem 0;
   flex: 1;
 
   @include dark-mode {

@@ -5,11 +5,9 @@
   --success: #10b981;
   --primary: #026bdc;
   --border-light: #f3f3f3;
-  --border-dark: #444;
+  --border-dark: #333;
   --link: #52a9ff;
-  --mint: rgb(0, 255, 149);
 
-  --error: rgb(216, 96, 96);
   --border-radius-small: 6px;
   --border-radius-medium: 8px;
   --border-radius-large: 16px;
@@ -65,7 +63,7 @@ a {
   );
   display: flex;
   flex-direction: column;
-  // height: 100vh;
+  height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {

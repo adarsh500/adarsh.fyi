@@ -1,17 +1,16 @@
-@import "@styles/mixins";
+@import '@styles/mixins';
 
 .projectCard {
   display: flex;
   flex-direction: column;
   margin: 0 36px 36px 0;
-  border: 1px solid #f3f3f3;
   border-radius: var(--border-radius-large);
   min-height: min-content;
   width: calc(50% - 18px);
 
   background-color: #171717;
   background-color: rgba(17, 17, 17, 0.5);
-  border: 1px solid #333;
+  border: 1px solid var(--border-dark);
 
   @include mobile {
     width: 100%;
@@ -89,7 +88,7 @@
 
       &Link {
         height: 18px;
-      width: 18px;
+        width: 18px;
         vertical-align: middle;
       }
     }
