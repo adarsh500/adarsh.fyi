@@ -33,24 +33,30 @@
   z-index: 1;
   display: flex;
   position: sticky;
-  // justify-content: space-between;
   justify-content: flex-end;
-
   top: 20px;
   padding: 16px 20px;
   border-radius: var(--border-radius-large);
   border: 1px solid transparent;
-  backdrop-filter: blur(10px) saturate(232%);
-  -webkit-backdrop-filter: blur(18px) saturate(132%);
   transition: all 0.3s ease-in-out;
+  @include font-size-weight(18, 24, 400);
+  color: var(--light-text-primary);
 
-  &Visible {
-    background-color: var(--background-dark);
-    border: 1px solid var(--border-dark);
+  @include dark-mode {
+    color: var(--dark-text-secondary);
   }
 
-  @include font-size-weight(18, 24, 400);
-  color: var(--dark-text-secondary);
+  &Visible {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-light);
+    backdrop-filter: blur(10px) saturate(232%);
+    -webkit-backdrop-filter: blur(18px) saturate(132%);
+
+    @include dark-mode {
+      border: 1px solid var(--border-dark);
+      background-color: var(--background-dark);
+    }
+  }
 
   @include mobile {
     position: sticky;
@@ -63,7 +69,11 @@
     &Visible {
       border-bottom: 1px solid var(--border-dark);
       background-color: var(--background-dark);
-      // border: 1px solid var(--border-dark);
+
+      @include dark-mode {
+        border-bottom: 1px solid var(--border-light);
+        background-color: var(--background-light);
+      }
     }
   }
 
@@ -83,17 +93,24 @@
   .item {
     padding: 6px 12px;
     @include font-size-weight(18, 24, 500);
-    color: var(dark-text-secondary);
+    color: var(light-text-secondary);
     z-index: 2;
     border: 1px solid transparent;
     border-radius: var(--border-radius-small);
 
+    @include dark-mode {
+      color: var(dark-text-secondary);
+    }
+
     &:hover {
       border: 1px solid rgba(180, 180, 180, 0.621);
-      color: var(--dark-text-primary);
-      // background-color: #242424;
+      color: var(--light-text-primary);
       border-radius: var(--border-radius-small);
       transition: all 0.3s ease-in-out;
+
+      @include dark-mode {
+        color: var(--dark-text-primary);
+      }
     }
 
     @include mobile {
@@ -112,17 +129,25 @@
       padding: 6px 12px;
       border-radius: var(--border-radius-medium);
       @include font-size-weight(18, 24, 500);
-      color: white;
+      color: black;
       border: 1px solid transparent;
       z-index: 2;
+
+      @include dark-mode {
+        color: white;
+      }
       // transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: white;
+        color: black;
         // background-color: #1f1f1f;
         border: 1px solid rgba(180, 180, 180, 0.621);
         transition: all 0.3s ease-in-out;
         border-radius: var(--border-radius-small);
+
+        @include dark-mode {
+          color: white;
+        }
       }
 
       @include mobile {

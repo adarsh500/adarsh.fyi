@@ -12,11 +12,16 @@
   }
 
   .icon {
-    border: 1px solid var(--border-dark);
     padding: 2rem;
     border-radius: var(--border-radius-medium);
     width: min-content;
-    background-color: var(--background-dark);
+    border: 1px solid var(--border-light);
+    background-color: var(--background-light);
+
+    @include dark-mode {
+      border: 1px solid var(--border-dark);
+      background-color: var(--background-dark);
+    }
 
     @include mobile {
       width: min-content;
@@ -26,14 +31,22 @@
     &:hover {
       transform: scale(1.01);
       transition: all 0.3s ease-in-out;
-      border: 1px solid white;
+      border: 1px solid black;
+
+      @include dark-mode {
+        border: 1px solid white;
+      }
     }
   }
 
   .name {
     margin-top: 0.5rem;
     @include font-size-weight(16, 24, 400);
-    color: var(--dark-text-secondary);
+    color: var(--light-text-secondary);
+
+    @include dark-mode {
+      color: var(--dark-text-secondary);
+    }
 
     @include mobile {
       @include font-size-weight(14, 20, 400);

@@ -1,10 +1,10 @@
-@import "./reset.scss";
-@import "./mixins.scss";
+@import './reset.scss';
+@import './mixins.scss';
 
 :root {
   --success: #10b981;
   --primary: #026bdc;
-  --border-light: #f3f3f3;
+  --border-light: #dedede;
   --border-dark: #333;
   --link: #52a9ff;
 
@@ -17,14 +17,14 @@
 
   //background
   --background-dark: rgba(17, 17, 17, 0.5);
-  --background-light: #ffffff;
+  --background-light: #f0f0f081;
   --tag: #026bdc;
 
   //font-colors
   --dark-text-primary: #ffffff;
   --dark-text-secondary: rgba(255, 255, 255, 0.8);
   --light-text-primary: #000000;
-  --light-text-secondary: #898989;
+  --light-text-secondary: #4d4d4d;
 }
 a {
   color: inherit;
@@ -33,6 +33,8 @@ a {
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #__next {
@@ -51,29 +53,14 @@ a {
   }
 }
 
-// @media (prefers-color-scheme: light) {
-//   html {
-//     color-scheme: dark;
-//   }
-//   body {
-//     color: var(--light-text-primary);
-//     background: var(--background-light);
-//   }
-// }
-
 @media (prefers-color-scheme: light) {
   html {
     color-scheme: light;
   }
   body {
-    color: var(--dark-text-primary);
-    background: var(--background-dark);
+    color: var(--light-text-primary);
+    background: #ffffff;
   }
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
@@ -110,8 +97,15 @@ body {
   // @include dark-mode {
 
   // }
-  background-image: linear-gradient(rgba(45, 52, 64, 0.5) 0px, transparent 0),
-    linear-gradient(90deg, rgba(45, 52, 64, 0.5) 0px, #0b0d0f 0);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.5) 0px,
+    transparent 0
+  );
+
+  @include dark-mode {
+    background-image: linear-gradient(rgba(45, 52, 64, 0.5) 0px, transparent 0),
+      linear-gradient(90deg, rgba(45, 52, 64, 0.5) 0px, #0b0d0f 0);
+  }
 }
 
 .icon {

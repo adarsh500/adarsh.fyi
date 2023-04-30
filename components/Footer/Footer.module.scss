@@ -1,13 +1,17 @@
-@import "@styles/mixins.scss";
+@import '@styles/mixins.scss';
 
 .footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.125);
   width: 100%;
   margin-top: 3rem;
   display: flex;
   align-content: center;
   justify-content: flex-start;
   padding: 2rem 1.5rem;
+  border-top: 1px solid var(--border-light);
+
+  @include dark-mode {
+    border-top: 1px solid var(--border-dark);
+  }
 
   @include mobile {
     margin-top: 1rem;

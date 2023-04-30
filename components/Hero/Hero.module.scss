@@ -1,4 +1,4 @@
-@import "@styles/mixins.scss";
+@import '@styles/mixins.scss';
 
 @keyframes gradient {
   0% {
@@ -25,14 +25,13 @@
 
 .main {
   flex: 1;
-  display: flex;
+  @include flex(center, center);
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   word-wrap: break-word;
   @include font-size-weight(20, 30, 400);
   text-align: left;
   margin: 6rem 0 5rem 0;
+  color: var(--light-text-primary);
 
   @include dark-mode {
     color: var(--dark-text-primary);
@@ -45,41 +44,16 @@
 }
 
 .container {
-  display: flex;
+  @include flex(center, flex-start);
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 
   .secondaryText {
     @include font-size-weight(20, 24, 400);
     text-align: left;
+    color: var(--light-text-primary);
 
     @include dark-mode {
       color: var(--dark-text-primary);
-    }
-  }
-
-  .tagline {
-    @include font-size-weight(28, 36, 500);
-
-    @include dark-mode {
-      color: var(--dark-text-primary);
-    }
-
-    @include mobile {
-      display: none;
-    }
-
-    &Mobile {
-      @include desktop {
-        display: none;
-      }
-
-      @include mobile {
-        margin-bottom: 18px;
-        @include font-size-weight(20, 28, 400);
-        display: block;
-      }
     }
   }
 
@@ -125,8 +99,12 @@
   .about {
     margin-top: 16px;
     max-width: 90%;
-    color: var(--dark-text-secondary);
+    color: var(--light-text-secondary);
     @include font-size-weight(22, 36, 400);
+
+    @include dark-mode {
+      color: var(--dark-text-secondary);
+    }
 
     @include mobile {
       max-width: 100%;
@@ -134,8 +112,12 @@
     }
 
     .link {
-      color: white;
+      color: var(--light-text-primary);
       font-weight: 500;
+
+      @include dark-mode {
+        color: var(--dark-text-primary);
+      }
     }
 
     .redGradient {
@@ -150,67 +132,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 500;
-    }
-  }
-
-  .ctaWrapper {
-    display: flex;
-    @include font-size-weight(16, 24, 400);
-
-    .icon {
-      height: 14px;
-      width: 14px;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-
-    .secondary {
-      backdrop-filter: blur(10px) saturate(232%);
-      -webkit-backdrop-filter: blur(18px) saturate(132%);
-      background-color: rgba(17, 17, 17, 0.75);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 30px 0;
-      padding: 10px 40px;
-      margin-right: 20px;
-      border: 1px solid white;
-      border-radius: var(--border-radius-large);
-      transition: all 0.3s ease;
-
-      &:hover {
-        transform: scale(1.045);
-      }
-
-      @include mobile {
-        margin: 20px 0;
-        padding: 8px 12px;
-      }
-    }
-
-    .primary {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 30px 0;
-      padding: 10px 40px;
-      margin-right: 20px;
-      border: 1px solid white;
-      background-color: white;
-      color: black;
-      border-radius: var(--border-radius-large);
-      transition: all 0.3s ease;
-
-      &:hover {
-        transform: scale(1.07);
-      }
-
-      @include mobile {
-        margin: 20px 0;
-        padding: 8px 12px;
-        margin-right: 12px;
-        @include font-size-weight(16, 20, 400);
-      }
     }
   }
 }

@@ -1,4 +1,4 @@
-@import "@styles/mixins";
+@import '@styles/mixins';
 
 .experience {
   display: flex;
@@ -7,19 +7,27 @@
   padding: 32px;
   height: 240px;
   overflow: hidden;
-  background-color: var(--background-dark);
   @include font-size-weight(18, 24, 400);
   border-radius: var(--border-radius-large);
   width: 100%;
   margin-bottom: 30px;
-  border-radius: var(--border-radius-large);
-  border: 1px solid var(--border-dark);
   transition: all 0.4s ease-in-out;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-light);
+
+  @include dark-mode {
+    background-color: var(--background-dark);
+    border: 1px solid var(--border-dark);
+  }
 
   &:hover {
     transform: scale(1.01);
     transition: all 0.3s ease-in-out;
-    border: 1px solid white;
+    border: 1px solid black;
+
+    @include dark-mode {
+      border: 1px solid white;
+    }
   }
 
   &:last-child {
@@ -38,6 +46,16 @@
     @include mobile {
       display: none;
     }
+
+    .logo {
+      path {
+        fill: var(--light-text-primary);
+
+        @include dark-mode {
+          fill: var(--dark-text-primary);
+        }
+      }
+    }
   }
 
   .right {
@@ -46,10 +64,7 @@
     flex-direction: column;
 
     .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
+      @include flex(space-between, center);
       .primary {
         @include font-size-weight(18, 24, 500);
 
@@ -70,8 +85,11 @@
 
       .secondary {
         @include font-size-weight(18, 24, 400);
-        // color: #a9a9a9;
-        color: var(--dark-text-secondary);
+        color: var(--light-text-secondary);
+
+        @include dark-mode {
+          color: var(--dark-text-secondary);
+        }
 
         @include mobile {
           @include font-size-weight(16, 23, 300);
@@ -88,9 +106,13 @@
     }
 
     .body {
-      color: var(--dark-text-secondary);
       margin-top: 24px;
       @include font-size-weight(18, 26, 400);
+      color: var(--light-text-secondary);
+
+      @include dark-mode {
+        color: var(--dark-text-secondary);
+      }
 
       @include mobile {
         margin-top: 16px;

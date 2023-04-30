@@ -1,4 +1,4 @@
-@import "@styles/mixins.scss";
+@import '@styles/mixins.scss';
 
 .info {
   @include flex(center, center);
@@ -27,9 +27,7 @@
 }
 
 .nowPlaying {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(space-between, center);
   flex-direction: row;
   min-width: 200px;
   max-width: 100%;
@@ -62,42 +60,24 @@
 
 .paused {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @include mobile {
-    // margin-left: 1rem;
-    // justify-content: flex-start
-  }
+  @include flex(center, center);
 }
 
 .notListening {
   @include font-size-weight(16, 22, 400);
   text-align: left;
-  color: var(--dark-text-primary);
+  color: var(--light-text-primary);
+
+  @include dark-mode {
+    color: var(--dark-text-primary);
+  }
 }
 
 .currentTrack {
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  .albumImage {
-    border-radius: var(--border-radius-medium) !important;
-    height: 46px;
-    width: 46px;
-    margin-right: 12px;
-    border: 1px solid transparent;
-
-    @include mobile {
-      margin-right: 1.5rem;
-    }
-  }
+  @include flex(flex-start, center);
 
   .trackInfo {
-    // margin-left: 12px;
     display: flex;
     flex-direction: column;
     @include font-size-weight(16, 22, 400);
@@ -110,8 +90,13 @@
   .trackTitle {
     @include font-size-weight(16, 22, 500);
     text-align: left;
-    color: var(--dark-text-primary);
+    color: var(--light-text-primary);
     @include line-clamp(1);
+
+    @include dark-mode {
+      color: var(--dark-text-primary);
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -119,10 +104,14 @@
 
   .trackArtist {
     margin-top: 4px;
-    color: var(--dark-text-secondary);
     @include font-size-weight(14, 20, 300);
     text-align: left;
+    color: var(--light-text-primary);
     @include line-clamp(1);
+
+    @include dark-mode {
+      color: var(--dark-text-primary);
+    }
   }
 }
 

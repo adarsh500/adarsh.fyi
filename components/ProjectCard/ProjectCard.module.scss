@@ -1,4 +1,4 @@
-@import "@styles/mixins";
+@import '@styles/mixins';
 
 .projectCard {
   display: flex;
@@ -8,8 +8,13 @@
   border-radius: var(--border-radius-large);
   min-height: min-content;
   width: calc(50% - 18px);
-  background-color: var(--background-dark);
-  border: 1px solid var(--border-dark);
+  background-color: var(--background-light);
+  border: 1px solid var(--border-light);
+
+  @include dark-mode {
+    background-color: var(--background-dark);
+    border: 1px solid var(--border-dark);
+  }
 
   @include mobile {
     width: 100%;
@@ -26,7 +31,11 @@
   &:hover {
     transform: scale(1.01);
     transition: all 0.3s ease-in-out;
-    border: 1px solid white;
+    border: 1px solid black;
+
+    @include dark-mode {
+      border: 1px solid white;
+    }
   }
 
   .body {
@@ -70,8 +79,12 @@
     .description {
       margin-top: 1rem;
       @include font-size-weight(18, 26, 400);
-      color: var(--dark-text-secondary);
       @include line-clamp(3);
+      color: var(--light-text-secondary);
+
+      @include dark-mode {
+        color: var(--dark-text-secondary);
+      }
 
       @include mobile {
         margin-top: 14px;
@@ -104,12 +117,20 @@
 .icon {
   height: 20px;
   width: 20px;
-  color: white !important;
+  color: black !important;
   vertical-align: middle;
   margin: 3px 0 0 0px;
   rotate: -45deg;
 
+  @include dark-mode {
+    color: white !important;
+  }
+
   path {
-    stroke: #fff;
+    stroke: #000;
+
+    @include dark-mode {
+      stroke: #fff;
+    }
   }
 }

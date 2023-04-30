@@ -1,4 +1,4 @@
-@import "@styles/mixins.scss";
+@import '@styles/mixins.scss';
 
 .container {
   text-align: left;
@@ -24,8 +24,13 @@
   left: 1rem;
   backdrop-filter: blur(18px) saturate(132%);
   -webkit-backdrop-filter: blur(18px) saturate(132%);
-  background-color: var(--background-dark);
-  border: 1px solid var(--border-dark);
+  background-color: var(--background-light);
+  border: 1px solid var(--border-light);
+
+  @include dark-mode {
+    background-color: var(--background-dark);
+    border: 1px solid var(--border-dark);
+  }
 
   @include mobile {
     display: none;
