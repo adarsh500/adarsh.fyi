@@ -8,7 +8,7 @@ export const work = [
     location: "Bangalore",
     duration: "Nov 2022 - Present",
     shortDuration: `Nov - Present`,
-    url: 'https://cloudsek.com/',
+    url: "https://cloudsek.com/",
     logo: CloudSEK,
     description: [
       `Working as an SDE Intern on the core platform team to build new features and improve the product. 
@@ -21,7 +21,7 @@ export const work = [
     location: "Bangalore",
     duration: "Apr 2022 - June 2022",
     shortDuration: `Apr - June '22`,
-    url: 'https://mydukaan.io/',
+    url: "https://mydukaan.io/",
     logo: Dukaan,
     description: [
       `Worked as a Front-End developer on the core product to develop new features and 

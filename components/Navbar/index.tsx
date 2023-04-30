@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import styles from './Navbar.module.scss';
-import { useRouter } from 'next/router';
+import Link from "next/link";
+import styles from "./Navbar.module.scss";
+import { useRouter } from "next/router";
 
 type NavItemProps = {
   href: string;

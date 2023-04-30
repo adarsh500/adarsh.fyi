@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import MusicBars from '@components/MusicBars';
-import styles from './NowPlaying.module.scss';
-import { SiSpotify } from 'react-icons/si';
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import MusicBars from "@components/MusicBars";
+import styles from "./NowPlaying.module.scss";
+import { SiSpotify } from "react-icons/si";
 
 interface NotPlaying {
   isPlaying?: false;
@@ -41,7 +41,7 @@ const NowPlaying = () => {
   const [currentTrack, setCurrentTrack] = useState<NotPlaying | Playing>({});
 
   const fetchNowPlaying = async () => {
-    const track = await fetch('api/getNowPlaying');
+    const track = await fetch("api/getNowPlaying");
     const data = await track.json();
     setCurrentTrack(data);
   };
