@@ -25,7 +25,7 @@ const Navbar = () => {
         <span className={styles.glow}></span>
       </div>
       <div className={styles.rightNav}>
-        <div className={styles.glider}></div>
+        {/* <div className={styles.glider}></div> */}
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />
         <NavItem href="/more" text="More" />
