@@ -4,14 +4,12 @@
   display: flex;
   flex-direction: column;
   margin: 0 36px 36px 0;
-  border: 1px solid #f3f3f3;
+  cursor: pointer;
   border-radius: var(--border-radius-large);
   min-height: min-content;
   width: calc(50% - 18px);
-
-  background-color: #171717;
-  background-color: rgba(17, 17, 17, 0.5);
-  border: 1px solid #333;
+  background-color: var(--background-dark);
+  border: 1px solid var(--border-dark);
 
   @include mobile {
     width: 100%;
@@ -26,38 +24,19 @@
   }
 
   &:hover {
-    transform: scale(1.04);
+    transform: scale(1.01);
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 5px 14px rgba(27, 64, 156, 0.543);
-  }
-
-  .mainIcon {
-    height: 32px;
-    width: 32px;
-    vertical-align: middle;
-    margin-right: 1rem;
-
-    color: var(--link);
-    border: 1px solid var(--link);
-
-    // color: var(--mint);
-    // border: 1px solid var(--mint);
-
-    border-radius: var(--border-radius-medium);
-    padding: 0.5rem;
-  }
-
-  .image {
-    border-radius: var(--border-radius-large);
-    aspect-ratio: 4/3;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border: 1px solid white;
   }
 
   .body {
     flex-direction: column;
     justify-content: flex-end;
-    padding: 18px;
+    padding: 28px 18px;
+
+    @include mobile {
+      padding: 26px 16px;
+    }
 
     .header {
       display: flex;
@@ -67,16 +46,16 @@
 
       .main {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
       }
 
       &Title {
-        @include font-size-weight(22, 28, 500);
+        @include font-size-weight(24, 30, 500);
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin-top: 16px;
 
         p {
           margin-right: 8px;
@@ -86,55 +65,37 @@
           @include font-size-weight(20, 24, 500);
         }
       }
-
-      &Link {
-        height: 18px;
-        width: 18px;
-        vertical-align: middle;
-      }
     }
 
     .description {
-      margin: 1rem 0;
-      @include font-size-weight(17, 26, 400);
-      color: #aaaaaa;
+      margin-top: 1rem;
+      @include font-size-weight(18, 26, 400);
+      color: var(--dark-text-secondary);
       @include line-clamp(3);
 
       @include mobile {
-        margin: 12px 0;
+        margin-top: 14px;
         @include line-clamp(3);
-        @include font-size-weight(16, 22, 400);
+        @include font-size-weight(16, 24, 400);
       }
     }
 
     .footer {
-      // margin-top: 24px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+      color: var(--dark-text-secondary);
+      margin-top: 12px;
 
-      @include mobile {
-        // margin-top: 22px;
-      }
-
-      .stack {
+      &cta {
         display: flex;
-
-        &Item {
-          margin-right: 14px;
-          height: 18px;
-          width: 18px;
-          vertical-align: middle;
-        }
-      }
-
-      .expand {
-        padding: 8px 16px;
-        display: flex;
+        justify-content: flex-end;
         align-items: center;
-        background-color: rgb(41, 41, 41);
-        border-radius: var(--border-radius-large);
+        @include font-size-weight(18, 26, 300);
+
+        .github {
+          vertical-align: middle;
+          margin-left: 10px;
+          height: 20px;
+          width: 20px;
+        }
       }
     }
   }
@@ -145,7 +106,7 @@
   width: 20px;
   color: white !important;
   vertical-align: middle;
-  margin: 2px 0 0 2px;
+  margin: 3px 0 0 0px;
   rotate: -45deg;
 
   path {

@@ -1,10 +1,11 @@
-@import '@styles/mixins.scss';
+@import "@styles/mixins.scss";
 
 .blog {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 2.5rem 0;
+  // margin: 2.5rem 0;
+  margin-top: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #333;
 

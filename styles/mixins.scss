@@ -20,7 +20,7 @@ $dark-mode: true;
   font-weight: $weight;
 }
 
-@mixin display-flex($align: center, $justify: center) {
+@mixin flex($justify: center, $align: center) {
   display: flex;
   align-items: $align;
   justify-content: $justify;

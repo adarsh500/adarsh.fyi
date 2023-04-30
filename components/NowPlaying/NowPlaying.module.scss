@@ -1,27 +1,16 @@
-@import '@styles/mixins.scss';
+@import "@styles/mixins.scss";
 
 .info {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  // display: none;
+  @include flex(center, center);
 }
 
-.nowPlaying {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+.notPlaying {
+  @include flex(space-between, center);
   width: 100%;
 
-  @include mobile {
-    padding: 10px 0;
-  }
-
   .icon {
-    height: 42px;
-    width: 42px;
+    height: 36px;
+    width: 36px;
 
     @include mobile {
       height: 28px;
@@ -33,21 +22,34 @@
     margin-left: 12px;
     text-align: center;
     width: 150px;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 500;
+    @include font-size-weight(18, 24, 500);
   }
+}
 
-  .paused {
-    margin: 0 18px;
+.nowPlaying {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  min-width: 200px;
+  max-width: 100%;
+  width: 100%;
 
-    width: 100%;
-    justify-content: space-between;
+  .icon {
+    height: 36px;
+    width: 36px;
 
     @include mobile {
-      margin: 0;
-      margin-left: 24px;
+      height: 28px;
+      width: 28px;
     }
+  }
+
+  .title {
+    margin-left: 12px;
+    text-align: center;
+    width: 150px;
+    @include font-size-weight(18, 24, 500);
   }
 }
 
@@ -58,16 +60,47 @@
   font-weight: 400;
 }
 
-.currentTrack {
-  max-width: 200px;
+.paused {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  @include mobile {
+    // margin-left: 1rem;
+    // justify-content: flex-start
+  }
+}
+
+.notListening {
+  @include font-size-weight(16, 22, 400);
+  text-align: left;
+  color: var(--dark-text-primary);
+}
+
+.currentTrack {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .albumImage {
+    border-radius: var(--border-radius-medium) !important;
+    height: 46px;
+    width: 46px;
+    margin-right: 12px;
+    border: 1px solid transparent;
+
+    @include mobile {
+      margin-right: 1.5rem;
+    }
+  }
+
   .trackInfo {
-    margin-left: 12px;
+    // margin-left: 12px;
     display: flex;
     flex-direction: column;
+    @include font-size-weight(16, 22, 400);
 
     @include mobile {
       margin-left: 0;
@@ -75,10 +108,8 @@
   }
 
   .trackTitle {
-    @include font-size-weight(16, 20, 500);
+    @include font-size-weight(16, 22, 500);
     text-align: left;
-    // margin-bottom: 4px;
-
     color: var(--dark-text-primary);
     @include line-clamp(1);
     &:hover {
@@ -87,9 +118,9 @@
   }
 
   .trackArtist {
-    margin-top: 6px;
+    margin-top: 4px;
     color: var(--dark-text-secondary);
-    @include font-size-weight(12, 14, 300);
+    @include font-size-weight(14, 20, 300);
     text-align: left;
     @include line-clamp(1);
   }
@@ -98,12 +129,11 @@
 .track {
   display: flex;
   border-radius: var(--border-radius-large);
-  margin-left: 12px;
+
   width: 100%;
   justify-content: space-between;
 
   @include mobile {
     margin: 0;
-    margin-left: 24px;
   }
 }

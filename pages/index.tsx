@@ -1,13 +1,13 @@
-import Hero from '@components/Hero';
-import styles from '@styles/Home.module.scss';
-import ProjectCard from '@components/ProjectCard';
-import Experience from '@components/Experience';
-import NowPlaying from '@components/NowPlaying';
+import Hero from "@components/Hero";
+import styles from "@styles/Home.module.scss";
+import ProjectCard from "@components/ProjectCard";
+import Experience from "@components/Experience";
+import NowPlaying from "@components/NowPlaying";
 
-import { work } from '@components/Content/work';
-import { projects } from '@components/Content/projects';
-import { skills } from '@components/Content/skills';
-import TechCard from '@components/TechCard';
+import { work } from "@components/Content/work";
+import { projects } from "@components/Content/projects";
+import { skills } from "@components/Content/skills";
+import TechCard from "@components/TechCard";
 
 const Home = (props: any) => (
   <>
@@ -23,7 +23,6 @@ const Home = (props: any) => (
 
     <div className={styles.section}>
       <h2 className={styles.subTitle}>Tech I work with</h2>
-
       <div className={styles.carousel}>
         {skills.map((skill) => (
           <TechCard {...skill} />
@@ -32,9 +31,9 @@ const Home = (props: any) => (
     </div>
 
     <div className={styles.section}>
-      <h2 className={styles.subTitle}>Work Experience</h2>
+      <h2 className={styles.subTitle}>Work </h2>
       <div className={styles.work}>
-        {work.slice(0, 2).map((experience) => (
+        {work.map((experience) => (
           <Experience {...experience} />
         ))}
       </div>

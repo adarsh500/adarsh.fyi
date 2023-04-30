@@ -1,4 +1,4 @@
-@import '@styles/mixins.scss';
+@import "@styles/mixins.scss";
 
 @keyframes gradient {
   0% {
@@ -32,16 +32,15 @@
   word-wrap: break-word;
   @include font-size-weight(20, 30, 400);
   text-align: left;
-  margin: 6rem 0 5.5rem 0;
+  margin: 6rem 0 5rem 0;
 
   @include dark-mode {
     color: var(--dark-text-primary);
   }
 
   @include mobile {
-    padding: 1.5rem 1rem;
+    padding: 2.5rem 1rem;
     margin: 2rem 0 1rem 0;
-    // min-height: 20vh;
   }
 }
 
@@ -119,16 +118,15 @@
     color: white;
 
     @include mobile {
-      @include font-size-weight(44, 52, 800);
+      @include font-size-weight(46, 54, 800);
     }
   }
 
   .about {
     margin-top: 16px;
     max-width: 90%;
-    color: rgb(210, 210, 210);
     color: var(--dark-text-secondary);
-    @include font-size-weight(22, 34, 400);
+    @include font-size-weight(22, 36, 400);
 
     @include mobile {
       max-width: 100%;
@@ -224,26 +222,4 @@
   100% {
     background-position-x: 600vw;
   }
-}
-
-.gradient {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #be123c;
-  --tw-gradient-to: rgb(190 18 60 / 0);
-  --tw-gradient-to: #7e22ce;
-  // opacity: 0.6;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-from: #93c5fd;
-  --tw-gradient-to: rgb(147 197 253 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  aspect-ratio: 1 / 1;
-  // z-index: -50;
-  width: 100%;
-  max-width: 1024px;
-  --tw-blur: blur(64px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-    var(--tw-sepia) var(--tw-drop-shadow);
-  bottom: calc(100% - 200px);
-  // position: fixed;
 }

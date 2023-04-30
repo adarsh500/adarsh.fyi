@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import MusicBars from '@components/MusicBars';
-import styles from './NowPlaying.module.scss';
-import { SiSpotify } from 'react-icons/si';
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import MusicBars from "@components/MusicBars";
+import styles from "./NowPlaying.module.scss";
+import { SiSpotify } from "react-icons/si";
 
 interface NotPlaying {
   isPlaying?: false;
@@ -17,11 +17,10 @@ interface Playing {
   isPlaying: true;
 }
 
-const CurrentTrack = ({ props }: any) => {
+const CurrentTrack = (props: any) => {
   const { songUrl, artist, title, isPlaying, albumImageUrl } = props;
   return (
-    <div className={styles.currentTrack}>
-      {/* <Image src={props?.albumImageUrl} height={52} width={52} /> */}
+    <div className={isPlaying ? styles.currentTrack : styles.paused}>
       <div className={styles.trackInfo}>
         {isPlaying ? (
           <>
@@ -31,7 +30,7 @@ const CurrentTrack = ({ props }: any) => {
             <p className={styles.trackArtist}>{artist}</p>
           </>
         ) : (
-          <p className={styles.trackTitle}>Not listening</p>
+          <p className={styles.notListening}>Not listening</p>
         )}
       </div>
     </div>
@@ -42,7 +41,7 @@ const NowPlaying = () => {
   const [currentTrack, setCurrentTrack] = useState<NotPlaying | Playing>({});
 
   const fetchNowPlaying = async () => {
-    const track = await fetch('api/getNowPlaying');
+    const track = await fetch("api/getNowPlaying");
     const data = await track.json();
     setCurrentTrack(data);
   };
@@ -52,10 +51,14 @@ const NowPlaying = () => {
   }, []);
 
   return (
-    <div className={styles.nowPlaying}>
-      <SiSpotify className={styles.icon} />
+    <div
+      className={
+        currentTrack?.isPlaying ? styles.nowPlaying : styles.notPlaying
+      }
+    >
+      {!currentTrack?.isPlaying && <SiSpotify className={styles.icon} />}
       <div className={styles.track}>
-        <CurrentTrack props={currentTrack} />
+        <CurrentTrack {...currentTrack} />
         {currentTrack?.isPlaying && <MusicBars />}
       </div>
     </div>

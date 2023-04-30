@@ -1,10 +1,6 @@
 import Link from "next/link";
-import { MdExpandMore } from "react-icons/md";
-import { FiCommand } from "react-icons/fi";
-import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "./Navbar.module.scss";
 import { useRouter } from "next/router";
-import cn from "classnames";
 
 type NavItemProps = {
   href: string;
@@ -27,22 +23,12 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.leftNav}>
         <span className={styles.glow}></span>
-
-        {/* <button className={styles.sidebar}>
-          <GiHamburgerMenu className={styles.icon} />
-        </button> */}
       </div>
       <div className={styles.rightNav}>
+        {/* <div className={styles.glider}></div> */}
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />
-        {/* <NavItem href="/blog" text="Blog" /> */}
-        {/* <NavItem href="/work" text="Work" /> */}
-        {/* <NavItem href="/projects" text="Projects" /> */}
         <NavItem href="/more" text="More" />
-
-        {/* <li className={styles.cmd}>
-          <FiCommand />
-        </li> */}
       </div>
     </nav>
   );

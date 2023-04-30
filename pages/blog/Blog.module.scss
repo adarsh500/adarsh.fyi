@@ -15,6 +15,7 @@
   @include mobile {
     padding: 1.5rem 1rem;
     margin: 3rem 0 3rem 0;
+    @include font-size-weight(18, 30, 400);
   }
 }
 
@@ -88,9 +89,7 @@
       padding: 1.5rem;
       border-radius: var(--border-radius-medium);
       border: 1px solid var(--border-dark);
-      // border-top-right-radius: 0;
-      // border-top-left-radius: 0;
-      background-color: #171717 !important;
+      background-color: var(--background-dark) !important;
       @include font-size-weight(14, 24, 400);
 
       @include mobile {

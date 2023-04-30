@@ -1,4 +1,4 @@
-@import '@styles/mixins.scss';
+@import "@styles/mixins.scss";
 
 @keyframes gradient {
   0% {
@@ -25,10 +25,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 5rem 0;
+  margin: 3rem 0;
+
+  &:last-child {
+    margin-bottom: 4rem !important;
+  }
 
   @include mobile {
-    margin: 4rem 1rem;
+    margin: 2.5rem 1rem;
   }
 }
 
@@ -72,15 +76,21 @@
   margin: 2rem 1rem;
   padding: 0 1.5rem;
 
+  &:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid white;
+  }
+
   @include mobile {
     display: block;
-    border: 1px solid #f3f3f3;
     border-radius: var(--border-radius-large);
     background-color: #171717;
     backdrop-filter: blur(18px) saturate(132%);
     -webkit-backdrop-filter: blur(18px) saturate(132%);
     background-color: rgba(17, 17, 17, 0.5);
-    border: 1px solid #333;
+    border: 1px solid var(--border-dark);
     margin-top: 0;
+    padding: 18px;
   }
 }

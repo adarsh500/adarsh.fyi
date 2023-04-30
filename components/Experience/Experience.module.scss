@@ -1,51 +1,35 @@
 @import "@styles/mixins";
 
-// .vertical {
-//   display: flex;
-//   flex-direction: column;
-// }
-
-.expand {
-  width: 100%;
-  background-color: #171717;
-  background-color: rgba(17, 17, 17, 0.75);
-  padding: 0;
-  margin: 0;
-  border: 0;
-  padding: 12px 0;
-  @include font-size-weight(16, 22, 300);
-  color: var(--dark-text-secondary);
-  border-bottom-left-radius: var(--border-radius-large);
-  border-bottom-right-radius: var(--border-radius-large);
-}
-
-.card {
-  width: 100%;
-  margin-bottom: 30px;
-  border-radius: var(--border-radius-large);
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  transition: all 0.4s ease-in-out;
-}
-
 .experience {
   display: flex;
   height: min-content !important;
   flex-direction: row;
   padding: 32px;
-  border-radius: var(--border-radius-large);
   height: 240px;
   overflow: hidden;
-  background-color: #171717;
-  background-color: rgba(17, 17, 17, 0.75);
+  background-color: var(--background-dark);
   @include font-size-weight(18, 24, 400);
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: var(--border-radius-large);
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: var(--border-radius-large);
+  border: 1px solid var(--border-dark);
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid white;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @include mobile {
     margin-left: 0;
     height: 220px;
-    padding: 18px;
+    padding: 28px 18px;
   }
 
   .left {
@@ -90,7 +74,7 @@
         color: var(--dark-text-secondary);
 
         @include mobile {
-          @include font-size-weight(14, 20, 400);
+          @include font-size-weight(16, 23, 300);
         }
       }
 
@@ -106,20 +90,11 @@
     .body {
       color: var(--dark-text-secondary);
       margin-top: 24px;
+      @include font-size-weight(18, 26, 400);
 
       @include mobile {
-        margin-top: 24px;
-      }
-    }
-
-    li {
-      list-style-type: disc;
-      margin-bottom: 6px;
-      @include font-size-weight(17, 26, 400);
-      color: var(--dark-text-secondary);
-
-      @include mobile {
-        @include font-size-weight(16, 22, 400);
+        margin-top: 16px;
+        @include font-size-weight(16, 24, 400);
       }
     }
   }

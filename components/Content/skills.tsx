@@ -7,50 +7,49 @@ import {
   SiMongodb,
   SiReact,
   SiTypescript,
-} from 'react-icons/si';
-import { IoLogoSass, IoLogoNodejs } from 'react-icons/io';
+} from "react-icons/si";
+import { IoLogoSass, IoLogoNodejs } from "react-icons/io";
+import { TbBrandGolang } from "react-icons/tb";
 
 export const skills = [
   {
-    name: 'Typescript',
+    name: "Typescript",
     icon: <SiTypescript className="techIcon" />,
   },
   {
-    name: 'JavaScript',
+    name: "JavaScript",
     icon: <SiJavascript className="techIcon" />,
   },
   {
-    name: 'Next.js',
+    name: "Next.js",
     icon: <SiNextdotjs className="techIcon" />,
   },
   {
-    name: 'React',
+    name: "React",
     icon: <SiReact className="techIcon" />,
   },
   {
-    name: 'Redux',
+    name: "Redux",
     icon: <SiRedux className="techIcon" />,
   },
   {
-    name: 'Nestjs',
+    name: "Nestjs",
     icon: <SiNestjs className="techIcon" />,
   },
   {
-    name: 'SASS',
+    name: "SASS",
     icon: <IoLogoSass className="techIcon" />,
   },
   {
-    name: 'MongoDB',
+    name: "MongoDB",
     icon: <SiMongodb className="techIcon" />,
   },
-
   {
-    name: 'Nodejs',
+    name: "Nodejs",
     icon: <IoLogoNodejs className="techIcon" />,
   },
-
   {
-    name: 'Postgresql',
+    name: "Postgresql",
     icon: <SiPostgresql className="techIcon" />,
   },
 ];

@@ -1,56 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import './reset.scss';
-@import './mixins.scss';
+@import "./reset.scss";
+@import "./mixins.scss";
 
 :root {
   --success: #10b981;
   --primary: #026bdc;
   --border-light: #f3f3f3;
-  --border-dark: #444;
+  --border-dark: #333;
   --link: #52a9ff;
-  --mint: rgb(0, 255, 149);
 
-  --error: rgb(216, 96, 96);
+  //borders
   --border-radius-small: 6px;
   --border-radius-medium: 8px;
-  --border-radius-large: 16px;
+  --border-radius-large: 10px;
+
   --primary-gradient: linear-gradient(to right, #007fff, #0059b2);
 
   //background
   --background-dark: rgba(17, 17, 17, 0.5);
   --background-light: #ffffff;
-  --blur-background-light: rgba(255, 255, 255, 0.75);
-  --blur-background-dark: rgba(17, 17, 17, 0.75);
   --tag: #026bdc;
 
   //font-colors
   --dark-text-primary: #ffffff;
-  --dark-text-secondary: #a9a9a9;
+  --dark-text-secondary: rgba(255, 255, 255, 0.8);
   --light-text-primary: #000000;
   --light-text-secondary: #898989;
-
-  --shadow-color: 0deg 0% 61%;
-  --shadow-elevation-low: 0px 0.3px 0.3px hsl(var(--shadow-color) / 0.35),
-    0px 0.5px 0.6px -1.2px hsl(var(--shadow-color) / 0.35),
-    0px 1.2px 1.3px -2.5px hsl(var(--shadow-color) / 0.35);
-  --shadow-elevation-medium: 0px 0.3px 0.3px hsl(var(--shadow-color) / 0.3),
-    0px 0.8px 0.9px -0.6px hsl(var(--shadow-color) / 0.3),
-    0px 1.6px 1.8px -1.2px hsl(var(--shadow-color) / 0.3),
-    -0.1px 3.2px 3.6px -1.9px hsl(var(--shadow-color) / 0.3),
-    -0.1px 6.1px 6.9px -2.5px hsl(var(--shadow-color) / 0.3);
-  --shadow-elevation-high: 0px 0.3px 0.3px hsl(var(--shadow-color) / 0.28),
-    0px 1.5px 1.7px -0.3px hsl(var(--shadow-color) / 0.28),
-    -0.1px 2.6px 2.9px -0.6px hsl(var(--shadow-color) / 0.28),
-    -0.1px 4px 4.5px -0.8px hsl(var(--shadow-color) / 0.28),
-    -0.1px 5.9px 6.6px -1.1px hsl(var(--shadow-color) / 0.28),
-    -0.2px 8.4px 9.5px -1.4px hsl(var(--shadow-color) / 0.28),
-    -0.3px 12px 13.5px -1.7px hsl(var(--shadow-color) / 0.28),
-    -0.4px 16.8px 18.9px -1.9px hsl(var(--shadow-color) / 0.28),
-    -0.6px 23.1px 26px -2.2px hsl(var(--shadow-color) / 0.28),
-    -0.7px 31.1px 35px -2.5px hsl(var(--shadow-color) / 0.28);
 }
 a {
   color: inherit;
@@ -62,11 +36,9 @@ a {
 }
 
 #__next {
-  background: linear-gradient(
-    rgb(19, 21, 25),
-    rgb(11, 13, 15) 20%,
-    transparent
-  );
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -136,9 +108,10 @@ body {
   // width: 820px;
   // margin: 0 auto;
   // @include dark-mode {
-  background-image: linear-gradient(rgba(45, 52, 64, 0.5) 1px, transparent 0),
-    linear-gradient(90deg, rgba(45, 52, 64, 0.5) 1px, #0b0d0f 0);
+
   // }
+  background-image: linear-gradient(rgba(45, 52, 64, 0.5) 0px, transparent 0),
+    linear-gradient(90deg, rgba(45, 52, 64, 0.5) 0px, #0b0d0f 0);
 }
 
 .icon {
@@ -148,8 +121,8 @@ body {
 }
 
 .techIcon {
-  height: 48px;
-  width: 48px !important;
+  height: 46px;
+  width: 46px !important;
   margin: 0 !important;
   width: 100%;
   vertical-align: middle;
