@@ -1,11 +1,6 @@
-import styles from "./ProjectCard.module.scss";
-import Image from "next/image";
-import { HiArrowTopRightOnSquare } from "react-icons/hi2";
-import { VscGithubInverted } from "react-icons/vsc";
-import { SiNextdotjs, SiReact, SiMongodb, SiTypescript } from "react-icons/si";
-import { DiSass } from "react-icons/di";
-import { GrLinkNext } from "react-icons/gr";
-import Mark from "@icons/Mark";
+import styles from './ProjectCard.module.scss';
+import { VscGithubInverted } from 'react-icons/vsc';
+import { GrLinkNext } from 'react-icons/gr';
 
 type ProjectProps = {
   title: string;
@@ -22,26 +17,18 @@ const ProjectCard = (props: ProjectProps) => {
   return (
     <div className={styles.projectCard}>
       <div className={styles.body}>
-        <Mark className={styles.mainIcon} />
         <div className={styles.header}>
           <div className={styles.main}>
             <a className={styles.headerTitle} href={link} target="_blank">
               <p>{title}</p>
               <GrLinkNext className={styles.icon} />
             </a>
+            <a className={styles.footercta} href={githubUrl} target="_blank">
+              <VscGithubInverted className={styles.github} />
+            </a>
           </div>
-          <a href={githubUrl} target="_blank" className={styles.headerLink}>
-            <VscGithubInverted className="icon" />
-          </a>
         </div>
         <div className={styles.description}>{description}</div>
-
-        <div className={styles.footer}>
-          {/* <button className={styles.expand}>
-            <p>Expand</p>
-            <MdExpandMore className={styles.icon} />
-          </button> */}
-        </div>
       </div>
     </div>
   );

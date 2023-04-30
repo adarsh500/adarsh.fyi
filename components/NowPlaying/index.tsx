@@ -21,18 +21,6 @@ const CurrentTrack = (props: any) => {
   const { songUrl, artist, title, isPlaying, albumImageUrl } = props;
   return (
     <div className={isPlaying ? styles.currentTrack : styles.paused}>
-      {!!albumImageUrl && isPlaying && (
-        <div className={styles.albumImage}>
-          <Image
-            src={props?.albumImageUrl}
-            height={46}
-            width={46}
-            layout="fixed"
-            loading="lazy"
-            objectFit="contain"
-          />
-        </div>
-      )}
       <div className={styles.trackInfo}>
         {isPlaying ? (
           <>
@@ -70,8 +58,8 @@ const NowPlaying = () => {
     >
       {!currentTrack?.isPlaying && <SiSpotify className={styles.icon} />}
       <div className={styles.track}>
-        <CurrentTrack {...currentTrack} />
         {currentTrack?.isPlaying && <MusicBars />}
+        <CurrentTrack {...currentTrack} />
       </div>
     </div>
   );

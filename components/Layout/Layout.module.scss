@@ -18,14 +18,13 @@
 
 .nowPlaying {
   position: fixed;
-  padding: 1rem;
+  padding: 1.125rem 1.5rem;
   border-radius: var(--border-radius-large);
-  background-color: #171717;
   bottom: 1rem;
   left: 1rem;
   backdrop-filter: blur(18px) saturate(132%);
   -webkit-backdrop-filter: blur(18px) saturate(132%);
-  background-color: rgba(17, 17, 17, 0.75);
+  background-color: var(--background-dark);
   border: 1px solid var(--border-dark);
 
   @include mobile {

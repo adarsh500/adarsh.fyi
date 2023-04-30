@@ -89,9 +89,7 @@
       padding: 1.5rem;
       border-radius: var(--border-radius-medium);
       border: 1px solid var(--border-dark);
-      // border-top-right-radius: 0;
-      // border-top-left-radius: 0;
-      background-color: var(--blur-background-dark) !important;
+      background-color: var(--background-dark) !important;
       @include font-size-weight(14, 24, 400);
 
       @include mobile {
