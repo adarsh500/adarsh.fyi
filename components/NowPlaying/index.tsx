@@ -58,8 +58,8 @@ const NowPlaying = () => {
     >
       {!currentTrack?.isPlaying && <SiSpotify className={styles.icon} />}
       <div className={styles.track}>
-        {currentTrack?.isPlaying && <MusicBars />}
         <CurrentTrack {...currentTrack} />
+        {currentTrack?.isPlaying && <MusicBars />}
       </div>
     </div>
   );

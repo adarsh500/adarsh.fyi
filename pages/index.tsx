@@ -31,9 +31,9 @@ const Home = (props: any) => (
     </div>
 
     <div className={styles.section}>
-      <h2 className={styles.subTitle}>Work</h2>
+      <h2 className={styles.subTitle}>Work </h2>
       <div className={styles.work}>
-        {work.slice(0, 2).map((experience) => (
+        {work.map((experience) => (
           <Experience {...experience} />
         ))}
       </div>

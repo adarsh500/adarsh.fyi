@@ -11,7 +11,7 @@
   //borders
   --border-radius-small: 6px;
   --border-radius-medium: 8px;
-  --border-radius-large: 12px;
+  --border-radius-large: 10px;
 
   --primary-gradient: linear-gradient(to right, #007fff, #0059b2);
 
@@ -128,8 +128,8 @@ body {
 }
 
 .techIcon {
-  height: 48px;
-  width: 48px !important;
+  height: 46px;
+  width: 46px !important;
   margin: 0 !important;
   width: 100%;
   vertical-align: middle;

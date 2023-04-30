@@ -25,10 +25,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 4rem 0;
+  margin: 3rem 0;
+
+  &:last-child {
+    margin-bottom: 4rem !important;
+  }
 
   @include mobile {
-    margin: 3rem 1rem;
+    margin: 2.5rem 1rem;
   }
 }
 
@@ -72,6 +76,12 @@
   margin: 2rem 1rem;
   padding: 0 1.5rem;
 
+  &:hover {
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid white;
+  }
+
   @include mobile {
     display: block;
     border-radius: var(--border-radius-large);
@@ -81,6 +91,6 @@
     background-color: rgba(17, 17, 17, 0.5);
     border: 1px solid var(--border-dark);
     margin-top: 0;
-    padding: 1rem;
+    padding: 18px;
   }
 }
