@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import styles from './Navbar.module.scss';
-import { useRouter } from 'next/router';
-import usePosition from 'hooks/usePosition';
-import clsx from 'clsx';
+import Link from "next/link";
+import styles from "./Navbar.module.scss";
+import { useRouter } from "next/router";
+import usePosition from "hooks/usePosition";
+import clsx from "clsx";
 
 type NavItemProps = {
   href: string;

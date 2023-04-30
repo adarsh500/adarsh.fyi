@@ -1,13 +1,13 @@
-import Hero from '@components/Hero';
-import styles from '@styles/Home.module.scss';
-import ProjectCard from '@components/ProjectCard';
-import Experience from '@components/Experience';
-import NowPlaying from '@components/NowPlaying';
+import Hero from "@components/Hero";
+import styles from "@styles/Home.module.scss";
+import ProjectCard from "@components/ProjectCard";
+import Experience from "@components/Experience";
+import NowPlaying from "@components/NowPlaying";
 
-import { work } from '@components/Content/work';
-import { projects } from '@components/Content/projects';
-import { skills } from '@components/Content/skills';
-import TechCard from '@components/TechCard';
+import { work } from "@components/Content/work";
+import { projects } from "@components/Content/projects";
+import { skills } from "@components/Content/skills";
+import TechCard from "@components/TechCard";
 
 const Home = (props: any) => (
   <>
