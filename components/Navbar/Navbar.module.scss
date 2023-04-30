@@ -1,4 +1,4 @@
-@import "@styles/mixins.scss";
+@import '@styles/mixins.scss';
 
 @-moz-keyframes spin {
   100% {
@@ -33,25 +33,38 @@
   z-index: 1;
   display: flex;
   position: sticky;
-  justify-content: space-between;
+  // justify-content: space-between;
+  justify-content: flex-end;
+
   top: 20px;
   padding: 16px 20px;
   border-radius: var(--border-radius-large);
-  background-color: #171717;
+  border: 1px solid transparent;
   backdrop-filter: blur(10px) saturate(232%);
   -webkit-backdrop-filter: blur(18px) saturate(132%);
-  background-color: rgba(17, 17, 17, 0.75);
-  border: 1px solid var(--border-dark);
+  transition: all 0.3s ease-in-out;
+
+  &Visible {
+    background-color: var(--background-dark);
+    border: 1px solid var(--border-dark);
+  }
+
   @include font-size-weight(18, 24, 400);
-  color: darkgray;
+  color: var(--dark-text-secondary);
 
   @include mobile {
     position: sticky;
     top: 0;
     border: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.125);
     border-radius: 0;
     padding: 16px 12px;
+    border-bottom: 1px solid transparent;
+
+    &Visible {
+      border-bottom: 1px solid var(--border-dark);
+      background-color: var(--background-dark);
+      // border: 1px solid var(--border-dark);
+    }
   }
 
   .lastItem {
@@ -62,26 +75,29 @@
     @include font-size-weight(18, 22, 500);
 
     @include mobile {
-      padding: 4px 0 4px 6px;
+      padding: 4px 8px;
       @include font-size-weight(16, 22, 400);
     }
   }
 
   .item {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    padding: 0.5rem 0.75rem;
+    padding: 6px 12px;
     @include font-size-weight(18, 24, 500);
     color: var(dark-text-secondary);
     z-index: 2;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-small);
 
-    &:last-child {
-      padding-right: 0;
+    &:hover {
+      border: 1px solid rgba(180, 180, 180, 0.621);
+      color: var(--dark-text-primary);
+      // background-color: #242424;
+      border-radius: var(--border-radius-small);
+      transition: all 0.3s ease-in-out;
     }
 
     @include mobile {
-      padding: 4px 6px;
+      padding: 4px 8px;
       @include font-size-weight(16, 22, 400);
     }
 
@@ -93,12 +109,21 @@
     }
 
     &Active {
-      list-style-type: none;
       padding: 6px 12px;
       border-radius: var(--border-radius-medium);
-      @include font-size-weight(19, 24, 500);
+      @include font-size-weight(18, 24, 500);
       color: white;
+      border: 1px solid transparent;
       z-index: 2;
+      // transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: white;
+        // background-color: #1f1f1f;
+        border: 1px solid rgba(180, 180, 180, 0.621);
+        transition: all 0.3s ease-in-out;
+        border-radius: var(--border-radius-small);
+      }
 
       @include mobile {
         padding: 4px 8px;

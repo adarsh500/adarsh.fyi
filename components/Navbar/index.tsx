@@ -1,6 +1,8 @@
-import Link from "next/link";
-import styles from "./Navbar.module.scss";
-import { useRouter } from "next/router";
+import Link from 'next/link';
+import styles from './Navbar.module.scss';
+import { useRouter } from 'next/router';
+import usePosition from 'hooks/usePosition';
+import clsx from 'clsx';
 
 type NavItemProps = {
   href: string;
@@ -19,11 +21,17 @@ const NavItem = ({ href, text }: NavItemProps) => {
 };
 
 const Navbar = () => {
+  const position = usePosition();
+
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.leftNav}>
+    <nav
+      className={clsx(styles.navbar, {
+        [styles.navbarVisible]: position > 0,
+      })}
+    >
+      {/* <div className={styles.leftNav}>
         <span className={styles.glow}></span>
-      </div>
+      </div> */}
       <div className={styles.rightNav}>
         {/* <div className={styles.glider}></div> */}
         <NavItem href="/" text="Home" />

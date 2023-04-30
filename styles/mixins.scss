@@ -9,6 +9,14 @@ $dark-mode: true;
   }
 }
 
+@mixin light-mode {
+  @if not($dark-mode) {
+    @media (prefers-color-scheme: light) {
+      @content;
+    }
+  }
+}
+
 @mixin font-size($size, $line-height) {
   font-size: #{$size}px;
   line-height: #{$line-height}px;
