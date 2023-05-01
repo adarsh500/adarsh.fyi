@@ -67,12 +67,12 @@
     border-bottom: 1px solid transparent;
 
     &Visible {
-      border-bottom: 1px solid var(--border-dark);
-      background-color: var(--background-dark);
+      border-bottom: 1px solid var(--border-light);
+      background-color: var(--background-light);
 
       @include dark-mode {
-        border-bottom: 1px solid var(--border-light);
-        background-color: var(--background-light);
+        border-bottom: 1px solid var(--border-dark);
+        background-color: var(--background-dark);
       }
     }
   }
