@@ -1,13 +1,16 @@
-@import "@styles/mixins.scss";
+@import '@styles/mixins.scss';
 
 .blog {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // margin: 2.5rem 0;
   margin-top: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--border-light);
+
+  @include dark-mode {
+    border-bottom: 1px solid var(--border-dark);
+  }
 
   @include mobile {
     margin: 2rem 0;
@@ -46,11 +49,14 @@
 
   .readingTime {
     display: flex !important;
-
     align-items: center;
-    color: var(--dark-text-secondary);
     @include font-size-weight(16, 22, 400);
     @include line-clamp(1);
+    color: var(--light-text-secondary);
+
+    @include dark-mode {
+      color: var(--dark-text-secondary);
+    }
 
     @include mobile {
       @include font-size-weight(14, 20, 400);
@@ -59,9 +65,13 @@
 
   .date {
     margin-top: 8px;
-    color: var(--dark-text-secondary);
     @include font-size-weight(16, 22, 400);
     @include line-clamp(1);
+    color: var(--light-text-secondary);
+
+    @include dark-mode {
+      color: var(--dark-text-secondary);
+    }
 
     @include mobile {
       margin-top: 4px;
@@ -71,9 +81,13 @@
 
   .description {
     margin-top: 14px;
-    color: var(--dark-text-secondary);
     @include font-size-weight(16, 24, 400);
     @include line-clamp(3);
+    color: var(--light-text-secondary);
+
+    @include dark-mode {
+      color: var(--dark-text-secondary);
+    }
 
     @include mobile {
       margin-top: 10px;

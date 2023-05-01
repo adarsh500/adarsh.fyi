@@ -1,4 +1,4 @@
-@import "@styles/mixins";
+@import '@styles/mixins';
 
 .main {
   display: flex;
@@ -9,6 +9,7 @@
   @include font-size-weight(20, 30, 400);
   margin: 3rem 0 6rem 0;
   flex: 1;
+  color: var(--lighttext-primary);
 
   @include dark-mode {
     color: var(--dark-text-primary);
@@ -22,10 +23,8 @@
 }
 
 .container {
-  display: flex;
+  @include flex(center, flex-start);
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 
   .title {
     @include font-size-weight(48, 54, 800);

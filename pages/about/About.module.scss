@@ -1,4 +1,4 @@
-@import "@styles/mixins";
+@import '@styles/mixins';
 
 .main {
   display: flex;
@@ -10,6 +10,7 @@
   text-align: left;
   margin: 3rem 0 6rem 0;
   flex: 1;
+  color: var(--light-text-primary);
 
   @include dark-mode {
     color: var(--dark-text-primary);
@@ -34,8 +35,11 @@
 
   .about {
     margin-top: 3rem;
-    color: #c3c3c3;
-    // @include font-size-weight(18, 32, 400);
+    color: var(--light-text-primary);
+    @include dark-mode {
+      color: var(--dark-text-secondary);
+      color: #c3c3c3;
+    }
 
     .link {
       color: var(--link);

@@ -1,4 +1,4 @@
-@import "@styles/mixins";
+@import '@styles/mixins';
 
 .main {
   display: flex;
@@ -7,6 +7,7 @@
   word-wrap: break-word;
   @include font-size-weight(20, 30, 400);
   margin: 6rem 0 6rem 0;
+  color: var(--light-text-primary);
 
   @include dark-mode {
     color: var(--dark-text-primary);
@@ -20,10 +21,8 @@
 }
 
 .container {
-  display: flex;
+  @include flex(center, flex-start);
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 
   .title {
     @include font-size-weight(48, 54, 800);
@@ -36,10 +35,12 @@
   .subRow {
     margin-top: 0.75rem;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--dark-text-secondary);
+    @include flex(space-between, center);
+    color: var(--light-text-secondary);
+
+    @include dark-mode {
+      color: var(--dark-text-secondary);
+    }
 
     .time {
       @include font-size-weight(16, 20, 500);
@@ -54,7 +55,11 @@
 
   .blog {
     margin-top: 2.5rem;
-    color: var(--dark-text-secondary);
+    color: var(--light-text-secondary);
+
+    @include dark-mode {
+      color: var(--dark-text-secondary);
+    }
     @include font-size-weight(18, 32, 400);
 
     h1 {
@@ -75,22 +80,32 @@
     [data-rehype-pretty-code-title] {
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
-      border: 1px solid var(--border-dark);
       border-bottom: none;
-      background-color: #1c1c1c;
       padding: 0.75rem 1rem;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         Liberation Mono, Courier New, monospace;
       @include font-size-weight(14, 24, 400);
+      border: 1px solid var(--border-light);
+      background-color: #bababa;
+
+      @include dark-mode {
+        border: 1px solid var(--border-dark);
+        background-color: #1c1c1c;
+      }
     }
 
     pre {
       margin: 1rem 0;
       padding: 1.5rem;
-      border-radius: var(--border-radius-medium);
-      border: 1px solid var(--border-dark);
-      background-color: var(--background-dark) !important;
       @include font-size-weight(14, 24, 400);
+      border-radius: var(--border-radius-medium);
+      border: 1px solid var(--border-light);
+      background-color: var(--background-light) !important;
+
+      @include dark-mode {
+        border: 1px solid var(--border-dark);
+        background-color: var(--background-dark) !important;
+      }
 
       @include mobile {
         padding: 1rem;

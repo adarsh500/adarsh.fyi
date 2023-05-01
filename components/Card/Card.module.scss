@@ -1,4 +1,4 @@
-@import "@styles/mixins.scss";
+@import '@styles/mixins.scss';
 
 .card {
   display: flex;
@@ -8,13 +8,23 @@
   min-height: min-content;
   width: calc(50% - 16px);
   padding: 18px;
-  background-color: rgba(17, 17, 17, 0.5);
-  border: 1px solid var(--border-dark);
+
+  background-color: var(--background-light);
+  border: 1px solid var(--border-light);
+
+  @include dark-mode {
+    background-color: rgba(17, 17, 17, 0.5);
+    border: 1px solid var(--border-dark);
+  }
 
   &:hover {
     transform: scale(1.01);
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 5px 14px rgba(27, 64, 156, 0.543);
+    border: 1px solid black;
+
+    @include dark-mode {
+      border: 1px solid white;
+    }
   }
 
   &:nth-child(2n) {
@@ -44,8 +54,12 @@
   .description {
     margin-top: 10px;
     @include font-size-weight(17, 26, 400);
-    color: #aaaaaa;
     @include line-clamp(1);
+    color: var(--light-text-secondary);
+
+    @include dark-mode {
+      color: #aaaaaa;
+    }
 
     @include mobile {
       margin-top: 12px 0;
