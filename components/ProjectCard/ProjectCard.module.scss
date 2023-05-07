@@ -36,6 +36,10 @@
     @include dark-mode {
       border: 1px solid white;
     }
+
+    .icon {
+      transform: translateX(6px);
+    }
   }
 
   .body {
@@ -120,7 +124,8 @@
   color: black !important;
   vertical-align: middle;
   margin: 3px 0 0 0px;
-  rotate: -45deg;
+  transition: all 0.3s ease-in-out;
+  stroke-width: 40px;
 
   @include dark-mode {
     color: white !important;

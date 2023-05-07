@@ -12,14 +12,34 @@
   }
 }
 
-@keyframes glow {
+@keyframes fadeInUp {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
   }
+
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
-      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes blur {
+  0% {
+    opacity: 0;
+    filter: brightness(1) blur(30px);
+  }
+  30% {
+    opacity: 1;
+    filter: brightness(2) blur(20px);
+  }
+  60% {
+    opacity: 1;
+    filter: brightness(2) blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) blur(0);
   }
 }
 
@@ -46,6 +66,7 @@
 .container {
   @include flex(center, flex-start);
   flex-direction: column;
+  animation: fadeInUp 1s ease-in-out;
 
   .secondaryText {
     @include font-size-weight(20, 24, 400);
@@ -58,33 +79,10 @@
   }
 
   .title {
-    // user-select: none;
     @include font-size-weight(72, 82, 800);
-    // background: repeating-linear-gradient(
-    //   -45deg,
-    //   red 0%,
-    //   rgb(0, 255, 0) 14.28%,
-    //   rgb(0, 255, 255) 21.4%,
-    //   cyan 28.56%,
-    //   blue 35.7%,
-    //   magenta 42.84%,
-    //   red 50%
-    // );
-    // background: repeating-linear-gradient(
-    //   -45deg,
-    //   rgb(223, 31, 108) 0%,
-    //   rgb(0, 255, 255) 10%,
-    //   rgb(0, 102, 255) 30%,
-    //   rgb(27, 65, 234) 40%,
-    //   rgb(223, 31, 108) 50%
-    // );
-    // background-size: 600vw 600vw;
-
-    // animation: slide 7s linear infinite forwards;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradient 7s ease infinite;
-    // animation: glow 1s ease-in-out infinite alternate;
+    animation: gradient 7s ease infinite, blur 1s linear;
 
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -92,7 +90,7 @@
     color: white;
 
     @include mobile {
-      @include font-size-weight(46, 54, 800);
+      @include font-size-weight(48, 58, 800);
     }
   }
 
@@ -119,28 +117,5 @@
         color: var(--dark-text-primary);
       }
     }
-
-    .redGradient {
-      background: -webkit-linear-gradient(-75deg, #ee7752, #e73c7e);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 500;
-    }
-
-    .blueGradient {
-      background: -webkit-linear-gradient(-75deg, #23a6d5, #23d5ab);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 500;
-    }
-  }
-}
-
-@keyframes slide {
-  0% {
-    background-position-x: 0%;
-  }
-  100% {
-    background-position-x: 600vw;
   }
 }

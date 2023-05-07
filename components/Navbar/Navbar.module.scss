@@ -1,22 +1,5 @@
 @import '@styles/mixins.scss';
 
-@-moz-keyframes spin {
-  100% {
-    -moz-transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -26,6 +9,18 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
@@ -39,6 +34,7 @@
   border-radius: var(--border-radius-large);
   border: 1px solid transparent;
   transition: all 0.3s ease-in-out;
+  animation: fadeInDown 1s ease-in-out;
   @include font-size-weight(18, 24, 400);
   color: var(--light-text-primary);
 
@@ -181,28 +177,12 @@
         width: 18px;
       }
     }
-
-    .glow {
-      border-radius: 100%;
-      @include content-size(24, 24);
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-      background-size: 30px 30px;
-      animation: gradient 7s ease infinite;
-      animation: spin 4s linear infinite;
-
-      @include mobile {
-        display: none;
-      }
-    }
   }
 
   .rightNav {
     display: flex;
     align-items: center;
     position: relative;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
 
     .glider {
       position: absolute;
