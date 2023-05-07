@@ -79,7 +79,7 @@
   }
 
   .title {
-    @include font-size-weight(72, 82, 800);
+    @include font-size-weight(70, 80, 800);
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 7s ease infinite, blur 1s linear;
@@ -98,7 +98,7 @@
     margin-top: 16px;
     max-width: 90%;
     color: var(--light-text-secondary);
-    @include font-size-weight(22, 36, 400);
+    @include font-size-weight(20, 36, 400);
 
     @include dark-mode {
       color: var(--dark-text-secondary);
