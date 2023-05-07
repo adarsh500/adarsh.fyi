@@ -34,7 +34,7 @@
   border-radius: var(--border-radius-large);
   border: 1px solid transparent;
   transition: all 0.3s ease-in-out;
-  // animation: fadeInDown 1s ease-in-out;
+  animation: fadeInDown 1s ease-in-out;
   @include font-size-weight(18, 24, 400);
   color: var(--light-text-primary);
 

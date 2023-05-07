@@ -52,7 +52,6 @@
   text-align: left;
   margin: 6rem 0 5rem 0;
   color: var(--light-text-primary);
-  animation: fadeInUp 1s ease-in-out;
 
   @include dark-mode {
     color: var(--dark-text-primary);
@@ -67,6 +66,7 @@
 .container {
   @include flex(center, flex-start);
   flex-direction: column;
+  animation: fadeInUp 1s ease-in-out;
 
   .secondaryText {
     @include font-size-weight(20, 24, 400);
@@ -79,27 +79,7 @@
   }
 
   .title {
-    // user-select: none;
     @include font-size-weight(72, 82, 800);
-    // background: repeating-linear-gradient(
-    //   -45deg,
-    //   red 0%,
-    //   rgb(0, 255, 0) 14.28%,
-    //   rgb(0, 255, 255) 21.4%,
-    //   cyan 28.56%,
-    //   blue 35.7%,
-    //   magenta 42.84%,
-    //   red 50%
-    // );
-    // background: repeating-linear-gradient(
-    //   -45deg,
-    //   rgb(223, 31, 108) 0%,
-    //   rgb(0, 255, 255) 10%,
-    //   rgb(0, 102, 255) 30%,
-    //   rgb(27, 65, 234) 40%,
-    //   rgb(223, 31, 108) 50%
-    // );
-    // background-size: 600vw 600vw;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 7s ease infinite, blur 1s linear;
@@ -137,28 +117,5 @@
         color: var(--dark-text-primary);
       }
     }
-
-    .redGradient {
-      background: -webkit-linear-gradient(-75deg, #ee7752, #e73c7e);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 500;
-    }
-
-    .blueGradient {
-      background: -webkit-linear-gradient(-75deg, #23a6d5, #23d5ab);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 500;
-    }
-  }
-}
-
-@keyframes slide {
-  0% {
-    background-position-x: 0%;
-  }
-  100% {
-    background-position-x: 600vw;
   }
 }
