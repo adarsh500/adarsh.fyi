@@ -11,7 +11,7 @@ const More = () => {
 
         <div className={styles.more}>
           {more.map((item) => (
-            <Card {...item} />
+            <Card {...item} key={item.title}/>
           ))}
         </div>
       </div>

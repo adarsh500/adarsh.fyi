@@ -14,9 +14,10 @@ export default function Blog({ posts }: any) {
       <div className={styles.container}>
         <p className={styles.title}>Blogs</p>
         <div className={styles.blogs}>
-          {posts.map((post: any) => (
+          {posts.map((post: any, index: number) => (
             <>
               <BlogCard
+                key={index}
                 {...post}
                 slug={post.url}
                 readingTime={post.readingTime}
