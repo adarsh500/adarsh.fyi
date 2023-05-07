@@ -7,6 +7,7 @@ import { work } from '@components/Content/work';
 import ProjectCard from '@components/ProjectCard';
 import TechCard from '@components/TechCard';
 import Experience from '@components/Experience';
+import NowPlaying from '@components/NowPlaying';
 
 const Home = (props: any) => (
   <>
@@ -38,7 +39,9 @@ const Home = (props: any) => (
       </div>
     </div>
 
-    <div className={styles.spotify}>{/* <NowPlaying /> */}</div>
+    <div className={styles.spotify}>
+      <NowPlaying />
+    </div>
   </>
 );
 

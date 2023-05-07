@@ -1,8 +1,8 @@
-'use client';
 import React, { useEffect, useState } from 'react';
 import MusicBars from '@components/MusicBars';
 import styles from './NowPlaying.module.scss';
 import { SiSpotify } from 'react-icons/si';
+import { getNowPlaying } from '@utils/spotify';
 
 interface NotPlaying {
   isPlaying?: false;
@@ -18,7 +18,7 @@ interface Playing {
 }
 
 const CurrentTrack = (props: any) => {
-  const { songUrl, artist, title, isPlaying, albumImageUrl } = props;
+  const { songUrl, artist, title, isPlaying } = props;
   return (
     <div className={isPlaying ? styles.currentTrack : styles.paused}>
       <div className={styles.trackInfo}>
@@ -37,18 +37,9 @@ const CurrentTrack = (props: any) => {
   );
 };
 
-const NowPlaying = () => {
-  const [currentTrack, setCurrentTrack] = useState<NotPlaying | Playing>({});
-
-  const fetchNowPlaying = async () => {
-    const track = await fetch('api/getNowPlaying');
-    const data = await track.json();
-    setCurrentTrack(data);
-  };
-
-  useEffect(() => {
-    fetchNowPlaying();
-  }, []);
+const NowPlaying = async () => {
+  const currentTrack = await getNowPlaying();
+  console.log(currentTrack);
 
   return (
     <div

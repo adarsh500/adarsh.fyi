@@ -1,11 +1,10 @@
-'use client';
 import { Inter } from 'next/font/google';
 import '../styles/globals.scss';
-import { usePathname } from 'next/navigation';
+import styles from './Layout.module.scss';
 import Footer from '@components/Footer';
 import Navbar from './nav';
+import NowPlaying from '@components/NowPlaying';
 
-// If loading a variable font, you don't need to specify the font weight
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -16,17 +15,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-    console.log(pathname)
-  const hide =
-    pathname === '/blog/[slug]' || pathname === '/blog' ? true : false;
-
   return (
     <html lang="en" className={inter.className}>
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
+      <body suppressHydrationWarning={true}>
+        <div className={styles.container}>
+          <Navbar />
+          {children}
+          <div className={styles.nowPlaying}>
+            <NowPlaying />
+          </div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
