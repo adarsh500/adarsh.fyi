@@ -1,48 +1,63 @@
-import Hero from '@components/Hero';
-import styles from '@styles/Home.module.scss';
-import { projects } from '@components/Content/projects';
-import { skills } from '@components/Content/skills';
-import { work } from '@components/Content/work';
-
-import ProjectCard from '@components/ProjectCard';
-import TechCard from '@components/TechCard';
-import Experience from '@components/Experience';
-import NowPlaying from '@components/NowPlaying';
+import styles from './test.module.scss';
 
 const Home = (props: any) => (
-  <>
-    <Hero />
-    <div className={styles.section}>
-      <h2 className={styles.subTitle}>Featured Projects</h2>
-      <div className={styles.projectWrapper}>
-        {projects.slice(0, 2).map((project, index) => (
-          <ProjectCard {...project} key={index} />
-        ))}
-      </div>
+  <main className={styles.main}>
+    <div className={styles.container}>
+      <p className={styles.title}>About Me</p>
+      <p className={styles.about}>
+        I'm a 20 y/o full-stack developer from Bangalore, India. I'm currently
+        studying at DSCE. I'm currently working as a Software Development
+        Engineer Intern at{' '}
+        <a href="https://cloudsek.com/" target="_blank" className={styles.link}>
+          CloudSEK
+        </a>
+        <br />
+        <br />I tend to spend my free time working on side projects like{' '}
+        <a
+          href="https://mark3.vercel.app"
+          target="_blank"
+          className={styles.link}
+        >
+          Mark3
+        </a>{' '}
+        and{' '}
+        <a
+          href="https://cal-nu.vercel.app"
+          target="_blank"
+          className={styles.link}
+        >
+          Cal.ndr
+        </a>
+        , contributing to open source or practicing DSA.
+        <br />
+        <br />I absolutely love working with NextJs, React, and Typescript. I'm
+        also learning backend development on the side. You can find my resume{' '}
+        <a
+          href="https://drive.google.com/file/d/1x35AKUlYyGMhfqAL0zIC1njdJ6TSflo-/view?usp=sharing"
+          className={styles.link}
+        >
+          here
+        </a>
+        .
+        <br />
+        <br />
+        You can often find me talking about tech, mechanical keyboards and Star
+        Wars.
+        <br />
+        <br />
+        If you have an interesting project or if you want to collab on a
+        hackathon or just want to say hi, feel free to reach out to me via{' '}
+        <a
+          href="https://twitter.com/adarshsulegai50"
+          target="_blank"
+          className={styles.link}
+        >
+          Twitter
+        </a>
+        .
+      </p>
     </div>
-
-    <div className={styles.section}>
-      <h2 className={styles.subTitle}>Tech I work with</h2>
-      <div className={styles.carousel}>
-        {skills.map((skill, index) => (
-          <TechCard {...skill} key={index} />
-        ))}
-      </div>
-    </div>
-
-    <div className={styles.section}>
-      <h2 className={styles.subTitle}>Work </h2>
-      <div className={styles.work}>
-        {work.map((experience, index) => (
-          <Experience {...experience} key={index} />
-        ))}
-      </div>
-    </div>
-
-    <div className={styles.spotify}>
-      <NowPlaying />
-    </div>
-  </>
+  </main>
 );
 
 export default Home;

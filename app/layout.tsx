@@ -4,6 +4,7 @@ import styles from './Layout.module.scss';
 import Footer from '@components/Footer';
 import Navbar from './nav';
 import NowPlaying from '@components/NowPlaying';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,6 +27,7 @@ export default function RootLayout({
           </div>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
