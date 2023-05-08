@@ -1,10 +1,20 @@
 @import '@styles/mixins';
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
 .main {
-  display: flex;
+  @include flex(center, flex-start);
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   word-wrap: break-word;
   @include font-size-weight(20, 32, 400);
   text-align: left;
@@ -24,10 +34,9 @@
 }
 
 .container {
-  display: flex;
+  @include flex(center, flex-start);
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  animation: fadeInUp 1.2s ease-in-out;
 
   .title {
     @include font-size-weight(48, 54, 800);
@@ -38,11 +47,14 @@
     color: var(--light-text-primary);
     @include dark-mode {
       color: var(--dark-text-secondary);
-      color: #c3c3c3;
     }
 
     .link {
       color: var(--link);
     }
   }
+}
+
+.footer {
+  animation: fadeInUp 1.2s ease-in-out !important;
 }

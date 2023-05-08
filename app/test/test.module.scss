@@ -1,16 +1,25 @@
 @import '@styles/mixins';
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
 .main {
-  display: flex;
+  @include flex(center, flex-start);
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   word-wrap: break-word;
-  @include font-size-weight(20, 32, 400);
-  text-align: left;
+  @include font-size-weight(20, 30, 400);
   margin: 3rem 0 6rem 0;
   flex: 1;
-  color: var(--light-text-primary);
+  color: var(--lighttext-primary);
 
   @include dark-mode {
     color: var(--dark-text-primary);
@@ -18,31 +27,25 @@
 
   @include mobile {
     padding: 1.5rem 1rem;
-    margin: 3rem 0 5rem 0;
+    margin: 3rem 0 3rem 0;
     @include font-size-weight(18, 30, 400);
   }
 }
 
 .container {
-  display: flex;
+  @include flex(center, flex-start);
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  animation: fadeInUp 1.2s ease-in-out;
 
   .title {
     @include font-size-weight(48, 54, 800);
   }
 
-  .about {
-    margin-top: 3rem;
-    color: var(--light-text-primary);
-    @include dark-mode {
-      color: var(--dark-text-secondary);
-      color: #c3c3c3;
-    }
-
-    .link {
-      color: var(--link);
-    }
+  .more {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }

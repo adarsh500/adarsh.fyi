@@ -1,8 +1,8 @@
-import styles from './test.module.scss';
+import styles from './more.module.scss';
 import { more } from '@components/Content/more';
 import Card from '@components/Card';
 
-const Home = (props: any) => (
+const More = (props: any) => (
   <main className={styles.main}>
     <div className={styles.container}>
       <p className={styles.title}>More</p>
@@ -16,4 +16,4 @@ const Home = (props: any) => (
   </main>
 );
 
-export default Home;
+export default More;
