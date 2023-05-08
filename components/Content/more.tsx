@@ -2,10 +2,12 @@ export const more = [
   {
     title: 'Music',
     description: 'Stuff that keeps me going',
+    href: '/more/tracks',
   },
   {
     title: 'Uses',
     description: 'Gadgets and tools that I use',
+    href: '/more/uses',
   },
   {
     title: 'Snippets',

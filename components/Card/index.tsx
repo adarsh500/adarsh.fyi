@@ -1,18 +1,20 @@
+import Link from 'next/link';
 import styles from './Card.module.scss';
 
 type CardProps = {
   title: string;
   description: string;
+  href?: string;
 };
 
 const Card = (props: CardProps) => {
-  const { title, description } = props;
+  const { title, description, href } = props;
 
   return (
-    <div className={styles.card}>
+    <Link href={href || '/more'} className={styles.card}>
       <p className={styles.title}>{title}</p>
       <p className={styles.description}>{description}</p>
-    </div>
+    </Link>
   );
 };
 

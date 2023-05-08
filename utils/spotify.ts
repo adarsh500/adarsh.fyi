@@ -19,18 +19,14 @@ const getAccessToken = async () => {
       grant_type: 'refresh_token',
       refresh_token,
     }).toString(),
-    next: {
-      // Re-generate new access token 1 minute before it expires
-      revalidate: 3599,
-    },
+    cache: 'no-store',
   });
   return response.json();
 };
 
 export const getTopTracks = async () => {
   const { access_token } = await getAccessToken();
-
-  return fetch(TOP_TRACKS_ENDPOINT, {
+  const tracks = await fetch(TOP_TRACKS_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
@@ -38,6 +34,9 @@ export const getTopTracks = async () => {
       revalidate: 86400,
     },
   });
+  const data = await tracks.json();
+
+  return data.items;
 };
 
 export const getNowPlaying = async () => {
