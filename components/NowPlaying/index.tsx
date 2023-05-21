@@ -39,7 +39,6 @@ const CurrentTrack = (props: any) => {
 
 const NowPlaying = async () => {
   const currentTrack = await getNowPlaying();
-  console.log(currentTrack);
 
   return (
     <div

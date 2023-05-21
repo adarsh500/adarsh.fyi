@@ -19,7 +19,9 @@ const getAccessToken = async () => {
       grant_type: 'refresh_token',
       refresh_token,
     }).toString(),
-    cache: 'no-store',
+    next: {
+      revalidate: 3000,
+    },
   });
   return response.json();
 };
