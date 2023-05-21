@@ -5,11 +5,17 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 import styles from '../blog.module.scss';
 import Image from 'next/image';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 const MyButton: React.FC = () => <button>Click me</button>;
 
 const PostLayout = ({ params }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+
+  if (!post) {
+    return notFound();
+  }
+
   const MDXContent = useMDXComponent(post.body.code);
 
   return (
