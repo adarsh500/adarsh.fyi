@@ -24,7 +24,7 @@ type Tracks = {
 
 export default async function Tracks() {
   const tracks: Tracks[] = await getTopTracks();
-  console.log('aslkdfjas', tracks[0].artists);
+
   return (
     <main className={styles.main}>
       <div className={styles.container}>
