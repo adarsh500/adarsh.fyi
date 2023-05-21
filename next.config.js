@@ -1,4 +1,4 @@
-const { withContentlayer } = require('next-contentlayer');
+const { withContentlayer } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -6,7 +6,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['i.scdn.co', 'og-image.vercel.app'],
+    domains: ["i.scdn.co", "og-image.vercel.app"],
   },
   typescript: {
     ignoreBuildErrors: true,

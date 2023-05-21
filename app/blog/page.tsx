@@ -1,6 +1,6 @@
-import styles from './blog.module.scss';
-import { allPosts } from 'contentlayer/generated';
-import BlogCard from '@components/BlogCard';
+import styles from "./blog.module.scss";
+import { allPosts } from "contentlayer/generated";
+import BlogCard from "@components/BlogCard";
 
 export default function Blog() {
   return (

@@ -1,5 +1,5 @@
-import styles from './tracks.module.scss';
-import { getTopTracks } from '@utils/spotify';
+import styles from "./tracks.module.scss";
+import { getTopTracks } from "@utils/spotify";
 
 type Album = {
   url: string;
@@ -30,7 +30,7 @@ export default async function Tracks() {
       <div className={styles.container}>
         <p className={styles.title}>Top Tracks</p>
         {tracks.map((track, index: number) => {
-          const artists = track.artists.map((artist) => artist.name).join(', ');
+          const artists = track.artists.map((artist) => artist.name).join(", ");
           return (
             <a
               href={track.external_urls.spotify}

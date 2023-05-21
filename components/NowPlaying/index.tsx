@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import MusicBars from '@components/MusicBars';
-import styles from './NowPlaying.module.scss';
-import { SiSpotify } from 'react-icons/si';
-import { getNowPlaying } from '@utils/spotify';
+import React, { useEffect, useState } from "react";
+import MusicBars from "@components/MusicBars";
+import styles from "./NowPlaying.module.scss";
+import { SiSpotify } from "react-icons/si";
+import { getNowPlaying } from "@utils/spotify";
 
 interface NotPlaying {
   isPlaying?: false;

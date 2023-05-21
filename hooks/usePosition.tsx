@@ -1,6 +1,6 @@
-'use client';
-import { useEffect, useState } from 'react';
-import useDebounce from './useDebounce';
+"use client";
+import { useEffect, useState } from "react";
+import useDebounce from "./useDebounce";
 
 const usePosition = () => {
   const [position, setPosition] = useState<number>(0);
@@ -11,10 +11,10 @@ const usePosition = () => {
   const debouncedScroll = useDebounce(handleScroll, 10);
 
   useEffect(() => {
-    document.addEventListener('scroll', debouncedScroll);
+    document.addEventListener("scroll", debouncedScroll);
 
     return () => {
-      document.removeEventListener('scroll', debouncedScroll);
+      document.removeEventListener("scroll", debouncedScroll);
     };
   }, []);
 

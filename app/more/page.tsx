@@ -1,6 +1,6 @@
-import styles from './more.module.scss';
-import { more } from '@components/Content/more';
-import Card from '@components/Card';
+import styles from "./more.module.scss";
+import { more } from "@components/Content/more";
+import Card from "@components/Card";
 
 const More = () => (
   <main className={styles.main}>

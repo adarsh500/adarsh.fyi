@@ -12,7 +12,7 @@ type ProjectProps = {
 };
 
 const ProjectCard = (props: ProjectProps) => {
-  const { title, link, description, githubUrl} = props;
+  const { title, link, description, githubUrl } = props;
 
   return (
     <div className={styles.projectCard}>

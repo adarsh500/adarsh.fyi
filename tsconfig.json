@@ -2,34 +2,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": [
-        "components/*"
-      ],
-      "@context/*": [
-        "context/*"
-      ],
-      "@styles/*": [
-        "styles/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ],
-      "@types/*": [
-        "types/*"
-      ],
-      "@icons/*": [
-        "assets/icons/*"
-      ],
-      "contentlayer/generated": [
-        "./.contentlayer/generated"
-      ]
+      "@components/*": ["components/*"],
+      "@context/*": ["context/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"],
+      "@types/*": ["types/*"],
+      "@icons/*": ["assets/icons/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "target": "ES2016",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -55,7 +37,5 @@
     ".contentlayer/generated",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

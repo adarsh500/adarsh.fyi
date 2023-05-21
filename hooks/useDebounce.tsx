@@ -1,4 +1,4 @@
-'use client';
+"use client";
 const useDebounce = (callback: Function, delay = 300) => {
   let timer: string | number | NodeJS.Timeout | undefined = undefined;
   return function (...args: any) {

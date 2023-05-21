@@ -1,9 +1,9 @@
-'use client';
-import Link from 'next/link';
-import styles from './Nav.module.scss';
-import { usePathname } from 'next/navigation';
-import usePosition from 'hooks/usePosition';
-import clsx from 'clsx';
+"use client";
+import Link from "next/link";
+import styles from "./Nav.module.scss";
+import { usePathname } from "next/navigation";
+import usePosition from "hooks/usePosition";
+import clsx from "clsx";
 
 type NavItemProps = {
   href: string;
