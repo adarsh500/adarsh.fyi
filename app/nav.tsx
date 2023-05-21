@@ -1,6 +1,7 @@
+"use client";
 import Link from "next/link";
-import styles from "./Navbar.module.scss";
-import { useRouter } from "next/router";
+import styles from "./Nav.module.scss";
+import { usePathname } from "next/navigation";
 import usePosition from "hooks/usePosition";
 import clsx from "clsx";
 
@@ -10,8 +11,8 @@ type NavItemProps = {
 };
 
 const NavItem = ({ href, text }: NavItemProps) => {
-  const router = useRouter();
-  const isActive = router.asPath === href;
+  const pathname = usePathname();
+  const isActive = pathname === href;
 
   return (
     <Link href={href} className={isActive ? styles.itemActive : styles.item}>
@@ -29,9 +30,6 @@ const Navbar = () => {
         [styles.navbarVisible]: position > 0,
       })}
     >
-      {/* <div className={styles.leftNav}>
-        <span className={styles.glow}></span>
-      </div> */}
       <div className={styles.rightNav}>
         {/* <div className={styles.glider}></div> */}
         <NavItem href="/" text="Home" />

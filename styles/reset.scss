@@ -1,4 +1,4 @@
-@import './mixins';
+@import "./mixins";
 
 ul,
 ol {
@@ -23,7 +23,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -153,11 +153,6 @@ body {
   font-size: 14px !important;
   line-height: 1.42857143 !important;
   color: var(--) !important;
-  // background-color: var(--main-background) !important;
-  // min-height: 500px;
-  // @include mobile {
-  //  overflow: auto;
-  //};
 }
 
 svg {

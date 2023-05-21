@@ -2,12 +2,20 @@ import Head from "next/head";
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import styles from "./Blog.module.scss";
+import styles from "../blog.module.scss";
 import Image from "next/image";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 const MyButton: React.FC = () => <button>Click me</button>;
 
-const PostLayout = ({ post }: any) => {
+const PostLayout = ({ params }) => {
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+
+  if (!post) {
+    return notFound();
+  }
+
   const MDXContent = useMDXComponent(post.body.code);
 
   return (
@@ -34,19 +42,26 @@ const PostLayout = ({ post }: any) => {
 
 export default PostLayout;
 
-export async function getStaticPaths() {
-  const paths = allPosts.map((post) => post.url);
-  return {
-    paths,
-    fallback: false,
-  };
+export async function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post.url,
+  }));
 }
 
-export async function getStaticProps({ params }: any) {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+export async function generateMetadata({
+  params,
+}): Promise<Metadata | undefined> {
+  const post = allPosts.find((post) => post.url === params.slug);
+  if (!post) {
+    return;
+  }
+
+  const { title, date, description, readingTime } = post;
+
   return {
-    props: {
-      post,
-    },
+    title,
+    date,
+    readingTime,
+    description,
   };
 }

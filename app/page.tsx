@@ -1,13 +1,13 @@
-import Hero from '@components/Hero';
-import styles from '@styles/Home.module.scss';
-import ProjectCard from '@components/ProjectCard';
-import Experience from '@components/Experience';
-import NowPlaying from '@components/NowPlaying';
+import Hero from "@components/Hero";
+import styles from "@styles/Home.module.scss";
+import { projects } from "@components/Content/projects";
+import { skills } from "@components/Content/skills";
+import { work } from "@components/Content/work";
 
-import { work } from '@components/Content/work';
-import { projects } from '@components/Content/projects';
-import { skills } from '@components/Content/skills';
-import TechCard from '@components/TechCard';
+import ProjectCard from "@components/ProjectCard";
+import TechCard from "@components/TechCard";
+import Experience from "@components/Experience";
+import NowPlaying from "@components/NowPlaying";
 
 const Home = (props: any) => (
   <>
@@ -46,9 +46,3 @@ const Home = (props: any) => (
 );
 
 export default Home;
-
-export const getStaticProps = async () => {
-  return {
-    props: {},
-  };
-};

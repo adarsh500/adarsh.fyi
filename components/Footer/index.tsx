@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Footer.module.scss";
 import { VscGithubInverted, VscTwitter } from "react-icons/vsc";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -7,7 +6,7 @@ import { MdMail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <a href="https://github.com/adarsh500">
         <VscGithubInverted className={styles.icon} />
       </a>
@@ -23,7 +22,7 @@ const Footer = () => {
       <a href="mailto:adarshsulegai50@gmail.com">
         <MdMail className={styles.icon} />
       </a>
-    </div>
+    </footer>
   );
 };
 
