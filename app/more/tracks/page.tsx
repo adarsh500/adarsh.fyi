@@ -1,14 +1,35 @@
 import styles from './tracks.module.scss';
 import { getTopTracks } from '@utils/spotify';
 
-export default async function Tracks() {
-  const tracks = await getTopTracks();
+type Album = {
+  url: string;
+};
 
+type Tracks = {
+  albumImageUrl: string;
+  artist: string | string[];
+  isPlaying: boolean;
+  songUrl: string;
+  name: string;
+  url: string;
+  title: string;
+  artists: any[];
+  album: {
+    images: Album[];
+  };
+  external_urls: {
+    spotify: string;
+  };
+};
+
+export default async function Tracks() {
+  const tracks: Tracks[] = await getTopTracks();
+  console.log('aslkdfjas', tracks[0].artists);
   return (
     <main className={styles.main}>
       <div className={styles.container}>
         <p className={styles.title}>Top Tracks</p>
-        {tracks.map((track, index) => {
+        {tracks.map((track, index: number) => {
           const artists = track.artists.map((artist) => artist.name).join(', ');
           return (
             <a

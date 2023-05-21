@@ -23,6 +23,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <div className={styles.nowPlaying}>
+            {/* @ts-expect-error Server Component */}
             <NowPlaying />
           </div>
           <Footer />

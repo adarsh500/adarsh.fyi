@@ -1,9 +1,6 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  '@next/font':
-    specifier: ^13.0.3
-    version: 13.3.2
   '@vercel/analytics':
     specifier: ^0.1.6
     version: 0.1.11(react@18.2.0)
@@ -100,7 +97,7 @@ devDependencies:
     specifier: ^2.7.1
     version: 2.8.8
   typescript:
-    specifier: ^4.7.4
+    specifier: ^4.9.5
     version: 4.9.5
 
 packages:
@@ -659,10 +656,6 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
-
-  /@next/font@13.3.2:
-    resolution: {integrity: sha512-gQICS3IZIbITqxqBVD0K8ng9ib0bxsOxVhTLeQyBlL773sNQoWIhJOyUHhYw1kSaOWP5BiFEmTvjNQNKwYuVKQ==}
-    dev: false
 
   /@next/swc-darwin-arm64@13.4.1:
     resolution: {integrity: sha512-eF8ARHtYfnoYtDa6xFHriUKA/Mfj/cCbmKb3NofeKhMccs65G6/loZ15a6wYCCx4rPAd6x4t1WmVYtri7EdeBg==}
