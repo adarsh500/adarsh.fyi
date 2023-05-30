@@ -26,10 +26,16 @@ const PostLayout = ({ params }) => {
       </Head>
       {/* <div className={styles.subHeader}>Blog</div> */}
       <Image
+        style={{
+          maxWidth: '100%',
+          objectFit: 'contain',
+          aspectRatio: 'auto 1042 / 401',
+        }}
+        className={styles.image}
+        width={2084 / 2}
+        height={802 / 2}
         src={thumbnailPath}
-        height="380"
-        width="720"
-        alt="Dukaan logo"
+        alt="thumbnail"
         priority
       />
       <article className={styles.container}>
@@ -42,7 +48,10 @@ const PostLayout = ({ params }) => {
         </div>
 
         <div className={styles.blog}>
-          <MDXContent components={{ MyButton, Image }} />
+          <MDXContent
+            components={{ MyButton, Image }}
+            imageStyles={styles.image}
+          />
         </div>
       </article>
     </main>

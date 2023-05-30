@@ -65,10 +65,15 @@ new architecture.
 
 <Image
   src={'/dukaan-internship/highonfashion.png'}
-  height="380"
-  width="720"
-  alt="Dukaan logo"
-  priority
+  style={{
+    maxWidth: '100%',
+    objectFit: 'contain',
+    aspectRatio: 'auto 1042 / 401',
+  }}
+  className="image"
+  width={2084 / 2}
+  height={802 / 2}
+  alt="High on Fashion theme"
 />
 
 You might think 'Why was that necessary?'. The older app was a Next.js monolithic app. It was pretty huge and it was getting slower as

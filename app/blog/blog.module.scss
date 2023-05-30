@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: center;
   word-wrap: break-word;
+  position: relative;
+  flex: 1;
   @include font-size-weight(20, 30, 400);
   margin: 6rem 0 6rem 0;
   color: var(--light-text-primary);
@@ -20,9 +22,15 @@
   }
 }
 
+.image {
+  height: auto !important;
+  border-radius: var(--border-radius-medium);
+}
+
 .container {
+  flex: 1;
   margin-top: 2rem;
-  @include flex(center, flex-start);
+  @include flex(flex-start, flex-start);
   flex-direction: column;
 
   .title {

@@ -1,10 +1,11 @@
-@import "@styles/mixins.scss";
+@import '@styles/mixins.scss';
 
 .container {
   text-align: left;
   display: flex;
   flex-direction: column;
   height: 100%;
+  flex: 1;
 
   @include mobile {
     padding: 0rem;
