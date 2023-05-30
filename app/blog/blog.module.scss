@@ -1,4 +1,4 @@
-@import "@styles/mixins";
+@import '@styles/mixins';
 
 .main {
   display: flex;
@@ -63,18 +63,30 @@
     @include font-size-weight(18, 32, 400);
 
     h1 {
-      @include font-size-weight(30, 36, 600);
+      @include font-size-weight(30, 36, 700);
       margin: 1.5rem 0;
+      color: var(--light-text-primary);
+      @include dark-mode {
+        color: var(--dark-text-primary);
+      }
     }
 
     h2 {
       @include font-size-weight(28, 34, 600);
       margin: 3rem 0 1rem 0;
+      color: var(--light-text-primary);
+      @include dark-mode {
+        color: var(--dark-text-primary);
+      }
     }
 
     h3 {
       @include font-size-weight(26, 32, 600);
       margin: 2rem 0;
+      color: var(--light-text-primary);
+      @include dark-mode {
+        color: var(--dark-text-primary);
+      }
     }
 
     [data-rehype-pretty-code-title] {

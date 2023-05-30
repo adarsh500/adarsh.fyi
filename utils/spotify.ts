@@ -33,7 +33,7 @@ export const getTopTracks = async () => {
       Authorization: `Bearer ${access_token}`,
     },
     next: {
-      revalidate: 86400,
+      revalidate: 864399,
     },
   });
   const data = await tracks.json();
@@ -48,7 +48,7 @@ export const getNowPlaying = async () => {
       Authorization: `Bearer ${access_token}`,
     },
     next: {
-      revalidate: 30,
+      revalidate: 10,
     },
   });
   if (nowPlaying.status === 204 || nowPlaying.status > 400) {
