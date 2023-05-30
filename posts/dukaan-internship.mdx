@@ -2,33 +2,105 @@
 title: 'Internship experience at Dukaan'
 date: 2023-05-30
 description: 'A small article to describe my internship experience at a startup - Dukaan.'
-thumbnailUrl: '/tailwindcss-thumbnail.jpg'
 tags: ['tailwindcss', 'styling']
 ---
 
-# How did i land the internship?
+# Backstory
 
 Going back to March 2022. I had decided not to appy for GSoC that year.
-Since i had plenty of time due to online classes, i decided to start hunting for internships.I had started actively applying for internships from february.
+Since i had plenty of time due to online classes, i decided to start hunting for internships.
+I had started actively applying for internships from february.
 
-I had heard of Dukaan through twitter before. I decided to do some digging around twitter for people who work there, and i ended up following a few of them.
-Few days later, Subhash (CTO of Dukaan) posted a tweet about hiring interns, and i had my twitter notifications enabled. I immediately applied for the internship.
+# How did i land the internship?
+
+I had heard of Dukaan through twitter before. I decided to do some digging around twitter for people who work there,
+and i ended up following a few of them.
+
+Few days later, Subhash (CTO of Dukaan) posted a tweet about hiring interns, and i had my twitter notifications enabled.
+I immediately applied for the internship.
 The link was disabled after a few hours, and i was lucky enough to apply for it in time.
 
 # The interview process
 
-I had applied for the internship on 31st March. I got a call on the next day itself. I had a couple of rounds of interviews and then a final round with Subhash.
-All the rounds were finished on the same day and i was hired on the spot. Name a better interview process, i'll wait. The interviews were very quick they involved a few js questions. But it was mostly based on my projects.
+I had applied for the internship on 31st March. I got a call on the next day itself.
+I had a couple of rounds of interviews and then a final round with Subhash.
+All the rounds were finished on the same day and i was hired on the spot.
+
+- Screening call with HR
+- Technical round with the frontend lead
+- Culture fitment round with the CTO
+
+Name a better interview process, i'll wait. The interviews were very quick they involved a few js questions.
+But it was mostly based on my projects.
 
 # The internship
 
-I had an amazing time working at Dukaan. I worked on the buyer-side of the frontend team. My team handled all of the UI that you can see on any store that is running on Dukaan. My work mostly revolved around plugins that merchants could add to their store and the theming-engine.
+I had an amazing time working at Dukaan. I worked on the buyer-side of the frontend team.
+My team handled all of the UI that you can see on any store that is running on Dukaan.
 
-This was my first internship and i had absolutely no idea on what to expect from it. I had no experience working with large codebases or any previous internships. But this was all the more reason for me to take up this internship. I wanted to learn how to work with a large codebase and how to work with a team. 
+My work mostly revolved around plugins that merchants could add to their store and the dynamic theming-engine
+which powers the various themes that Dukaan has to offer.I worked extensively with React.js, Next.js, SCSS, Node.js and Nunjucks.
 
-### Day 0
-I still do remember my day 0 here, i was super pumped. The thought that i would get to make impactful changes to a product that is used by thousands of people was very exciting. I also got to meet Harnoor Singh that day, who's a tech YouTuber. 
+This was my first internship and i had absolutely no idea on what to expect from it.
+I had no experience working with large codebases or any previous internships.
+But this was all the more reason for me to take up this internship.
+I wanted to learn how to work with a large codebase and how to work with a team.
 
-Here's some of the things i worked on:
-1. Review plugin
+#### Day 0
 
+I still do remember my day 0 here, i was super pumped.
+The thought that i would get to make impactful changes to a product that is used by thousands of people was very exciting.
+I also got to meet Harnoor Singh that day, who's a tech YouTuber.
+
+# Work
+
+### Dynamic Theming Engine
+
+I got a chance to work on a theming-engine that Dukaan uses to manage store themes. As of now, Dukaan has over 15 themes to offer.
+This was one of the biggest and the most impactful feature that i worked on during my internship.
+
+The theming engine an architecture
+similar to islands architecture. It uses a variant of micro-frontends to load themes on the fly. I migrated the Matrix theme to this
+new architecture.
+
+<Image
+  src={'/dukaan-internship/highonfashion.png'}
+  height="380"
+  width="720"
+  alt="Dukaan logo"
+  priority
+/>
+
+You might think 'Why was that necessary?'. The older app was a Next.js monolithic app. It was pretty huge and it was getting slower as
+we added more features. Moreover it was difficult to maintain as we added new enterprise themes.
+
+So we decided to migrate to this new architecture. This uses `Nunjucks` as the templating engine and `SCSS` for styling. Since most of the content is static,
+we rendered the page on the server and then sent it to the client for hydration.
+
+Here's the best part, we didn't use frameworks like `Next.js` but instead we built our own mini-framework for this.
+We were able to reduce the bundle size from a few Megabytes to a few Kilobytes. This was a huge win for us.
+At this point i had written so much raw Javascript and CSS that i had become a pro at it (or at least that's what i think xD).
+
+### Instagram Plugin
+
+I also worked on an Instagram plugin. This plugin is used by merchants to display their Instagram feed on their store.
+Merchants could cusomize the plugin to their liking. They could change the number of posts to display, the layout, etc.
+
+### Review Plugin
+
+Added new features to this plugin like pagination, sorting, and filtering.
+
+# Takeaways
+
+Looking back at my internship, i can say that i've had a blast at Dukaan.
+I've learnt so much about building products and working with a team.
+I'm grateful that i've had an amazing team filled with smart peers and mentors. I've learnt so much from them.
+
+- Getting the first internship / job is always the hardest. Once you get it, it becomes easier to get more.
+- Don't be afraid to apply for internships. You might think that you're not good enough, but you'll never know until you try.
+- Don't be afraid to ask questions. You're an intern, you're not expected to know everything.
+- Don't be afraid to make mistakes. You're an intern, you're expected to make mistakes.
+- Learn more about the systems that are built around you. If you're a FE dev, learn about the backend / devops.
+- Internships are the best way to learn about the industry. You'll learn more in 2 months than you would in 2 years of college.
+  I'd recommend everyone to start doing Internships as early as possible. Sure your university might not allow you to do it and
+  you will likely have attendance / CGPA issues. But trust me, it's worth fighting it.
