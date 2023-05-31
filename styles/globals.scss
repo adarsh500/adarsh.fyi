@@ -67,6 +67,8 @@ a {
 html,
 body {
   padding: 0;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   scroll-behavior: smooth;
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, Segoe UI,
@@ -82,6 +84,11 @@ body {
     background-image: linear-gradient(rgba(45, 52, 64, 0.5) 0px, transparent 0),
       linear-gradient(90deg, rgba(45, 52, 64, 0.5) 0px, #0b0d0f 0);
   }
+}
+
+.image {
+  height: auto !important;
+  border-radius: var(--border-radius-medium);
 }
 
 .icon {

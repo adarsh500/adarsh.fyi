@@ -11,11 +11,12 @@ const MyButton: React.FC = () => <button>Click me</button>;
 
 const PostLayout = ({ params }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  const thumbnailPath = `/${params.slug}/${params.slug}.png`;
 
   if (!post) {
     return notFound();
   }
-
+  console.log(params);
   const MDXContent = useMDXComponent(post.body.code);
 
   return (
@@ -23,6 +24,20 @@ const PostLayout = ({ params }) => {
       <Head>
         <title>{post.title}</title>
       </Head>
+      {/* <div className={styles.subHeader}>Blog</div> */}
+      <Image
+        style={{
+          maxWidth: "100%",
+          objectFit: "contain",
+          aspectRatio: "auto 1042 / 401",
+        }}
+        className={styles.image}
+        width={2084 / 2}
+        height={802 / 2}
+        src={thumbnailPath}
+        alt="thumbnail"
+        priority
+      />
       <article className={styles.container}>
         <p className={styles.title}>{post.title}</p>
         <div className={styles.subRow}>
@@ -33,7 +48,10 @@ const PostLayout = ({ params }) => {
         </div>
 
         <div className={styles.blog}>
-          <MDXContent components={{ MyButton, Image }} />
+          <MDXContent
+            components={{ MyButton, Image }}
+            imageStyles={styles.image}
+          />
         </div>
       </article>
     </main>

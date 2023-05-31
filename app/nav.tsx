@@ -34,6 +34,7 @@ const Navbar = () => {
         {/* <div className={styles.glider}></div> */}
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />
+        <NavItem href="/blog" text="Blog" />
         <NavItem href="/more" text="More" />
       </div>
     </nav>

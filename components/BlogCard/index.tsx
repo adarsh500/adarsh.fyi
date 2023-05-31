@@ -24,13 +24,13 @@ const BlogCard = (props: Blog) => {
         <div className={styles.head}>
           <h3 className={styles.title}>{title}</h3>
         </div>
+        <p className={styles.description}>{description}</p>
         <p className={styles.date}>
           {format(parseISO(date), "LLLL d, yyyy")}
           &nbsp;&#8901; &nbsp;
           {readingTime.text}
         </p>
 
-        <p className={styles.description}>{description}</p>
         <div className={styles.footer}></div>
       </div>
     </Link>

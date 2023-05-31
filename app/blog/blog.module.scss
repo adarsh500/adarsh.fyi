@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: center;
   word-wrap: break-word;
+  position: relative;
+  flex: 1;
   @include font-size-weight(20, 30, 400);
   margin: 6rem 0 6rem 0;
   color: var(--light-text-primary);
@@ -20,8 +22,15 @@
   }
 }
 
+.image {
+  height: auto !important;
+  border-radius: var(--border-radius-medium);
+}
+
 .container {
-  @include flex(center, flex-start);
+  flex: 1;
+  margin-top: 2rem;
+  @include flex(flex-start, flex-start);
   flex-direction: column;
 
   .title {
@@ -30,6 +39,7 @@
 
   .blogs {
     margin: 1rem 0;
+    width: 100%;
   }
 
   .subRow {
@@ -62,19 +72,38 @@
     }
     @include font-size-weight(18, 32, 400);
 
+    li {
+      list-style-type: disc;
+      &::marker {
+        margin-left: 1rem;
+      }
+    }
+
     h1 {
-      @include font-size-weight(30, 36, 600);
+      @include font-size-weight(30, 36, 700);
       margin: 1.5rem 0;
+      color: var(--light-text-primary);
+      @include dark-mode {
+        color: var(--dark-text-primary);
+      }
     }
 
     h2 {
-      @include font-size-weight(28, 34, 600);
-      margin: 3rem 0 1rem 0;
+      @include font-size-weight(24, 32, 600);
+      margin: 1rem 0;
+      color: var(--light-text-primary);
+      @include dark-mode {
+        color: var(--dark-text-primary);
+      }
     }
 
     h3 {
-      @include font-size-weight(26, 32, 600);
-      margin: 2rem 0;
+      @include font-size-weight(22, 32, 600);
+      margin: 0.75rem 0;
+      color: var(--light-text-primary);
+      @include dark-mode {
+        color: var(--dark-text-primary);
+      }
     }
 
     [data-rehype-pretty-code-title] {
