@@ -1,8 +1,8 @@
-import Link from "next/link";
-import styles from "./Navbar.module.scss";
-import { useRouter } from "next/router";
-import usePosition from "hooks/usePosition";
-import clsx from "clsx";
+import Link from 'next/link';
+import styles from './Navbar.module.scss';
+import { useRouter } from 'next/router';
+import usePosition from 'hooks/usePosition';
+import clsx from 'clsx';
 
 type NavItemProps = {
   href: string;
@@ -14,7 +14,7 @@ const NavItem = ({ href, text }: NavItemProps) => {
   const isActive = router.asPath === href;
 
   return (
-    <Link href={href} className={isActive ? styles.itemActive : styles.item}>
+    <Link href={href} className={isActive ? 'bg-green' : 'bg-red px-100'}>
       {text}
     </Link>
   );
@@ -25,14 +25,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className={clsx(styles.navbar, {
-        [styles.navbarVisible]: position > 0,
-      })}
+      className={clsx(
+        'z-1 flex sticky justify-end ',
+        {
+          // [styles.navbarVisible]: position > 0,
+          'bg-red': position > 0,
+        }
+      )}
     >
       {/* <div className={styles.leftNav}>
         <span className={styles.glow}></span>
       </div> */}
-      <div className={styles.rightNav}>
+      <div className="flex absolute align-middle">
         {/* <div className={styles.glider}></div> */}
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />

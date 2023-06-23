@@ -1,5 +1,8 @@
-@import "./reset.scss";
-@import "./mixins.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './reset.scss';
+@import './mixins.scss';
 
 :root {
   --success: #10b981;
@@ -16,12 +19,12 @@
   --primary-gradient: linear-gradient(to right, #007fff, #0059b2);
 
   //background
-  --background-dark: rgba(17, 17, 17, 0.5);
+  --background-dark: #11111180;
   --background-light: #f0f0f081;
   --tag: #026bdc;
 
   //font-colors
-  --dark-text-primary: #ffffff;
+  --dark-text-primary: #ffffffcc;
   --dark-text-secondary: rgba(255, 255, 255, 0.8);
   --light-text-primary: #000000;
   --light-text-secondary: #4d4d4d;

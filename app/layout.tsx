@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+ import { Inter } from "next/font/google";
 import "../styles/globals.scss";
 import styles from "./Layout.module.scss";
 import Footer from "@components/Footer";

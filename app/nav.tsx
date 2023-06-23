@@ -1,9 +1,9 @@
-"use client";
-import Link from "next/link";
-import styles from "./Nav.module.scss";
-import { usePathname } from "next/navigation";
-import usePosition from "hooks/usePosition";
-import clsx from "clsx";
+'use client';
+import Link from 'next/link';
+import styles from './Nav.module.scss';
+import { usePathname } from 'next/navigation';
+import usePosition from 'hooks/usePosition';
+import clsx from 'clsx';
 
 type NavItemProps = {
   href: string;
@@ -26,9 +26,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={clsx(styles.navbar, {
-        [styles.navbarVisible]: position > 0,
-      })}
+      className={clsx(
+        'z-1 flex sticky justify-end top-20 px-4 py-5 rounded-lg border-inherit border-solid border transition-all text-lg animate-fadeIn text-lightprimary',
+        {
+          [styles.navbarVisible]: position > 0,
+        }
+      )}
     >
       <div className={styles.rightNav}>
         {/* <div className={styles.glider}></div> */}
