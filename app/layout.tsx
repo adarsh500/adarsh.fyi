@@ -1,10 +1,11 @@
- import { Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "../styles/globals.scss";
 import styles from "./Layout.module.scss";
 import Footer from "@components/Footer";
 import Navbar from "./nav";
 import NowPlaying from "@components/NowPlaying";
 import { Analytics } from "@vercel/analytics/react";
+import { Metadata } from "next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,3 +34,7 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Adarsh's Portfolio",
+};

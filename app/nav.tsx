@@ -1,9 +1,9 @@
-'use client';
-import Link from 'next/link';
-import styles from './Nav.module.scss';
-import { usePathname } from 'next/navigation';
-import usePosition from 'hooks/usePosition';
-import clsx from 'clsx';
+"use client";
+import Link from "next/link";
+import styles from "./Nav.module.scss";
+import { usePathname } from "next/navigation";
+import usePosition from "hooks/usePosition";
+import clsx from "clsx";
 
 type NavItemProps = {
   href: string;
@@ -15,7 +15,14 @@ const NavItem = ({ href, text }: NavItemProps) => {
   const isActive = pathname === href;
 
   return (
-    <Link href={href} className={isActive ? styles.itemActive : styles.item}>
+    <Link
+      href={href}
+      className={
+        isActive
+          ? styles.itemActive
+          : "py-1.5 px-3 text-lg font-medium text-light-secondary z-2 border border-solid rounded-lg border-transparent dark:text-dark-secondary hover:text-light-primary transition-all hover:dark:text-dark-primary"
+      }
+    >
       {text}
     </Link>
   );
@@ -27,9 +34,10 @@ const Navbar = () => {
   return (
     <nav
       className={clsx(
-        'z-1 flex sticky justify-end top-20 px-4 py-5 rounded-lg border-inherit border-solid border transition-all text-lg animate-fadeIn text-lightprimary',
+        "z-1 flex sticky justify-end top-20 px-4 py-5 rounded-lg border border-transparent transition-all text-lg animate-fadeIn text-light-primary dark:text-dark-secondary",
         {
-          [styles.navbarVisible]: position > 0,
+          "border border-solid border-[#dedede] bg-bg-light backdrop-blur-m dark:border-border-dark dark:bg-bg-dark":
+            position > 0,
         }
       )}
     >
