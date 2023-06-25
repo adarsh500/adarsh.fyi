@@ -1,4 +1,4 @@
-@import '@styles/mixins';
+@import "@styles/mixins";
 
 .projectCard {
   display: flex;
@@ -10,6 +10,7 @@
   width: calc(50% - 18px);
   background-color: var(--background-light);
   border: 1px solid var(--border-light);
+  z-index: 1;
 
   @include dark-mode {
     background-color: var(--background-dark);
@@ -19,6 +20,7 @@
   @include mobile {
     width: 100%;
     flex-direction: row;
+    z-index: 1;
     margin-right: 0;
     margin-bottom: 32px;
     min-height: min-content;

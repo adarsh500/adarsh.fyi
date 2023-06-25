@@ -33,7 +33,7 @@ export const getTopTracks = async () => {
       Authorization: `Bearer ${access_token}`,
     },
     next: {
-      revalidate: 864399,
+      revalidate: 3000,
     },
   });
   const data = await tracks.json();

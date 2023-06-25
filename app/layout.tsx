@@ -37,4 +37,7 @@ export default function RootLayout({
 
 export const metadata: Metadata = {
   title: "Adarsh's Portfolio",
+  icons: {
+    icon: "/_next/static/media/metadata/favicon.svg",
+  },
 };

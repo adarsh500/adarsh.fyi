@@ -8,8 +8,7 @@ import {
   SiReact,
   SiTypescript,
 } from "react-icons/si";
-import { IoLogoSass, IoLogoNodejs } from "react-icons/io";
-import { TbBrandGolang } from "react-icons/tb";
+import { IoLogoNodejs, IoLogoSass } from "react-icons/io";
 
 export const skills = [
   {

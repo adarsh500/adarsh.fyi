@@ -1,17 +1,5 @@
 @import "@styles/mixins.scss";
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -113,13 +101,6 @@
       @include font-size-weight(16, 22, 400);
     }
 
-    .icon {
-      height: 14px;
-      width: 14px;
-      vertical-align: middle;
-      margin-left: 4px;
-    }
-
     &Active {
       padding: 6px 12px;
       border-radius: var(--border-radius-medium);
@@ -135,7 +116,6 @@
       &:hover {
         color: black;
         // background-color: #1f1f1f;
-        border: 1px solid rgba(180, 180, 180, 0.621);
         transition: all 0.3s ease-in-out;
         border-radius: var(--border-radius-small);
 

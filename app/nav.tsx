@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import styles from "./Nav.module.scss";
 import { usePathname } from "next/navigation";
 import usePosition from "hooks/usePosition";
 import clsx from "clsx";
@@ -19,8 +18,8 @@ const NavItem = ({ href, text }: NavItemProps) => {
       href={href}
       className={
         isActive
-          ? styles.itemActive
-          : "py-1.5 px-3 text-lg font-medium text-light-secondary z-2 border border-solid rounded-lg border-transparent dark:text-dark-secondary hover:text-light-primary transition-all hover:dark:text-dark-primary"
+          ? "px-3 py-[1.25] rounded-lg text-lg font-medium text-light-primary z-2 border border-solid border-transparent dark:text-dark-primary hover:text-light-primary hover:transition-all hover:duration-300 hover:ease-in-out dark:hover:text-dark-primary mobile:px-2 mobile:py-1 mobile:text-base"
+          : "px-3 py-[1.25] text-lg font-medium text-light-secondary z-2 border border-solid rounded-lg border-transparent dark:text-dark-secondary hover:text-light-primary transition-all hover:dark:text-dark-primary mobile:px-2 mobile:py-1 mobile:text-base"
       }
     >
       {text}
@@ -34,14 +33,15 @@ const Navbar = () => {
   return (
     <nav
       className={clsx(
-        "z-1 flex sticky justify-end top-20 px-4 py-5 rounded-lg border border-transparent transition-all text-lg animate-fadeIn text-light-primary dark:text-dark-secondary",
+        "z-2 flex sticky justify-end top-20 px-4 py-5 rounded-lg border border-transparent transition-all text-lg animate-fadeInDown text-light-primary dark:text-dark-secondary mobile:top-0 mobile:px-3 mobile:py-4 mobile:border-b-[1px] mobile:border-transparent mobile:rounded-none mobile:z-[2]",
         {
-          "border border-solid border-[#dedede] bg-bg-light backdrop-blur-m dark:border-border-dark dark:bg-bg-dark":
+          "border border-solid border-border-light bg-bg-light backdrop-blur-m dark:border-border-dark dark:bg-bg-dark mobile:border-b-border-light mobile:dark:border-b-border-dark mobile:top-0":
             position > 0,
         }
       )}
     >
-      <div className={styles.rightNav}>
+      {/* <Logo className={styles.logo} /> */}
+      <div className="flex align-middle relative">
         {/* <div className={styles.glider}></div> */}
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />

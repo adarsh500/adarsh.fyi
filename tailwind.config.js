@@ -11,6 +11,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      mobile: { max: "1024px" },
+      desktop: "1024px",
+    },
     colors: {
       link: "#52a9ff",
       "light-primary": "#000000",
@@ -33,7 +37,7 @@ module.exports = {
         lg: "10px",
       },
       keyframes: {
-        fadeIn: {
+        fadeInDown: {
           from: {
             opacity: 0,
             transform: "-translate-y-5",
@@ -43,10 +47,22 @@ module.exports = {
             transform: "translate-y-0",
             opacity: 1,
           },
+          gradient: {
+            "0%": {
+              backgroundPosition: "0% 50%",
+            },
+            "50%": {
+              backgroundPosition: "100% 50%",
+            },
+            "100%": {
+              backgroundPosition: "0% 50%",
+            },
+          },
         },
       },
       animation: {
-        fadeIn: "fadeIn 1s ease-in-out",
+        fadeInDown: "fadeInDown 1s ease-in-out",
+        gradient: "gradient 7s ease-in-out infinite",
       },
     },
   },

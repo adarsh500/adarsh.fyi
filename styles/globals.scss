@@ -39,7 +39,7 @@ a {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: all 0.03s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 #__next {
