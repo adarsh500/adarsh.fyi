@@ -15,6 +15,9 @@ module.exports = {
       mobile: { max: "1024px" },
       desktop: "1024px",
     },
+    backgroundSize: {
+      "400%": "400%",
+    },
     colors: {
       link: "#52a9ff",
       "light-primary": "#000000",
@@ -40,29 +43,44 @@ module.exports = {
         fadeInDown: {
           from: {
             opacity: 0,
-            transform: "-translate-y-5",
+            transform: "translate3d(0, -20px, 0)",
           },
-
           to: {
-            transform: "translate-y-0",
+            transform: "translate3d(0, 0, 0)",
             opacity: 1,
           },
-          gradient: {
-            "0%": {
-              backgroundPosition: "0% 50%",
-            },
-            "50%": {
-              backgroundPosition: "100% 50%",
-            },
-            "100%": {
-              backgroundPosition: "0% 50%",
-            },
+        },
+        fadeInUp: {
+          from: {
+            opacity: 0,
+            transform: "translate3d(0, 20px, 0)",
+          },
+          to: {
+            transform: "translate3d(0, 0, 0)",
+            opacity: 1,
+          },
+        },
+        gradient: {
+          "0%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+          "100%": {
+            backgroundPosition: "0% 50%",
+          },
+        },
+        blur: {
+          "0%": {
+            opacity: "opactiy-0",
           },
         },
       },
       animation: {
-        fadeInDown: "fadeInDown 1s ease-in-out",
+        fadeInDown: "fadeInDown 1.6s ease",
         gradient: "gradient 7s ease-in-out infinite",
+        fadeInUp: "fadeInUp 1.6s ease",
       },
     },
   },

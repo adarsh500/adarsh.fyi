@@ -1,43 +1,41 @@
-import Hero from "@components/Hero";
-import styles from "@styles/Home.module.scss";
 import { projects } from "@components/Content/projects";
 import { skills } from "@components/Content/skills";
 import { work } from "@components/Content/work";
+import Hero from "@components/Hero";
+import styles from "@styles/Home.module.scss";
 
-import ProjectCard from "@components/ProjectCard";
-import TechCard from "@components/TechCard";
 import Experience from "@components/Experience";
 import NowPlaying from "@components/NowPlaying";
+import ProjectCard from "@components/ProjectCard";
+import Section from "@components/Section";
+import TechCard from "@components/TechCard";
 
 const Home = (props: any) => (
   <>
     <Hero />
-    <div className={styles.section}>
-      <h2 className={styles.subTitle}>Featured Projects</h2>
+    <Section subtitle="Featured Projects">
       <div className={styles.projectWrapper}>
         {projects.slice(0, 2).map((project, index) => (
           <ProjectCard {...project} key={index} />
         ))}
       </div>
-    </div>
+    </Section>
 
-    <div className={styles.section}>
-      <h2 className={styles.subTitle}>Tech I work with</h2>
+    <Section subtitle="Tech I work with">
       <div className={styles.carousel}>
         {skills.map((skill, index) => (
           <TechCard {...skill} key={index} />
         ))}
       </div>
-    </div>
+    </Section>
 
-    <div className={styles.section}>
-      <h2 className={styles.subTitle}>Work </h2>
+    <Section subtitle="Work">
       <div className={styles.work}>
         {work.map((experience, index) => (
           <Experience {...experience} key={index} />
         ))}
       </div>
-    </div>
+    </Section>
 
     <div className={styles.spotify}>
       <NowPlaying />

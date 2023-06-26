@@ -3,10 +3,10 @@ import {
   SiNextdotjs,
   SiNestjs,
   SiRedux,
-  SiPostgresql,
   SiMongodb,
   SiReact,
   SiTypescript,
+  SiTailwindcss,
 } from "react-icons/si";
 import { IoLogoNodejs, IoLogoSass } from "react-icons/io";
 
@@ -48,7 +48,7 @@ export const skills = [
     icon: <IoLogoNodejs className="techIcon" />,
   },
   {
-    name: "Postgresql",
-    icon: <SiPostgresql className="techIcon" />,
+    name: "Tailwind",
+    icon: <SiTailwindcss className="techIcon" />,
   },
 ];
