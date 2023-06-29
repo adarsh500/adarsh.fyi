@@ -26,6 +26,12 @@
       }
     }
   }
+
+  .responsiveCards {
+    &:nth-child(n + 9) {
+      display: none;
+    }
+  }
 }
 
 :root {

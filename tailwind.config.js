@@ -29,6 +29,8 @@ module.exports = {
       "border-light": "#dedede",
       "border-dark": "#333",
       transparent: "transparent",
+      'black': '#000',
+      'white': '#fff',
     },
     extend: {
       scale: {

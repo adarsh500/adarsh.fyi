@@ -1,4 +1,4 @@
-@import '@styles/mixins';
+@import "@styles/mixins";
 
 .experience {
   display: flex;
@@ -6,7 +6,6 @@
   flex-direction: row;
   padding: 32px;
   height: 240px;
-  overflow: hidden;
   @include font-size-weight(18, 24, 400);
   border-radius: var(--border-radius-large);
   width: 100%;
@@ -40,84 +39,26 @@
     padding: 28px 18px;
   }
 
-  .left {
-    margin-right: 24px;
-
-    @include mobile {
+  .primaryMobile {
+    @include desktop {
       display: none;
     }
 
-    .logo {
-      path {
-        fill: var(--light-text-primary);
-
-        @include dark-mode {
-          fill: var(--dark-text-primary);
-        }
-      }
+    @include mobile {
+      @include font-size-weight(18, 24, 500);
     }
   }
 
-  .right {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  .secondary {
+    @include font-size-weight(18, 24, 400);
+    color: var(--light-text-secondary);
 
-    .header {
-      @include flex(space-between, center);
-      .primary {
-        @include font-size-weight(18, 24, 500);
-
-        @include mobile {
-          display: none;
-        }
-      }
-
-      .primaryMobile {
-        @include desktop {
-          display: none;
-        }
-
-        @include mobile {
-          @include font-size-weight(18, 24, 500);
-        }
-      }
-
-      .secondary {
-        @include font-size-weight(18, 24, 400);
-        color: var(--light-text-secondary);
-
-        @include dark-mode {
-          color: var(--dark-text-secondary);
-        }
-
-        @include mobile {
-          @include font-size-weight(16, 23, 300);
-        }
-      }
-
-      &Left {
-        text-align: left;
-      }
-
-      &Right {
-        text-align: right;
-      }
+    @include dark-mode {
+      color: var(--dark-text-secondary);
     }
 
-    .body {
-      margin-top: 24px;
-      @include font-size-weight(18, 26, 400);
-      color: var(--light-text-secondary);
-
-      @include dark-mode {
-        color: var(--dark-text-secondary);
-      }
-
-      @include mobile {
-        margin-top: 16px;
-        @include font-size-weight(16, 24, 400);
-      }
+    @include mobile {
+      @include font-size-weight(16, 23, 300);
     }
   }
 }
