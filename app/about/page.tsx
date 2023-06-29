@@ -1,14 +1,12 @@
-import styles from "./about.module.scss";
-
 const Home = () => (
-  <main className={styles.main}>
-    <div className={styles.container}>
-      <p className={styles.title}>About Me</p>
-      <p className={styles.about}>
+  <main className="flex justify-center items-start flex-col break-words text-lg text-left mt-12 mb-24 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:mb-20 mobile:text-base">
+    <div className="flex justify-center items-start flex-col animate-fadeInUp">
+      <p className="text-5xl font-extrabold">About Me</p>
+      <p className="mt-12 text-light-secondary dark:text-dark-secondary">
         I'm a 20 y/o full-stack developer from Bangalore, India. I'm currently
         studying at DSCE. I'm currently working as a Software Development
         Engineer Intern at{" "}
-        <a href="https://cloudsek.com/" target="_blank" className={styles.link}>
+        <a href="https://cloudsek.com/" target="_blank" className="text-link">
           CloudSEK
         </a>
         <br />
@@ -16,7 +14,7 @@ const Home = () => (
         <a
           href="https://mark3.vercel.app"
           target="_blank"
-          className={styles.link}
+          className="text-link"
         >
           Mark3
         </a>{" "}
@@ -24,7 +22,7 @@ const Home = () => (
         <a
           href="https://cal-nu.vercel.app"
           target="_blank"
-          className={styles.link}
+          className="text-link"
         >
           Cal.ndr
         </a>
@@ -34,7 +32,7 @@ const Home = () => (
         also learning backend development on the side. You can find my resume{" "}
         <a
           href="https://drive.google.com/file/d/1XvDKnRz8UDSHq5kLwZh7JcnD4QKX2cLI/view?usp=sharing"
-          className={styles.link}
+          className="text-link"
         >
           here
         </a>
@@ -50,7 +48,7 @@ const Home = () => (
         <a
           href="https://twitter.com/adarshsulegai50"
           target="_blank"
-          className={styles.link}
+          className="text-link"
         >
           Twitter
         </a>
