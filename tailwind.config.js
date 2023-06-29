@@ -31,6 +31,9 @@ module.exports = {
       transparent: "transparent",
     },
     extend: {
+      scale: {
+        101: "1.01",
+      },
       backdropBlur: {
         m: "10px",
       },

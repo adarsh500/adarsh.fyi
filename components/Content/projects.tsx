@@ -8,8 +8,8 @@ export const projects = [
     og: "/mark3.png",
     imageUrl:
       "https://og-image.vercel.app/**mark3**.png?theme=dark&md=1&fontSize=150px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-white.svg",
-    description: `a bookmark management web app with sleek UI and dark mode
-          which helps you seamlessly manage your bookmarks across browsers and devices`,
+    description: `a bookmark manager with sleek UI and dark mode
+          that helps you seamlessly manage your bookmarks across browsers and devices`,
     githubUrl: "https://github.com/adarsh500/mark",
   },
 

@@ -20,7 +20,6 @@
   @include mobile {
     width: 100%;
     flex-direction: row;
-    z-index: 1;
     margin-right: 0;
     margin-bottom: 32px;
     min-height: min-content;
@@ -44,77 +43,21 @@
     }
   }
 
-  .body {
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 28px 18px;
+  .footer {
+    color: var(--dark-text-secondary);
+    margin-top: 12px;
 
-    @include mobile {
-      padding: 26px 16px;
-    }
-
-    .header {
+    &cta {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
+      @include font-size-weight(18, 26, 300);
 
-      .main {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-      }
-
-      &Title {
-        @include font-size-weight(24, 30, 500);
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
-        p {
-          margin-right: 8px;
-        }
-
-        @include mobile {
-          @include font-size-weight(20, 24, 500);
-        }
-      }
-    }
-
-    .description {
-      margin-top: 1rem;
-      @include font-size-weight(18, 26, 400);
-      @include line-clamp(3);
-      color: var(--light-text-secondary);
-
-      @include dark-mode {
-        color: var(--dark-text-secondary);
-      }
-
-      @include mobile {
-        margin-top: 14px;
-        @include line-clamp(3);
-        @include font-size-weight(16, 24, 400);
-      }
-    }
-
-    .footer {
-      color: var(--dark-text-secondary);
-      margin-top: 12px;
-
-      &cta {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        @include font-size-weight(18, 26, 300);
-
-        .github {
-          vertical-align: middle;
-          margin-left: 10px;
-          height: 20px;
-          width: 20px;
-        }
+      .github {
+        vertical-align: middle;
+        margin-left: 10px;
+        height: 20px;
+        width: 20px;
       }
     }
   }
