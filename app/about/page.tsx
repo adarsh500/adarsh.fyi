@@ -1,6 +1,6 @@
 import styles from "./about.module.scss";
 
-const Home = (props: any) => (
+const Home = () => (
   <main className={styles.main}>
     <div className={styles.container}>
       <p className={styles.title}>About Me</p>
@@ -33,7 +33,7 @@ const Home = (props: any) => (
         <br />I absolutely love working with NextJs, React, and Typescript. I'm
         also learning backend development on the side. You can find my resume{" "}
         <a
-          href="https://drive.google.com/file/d/1x35AKUlYyGMhfqAL0zIC1njdJ6TSflo-/view?usp=sharing"
+          href="https://drive.google.com/file/d/1XvDKnRz8UDSHq5kLwZh7JcnD4QKX2cLI/view?usp=sharing"
           className={styles.link}
         >
           here

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // important: true,
+  important: true,
   // important: "#app",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -29,8 +29,8 @@ module.exports = {
       "border-light": "#dedede",
       "border-dark": "#333",
       transparent: "transparent",
-      'black': '#000',
-      'white': '#fff',
+      black: "#000",
+      white: "#fff",
     },
     extend: {
       scale: {

@@ -5,6 +5,13 @@
 @import "./mixins.scss";
 
 @layer components {
+  .logo {
+    fill: black;
+    @include dark-mode {
+      fill: white;
+    }
+  }
+
   .icon {
     height: 20px;
     width: 20px;

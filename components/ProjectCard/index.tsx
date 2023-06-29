@@ -1,4 +1,3 @@
-import styles from "./ProjectCard.module.scss";
 import { VscGithubInverted } from "react-icons/vsc";
 import { GrLinkNext } from "react-icons/gr";
 
