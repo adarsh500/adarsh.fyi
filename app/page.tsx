@@ -9,7 +9,7 @@ import ProjectCard from "@components/ProjectCard";
 import Section from "@components/Section";
 import TechCard from "@components/TechCard";
 
-const Home = (props: any) => (
+const Home = () => (
   <>
     <Hero />
     <Section subtitle="Featured Projects">

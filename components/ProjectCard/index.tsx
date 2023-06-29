@@ -25,7 +25,7 @@ const ProjectCard = (props: ProjectProps) => {
               target="_blank"
             >
               <p className="mr-2">{title}</p>
-              <GrLinkNext className="group-hover:translate-x-1.5 h-5 w-5 text-black align-middle mt-1 transition-all duration-300 ease-in-out dark:text-white stroke-black dark:stroke-white" />
+              <GrLinkNext className="group-hover:translate-x-1.5 h-5 w-5 text-black align-middle mt-1 transition-all duration-300 ease-in-out dark:text-white stroke-white stroke-[#fff] dark:stroke-white icon" />
             </a>
             <a
               className="flex justify-end items-center text-lg "

@@ -4,6 +4,30 @@
 @import "./reset.scss";
 @import "./mixins.scss";
 
+@layer components {
+  .icon {
+    height: 20px;
+    width: 20px;
+    color: black !important;
+    vertical-align: middle;
+    margin: 3px 0 0 0px;
+    transition: all 0.3s ease-in-out;
+    stroke-width: 40px;
+
+    @include dark-mode {
+      color: white !important;
+    }
+
+    path {
+      stroke: #000;
+
+      @include dark-mode {
+        stroke: #fff;
+      }
+    }
+  }
+}
+
 :root {
   --success: #10b981;
   --primary: #026bdc;
