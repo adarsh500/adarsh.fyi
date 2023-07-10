@@ -2,7 +2,7 @@ import styles from "./Hero.module.scss";
 
 const Hero = () => {
   return (
-    <main className="flex-1 flex items-center justify-center break-words text-xl flex-col text-left mt-24 mb-20 text-light-primary dark:text-dark-primary mobile:py-10 mobile:px-4 mobile:mt-8 mobile:mb-4">
+    <main className="flex-1 flex items-center justify-center break-words text-xl flex-col text-left mt-40 mb-20 text-light-primary dark:text-dark-primary mobile:py-10 mobile:px-4 mobile:mt-8 mobile:mb-4">
       <div className="flex items-start justify-center flex-col animate-fadeInUp">
         <p
           // className="text-7xl font-extrabold bg-[length:400%_400%] animate-gradient"
