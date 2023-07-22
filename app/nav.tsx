@@ -37,7 +37,7 @@ const Navbar = () => {
         {
           "border border-solid border-border-light bg-bg-light backdrop-blur-md dark:border-border-dark dark:bg-bg-dark mobile:border-b-border-light mobile:dark:border-b-border-dark mobile:top-0":
             position > 0,
-        }
+        },
       )}
     >
       {/* <Logo className={styles.logo} /> */}
