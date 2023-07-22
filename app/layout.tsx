@@ -3,8 +3,8 @@ import "../styles/globals.scss";
 import Footer from "@components/Footer";
 import Navbar from "./nav";
 import NowPlaying from "@components/NowPlaying";
-import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
+import ClientWrapper from "@components/ClientWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +28,7 @@ export default function RootLayout({
           </div>
           <Footer />
         </div>
-        <Analytics />
+        <ClientWrapper />
       </body>
     </html>
   );
