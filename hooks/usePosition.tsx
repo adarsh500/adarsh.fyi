@@ -5,9 +5,9 @@ import useDebounce from "./useDebounce";
 const usePosition = () => {
   const [position, setPosition] = useState<number>(0);
   const handleScroll = () => {
-    const position = window.pageYOffset;
-    setPosition(position);
+    setPosition(window.pageYOffset);
   };
+
   const debouncedScroll = useDebounce(handleScroll, 10);
 
   useEffect(() => {

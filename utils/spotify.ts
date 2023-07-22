@@ -20,7 +20,7 @@ const getAccessToken = async () => {
       refresh_token,
     }).toString(),
     next: {
-      revalidate: 3000,
+      revalidate: 30000,
     },
   });
   return response.json();
@@ -33,7 +33,7 @@ export const getTopTracks = async () => {
       Authorization: `Bearer ${access_token}`,
     },
     next: {
-      revalidate: 864399,
+      revalidate: 3000,
     },
   });
   const data = await tracks.json();

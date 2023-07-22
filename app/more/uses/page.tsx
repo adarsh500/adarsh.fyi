@@ -1,5 +1,3 @@
-import styles from "./uses.module.scss";
-
 const hardware = [
   {
     key: "Laptop",
@@ -66,19 +64,24 @@ const software = [
   },
 ];
 
-export default async function Tracks() {
+export default async function Uses() {
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <p className={styles.title}>Gear that i use</p>
-        <div className={styles.section}>
-          <h2 className={styles.subtitle}>Hardware</h2>
-          <div className={styles.list}>
+    <main className="flex justify-start items-start flex-col break-words text-xl text-left mt-32 mb-24 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:mt-12 mobile:mb-20 mobile:text-base">
+      <div className="flex justify-center align-top flex-col w-full animate-fadeInUp">
+        <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold">
+          Gear that i use
+        </p>
+        <div className="my-12 mobile:my-8 last:mb-0">
+          <h2 className="mb-4 text-2xl font-semibold">Hardware</h2>
+          <div>
             {hardware.map((item) => (
-              <li className={styles.item} key={item.key}>
+              <li className="my-2 mx-0" key={item.key}>
                 <span>
                   {item.key}:{" "}
-                  <a className={styles.link} href={item.link}>
+                  <a
+                    className="text-light-secondary dark:text-dark-secondary"
+                    href={item.link}
+                  >
                     {item.name}
                   </a>
                 </span>
@@ -86,13 +89,16 @@ export default async function Tracks() {
             ))}
           </div>
         </div>
-        <div className={styles.section}>
-          <h2 className={styles.subtitle}>Software</h2>
-          <div className={styles.list}>
+        <div className="mb-12 last:mb-0">
+          <h2 className="mb-4 text-xl font-semibold">Software</h2>
+          <div>
             {software.map((item) => (
-              <li className={styles.item} key={item.key}>
+              <li className="my-2 mx-0" key={item.key}>
                 <span>
-                  {item.key}: <a className={styles.link}>{item.name}</a>
+                  {item.key}:{" "}
+                  <a className="text-light-secondary dark:text-dark-secondary">
+                    {item.name}
+                  </a>
                 </span>
               </li>
             ))}

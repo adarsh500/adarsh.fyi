@@ -4,10 +4,10 @@ This is my personal website / blog.
 
 ## Tech stack
 
-- NextJS
+- NextJS 13 (app dir with RSC)
 - React
 - Typescript
-- SASS
+- TailwindCSS
 - Vercel
 
 ## Running Locally

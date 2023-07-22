@@ -1,36 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MusicBars from "@components/MusicBars";
-import styles from "./NowPlaying.module.scss";
 import { SiSpotify } from "react-icons/si";
 import { getNowPlaying } from "@utils/spotify";
-
-interface NotPlaying {
-  isPlaying?: false;
-}
-
-interface Playing {
-  albumImageUrl: string;
-  artist: string;
-  title: string;
-  songUrl: string;
-  album: string;
-  isPlaying: true;
-}
 
 const CurrentTrack = (props: any) => {
   const { songUrl, artist, title, isPlaying } = props;
   return (
-    <div className={isPlaying ? styles.currentTrack : styles.paused}>
-      <div className={styles.trackInfo}>
+    <div
+      className={
+        isPlaying
+          ? "w-full flex justify-start items-center"
+          : "w-full flex justify-center items-center"
+      }
+    >
+      <div className="flex flex-col text-base mobile:ml-0">
         {isPlaying ? (
           <>
-            <a className={styles.trackTitle} href={songUrl}>
+            <a
+              className="text-lg text-left text-light-primary line-clamp-1 dark:text-dark-primary hover:underline"
+              href={songUrl}
+            >
               {title}
             </a>
-            <p className={styles.trackArtist}>{artist}</p>
+            <p className="mt-1 text-sm text-left text-light-secondary line-clamp-1 dark:text-dark-secondary">
+              {artist}
+            </p>
           </>
         ) : (
-          <p className={styles.notListening}>Not listening</p>
+          <p className="ml-4 text-xl">Not listening</p>
         )}
       </div>
     </div>
@@ -43,11 +40,15 @@ const NowPlaying = async () => {
   return (
     <div
       className={
-        currentTrack?.isPlaying ? styles.nowPlaying : styles.notPlaying
+        currentTrack?.isPlaying
+          ? "flex justify-between items-center min-w-[200px] max-w-full w-full"
+          : "flex justify-center items-center w-full"
       }
     >
-      {!currentTrack?.isPlaying && <SiSpotify className={styles.icon} />}
-      <div className={styles.track}>
+      {!currentTrack?.isPlaying && (
+        <SiSpotify className="w-9 h-9 mobile:w-7 mobile:h-7" />
+      )}
+      <div className="flex rounded-lg w-full justify-between mobile:m-0">
         <CurrentTrack {...currentTrack} />
         {currentTrack?.isPlaying && <MusicBars />}
       </div>

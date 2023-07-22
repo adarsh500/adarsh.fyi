@@ -12,30 +12,18 @@
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
 @keyframes blur {
   0% {
     opacity: 0;
-    filter: brightness(1) blur(30px);
+    filter: brightness(1) blur(20px);
   }
-  30% {
+  33% {
     opacity: 1;
-    filter: brightness(2) blur(20px);
+    filter: brightness(1) blur(13px);
   }
-  60% {
+  66% {
     opacity: 1;
-    filter: brightness(2) blur(10px);
+    filter: brightness(1) blur(6px);
   }
   100% {
     opacity: 1;
@@ -43,79 +31,22 @@
   }
 }
 
-.main {
-  flex: 1;
-  @include flex(center, center);
-  flex-direction: column;
-  word-wrap: break-word;
-  @include font-size-weight(20, 30, 400);
+.title {
+  @include font-size-weight(62, 70, 800);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation:
+    gradient 7s ease infinite,
+    blur 1.6s linear;
+  transition: all 0.3s ease-in-out;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: white;
   text-align: left;
-  margin: 6rem 0 5rem 0;
-  color: var(--light-text-primary);
-
-  @include dark-mode {
-    color: var(--dark-text-primary);
-  }
+  width: 100%;
 
   @include mobile {
-    padding: 2.5rem 1rem;
-    margin: 2rem 0 1rem 0;
-  }
-}
-
-.container {
-  @include flex(center, flex-start);
-  flex-direction: column;
-  animation: fadeInUp 1s ease-in-out;
-
-  .secondaryText {
-    @include font-size-weight(20, 24, 400);
-    text-align: left;
-    color: var(--light-text-primary);
-
-    @include dark-mode {
-      color: var(--dark-text-primary);
-    }
-  }
-
-  .title {
-    @include font-size-weight(70, 80, 800);
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 7s ease infinite, blur 1s linear;
-
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: white;
-
-    @include mobile {
-      @include font-size-weight(48, 58, 800);
-    }
-  }
-
-  .about {
-    margin-top: 16px;
-    max-width: 90%;
-    color: var(--light-text-secondary);
-    @include font-size-weight(20, 36, 400);
-
-    @include dark-mode {
-      color: var(--dark-text-secondary);
-    }
-
-    @include mobile {
-      max-width: 100%;
-      @include font-size-weight(18, 28, 400);
-    }
-
-    .link {
-      color: var(--light-text-primary);
-      font-weight: 500;
-
-      @include dark-mode {
-        color: var(--dark-text-primary);
-      }
-    }
+    @include font-size-weight(42, 50, 700);
   }
 }

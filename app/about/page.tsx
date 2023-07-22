@@ -1,14 +1,14 @@
-import styles from "./about.module.scss";
-
-const Home = (props: any) => (
-  <main className={styles.main}>
-    <div className={styles.container}>
-      <p className={styles.title}>About Me</p>
-      <p className={styles.about}>
+const Home = () => (
+  <main className="flex justify-start items-start flex-col break-words text-xl text-left mt-32 mb-24 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:mt-12 mobile:mb-20 mobile:text-base">
+    <div className="flex justify-center items-start flex-col animate-fadeInUp">
+      <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold">
+        About Me
+      </p>
+      <p className="mt-12 text-light-secondary dark:text-dark-secondary leading-9 mobile:mt-8 mobile:text-lg mobile:leading-9">
         I'm a 20 y/o full-stack developer from Bangalore, India. I'm currently
         studying at DSCE. I'm currently working as a Software Development
         Engineer Intern at{" "}
-        <a href="https://cloudsek.com/" target="_blank" className={styles.link}>
+        <a href="https://cloudsek.com/" target="_blank" className="text-link">
           CloudSEK
         </a>
         <br />
@@ -16,15 +16,15 @@ const Home = (props: any) => (
         <a
           href="https://mark3.vercel.app"
           target="_blank"
-          className={styles.link}
+          className="text-link"
         >
-          Mark3
+          Mark
         </a>{" "}
         and{" "}
         <a
           href="https://cal-nu.vercel.app"
           target="_blank"
-          className={styles.link}
+          className="text-link"
         >
           Cal.ndr
         </a>
@@ -33,8 +33,8 @@ const Home = (props: any) => (
         <br />I absolutely love working with NextJs, React, and Typescript. I'm
         also learning backend development on the side. You can find my resume{" "}
         <a
-          href="https://drive.google.com/file/d/1x35AKUlYyGMhfqAL0zIC1njdJ6TSflo-/view?usp=sharing"
-          className={styles.link}
+          href="https://drive.google.com/file/d/1XvDKnRz8UDSHq5kLwZh7JcnD4QKX2cLI/view?usp=sharing"
+          className="text-link"
         >
           here
         </a>
@@ -50,7 +50,7 @@ const Home = (props: any) => (
         <a
           href="https://twitter.com/adarshsulegai50"
           target="_blank"
-          className={styles.link}
+          className="text-link"
         >
           Twitter
         </a>

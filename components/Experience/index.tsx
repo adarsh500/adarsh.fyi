@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Experience.module.scss";
 
 type ExperienceProps = {
   company: string;
@@ -25,28 +24,39 @@ const Experience = (props: ExperienceProps) => {
   } = props;
 
   return (
-    <div className={styles.experience}>
-      <div className={styles.left}>
-        <a href={url} target="_blank" className={styles.logo}>
+    <div className="flex h-min p-8 text-lg rounded-lg w-full mb-6 transition-all duration-300 ease-in-out bg-bg-light border border-solid border-border-light dark:bg-bg-dark dark:border-border-dark hover:scale-101 hover:border-black hover:dark:border-white even:mb-0 mobile:ml-0 mobile:py-7 mobile:px-[18px]">
+      <div className="mr-6 mobile:hidden ">
+        <a href={url} target="_blank" className="logo">
           {logo()}
         </a>
       </div>
-      <div className={styles.right}>
-        <div className={styles.header}>
-          <div className={styles.headerLeft}>
-            <a href={url} target="_blank" className={styles.primary}>
+      <div className="w-full float-right flex-col ">
+        <div className="flex justify-between items-center">
+          <div className="text-left">
+            <a
+              href={url}
+              target="_blank"
+              className="text-lg font-medium mobile:text-lg text-light-primary dark:text-dark-primary"
+            >
               {company}
             </a>
-            <p className={styles.primaryMobile}>{company}</p>
-            <p className={styles.secondary}>{role}</p>
+            <p className="text-lg text-light-secondary dark:text-dark-secondary mobile:text-base">
+              {role}
+            </p>
           </div>
-          <div className={styles.headerRight}>
-            <p className={styles.primary}>{duration}</p>
-            <p className={styles.primaryMobile}>{shortDuration}</p>
-            <p className={styles.secondary}>{location}</p>
+          <div className="text-right">
+            <p className="text-lg font-medium mobile:text-lg text-light-primary dark:text-dark-primary mobile:hidden">
+              {duration}
+            </p>
+            <p className="desktop:hidden mobile:text-lg text-light-primary dark:text-dark-primary font-medium">
+              {shortDuration}
+            </p>
+            <p className="text-lg text-light-secondary dark:text-dark-secondary mobile:text-base">
+              {location}
+            </p>
           </div>
         </div>
-        <div className={styles.body}>
+        <div className="mt-6 text-lg text-light-secondary dark:text-dark-secondary mobile:mt-4 mobile:text-base">
           <p>{description}</p>
         </div>
       </div>
