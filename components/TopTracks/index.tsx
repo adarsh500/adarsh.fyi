@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import styles from './TopTracks.module.scss';
-import { Track } from '../../types/shared';
+import React from "react";
+import { Track } from "../../types/shared";
 
 interface TrackItem {
   track: Track;
@@ -9,7 +8,7 @@ interface TrackItem {
 const TrackItem = ({ track }: TrackItem) => {
   return (
     <div>
-      <a className={styles.trackItem} href={track.songUrl}>
+      <a className="flex flex-col hover:underline" href={track.songUrl}>
         {track.title}
       </a>
       <hr></hr>
@@ -17,24 +16,15 @@ const TrackItem = ({ track }: TrackItem) => {
   );
 };
 
-const TopTracks = () => {
-  const [tracks, setTracks] = useState([]);
-
-  const fetchTopTracks = async () => {
-    const res = await fetch('api/getTopTracks');
-    const data = await res.json();
-    setTracks(data.tracks);
-  };
-
-  useEffect(() => {
-    fetchTopTracks();
-  }, []);
+const TopTracks = async () => {
+  const res = await fetch("api/getTopTracks");
+  const data = await res.json();
 
   return (
-    <div className={styles.topTracksWrapper}>
+    <div className="flex flex-col justify-center items-center">
       <h2>Adarsh's Top Tracks</h2>
       <div>
-        {tracks.map((track: any, id: number) => (
+        {data?.tracks?.map((track: any, id: number) => (
           <TrackItem track={track} key={id} />
         ))}
       </div>

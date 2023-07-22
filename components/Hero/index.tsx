@@ -10,7 +10,7 @@ const Hero = () => {
         >
           Adarsh Sulegai.
         </p>
-        <p className="text-left mt-4 w-[90%] m:w-[100%] text-light-secondary text-xl font-medium dark:text-dark-secondary mobile:text-lg mobile:leading-8 mobile:w-[100%]">
+        <p className="text-left mt-4 w-[90%] m:w-[100%] text-light-secondary text-xl leading-9 font-medium dark:text-dark-secondary mobile:text-lg mobile:leading-8 mobile:w-[100%]">
           I'm a 20 y/o full-stack developer working as an SDE Intern at{" "}
           <a
             href="https://cloudsek.com/"
