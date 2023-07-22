@@ -5,7 +5,7 @@ import { MdMail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="w-full mt-12 flex items-center justify-start py-8 px-6 border-t border-solid border-border-light dark:border-border-dark mobile:mt-4 mobile:py-6 mobile:px-8">
+    <footer className="w-full mt-12 flex items-center justify-start py-8 px-6 border-t border-solid border-border-light dark:border-border-dark mobile:mt-4 mobile:py-6 mobile:px-8 animate-fadeInUp">
       <a href="https://github.com/adarsh500">
         <VscGithubInverted className="h-5 w-5 align-middle mr-9" />
       </a>

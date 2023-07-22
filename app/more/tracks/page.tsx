@@ -25,10 +25,12 @@ export default async function Tracks() {
   const tracks: Tracks[] = await getTopTracks();
 
   return (
-    <main className="flex justify-center align-top break-words text-xl mt-32 mb-24 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:mb-12 mobile:text-lg">
+    <main className="flex justify-start items-start flex-col break-words text-xl text-left mt-32 mb-24 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:mt-12 mobile:mb-20 mobile:text-base">
       <div className="flex justify-center align-top flex-col animate-fadeInUp w-full">
-        <p className="text-5xl font-bold mb-12 mobile:mb-8">Top Tracks</p>
-        <div className="flex flex-wrap">
+        <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold">
+          Top Tracks
+        </p>
+        <div className="my-12 flex justify-start items-center flex-wrap mobile:my-8">
           {tracks.map((track, index: number) => {
             const artists = track.artists
               .map((artist) => artist.name)

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import MusicBars from "@components/MusicBars";
 import { SiSpotify } from "react-icons/si";
 import { getNowPlaying } from "@utils/spotify";

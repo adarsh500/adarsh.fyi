@@ -19,12 +19,12 @@ const ProjectCard = (props: ProjectProps) => {
         <div className="flex justify-between items-center">
           <div className="flex justify-between items-center w-full">
             <a
-              className="flex text-xl font-semibold justify-start items-center mobile:text-lg"
+              className="flex text-xl font-semibold justify-start items-center "
               href={link}
               target="_blank"
             >
               <p className="mr-2">{title}</p>
-              <GrLinkNext className="group-hover:translate-x-1.5 h-5 w-5 text-black align-middle mt-1 transition-all duration-300 ease-in-out dark:text-white stroke-white stroke-[#fff] dark:stroke-white icon" />
+              <GrLinkNext className="group-hover:translate-x-1.5 h-5 w-5 text-black align-middle transition-all duration-300 ease-in-out dark:text-white stroke-white mobile:w-4 mobile:h-4 dark:stroke-white icon" />
             </a>
             <a
               className="flex justify-end items-center text-lg "
@@ -35,7 +35,7 @@ const ProjectCard = (props: ProjectProps) => {
             </a>
           </div>
         </div>
-        <div className="mt-4 text-lg line-clamp-3 text-light-secondary dark:text-dark-secondary mobile:mt-[14px] mobile:text-base">
+        <div className="mt-4 text-lg line-clamp-3 text-light-secondary dark:text-dark-secondary mobile:mt-2">
           {description}
         </div>
       </div>

@@ -20,7 +20,7 @@ const getAccessToken = async () => {
       refresh_token,
     }).toString(),
     next: {
-      revalidate: 3000,
+      revalidate: 30000,
     },
   });
   return response.json();

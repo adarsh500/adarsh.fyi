@@ -1,8 +1,10 @@
 const Home = () => (
-  <main className="flex justify-start items-start flex-col break-words text-xl text-left mt-32 mb-24 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:mb-20 mobile:text-base">
+  <main className="flex justify-start items-start flex-col break-words text-xl text-left mt-32 mb-24 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:mt-12 mobile:mb-20 mobile:text-base">
     <div className="flex justify-center items-start flex-col animate-fadeInUp">
-      <p className="text-5xl font-extrabold">About Me</p>
-      <p className="mt-12 text-light-secondary dark:text-dark-secondary leading-9">
+      <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold">
+        About Me
+      </p>
+      <p className="mt-12 text-light-secondary dark:text-dark-secondary leading-9 mobile:mt-8 mobile:text-lg mobile:leading-9">
         I'm a 20 y/o full-stack developer from Bangalore, India. I'm currently
         studying at DSCE. I'm currently working as a Software Development
         Engineer Intern at{" "}
