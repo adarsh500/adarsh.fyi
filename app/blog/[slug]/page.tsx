@@ -6,26 +6,29 @@ import styles from "../blog.module.scss";
 import Image from "next/image";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Balancer from "react-wrap-balancer";
 
-const MyButton: React.FC = () => <button>Click me</button>;
+export const dynamic = "force-static";
 
-const PostLayout = ({ params }) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+const RoundedImage = (props: any) => (
+  <div className={styles.imageContainer}>
+    <Image {...props} className="rounded-lg" />
+  </div>
+);
+
+const PostLayout = ({ params }: any) => {
+  const post = allPosts.find((post) => post.slug === params.slug);
   const thumbnailPath = `/${params.slug}/${params.slug}.png`;
 
   if (!post) {
     return notFound();
   }
-  console.log(params);
+
   const MDXContent = useMDXComponent(post.body.code);
 
   return (
     <main className={styles.main}>
-      <Head>
-        <title>{post.title}</title>
-      </Head>
-      {/* <div className={styles.subHeader}>Blog</div> */}
-      <Image
+      <RoundedImage
         style={{
           maxWidth: "100%",
           objectFit: "contain",
@@ -39,7 +42,9 @@ const PostLayout = ({ params }) => {
         priority
       />
       <article className={styles.container}>
-        <p className={styles.title}>{post.title}</p>
+        <p className={styles.title}>
+          <Balancer>{post.title}</Balancer>
+        </p>
         <div className={styles.subRow}>
           <time dateTime={post.date} className={styles.time}>
             Adarsh Sulegai / {format(parseISO(post.date), "LLLL d, yyyy")}
@@ -48,10 +53,7 @@ const PostLayout = ({ params }) => {
         </div>
 
         <div className={styles.blog}>
-          <MDXContent
-            components={{ MyButton, Image }}
-            imageStyles={styles.image}
-          />
+          <MDXContent components={{ Image: RoundedImage }} />
         </div>
       </article>
     </main>
@@ -68,18 +70,16 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}): Promise<Metadata | undefined> {
+}: any): Promise<Metadata | undefined> {
   const post = allPosts.find((post) => post.url === params.slug);
   if (!post) {
     return;
   }
 
-  const { title, date, description, readingTime } = post;
+  const { title, description } = post;
 
   return {
     title,
-    date,
-    readingTime,
     description,
   };
 }

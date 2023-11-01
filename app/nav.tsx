@@ -40,7 +40,6 @@ const Navbar = () => {
         },
       )}
     >
-      {/* <Logo className={styles.logo} /> */}
       <div className="flex align-middle relative">
         {/* <div className={styles.glider}></div> */}
         <NavItem href="/" text="Home" />
