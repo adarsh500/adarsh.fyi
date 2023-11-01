@@ -1,15 +1,10 @@
-import { Inter } from "next/font/google";
-import "../styles/globals.scss";
-import Footer from "@components/Footer";
-import Navbar from "./nav";
-import NowPlaying from "@components/NowPlaying";
-import { Metadata } from "next";
 import ClientWrapper from "@components/ClientWrapper";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
+import Footer from "@components/Footer";
+import NowPlaying from "@components/NowPlaying";
+import { GeistSans } from "geist/font";
+import { Metadata } from "next";
+import "../styles/globals.scss";
+import Navbar from "./nav";
 
 export default function RootLayout({
   children,
@@ -17,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={GeistSans.className}>
       <body suppressHydrationWarning={true}>
         <div className="text-left flex flex-col h-full flex-1 mobile:p-0 desktop:w-[720px] mt-[20] mx-auto mb-0">
           <Navbar />

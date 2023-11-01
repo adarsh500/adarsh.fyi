@@ -14,9 +14,9 @@
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.0",
     "date-fns": "^2.29.3",
+    "geist": "^1.0.0",
     "next": "13.4.3",
     "next-contentlayer": "^0.3.0",
-    "next-mdx-remote": "^4.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
@@ -26,8 +26,7 @@
     "rehype-pretty-code": "^0.9.3",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.53.0",
-    "shiki": "^0.14.1"
+    "sass": "^1.53.0"
   },
   "devDependencies": {
     "@types/node": "^18.0.3",
