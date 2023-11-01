@@ -10,8 +10,8 @@ const Hero = () => {
         </p>
 
         <p>
-          A frontend developer who loves to build things for the web. I'm
-          currently working at{" "}
+          A frontend developer who loves crafting rich and seamless experiences
+          for the web. I'm currently working at{" "}
           <a
             href="https://www.cloudsek.com/"
             target="_blank"
@@ -21,7 +21,6 @@ const Hero = () => {
             CloudSEK
           </a>
           .
-
         </p>
       </div>
     </main>
