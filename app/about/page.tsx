@@ -5,10 +5,10 @@ const Home = () => (
         About Me
       </p>
       <p className="mt-12 text-light-secondary dark:text-dark-secondary leading-9 mobile:mt-8 mobile:text-lg mobile:leading-9">
-        I'm a 20 y/o full-stack developer from Bangalore, India. I'm currently
+        I'm a 21 y/o frontend engineer from Bangalore, India. I'm currently
         studying at DSCE. I'm currently working as a Software Development
-        Engineer Intern at{" "}
-        <a href="https://cloudsek.com/" target="_blank" className="text-link">
+        Engineer 1 at{" "}
+        <a href="https://cloudsek.com/" target="_blank" className="font-semibold hover:underline">
           CloudSEK
         </a>
         <br />

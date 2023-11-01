@@ -13,8 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body suppressHydrationWarning={true}>
-        <div className="text-left flex flex-col h-full flex-1 mobile:p-0 desktop:w-[720px] mt-[20] mx-auto mb-0">
+      <body suppressHydrationWarning={true} className="bg-dark">
+        <div className="text-left flex flex-col h-full flex-1 mobile:p-0 desktop:w-[760px] mt-[20] mx-auto mb-0">
           <Navbar />
           {children}
           <div className="fixed py-4 px-5 rounded-lg bottom-4 left-4 backdrop-blur-md bg-bg-light border border-solid border-border-light dark:bg-bg-dark dark:border-border-dark mobile:hidden">

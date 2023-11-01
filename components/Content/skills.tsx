@@ -13,42 +13,42 @@ import { IoLogoNodejs, IoLogoSass } from "react-icons/io";
 export const skills = [
   {
     name: "Typescript",
-    icon: <SiTypescript className="techIcon" />,
+    icon: <SiTypescript className="h-[46px] w-[46px] m-0 align-middle mobile:w-8 mobile:h-8" />,
   },
   {
     name: "JavaScript",
-    icon: <SiJavascript className="techIcon" />,
+    icon: <SiJavascript className="h-[46px] w-[46px] m-0 align-middle mobile:w-8 mobile:h-8" />,
   },
   {
     name: "Next.js",
-    icon: <SiNextdotjs className="techIcon" />,
+    icon: <SiNextdotjs className="h-[46px] w-[46px] m-0 align-middle mobile:w-8 mobile:h-8" />,
   },
   {
     name: "React",
-    icon: <SiReact className="techIcon" />,
+    icon: <SiReact className="h-[46px] w-[46px] m-0 align-middle mobile:w-8 mobile:h-8" />,
   },
   {
     name: "Redux",
-    icon: <SiRedux className="techIcon" />,
+    icon: <SiRedux className="h-[46px] w-[46px] m-0 align-middle mobile:w-8 mobile:h-8" />,
   },
   {
     name: "Nestjs",
-    icon: <SiNestjs className="techIcon" />,
+    icon: <SiNestjs className="h-[46px] w-[46px] m-0 align-middle mobile:w-8 mobile:h-8" />,
   },
   {
     name: "SASS",
-    icon: <IoLogoSass className="techIcon" />,
+    icon: <IoLogoSass className="h-[46px] w-[46px] m-0 align-middle mobile:w-8 mobile:h-8" />,
   },
   {
     name: "MongoDB",
-    icon: <SiMongodb className="techIcon" />,
+    icon: <SiMongodb className="h-[46px] w-[46px] m-0 align-middle mobile:w-8 mobile:h-8" />,
   },
   {
     name: "Nodejs",
-    icon: <IoLogoNodejs className="techIcon" />,
+    icon: <IoLogoNodejs className="h-[46px] w-[46px] m-0 align-middle mobile:w-8 mobile:h-8" />,
   },
   {
     name: "Tailwind",
-    icon: <SiTailwindcss className="techIcon" />,
+    icon: <SiTailwindcss className="h-[46px] w-[46px] m-0 align-middle mobile:w-8 mobile:h-8" />,
   },
 ];

@@ -36,6 +36,18 @@ const CurrentTrack = (props: any) => {
 
 const NowPlaying = async () => {
   const currentTrack = await getNowPlaying();
+  const { songUrl, artist, title, isPlaying } = currentTrack;
+
+  if (!isPlaying) {
+    return (
+      <div className="flex flex-col justify-center items-center">
+        <SiSpotify className="w-9 h-9 mobile:w-7 mobile:h-7" />
+        <p className="text-lg text-center text-light-primary dark:text-dark-primary">
+          Not listening
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -55,5 +67,7 @@ const NowPlaying = async () => {
     </div>
   );
 };
+
+export const revalidate = 60000;
 
 export default NowPlaying;

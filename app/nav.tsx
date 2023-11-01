@@ -35,7 +35,7 @@ const Navbar = () => {
       className={clsx(
         "z-10 flex sticky justify-end top-20 px-4 py-5 rounded-lg border border-transparent transition-all text-lg animate-fadeInDown text-light-primary dark:text-dark-secondary mobile:top-0 mobile:px-3 mobile:py-5 mobile:border-b-[1px] mobile:border-transparent mobile:rounded-none mobile:text-lg mobile:z-[2]",
         {
-          "border border-solid border-border-light bg-bg-light backdrop-blur-md dark:border-border-dark dark:bg-bg-dark mobile:border-b-border-light mobile:dark:border-b-border-dark mobile:top-0":
+          "border border-solid border-border-light bg-bg-light backdrop-blur-md dark:border-border-dark dark:bg-bg-dark mobile:border-b-border-light mobile:dark:border-b-border-dark":
             position > 0,
         },
       )}
