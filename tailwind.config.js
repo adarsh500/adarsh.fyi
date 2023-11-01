@@ -33,6 +33,9 @@ module.exports = {
       white: "#fff",
     },
     extend: {
+      backgroundImage: {
+        foo: "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
+      },
       scale: {
         101: "1.01",
       },
@@ -67,25 +70,31 @@ module.exports = {
         },
         gradient: {
           "0%": {
-            backgroundPosition: "0% 50%",
+            "background-position": "0% 50%",
           },
           "50%": {
-            backgroundPosition: "100% 50%",
+            "background-position": "100% 50%",
           },
           "100%": {
-            backgroundPosition: "0% 50%",
+            "background-position": "0% 50%",
           },
         },
         blur: {
           "0%": {
-            opacity: "opactiy-0",
+            opacity: "0",
+            filter: "brightness(1) blur(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            filter: "brightness(1) blur(0px)",
           },
         },
       },
       animation: {
-        fadeInDown: "fadeInDown 1.6s ease",
+        fadeInDown: "fadeInDown 1s ease",
         gradient: "gradient 7s ease-in-out infinite",
-        fadeInUp: "fadeInUp 1.6s ease",
+        fadeInUp: "fadeInUp 3s ease",
+        blur: "blur 1.6s ease",
       },
     },
   },

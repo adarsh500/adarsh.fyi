@@ -33,7 +33,7 @@
 
 .title {
   @include font-size-weight(62, 70, 800);
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 7s ease infinite, blur 1.6s linear;
   transition: all 0.3s ease-in-out;
