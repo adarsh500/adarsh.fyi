@@ -31,6 +31,7 @@ export const Post = defineDocumentType(() => ({
       description: "The tags of the post",
       required: true,
     },
+    image: { type: "string" },
   },
   computedFields: {
     url: {
@@ -40,6 +41,10 @@ export const Post = defineDocumentType(() => ({
     readingTime: {
       type: "json",
       resolve: (doc) => readingTime(doc.body.raw),
+    },
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath,
     },
   },
 }));

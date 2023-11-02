@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MusicBars.module.scss';
+import styles from './MusicBars.module.css';
 
 const index = () => {
   return (

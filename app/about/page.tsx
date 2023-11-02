@@ -1,63 +1,88 @@
+import Link from "next/link";
+
 const Home = () => (
-  <main className="flex justify-start items-start flex-col break-words text-xl text-left mt-32 mb-24 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:mt-12 mobile:mb-20 mobile:text-base">
-    <div className="flex justify-center items-start flex-col animate-fadeInUp">
-      <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold">
+  <main className="flex justify-start items-start flex-col break-words text-xl text-left mt-32 mb-16 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:mt-12 mobile:mb-20 mobile:text-base">
+    <div
+      className="flex justify-center items-start flex-col animate-fadeInUp
+     text-light-secondary dark:text-dark-secondary leading-9 mobile:text-lg
+     break-words
+    "
+    >
+      <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4">
         About Me
       </p>
-      <p className="mt-12 text-light-secondary dark:text-dark-secondary leading-9 mobile:mt-8 mobile:text-lg mobile:leading-9">
-        I'm a 20 y/o full-stack developer from Bangalore, India. I'm currently
-        studying at DSCE. I'm currently working as a Software Development
-        Engineer Intern at{" "}
-        <a href="https://cloudsek.com/" target="_blank" className="text-link">
-          CloudSEK
-        </a>
-        <br />
-        <br />I tend to spend my free time working on side projects like{" "}
-        <a
-          href="https://mark3.vercel.app"
-          target="_blank"
-          className="text-link"
-        >
-          Mark
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://cal-nu.vercel.app"
-          target="_blank"
-          className="text-link"
-        >
-          Cal.ndr
-        </a>
-        , contributing to open source or practicing DSA.
-        <br />
-        <br />I absolutely love working with NextJs, React, and Typescript. I'm
-        also learning backend development on the side. You can find my resume{" "}
-        <a
-          href="https://drive.google.com/file/d/1XvDKnRz8UDSHq5kLwZh7JcnD4QKX2cLI/view?usp=sharing"
-          className="text-link"
-        >
-          here
-        </a>
-        .
-        <br />
-        <br />
-        You can often find me talking about tech, mechanical keyboards and Star
-        Wars.
-        <br />
-        <br />
-        If you have an interesting project or if you want to collab on a
-        hackathon or just want to say hi, feel free to reach out to me via{" "}
-        <a
-          href="https://twitter.com/adarshsulegai50"
-          target="_blank"
-          className="text-link"
-        >
-          Twitter
-        </a>
-        .
+
+      <Paragraph>
+        I'm a 21 y/o frontend engineer from 📍 Bangalore, India. I'm currently
+        studying at DSCE and I'm working as a Software Development Engineer 1 at{" "}
+        <Lin href="https://cloudsek.com/">CloudSEK</Lin>.
+      </Paragraph>
+
+      <p className="mt-8">
+        There are quite a few niche domains that i'm interested in besides tech.
       </p>
+      <ul className="list-disc ml-8 mt-4">
+        <li>
+          I've developed an interest in watches ⌚️ after starting my collection. I absolutely love dive
+          watches and those with integrated bracelets.
+        </li>
+        <li>
+          I've developed an indulgence for fragrances and have a small but a
+          growing collection of fragrances.
+        </li>
+        <li>
+          I'm very much into star-wars ✨. At any given point of time there is a
+          20% chance that i'll make a star-wars quote or a reference.
+        </li>
+        <li>
+          I'm also interested in mechanical keyboards. I use a Keychrom K2V2 ⌨️
+          and plan to build a custom keyboard soon. Also no, i'm not a socipath,
+          i don't use blue switches.
+        </li>
+      </ul>
+
+      <Paragraph>
+        I tend to spend my free time working on some hobby projects like this
+        site or <Lin href="https://mark3.vercel.app">Mark</Lin>, contributing to
+        open source or reading tech blogs.
+      </Paragraph>
+
+      <Paragraph>
+        If you have an interesting project or if you want to collab on a
+        hackathon or just want to say hi 👋, feel free to reach out to me via my
+        socials or through my mail.
+      </Paragraph>
+
+      <Paragraph>
+        If you want to know more about my work, you can check out my{" "}
+        <Lin href="https://drive.google.com/file/d/1EdIZrgXqwtX1lKmlWMEJV_MW5XcWSVhS/view?usp=sharing">
+          Resume
+        </Lin>
+        .
+      </Paragraph>
     </div>
   </main>
 );
+
+const Paragraph = (props: any) => {
+  return (
+    <p className="mt-8 text-light-secondary dark:text-dark-secondary leading-9 mobile:mt-8 mobile:text-lg">
+      {props.children}
+    </p>
+  );
+};
+
+const Lin = (props: any) => {
+  return (
+    <Link
+      href={props.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-semibold underline"
+    >
+      {props.children}
+    </Link>
+  );
+};
 
 export default Home;

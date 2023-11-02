@@ -26,7 +26,7 @@ const Experience = (props: ExperienceProps) => {
   return (
     <div className="flex h-min p-8 text-lg rounded-lg w-full mb-6 transition-all duration-300 ease-in-out bg-bg-light border border-solid border-border-light dark:bg-bg-dark dark:border-border-dark hover:scale-101 hover:border-black hover:dark:border-white even:mb-0 mobile:ml-0 mobile:py-7 mobile:px-[18px]">
       <div className="mr-6 mobile:hidden ">
-        <a href={url} target="_blank" className="logo">
+        <a href={url} target="_blank" className="fill-black dark:fill-white">
           {logo()}
         </a>
       </div>

@@ -1,17 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./reset.scss";
 @import "./mixins.scss";
 
 @layer components {
-  .logo {
-    fill: black;
-    @include dark-mode {
-      fill: white;
-    }
-  }
-
   .icon {
     height: 20px;
     width: 20px;
@@ -78,18 +70,8 @@ body {
   flex-direction: column;
   margin: 0;
   scroll-behavior: smooth;
-  font-family:
-    var(--font-inter),
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
 
   background-image: linear-gradient(
@@ -97,21 +79,12 @@ body {
     transparent 0
   );
 
-  @include dark-mode {
-    background-image: linear-gradient(rgba(45, 52, 64, 0.5) 0px, transparent 0),
-      linear-gradient(90deg, rgba(45, 52, 64, 0.5) 0px, #0b0d0f 0);
-  }
+  min-height: 100vh;
+  font-weight: normal;
+  font-size: 15px !important;
+  line-height: 1.42857143 !important;
 }
 
-.techIcon {
-  height: 46px;
-  width: 46px !important;
-  margin: 0 !important;
-  width: 100%;
-  vertical-align: middle;
-
-  @include mobile {
-    height: 32px;
-    width: 32px !important;
-  }
+#hero-text {
+  text-wrap: balance !important;
 }

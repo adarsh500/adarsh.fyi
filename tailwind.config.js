@@ -33,6 +33,10 @@ module.exports = {
       white: "#fff",
     },
     extend: {
+      backgroundImage: {
+        foo: "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
+        dark: "linear-gradient(rgba(45, 52, 64, 0.5) 0px, transparent 0),linear-gradient(90deg, rgba(45, 52, 64, 0.5) 0px, #0b0d0f 0)",
+      },
       scale: {
         101: "1.01",
       },
@@ -67,25 +71,55 @@ module.exports = {
         },
         gradient: {
           "0%": {
-            backgroundPosition: "0% 50%",
+            "background-position": "0% 50%",
           },
           "50%": {
-            backgroundPosition: "100% 50%",
+            "background-position": "100% 50%",
           },
           "100%": {
-            backgroundPosition: "0% 50%",
+            "background-position": "0% 50%",
           },
         },
         blur: {
           "0%": {
-            opacity: "opactiy-0",
+            opacity: "0",
+            filter: "brightness(1) blur(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            filter: "brightness(1) blur(0px)",
+          },
+        },
+        gradientBlur: {
+          "0%": {
+            opacity: "0",
+            filter: "brightness(1) blur(20px)",
+            "background-position": "0% 50%",
+          },
+          "33%": {
+            opacity: "1",
+            filter: "brightness(1) blur(13px)",
+          },
+          "50%": {
+            "background-position": "100% 50%",
+          },
+          "66%": {
+            opacity: "1",
+            filter: "brightness(1) blur(6px)",
+          },
+          "100%": {
+            opacity: "1",
+            filter: "brightness(1) blur(0px)",
+            "background-position": "0% 50%",
           },
         },
       },
       animation: {
-        fadeInDown: "fadeInDown 1.6s ease",
+        fadeInDown: "fadeInDown 1s ease",
         gradient: "gradient 7s ease-in-out infinite",
         fadeInUp: "fadeInUp 1.6s ease",
+        blur: "blur 1.6s ease",
+        gradientBlur: "gradient 7s ease-in-out infinite, blur 1.6s ease",
       },
     },
   },

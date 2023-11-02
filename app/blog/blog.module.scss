@@ -1,5 +1,13 @@
 @import "@styles/mixins";
 
+#not-playing {
+  display: none;
+}
+
+#playing {
+  display: none;
+}
+
 .main {
   display: flex;
   flex-direction: column;

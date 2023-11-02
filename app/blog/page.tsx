@@ -10,14 +10,12 @@ export default function Blog() {
         </p>
         <div className="w-full mt-8 mobile:mt-1">
           {allPosts.map((post: any, index: number) => (
-            <>
-              <BlogCard
-                key={index}
-                {...post}
-                slug={post.url}
-                readingTime={post.readingTime}
-              />
-            </>
+            <BlogCard
+              key={index}
+              {...post}
+              slug={post.url}
+              readingTime={post.readingTime}
+            />
           ))}
         </div>
       </div>

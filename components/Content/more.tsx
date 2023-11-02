@@ -7,6 +7,7 @@ export const more = [
   {
     title: "Snippets",
     description: "Code snippets that I use often",
+    href: "/more/snippets",
   },
   {
     title: "Reads",
