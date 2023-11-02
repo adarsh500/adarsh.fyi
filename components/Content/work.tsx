@@ -4,7 +4,7 @@ import CloudSEK from "assets/icons/CloudSEK";
 export const work = [
   {
     company: "CloudSEK",
-    role: "SDE Intern",
+    role: "SDE 1",
     location: "Bangalore",
     duration: "Nov 2022 - Present",
     shortDuration: `Nov - Present`,

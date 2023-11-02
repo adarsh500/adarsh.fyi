@@ -9,18 +9,26 @@ const Hero = () => {
           Adarsh Sulegai
         </p>
 
-        <p>
+        <p className="text-left mt-4 w-[90%] m:w-[100%] text-light-secondary text-xl leading-9 font-medium dark:text-dark-secondary mobile:text-lg mobile:leading-8 mobile:w-[100%] animate-fadeInUp">
           A frontend developer who loves crafting rich and seamless experiences
-          for the web. I'm currently working at{" "}
+          for the web. I'm currently working as an SDE 1 at{" "}
           <a
             href="https://www.cloudsek.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="underline"
           >
             CloudSEK
           </a>
-          .
+          . Previously, did frontend at{" "}
+          <a
+            href="https://www.mydukaan.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Dukaan.
+          </a>
         </p>
       </div>
     </main>

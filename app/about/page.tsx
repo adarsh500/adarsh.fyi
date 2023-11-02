@@ -23,9 +23,8 @@ const Home = () => (
       </p>
       <ul className="list-disc ml-8 mt-4">
         <li>
-t in watches ⌚️ after
-          starting my collection. I absolutely love dive watches and those with
-          integrated bracelets.
+          I've developed an interest in watches ⌚️ after starting my collection. I absolutely love dive
+          watches and those with integrated bracelets.
         </li>
         <li>
           I've developed an indulgence for fragrances and have a small but a
@@ -37,8 +36,8 @@ t in watches ⌚️ after
         </li>
         <li>
           I'm also interested in mechanical keyboards. I use a Keychrom K2V2 ⌨️
-          and plan to build a custom keyboard soon. Also no, i'm not a socipath, i
-          don't use blue switches.
+          and plan to build a custom keyboard soon. Also no, i'm not a socipath,
+          i don't use blue switches.
         </li>
       </ul>
 
