@@ -14,7 +14,7 @@ const ProjectCard = (props: ProjectProps) => {
   const { title, link, description, githubUrl } = props;
 
   return (
-    <div className="group flex flex-col mr-9 mb-9 cursor-pointer min-h-min w-[calc(50%-18px)] rounded-lg bg-bg-light border border-solid border-border-light z-[1] dark:bg-bg-dark dark:border-border-dark mobile:w-full mobile:flex-row mobile:mr-0 mobile:mb-8 even:mr-0 hover:scale-101 hover:transition-all hover:duration-300 hover:ease-in-out hover:border-black hover:dark:border-white ">
+    <div className="group flex flex-col mr-9 cursor-pointer min-h-min w-[calc(50%-18px)] rounded-lg bg-bg-light border border-solid border-border-light z-[1] dark:bg-bg-dark dark:border-border-dark mobile:w-full mobile:flex-row mobile:mr-0 mobile:mb-8 even:mr-0 hover:scale-101 hover:transition-all hover:duration-300 hover:ease-in-out hover:border-black hover:dark:border-white ">
       <div className="flex-col justify-end py-7 px-[18px] mobile:py-[26px] mobile:px-4">
         <div className="flex justify-between items-center">
           <div className="flex justify-between items-center w-full">

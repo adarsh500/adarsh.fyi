@@ -1,20 +1,18 @@
 "use client";
-import { useEffect, useState } from "react";
-import useDebounce from "./useDebounce";
+import { useCallback, useEffect, useState } from "react";
 
 const usePosition = () => {
   const [position, setPosition] = useState<number>(0);
-  const handleScroll = () => {
-    setPosition(window.pageYOffset);
-  };
 
-  const debouncedScroll = useDebounce(handleScroll, 10);
+  const handleScroll = useCallback(() => {
+    setPosition(window.pageYOffset);
+  }, []);
 
   useEffect(() => {
-    document.addEventListener("scroll", debouncedScroll);
+    document.addEventListener("scroll", handleScroll);
 
     return () => {
-      document.removeEventListener("scroll", debouncedScroll);
+      document.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

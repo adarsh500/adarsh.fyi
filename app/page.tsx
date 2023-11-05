@@ -21,7 +21,7 @@ const Home = () => (
     </Section>
 
     <Section subtitle="Tech I work with">
-      <div className="w-[100%] my-12 flex flex-wrap justify-between">
+      <div className="w-[100%] mt-12 flex flex-wrap justify-between">
         {skills.map((skill, index) => (
           <TechCard {...skill} key={index} />
         ))}

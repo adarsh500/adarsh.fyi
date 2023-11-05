@@ -1,17 +1,19 @@
 import Link from "next/link";
 
 const Home = () => (
-  <main className="flex justify-start items-start flex-col break-words text-xl text-left mt-32 mb-16 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:mt-12 mobile:mb-20 mobile:text-base">
+  <main
+    className="flex justify-start items-start flex-col break-words text-xl text-left 
+    mt-20 mb-16 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 
+    mobile:mt-6 mobile:mb-10 mobile:text-base"
+  >
+    <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4 animate-fadeInUp">
+      About Me
+    </p>
     <div
-      className="flex justify-center items-start flex-col animate-fadeInUp
-     text-light-secondary dark:text-dark-secondary leading-9 mobile:text-lg
-     break-words
+      className="flex justify-center items-start flex-col leading-9 mobile:text-lg
+     break-words text-light-secondary dark:text-dark-secondary animate-fadeInUp
     "
     >
-      <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4">
-        About Me
-      </p>
-
       <Paragraph>
         I'm a 21 y/o frontend engineer from 📍 Bangalore, India. I'm currently
         studying at DSCE and I'm working as a Software Development Engineer 1 at{" "}
@@ -23,8 +25,9 @@ const Home = () => (
       </p>
       <ul className="list-disc ml-8 mt-4">
         <li>
-          I've developed an interest in watches ⌚️ after starting my collection. I absolutely love dive
-          watches and those with integrated bracelets.
+          I've developed an interest in watches ⌚️ after starting my
+          collection. I absolutely love dive watches and those with integrated
+          bracelets.
         </li>
         <li>
           I've developed an indulgence for fragrances and have a small but a
@@ -66,7 +69,7 @@ const Home = () => (
 
 const Paragraph = (props: any) => {
   return (
-    <p className="mt-8 text-light-secondary dark:text-dark-secondary leading-9 mobile:mt-8 mobile:text-lg">
+    <p className="mt-8  leading-9 mobile:mt-8 mobile:text-lg">
       {props.children}
     </p>
   );
