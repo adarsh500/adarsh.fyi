@@ -61,7 +61,7 @@
   }
 
   h2 {
-    @include font-size-weight(24, 32, 600);
+    @include font-size-weight(26, 34, 600);
     margin: 1rem 0;
     color: var(--light-text-primary);
     @include dark-mode {
@@ -70,7 +70,7 @@
   }
 
   h3 {
-    @include font-size-weight(22, 32, 600);
+    @include font-size-weight(22, 28, 600);
     margin: 0.75rem 0;
     color: var(--light-text-primary);
     @include dark-mode {

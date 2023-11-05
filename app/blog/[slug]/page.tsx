@@ -10,7 +10,7 @@ import styles from "../blog.module.scss";
 export const dynamic = "force-static";
 
 const RoundedImage = (props: any) => (
-  <Image {...props} className="rounded-lg" />
+  <Image {...props} className={`rounded-lg ${props.customStyles}`} />
 );
 
 const PostLayout = ({ params }: any) => {
