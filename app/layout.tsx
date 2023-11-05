@@ -17,10 +17,6 @@ export default function RootLayout({
         <Navbar />
         <div className="text-left flex flex-col h-full flex-1 mobile:p-0 desktop:w-[760px] mt-[20] mx-auto mb-0">
           {children}
-          <div className="fixed py-4 px-5 rounded-lg bottom-4 left-4 backdrop-blur-md bg-bg-light border border-solid border-border-light dark:bg-bg-dark dark:border-border-dark mobile:hidden">
-            {/* @ts-expect-error Server Component */}
-            <NowPlaying />
-          </div>
           <Footer />
         </div>
         <ClientWrapper />

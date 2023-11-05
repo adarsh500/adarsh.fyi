@@ -10,9 +10,7 @@ import styles from "../blog.module.scss";
 export const dynamic = "force-static";
 
 const RoundedImage = (props: any) => (
-  <div className={styles.imageContainer}>
-    <Image {...props} className="rounded-lg" />
-  </div>
+  <Image {...props} className="rounded-lg" />
 );
 
 const PostLayout = ({ params }: any) => {
@@ -26,29 +24,29 @@ const PostLayout = ({ params }: any) => {
   const MDXContent = useMDXComponent(post.body.code);
 
   return (
-    <main className={styles.main}>
+    <main
+      className="flex flex-col justify-center break-words relative flex-1 
+      text-xl my-14 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:my-12 mobile:text-lg "
+    >
       <RoundedImage
-        style={{
-          maxWidth: "100%",
-          objectFit: "contain",
-          aspectRatio: "auto 1042 / 401",
-        }}
-        className={styles.image}
-        width={2084 / 2}
-        height={802 / 2}
+        width={760}
+        height={300}
         src={thumbnailPath}
         alt="thumbnail"
+        objectFit="contain"
+        aspectRatio="auto 1042 / 401"
         priority
+        loading="eager"
       />
-      <article className={styles.container}>
-        <p className='text-6xl font-extrabold mobile:text-4xl mobile:font-bold'>
+      <article className="flex flex-1 mt-8 justify-start items-start flex-col">
+        <p className="text-6xl font-extrabold mobile:text-4xl mobile:font-bold">
           <Balancer>{post.title}</Balancer>
         </p>
-        <div className={styles.subRow}>
-          <time dateTime={post.date} className={styles.time}>
+        <div className="mt-3 w-full flex justify-between items-center text-light-secondary dark:text-dark-secondary">
+          <time dateTime={post.date} className="text-lg font-semibold">
             Adarsh Sulegai / {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
-          <p className={styles.readingTime}>{post.readingTime.text}</p>
+          <p className="text-lg font-normal">{post.readingTime.text}</p>
         </div>
 
         <div className={styles.blog}>

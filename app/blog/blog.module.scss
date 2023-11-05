@@ -30,136 +30,94 @@
   }
 }
 
-.image {
-  height: auto !important;
-  border-radius: var(--border-radius-medium);
-}
+.blog {
+  margin-top: 2.5rem;
+  color: var(--light-text-secondary);
 
-.container {
-  flex: 1;
-  margin-top: 2rem;
-  @include flex(flex-start, flex-start);
-  flex-direction: column;
-
-  .title {
-    @include font-size-weight(48, 54, 800);
+  @include dark-mode {
+    color: var(--dark-text-secondary);
   }
+  @include font-size-weight(18, 32, 400);
 
-  .blogs {
+  ul {
     margin: 1rem 0;
-    width: 100%;
+    padding-left: 1.5rem;
   }
 
-  .subRow {
-    margin-top: 0.75rem;
-    width: 100%;
-    @include flex(space-between, center);
-    color: var(--light-text-secondary);
-
-    @include dark-mode {
-      color: var(--dark-text-secondary);
-    }
-
-    .time {
-      @include font-size-weight(16, 20, 500);
-      margin: 0.5rem 0;
-    }
-
-    .readingTime {
-      @include font-size-weight(16, 20, 400);
-      margin: 0.5rem 0;
+  li {
+    list-style-type: disc;
+    &::marker {
+      margin-left: 1rem;
     }
   }
 
-  .blog {
-    margin-top: 2.5rem;
-    color: var(--light-text-secondary);
+  h1 {
+    @include font-size-weight(30, 36, 700);
+    margin: 1.5rem 0;
+    color: var(--light-text-primary);
+    @include dark-mode {
+      color: var(--dark-text-primary);
+    }
+  }
+
+  h2 {
+    @include font-size-weight(24, 32, 600);
+    margin: 1rem 0;
+    color: var(--light-text-primary);
+    @include dark-mode {
+      color: var(--dark-text-primary);
+    }
+  }
+
+  h3 {
+    @include font-size-weight(22, 32, 600);
+    margin: 0.75rem 0;
+    color: var(--light-text-primary);
+    @include dark-mode {
+      color: var(--dark-text-primary);
+    }
+  }
+
+  [data-rehype-pretty-code-title] {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom: none;
+    padding: 0.75rem 1rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      Liberation Mono, Courier New, monospace;
+    @include font-size-weight(14, 24, 400);
+    border: 1px solid var(--border-light);
+    background-color: #bababa;
 
     @include dark-mode {
-      color: var(--dark-text-secondary);
+      border: 1px solid var(--border-dark);
+      background-color: #1c1c1c;
     }
-    @include font-size-weight(18, 32, 400);
+  }
 
-    ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
+  pre {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    @include font-size-weight(14, 24, 400);
+    border-radius: var(--border-radius-medium);
+    border: 1px solid var(--border-light);
+    background-color: var(--background-light) !important;
 
-    li {
-      list-style-type: disc;
-      &::marker {
-        margin-left: 1rem;
-      }
-    }
-
-    h1 {
-      @include font-size-weight(30, 36, 700);
-      margin: 1.5rem 0;
-      color: var(--light-text-primary);
-      @include dark-mode {
-        color: var(--dark-text-primary);
-      }
+    @include dark-mode {
+      border: 1px solid var(--border-dark);
+      background-color: var(--background-dark) !important;
     }
 
-    h2 {
-      @include font-size-weight(24, 32, 600);
-      margin: 1rem 0;
-      color: var(--light-text-primary);
-      @include dark-mode {
-        color: var(--dark-text-primary);
-      }
+    @include mobile {
+      padding: 1rem;
     }
+  }
 
-    h3 {
-      @include font-size-weight(22, 32, 600);
-      margin: 0.75rem 0;
-      color: var(--light-text-primary);
-      @include dark-mode {
-        color: var(--dark-text-primary);
-      }
-    }
+  p {
+    margin: 1.25rem 0;
+  }
 
-    [data-rehype-pretty-code-title] {
-      border-top-left-radius: 0.5rem;
-      border-top-right-radius: 0.5rem;
-      border-bottom: none;
-      padding: 0.75rem 1rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-        Liberation Mono, Courier New, monospace;
-      @include font-size-weight(14, 24, 400);
-      border: 1px solid var(--border-light);
-      background-color: #bababa;
-
-      @include dark-mode {
-        border: 1px solid var(--border-dark);
-        background-color: #1c1c1c;
-      }
-    }
-
-    pre {
-      margin: 1rem 0;
-      padding: 1.5rem;
-      @include font-size-weight(14, 24, 400);
-      border-radius: var(--border-radius-medium);
-      border: 1px solid var(--border-light);
-      background-color: var(--background-light) !important;
-
-      @include dark-mode {
-        border: 1px solid var(--border-dark);
-        background-color: var(--background-dark) !important;
-      }
-
-      @include mobile {
-        padding: 1rem;
-      }
-    }
-
-    p {
-      margin: 1.25rem 0;
-    }
-
-    a {
-      color: var(--link);
-    }
+  a {
+    color: var(--link);
   }
 }
