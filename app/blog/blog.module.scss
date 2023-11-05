@@ -80,6 +80,11 @@
     }
     @include font-size-weight(18, 32, 400);
 
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
     li {
       list-style-type: disc;
       &::marker {

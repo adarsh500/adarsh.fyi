@@ -1,12 +1,11 @@
-import Head from "next/head";
-import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
-import { useMDXComponent } from "next-contentlayer/hooks";
-import styles from "../blog.module.scss";
-import Image from "next/image";
+import { format, parseISO } from "date-fns";
 import { Metadata } from "next";
+import { useMDXComponent } from "next-contentlayer/hooks";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
+import styles from "../blog.module.scss";
 
 export const dynamic = "force-static";
 
@@ -42,7 +41,7 @@ const PostLayout = ({ params }: any) => {
         priority
       />
       <article className={styles.container}>
-        <p className={styles.title}>
+        <p className='text-6xl font-extrabold mobile:text-4xl mobile:font-bold'>
           <Balancer>{post.title}</Balancer>
         </p>
         <div className={styles.subRow}>
