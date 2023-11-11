@@ -6,12 +6,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
 import styles from "../blog.module.scss";
+import BlurImage from "@components/BlurImage";
 
 export const dynamic = "force-static";
-
-const RoundedImage = (props: any) => (
-  <Image {...props} className={`rounded-lg ${props.customStyles}`} />
-);
 
 const PostLayout = ({ params }: any) => {
   const post = allPosts.find((post) => post.slug === params.slug);
@@ -28,7 +25,7 @@ const PostLayout = ({ params }: any) => {
       className="flex flex-col justify-center break-words relative flex-1 
       text-xl my-14 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:my-12 mobile:text-lg "
     >
-      <RoundedImage
+      <BlurImage
         width={760}
         height={300}
         src={thumbnailPath}
@@ -50,7 +47,7 @@ const PostLayout = ({ params }: any) => {
         </div>
 
         <div className={styles.blog}>
-          <MDXContent components={{ Image: RoundedImage }} />
+          <MDXContent components={{ Image: BlurImage }} />
         </div>
       </article>
     </main>

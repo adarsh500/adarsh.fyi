@@ -21,20 +21,18 @@ const Footer = () => {
         <a href="https://www.linkedin.com/in/adarsh-sulegai/">
           <FaLinkedinIn className="h-5 w-5 align-middle mr-9" />
         </a>
-        <a href="https://www.instagram.com/adarsh_sulegai/">
-          <SiInstagram className="h-5 w-5 align-middle mr-9" />
-        </a>
         <a href="mailto:adarshsulegai50@gmail.com">
           <MdMail className="h-5 w-5 align-middle mr-9" />
         </a>
+        <a href="https://www.instagram.com/adarsh_sulegai/">
+          <SiInstagram className="h-5 w-5 align-middle mr-9" />
+        </a>
       </div>
 
-      {/* <div className="py-2 px-5 rounded-lg backdrop-blur-md bg-bg-light border border-solid border-border-light dark:bg-bg-dark dark:border-border-dark mobile:hidden"> */}
       <div className="mobile:hidden">
         {/* @ts-expect-error Server Component */}
         <NowPlaying />
       </div>
-      {/* </div> */}
     </footer>
   );
 };
