@@ -58,7 +58,7 @@ const Home = () => (
 
       <Paragraph>
         If you want to know more about my work, you can check out my{" "}
-        <Lin href="https://drive.google.com/file/d/1EdIZrgXqwtX1lKmlWMEJV_MW5XcWSVhS/view?usp=sharing">
+        <Lin href="https://drive.google.com/file/d/1H1avtPcQQ7DulRdMLJ81MjKy0-Bl-jsu/view?usp=sharing">
           Resume
         </Lin>
         .
