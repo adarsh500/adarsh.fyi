@@ -17,7 +17,7 @@ const Home = () => (
       <Paragraph>
         I'm a 21 y/o frontend engineer from 📍 Bangalore, India. I'm currently
         studying at DSCE and I'm working as a Software Development Engineer 1 at{" "}
-        <Lin href="https://cloudsek.com/">CloudSEK</Lin>.
+        <CustomLink href="https://cloudsek.com/">CloudSEK</CustomLink>.
       </Paragraph>
 
       <p className="mt-8">
@@ -46,7 +46,7 @@ const Home = () => (
 
       <Paragraph>
         I tend to spend my free time working on some hobby projects like this
-        site or <Lin href="https://mark3.vercel.app">Mark</Lin>, contributing to
+        site or <CustomLink href="https://mark3.vercel.app">Mark</CustomLink>, contributing to
         open source or reading tech blogs.
       </Paragraph>
 
@@ -56,13 +56,13 @@ const Home = () => (
         socials or through my mail.
       </Paragraph>
 
-      <Paragraph>
+      {/* <Paragraph>
         If you want to know more about my work, you can check out my{" "}
         <Lin href="https://drive.google.com/file/d/1EdIZrgXqwtX1lKmlWMEJV_MW5XcWSVhS/view?usp=sharing">
           Resume
         </Lin>
         .
-      </Paragraph>
+      </Paragraph> */}
     </div>
   </main>
 );
@@ -75,7 +75,7 @@ const Paragraph = (props: any) => {
   );
 };
 
-const Lin = (props: any) => {
+const CustomLink = (props: any) => {
   return (
     <Link
       href={props.href}

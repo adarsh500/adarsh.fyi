@@ -28,8 +28,8 @@ const Home = () => (
       </div>
     </Section>
 
-    <Section subtitle="Experience">
-      <div className="w-[100%] flex flex-col justify-start mt-12 mobile:p-0">
+    <Section subtitle="Work">
+      <div className="w-[100%] flex flex-col justify-start mt-12 mobile:p-0 gap-6">
         {work.map((experience, index) => (
           <Experience {...experience} key={index} />
         ))}

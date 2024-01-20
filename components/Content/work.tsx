@@ -6,7 +6,20 @@ export const work = [
     company: "CloudSEK",
     role: "SDE 1",
     location: "Bangalore",
-    duration: "Nov 2022 - Present",
+    duration: "Oct 2023 - Present",
+    shortDuration: `Nov - Present`,
+    url: "https://cloudsek.com/",
+    logo: CloudSEK,
+    description: [
+      `Working as an SDE 1 on the core platform team to build new features and improve the product. 
+       Shipping and maintaining features on the platform. `,
+    ],
+  },
+  {
+    company: "CloudSEK",
+    role: "SDE Intern",
+    location: "Bangalore",
+    duration: "Nov 2022 - Oct 2023",
     shortDuration: `Nov - Present`,
     url: "https://cloudsek.com/",
     logo: CloudSEK,

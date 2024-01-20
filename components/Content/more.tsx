@@ -9,16 +9,4 @@ export const more = [
     description: "Code snippets that I use often",
     href: "/more/snippets",
   },
-  {
-    title: "Reads",
-    description: "A collection of my favourite articles",
-  },
-  {
-    title: "Personal Notes",
-    description: "Smol notes",
-  },
-  {
-    title: "Learnings",
-    description: "A collection of things i've learnt",
-  },
 ];

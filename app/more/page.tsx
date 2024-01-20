@@ -10,8 +10,8 @@ const More = () => (
     <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4 animate-fadeInUp">
       More
     </p>
-    <div className="flex justify-center items-start flex-col animate-fadeInUp">
-      <div className="my-10 flex justify-start items-center flex-wrap mobile:my-8">
+    <div className="flex justify-center items-start flex-col animate-fadeInUp w-full">
+      <div className="my-10 flex justify-start items-center flex-wrap mobile:my-8 w-full">
         {more.map((item) => (
           <Card {...item} key={item.title} />
         ))}
