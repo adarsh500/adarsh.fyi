@@ -1,7 +1,7 @@
 import ClientWrapper from "@components/ClientWrapper";
 import Footer from "@components/Footer";
-import { GeistSans } from "geist/font";
-import { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { Metadata } from "next/types";
 import "../styles/globals.scss";
 import Navbar from "./nav";
 

@@ -1,12 +1,11 @@
+import BlurImage from "@components/BlurImage";
 import { allPosts } from "contentlayer/generated";
 import { format, parseISO } from "date-fns";
 import { Metadata } from "next";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import Balancer from "react-wrap-balancer";
 import styles from "../blog.module.scss";
-import BlurImage from "@components/BlurImage";
 
 export const dynamic = "force-static";
 
@@ -30,7 +29,7 @@ const PostLayout = ({ params }: any) => {
         height={300}
         src={thumbnailPath}
         alt="thumbnail"
-        objectFit="contain"
+        // objectFit="contain"
         aspectRatio="auto 1042 / 401"
         priority
         loading="eager"

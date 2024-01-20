@@ -7,7 +7,7 @@ const ClientWrapper = () => {
     <>
       <Analytics />
       <ProgressBar
-        height="3px"
+        height="2px"
         color="#ffffff"
         options={{ showSpinner: false }}
         shallowRouting
