@@ -4,19 +4,24 @@ import { GeistSans } from "geist/font/sans";
 import { Metadata } from "next/types";
 import "../styles/globals.scss";
 import Navbar from "./nav";
+import { Suspense } from "react";
 
-export default function RootLayout({
-  children,
-}: {
+type LayoutProps = {
   children: React.ReactNode;
-}) {
+  params?: string;
+};
+
+export default function RootLayout(props: LayoutProps) {
+  // console.log("pji", props.params);
   return (
     <html lang="en" className={GeistSans.className}>
       <body suppressHydrationWarning={true} className="dark:bg-dark">
-        <ClientWrapper />
-        <Navbar />
+        <Suspense fallback={<></>}>
+          <ClientWrapper />
+          <Navbar />
+        </Suspense>
         <div className="text-left flex flex-col h-full flex-1 mobile:p-0 desktop:w-[760px] mt-[20] mx-auto mb-0">
-          {children}
+          {props.children}
           <Footer />
         </div>
       </body>

@@ -1,8 +1,7 @@
 "use client";
+import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import usePosition from "hooks/usePosition";
-import clsx from "clsx";
 
 type NavItemProps = {
   href: string;
