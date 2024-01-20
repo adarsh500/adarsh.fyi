@@ -24,7 +24,7 @@ export const work = [
     url: "https://cloudsek.com/",
     logo: CloudSEK,
     description: [
-      `Working as an SDE Intern on the core platform team to build new features and improve the product. 
+      `Worked as an SDE Intern on the core platform team to build new features and improve the product. 
        Shipping and maintaining features on the platform. `,
     ],
   },

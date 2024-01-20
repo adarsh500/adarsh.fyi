@@ -39,7 +39,7 @@ const Home = () => (
         </li>
         <li>
           I'm also interested in mechanical keyboards. I use a Keychrom K2V2 ⌨️
-          and plan to build a custom keyboard soon. Also no, i'm not a socipath,
+          and plan to build a custom keyboard soon. Also no, i'm not a sociopath,
           i don't use blue switches.
         </li>
       </ul>

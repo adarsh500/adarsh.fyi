@@ -5,6 +5,7 @@ import { Metadata } from "next/types";
 import "../styles/globals.scss";
 import Navbar from "./nav";
 import { Suspense } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -24,6 +25,7 @@ export default function RootLayout(props: LayoutProps) {
           {props.children}
           <Footer />
         </div>
+        <SpeedInsights />
       </body>
     </html>
   );

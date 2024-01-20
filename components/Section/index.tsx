@@ -2,8 +2,8 @@ import React from "react";
 
 const Section = (props: { children: React.ReactElement; subtitle: string }) => {
   return (
-    <div className="flex flex-col justify-center align-top my-12 animate-fadeInUp mobile:my-8 mobile:mx-4 last:mb-16">
-      <h2 className="text-3xl font-bold mobile:text-3xl">{props.subtitle}</h2>
+    <div className="flex flex-col justify-center align-top my-12 animate-fadeInUp mobile:my-6 mobile:mx-4 last:mb-16">
+      <h2 className="text-3xl font-bold mobile:text-xl">{props.subtitle}</h2>
       {props.children}
     </div>
   );
