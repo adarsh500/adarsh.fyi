@@ -31,6 +31,8 @@ export default function RootLayout(props: LayoutProps) {
   );
 }
 
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: "Adarsh Sulegai",
   description:
