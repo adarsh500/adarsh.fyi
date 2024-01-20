@@ -1,33 +1,53 @@
+import Link from "next/link";
+
 const hardware = [
   {
-    key: "Laptop",
-    name: 'Macbook Air M1 13"',
+    key: "Laptop (work)",
+    name: 'Macbook Pro M1 Pro 16"',
     link: "https://www.apple.com/macbook-pro-13/",
+    icon: "💻",
   },
   {
-    key: "Earphones",
-    name: "Nothing ear(1)",
-    link: "https://www.nothing.tech/products/nothing-ear-1",
+    key: "Laptop (personal)",
+    name: 'Macbook Air M1 13"',
+    link: "https://www.apple.com/macbook-pro-13/",
+    icon: "💻",
+  },
+  {
+    key: "Headphones",
+    name: "Sony WH-1000XM4",
+    link: "https://www.sony.com/electronics/headband-headphones/wh-1000xm4",
+    icon: "🎧",
   },
   {
     key: "Mouse",
     name: "Apple magic mouse 2",
-    link: "https://www.apple.com/shop/product/MLA02LL/A/magic-mouse-2-silver",
+    link: "https://www.amazon.in/Apple-Magic-Mouse-Bluetooth-Enabled-iPadOS/dp/B09BTNQ6MM/ref=sr_1_1?crid=33M7V0RVX2KGK&dib=eyJ2IjoiMSJ9.Ag0hfEY36nlJIGg4h_pmRuq4bxp7UqOsSumHQUJzbMGX2GNzrQzJGDt9yWt9nSQpnSvjXGC_Fj-ITSUQRNUVHSKwqU0wTnHxSqiRzhb9ZFBWuX_rnzayBHo9CVJ-pB6KgOsbiaVaWcGqew9YEVVijvsFMt4ZdDjklOHL9bC_qMZrowVSwl2QrygFe4u5dF1t1XkO9zpipVC5veIrgrxiPEWDDr50WY_sGgP0ZEJ60Hk.BDJK8WLrVEtWCksaCli2alQvAKo2qRe8-rdHCAJjfHs&dib_tag=se&keywords=magic+mouse+2&qid=1705736659&sprefix=magic+mouse+%2Caps%2C184&sr=8-1",
+    icon: "🖱",
   },
   {
     key: "Keyboard",
     name: "Keychron K2V2",
     link: "https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard",
+    icon: "⌨️",
   },
   {
     key: "Monitor",
-    name: 'LG 27UL850-W 27" 4K',
-    link: "https://www.lg.com/us/monitors/lg-27UL850-W-4k-uhd-led-monitor",
+    name: 'Gigabyte G27 27"',
+    link: "https://www.gigabyte.com/Monitor/G27F#kf",
+    icon: "🖥",
   },
   {
     key: "Speakers",
     name: "Amazon Echo Dot 3rd Gen",
     link: "https://www.amazon.com/Echo-Dot-3rd-Gen-Smart-speaker-with-Alexa-Charcoal/dp/B07FZ8S74R",
+    icon: "🔊",
+  },
+  {
+    key: "Watch",
+    name: "Seiko Series 5 GMT",
+    link: "https://seikowatches.co.in/products/seiko-5-skx-sports-style-gmt-series-ssk003k1",
+    icon: "⌚️",
   },
 ];
 
@@ -76,36 +96,29 @@ export default async function Uses() {
       </p>
       <div className="animate-fadeInUp">
         <div className="my-12 mobile:my-8 last:mb-0">
-          <h2 className="mb-4 text-2xl font-semibold">Hardware</h2>
-          <div>
-            {hardware.map((item) => (
-              <li className="my-2 mx-0" key={item.key}>
-                <span>
-                  {item.key}:{" "}
-                  <a
-                    className="text-light-secondary dark:text-dark-secondary"
-                    href={item.link}
-                  >
-                    {item.name}
-                  </a>
-                </span>
-              </li>
-            ))}
-          </div>
-        </div>
-        <div className="mb-12 last:mb-0">
-          <h2 className="mb-4 text-xl font-semibold">Software</h2>
-          <div>
-            {software.map((item) => (
-              <li className="my-2 mx-0" key={item.key}>
-                <span>
-                  {item.key}:{" "}
-                  <a className="text-light-secondary dark:text-dark-secondary">
-                    {item.name}
-                  </a>
-                </span>
-              </li>
-            ))}
+          <h2 className="mb-4 text-3xl font-semibold">Hardware</h2>
+          <div className="my-10 flex justify-start items-center flex-wrap mobile:my-8 w-full">
+            {hardware.map((item) => {
+              const { key, name, link, icon } = item;
+              return (
+                <Link
+                  key={key}
+                  className="flex mr-8 mb-8 rounded-lg w-[calc(50%-16px)] p-[18px] bg-bg-light border border-solid border-border-light dark:bg-bg-dark dark:border-border-dark hover:scale-101 hover:transition-all hover:duration-300 hover:ease-in-out hover:dark:border-white even:mr-0 mobile:my-2 mobile:w-full mobile:mr-0"
+                  href={link}
+                  target="_blank"
+                >
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-4">
+                      {icon}
+                      <span className="text-dark-primary font-semibold">
+                        {key}
+                      </span>
+                    </div>
+                    <span className="text-dark-secondary">{name}</span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

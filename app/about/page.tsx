@@ -81,7 +81,7 @@ const CustomLink = (props: any) => {
       href={props.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="font-semibold underline"
+      className="font-semibold special-underline"
     >
       {props.children}
     </Link>

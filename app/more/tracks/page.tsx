@@ -31,7 +31,7 @@ export default async function Tracks() {
           Top Tracks
         </p>
         <div className="my-12 flex justify-start items-center flex-wrap mobile:my-8">
-          {tracks.map((track, index: number) => {
+          {tracks?.map((track, index: number) => {
             const artists = track.artists
               .map((artist) => artist.name)
               .join(", ");

@@ -1,6 +1,5 @@
 import ClientWrapper from "@components/ClientWrapper";
 import Footer from "@components/Footer";
-import NowPlaying from "@components/NowPlaying";
 import { GeistSans } from "geist/font";
 import { Metadata } from "next";
 import "../styles/globals.scss";
@@ -14,12 +13,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={GeistSans.className}>
       <body suppressHydrationWarning={true} className="dark:bg-dark">
+        <ClientWrapper />
         <Navbar />
         <div className="text-left flex flex-col h-full flex-1 mobile:p-0 desktop:w-[760px] mt-[20] mx-auto mb-0">
           {children}
           <Footer />
         </div>
-        <ClientWrapper />
       </body>
     </html>
   );
