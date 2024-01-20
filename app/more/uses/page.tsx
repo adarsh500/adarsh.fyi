@@ -91,10 +91,10 @@ export default async function Uses() {
     mt-20 mb-16 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 
     mobile:mt-6 mobile:mb-10 mobile:text-base"
     >
-      <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4 animate-fadeInUp">
+      <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4 slide-enter-content">
         Gear that i use
       </p>
-      <div className="animate-fadeInUp">
+      <div className="slide-enter-content">
         <div className="my-12 mobile:my-8 last:mb-0">
           <h2 className="mb-4 text-3xl font-semibold">Hardware</h2>
           <div className="my-10 flex justify-start items-center flex-wrap mobile:my-8 w-full">
@@ -110,11 +110,13 @@ export default async function Uses() {
                   <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-4">
                       {icon}
-                      <span className="text-dark-primary font-semibold">
+                      <span className="text-dark-primary font-medium text-lg">
                         {key}
                       </span>
                     </div>
-                    <span className="text-dark-secondary">{name}</span>
+                    <span className="text-dark-secondary text-base">
+                      {name}
+                    </span>
                   </div>
                 </Link>
               );

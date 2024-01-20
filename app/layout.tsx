@@ -1,11 +1,13 @@
 import ClientWrapper from "@components/ClientWrapper";
-import Footer from "@components/Footer";
 import { GeistSans } from "geist/font/sans";
+import dynamic from "next/dynamic";
 import { Metadata } from "next/types";
+import { Suspense } from "react";
 import "../styles/globals.scss";
 import Navbar from "./nav";
-import { Suspense } from "react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+const Footer = dynamic(() => import("@components/Footer"), {
+  ssr: true,
+});
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -13,7 +15,6 @@ type LayoutProps = {
 };
 
 export default function RootLayout(props: LayoutProps) {
-  // console.log("pji", props.params);
   return (
     <html lang="en" className={GeistSans.className}>
       <body suppressHydrationWarning={true} className="dark:bg-dark">
@@ -25,7 +26,6 @@ export default function RootLayout(props: LayoutProps) {
           {props.children}
           <Footer />
         </div>
-        <SpeedInsights />
       </body>
     </html>
   );
@@ -33,6 +33,8 @@ export default function RootLayout(props: LayoutProps) {
 
 export const metadata: Metadata = {
   title: "Adarsh Sulegai",
+  description:
+    "Adarsh Sulegai is a frontend engineer based in Bangalore, India.",
   icons: {
     icon: "/_next/static/media/metadata/favicon.svg",
   },

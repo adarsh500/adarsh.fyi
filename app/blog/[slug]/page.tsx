@@ -29,7 +29,6 @@ const PostLayout = ({ params }: any) => {
         height={300}
         src={thumbnailPath}
         alt="thumbnail"
-        // objectFit="contain"
         aspectRatio="auto 1042 / 401"
         priority
         loading="eager"
