@@ -43,11 +43,11 @@ const PostLayout = ({ params }: any) => {
           </time>
           <p className="text-lg font-normal">{post.readingTime.text}</p>
         </div>
-        <div className="flex gap-3 justify-start items-center mt-4 ">
+        <div className="flex gap-3 justify-start items-center mt-4 flex-wrap">
           {post.tags?.map((tag) => (
             <span
               key={tag}
-              className="text-lg font-semibold text-blue-100 bg-sky-600 rounded-2xl px-3 py-0.5"
+              className="text-lg mobile:text-base font-semibold text-blue-100 bg-sky-600 rounded-2xl px-3 py-0.5 mobile:px-2 "
             >
               {tag}
             </span>
