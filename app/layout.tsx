@@ -1,36 +1,42 @@
 import ClientWrapper from "@components/ClientWrapper";
-import Footer from "@components/Footer";
-import NowPlaying from "@components/NowPlaying";
-import { GeistSans } from "geist/font";
-import { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import dynamic from "next/dynamic";
+import { Metadata } from "next/types";
+import { Suspense } from "react";
 import "../styles/globals.scss";
 import Navbar from "./nav";
+const Footer = dynamic(() => import("@components/Footer"), {
+  ssr: true,
+});
 
-export default function RootLayout({
-  children,
-}: {
+type LayoutProps = {
   children: React.ReactNode;
-}) {
+  params?: string;
+};
+
+export default function RootLayout(props: LayoutProps) {
   return (
     <html lang="en" className={GeistSans.className}>
       <body suppressHydrationWarning={true} className="dark:bg-dark">
-        <Navbar />
+        <Suspense fallback={<></>}>
+          <ClientWrapper />
+          <Navbar />
+        </Suspense>
         <div className="text-left flex flex-col h-full flex-1 mobile:p-0 desktop:w-[760px] mt-[20] mx-auto mb-0">
-          {children}
-          <div className="fixed py-4 px-5 rounded-lg bottom-4 left-4 backdrop-blur-md bg-bg-light border border-solid border-border-light dark:bg-bg-dark dark:border-border-dark mobile:hidden">
-            {/* @ts-expect-error Server Component */}
-            <NowPlaying />
-          </div>
+          {props.children}
           <Footer />
         </div>
-        <ClientWrapper />
       </body>
     </html>
   );
 }
 
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: "Adarsh Sulegai",
+  description:
+    "Adarsh Sulegai is a frontend engineer based in Bangalore, India.",
   icons: {
     icon: "/_next/static/media/metadata/favicon.svg",
   },

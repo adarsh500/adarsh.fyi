@@ -10,10 +10,10 @@ const NowPlaying = async () => {
   if (!isPlaying) {
     return (
       <div
-        className="flex justify-between items-center mobile:justify-start gap-6"
+        className="flex justify-between items-center mobile:justify-start gap-6 "
         id="not-playing"
       >
-        <SiSpotify className="w-9 h-9 mobile:w-7 mobile:h-7" />
+        <SiSpotify className="w-6 h-6 mobile:w-5 mobile:h-5" />
         <p className="text-lg text-center text-light-primary dark:text-dark-primary">
           Not listening
         </p>

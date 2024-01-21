@@ -1,24 +1,22 @@
+import { FaGear } from "react-icons/fa6";
+import { FaCode } from "react-icons/fa6";
+
 export const more = [
   {
     title: "Uses",
     description: "Gadgets and tools that I use",
     href: "/more/uses",
+    icon: <FaGear className="h-8 w-8" />,
   },
   {
     title: "Snippets",
     description: "Code snippets that I use often",
     href: "/more/snippets",
+    icon: <FaCode className="h-8 w-8" />,
   },
-  {
-    title: "Reads",
-    description: "A collection of my favourite articles",
-  },
-  {
-    title: "Personal Notes",
-    description: "Smol notes",
-  },
-  {
-    title: "Learnings",
-    description: "A collection of things i've learnt",
-  },
+  // {
+  //   title: "Timeline",
+  //   description: "Timeline of my life",
+  //   href: "/more/timeline",
+  // },
 ];
