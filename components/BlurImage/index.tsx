@@ -12,7 +12,7 @@ const BlurImage = (props: any) => {
       alt={props.alt}
       className={clsx(
         props.customStyles,
-        "duration-700 ease-in-out rounded-lg mobile:rounded-md" ,
+        "duration-700 ease-in-out rounded-md mobile:rounded-sm" ,
         isLoading
           ? "grayscale blur-xl scale-105"
           : "grayscale-0 blur-0 scale-100"
