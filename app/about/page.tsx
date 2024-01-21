@@ -10,7 +10,7 @@ const Home = () => (
       About Me
     </p>
     <div
-      className="flex justify-center items-start flex-col leading-9 mobile:text-lg
+      className="slide-enter-content flex justify-center items-start flex-col leading-9 mobile:text-lg
      break-words text-light-secondary dark:text-dark-secondary
     "
     >
@@ -68,7 +68,7 @@ const Home = () => (
 
 const Paragraph = (props: any) => {
   return (
-    <p className="mt-8  leading-9 mobile:mt-8 mobile:text-lg">
+    <p className="mt-8 leading-9 mobile:mt-8 mobile:text-lg">
       {props.children}
     </p>
   );

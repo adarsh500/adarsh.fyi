@@ -117,7 +117,7 @@ module.exports = {
       animation: {
         fadeInDown: "fadeInDown 1s ease",
         gradient: "gradient 7s ease-in-out infinite",
-        fadeInUp: "fadeInUp 1.6s ease",
+        fadeInUp: "fadeInUp 1s ease",
         blur: "blur 1.6s ease",
         gradientBlur: "gradient 7s ease-in-out infinite, blur 1.6s ease",
       },

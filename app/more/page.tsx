@@ -10,12 +10,10 @@ const More = () => (
     <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4 slide-enter-content">
       More
     </p>
-    <div className="flex justify-center items-start flex-col slide-enter-content w-full">
-      <div className="my-10 flex justify-start items-center flex-wrap mobile:my-8 w-full">
-        {more.map((item) => (
-          <Card {...item} key={item.title} />
-        ))}
-      </div>
+    <div className="flex justify-start items-start slide-enter-content w-full my-10 flex-wrap mobile:my-8">
+      {more.map((item) => (
+        <Card {...item} key={item.title} />
+      ))}
     </div>
   </main>
 );
