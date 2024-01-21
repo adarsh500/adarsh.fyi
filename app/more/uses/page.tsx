@@ -33,7 +33,7 @@ const hardware = [
   },
   {
     key: "Monitor",
-    name: 'Gigabyte G27 27"',
+    name: 'Gigabyte G27F 1080p 27"',
     link: "https://www.gigabyte.com/Monitor/G27F#kf",
     icon: "🖥",
   },
