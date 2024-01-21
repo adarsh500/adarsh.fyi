@@ -3,6 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { MdMail } from "react-icons/md";
 import NowPlaying from "@components/NowPlaying";
+import Link from "next/link";
 
 const links = [
   {
@@ -43,7 +44,7 @@ const Footer = () => {
         {links.map((link, index) => {
           const { name, url, icon } = link;
           return (
-            <a
+            <Link
               key={index}
               href={url}
               target="_blank"
@@ -52,7 +53,7 @@ const Footer = () => {
               {icon({
                 className: "h-5 w-5 align-middle mr-9",
               })}
-            </a>
+            </Link>
           );
         })}
       </div>

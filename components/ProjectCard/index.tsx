@@ -1,5 +1,6 @@
 import { VscGithubInverted } from "react-icons/vsc";
 import { GrLinkNext } from "react-icons/gr";
+import Link from "next/link";
 
 type ProjectProps = {
   title: string;
@@ -18,21 +19,21 @@ const ProjectCard = (props: ProjectProps) => {
       <div className="flex-col justify-end py-7 px-[18px] mobile:p-5 mobile">
         <div className="flex justify-between items-center">
           <div className="flex justify-between items-center w-full">
-            <a
+            <Link
               className="flex text-xl mobile:text-lg font-semibold justify-start items-center "
               href={link}
               target="_blank"
             >
               <p className="mr-2">{title}</p>
               <GrLinkNext className="group-hover:translate-x-1.5 h-5 w-5 text-black align-middle transition-all duration-300 ease-in-out dark:text-white stroke-white mobile:w-4 mobile:h-4 dark:stroke-white icon" />
-            </a>
-            <a
+            </Link>
+            <Link
               className="flex justify-end items-center text-lg "
               href={githubUrl}
               target="_blank"
             >
               <VscGithubInverted className="align-middle ml-2.5 h-5 w-5" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="mt-4 text-lg mobile:text-base line-clamp-3 text-light-secondary dark:text-dark-secondary mobile:mt-2">

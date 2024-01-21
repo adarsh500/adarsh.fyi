@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 type ExperienceProps = {
@@ -26,20 +27,20 @@ const Experience = (props: ExperienceProps) => {
   return (
     <div className="slide-enter-content flex h-min p-8 text-lg rounded-md w-full transition-all duration-300 ease-in-out bg-bg-light border border-solid border-border-light dark:bg-bg-dark dark:border-border-dark hover:scale-101 hover:border-black hover:dark:border-white mobile:ml-0 mobile:py-5 mobile:px-[18px]">
       <div className="mr-6 mobile:hidden ">
-        <a href={url} target="_blank" className="fill-black dark:fill-white">
+        <Link href={url} target="_blank" className="fill-black dark:fill-white">
           {logo()}
-        </a>
+        </Link>
       </div>
       <div className="w-full float-right flex-col ">
         <div className="flex justify-between items-center">
           <div className="text-left">
-            <a
+            <Link
               href={url}
               target="_blank"
               className="text-lg font-semibold mobile:text-lg text-light-primary dark:text-dark-primary"
             >
               {company}
-            </a>
+            </Link>
             <p className="text-lg font-medium text-light-secondary dark:text-dark-secondary mobile:text-base">
               {role}
             </p>
