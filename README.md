@@ -8,6 +8,7 @@ This is my personal website / blog.
 - React
 - Typescript
 - TailwindCSS
+- Contentlayer (MDX)
 - Vercel
 
 ## Running Locally
