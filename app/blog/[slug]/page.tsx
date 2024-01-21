@@ -43,6 +43,16 @@ const PostLayout = ({ params }: any) => {
           </time>
           <p className="text-lg font-normal">{post.readingTime.text}</p>
         </div>
+        <div className="flex gap-3 justify-start items-center mt-4 ">
+          {post.tags?.map((tag) => (
+            <span
+              key={tag}
+              className="text-lg font-semibold text-blue-100 bg-sky-600 rounded-2xl px-3 py-0.5"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
 
         <div className={styles.blog}>
           <MDXContent components={{ Image: BlurImage }} />

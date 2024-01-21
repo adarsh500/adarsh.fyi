@@ -31,7 +31,7 @@
 }
 
 .blog {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   color: var(--light-text-secondary);
 
   @include dark-mode {
@@ -40,8 +40,8 @@
   @include font-size-weight(18, 32, 400);
 
   ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    padding-left: 1.75rem;
   }
 
   li {
@@ -76,6 +76,11 @@
     @include dark-mode {
       color: var(--dark-text-primary);
     }
+  }
+
+  [data-rehype-pretty-code-fragment] {
+    border-radius: 0.5rem;
+    border: 1px solid #333;
   }
 
   [data-rehype-pretty-code-title] {

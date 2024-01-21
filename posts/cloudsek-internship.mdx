@@ -37,15 +37,56 @@ Since i was already familiar with the tech stack that the frontend team uses, i 
 # The Internship Experience
 
 The frontend codebase had a familiar tech stack which included React, Next.js, TypeScript, React Query, Chakra UI, etc.
-I was already familiar with most of these technologies and had worked with some of them in the past.
+I was already familiar with most of these technologies and had worked with most of them in the past.
 
 ## Challenges and Learnings
 
+Here's a list of some of the challenges that i worked on and the learnings that i
+
 ### 1. Reducing re-renders in React
+
+One of the first challenges that i worked on was to reduce the number of re-renders in a particular Next.js page. Can you imagine a page re-rendering 20+ times on every page load?
+The main cause for this was poor localisation of states, i.e. the states were not localised to the components that needed them. This resulted in unnecessary re-renders of components that didn't need to re-render.
+This was so bad that clicking a checkbox on a dropdown would re-render the entire page.
+
+This was a great learning experience for me as i got to learn about the various ways to reduce re-renders in React. Over a period of time, i was able to localize the states and reduce the number of re-renders to a great extent.
+Optimisation techniques like `useMemo`, `useCallback` were of great help in this case.
 
 ### 2. Adopting A Server-Driven UI Architecture
 
-### 3. Building Advanced Query Builder
+The CloudSEK Platform offers various integrations with third-party tools like Slack, Jira, APIs and integrations with SIEM tools like Splunk, QRadar, etc. These integrations are used to send alerts and notifications to the tools that the customers use.
+
+This feature was a perfect candidate for adopting a server-driven UI architecture. The main reason for this was that the UI of the form that the user fills to configure the integration depends on the type of integration that the user has selected.
+
+For example, if the user has selected the Slack integration, then the form will have fields like `Channel`, etc. If the user has selected the Jira integration, then the form will have fields like `Jira URL`, `Project Key`, etc.
+What started as a simple task of building a form with dynamic fields turned out to be a complex problem that required a lot of thinking and planning.
+
+This feature has now evolved into a mini-framework that can be used to add new integrations with minimal or no effort. This framework has the following features:
+
+- dynamic form validation
+- dynamic form fields - ranging from simple text fields to complex fields like a dropdown with dynamic options
+- dynamic API calls
+- dynamic setup - either via traditional REST APIs or OAuth with different applications
+- dynamic and customiseable UI - the UI of the form is also dynamic and depends on the type of integration that the user has selected
+
+### 3. Building The Advanced Query Builder
+
+<Image
+  src="/cloudsek-internship/advanced-query-builder.png"
+  width={760}
+  height={300}
+  alt="Advanced Query Builder"
+  customStyles="mt-8"
+  loading="lazy"
+/>
+**Example**: [AG Grid](https://www.ag-grid.com/react-data-grid/filter-advanced/)
+
+The CloudSEK Platform has a feature called **Alert Rules** which is used to configure the alerts that the user wants to receive.
+These alerts can also be configured to be triggered when the threats match a specific query that the user has configured. This query is built using the Advanced Query Builder.
+
+The Advanced Query Builder is a UI component that is used to build complex queries using a simple UI. It is similar to the query builder that you see in the advanced filter of [AG Grid](https://www.ag-grid.com/react-data-grid/filter-advanced/).
+Due to the complex nature of the queries that the user can build and specific requirements, i had to build this component from scratch instead of using an existing library.
+There was already a query builder, but it wasn't performant or readable and was difficult to maintain. So i had to build a new one from scratch with more features and better performance.
 
 ## Beyond the internship
 
