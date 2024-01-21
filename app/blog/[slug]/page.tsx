@@ -37,11 +37,16 @@ const PostLayout = ({ params }: any) => {
         <p className="text-6xl font-extrabold mobile:text-4xl mobile:font-bold">
           <Balancer>{post.title}</Balancer>
         </p>
-        <div className="mt-3 w-full flex justify-between items-center text-light-secondary dark:text-dark-secondary">
-          <time dateTime={post.date} className="text-lg font-semibold">
+        <div className="mt-3 w-full flex justify-between items-center text-light-secondary dark:text-dark-secondary mobile:flex-col mobile:justify-start mobile:items-start">
+          <time
+            dateTime={post.date}
+            className="text-lg font-semibold mobile:text-base"
+          >
             Adarsh Sulegai / {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
-          <p className="text-lg font-normal">{post.readingTime.text}</p>
+          <p className="text-lg font-normal mobile:text-base">
+            {post.readingTime.text}
+          </p>
         </div>
         <div className="flex gap-3 justify-start items-center mt-4 flex-wrap">
           {post.tags?.map((tag) => (
