@@ -25,7 +25,7 @@ const BlogCard = (props: Blog) => {
         <h3 className="text-xl font-semibold line-clamp-1 mobile:text-lg">
           {title}
         </h3>
-        <p className="mt-2 text-lg line-clamp-2 text-light-secondary dark:text-dark-secondary ">
+        <p className="mt-2 text-lg line-clamp-2 text-light-secondary dark:text-dark-secondary mobile:leading-6">
           {description}
         </p>
         <p className="mt-4 text-base line-clamp-2 text-light-secondary dark:text-dark-secondary">

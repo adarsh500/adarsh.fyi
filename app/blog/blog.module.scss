@@ -38,6 +38,10 @@
   margin-top: 2rem;
   color: var(--light-text-secondary);
 
+  @include mobile {
+    margin-top: 1.25rem;
+  }
+
   @include dark-mode {
     color: var(--dark-text-secondary);
   }
@@ -126,6 +130,12 @@
   p {
     margin: 1.25rem 0;
     color: #ffffffcc;
+    font-size: 1.2rem;
+
+    @include mobile {
+      font-style: 0.9rem;
+      line-height: 1.9rem;
+    }
   }
 
   a {
