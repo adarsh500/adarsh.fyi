@@ -17,7 +17,7 @@ type LayoutProps = {
 export default function RootLayout(props: LayoutProps) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body suppressHydrationWarning={true} className="dark:bg-dark">
+      <body suppressHydrationWarning={true} className="bg-dark">
         <Suspense fallback={<></>}>
           <ClientWrapper />
           <Navbar />

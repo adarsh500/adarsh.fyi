@@ -13,8 +13,8 @@ const NowPlaying = async () => {
         className="flex justify-between items-center mobile:justify-start gap-6 "
         id="not-playing"
       >
-        <SiSpotify className="w-6 h-6 mobile:w-5 mobile:h-5" />
-        <p className="text-lg text-center text-light-primary dark:text-dark-primary">
+        <SiSpotify className="w-6 h-6 mobile:w-5 mobile:h-5 fill-white" />
+        <p className="text-lg text-center text-dark-primary">
           Not listening
         </p>
       </div>
@@ -28,12 +28,12 @@ const NowPlaying = async () => {
     >
       <div className="flex flex-col text-base mobile:ml-0 w-full justify-center items-start desktop:max-w-[200px]">
         <a
-          className="text-lg text-left text-light-primary line-clamp-1 dark:text-dark-primary hover:underline"
+          className="text-lg text-left text-dark-primary line-clamp-1 hover:underline"
           href={songUrl}
         >
           {title}
         </a>
-        <p className="mt-1 text-sm text-left text-light-secondary line-clamp-1 dark:text-dark-secondary">
+        <p className="mt-1 text-sm text-left text-dark-secondary line-clamp-1 ">
           {artist}
         </p>
       </div>

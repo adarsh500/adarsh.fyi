@@ -2,6 +2,8 @@
 
 :root .blog {
   --link: #52a9ff;
+  --bg-dark: theme("colors.bg-dark");
+  --dark-primary: theme("colors.dark-primary");
 }
 
 #not-playing {
@@ -138,7 +140,22 @@
     }
   }
 
+  code {
+    // padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem !important;
+    padding: 0.2rem 0.3rem !important;
+    border-radius: var(--border-radius-medium);
+    color: var(--light-text-primary);
+    font-size: 0.9rem;
+
+    @include dark-mode {
+      color: var(--dark-primary);
+      background-color: #292929;
+    }
+  }
+
   a {
     color: var(--link);
+    text-decoration: underline;
   }
 }

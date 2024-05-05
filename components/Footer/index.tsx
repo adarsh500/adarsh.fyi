@@ -36,7 +36,7 @@ const links = [
 const Footer = () => {
   return (
     <footer
-      className="flex justify-between items-center w-full mt-12 border-t border-solid border-border-light dark:border-border-dark slide-enter-content
+      className="flex justify-between items-center w-full mt-12 border-t border-solid border-border-dark slide-enter-content
       py-8 px-6 mobile:mt-4 mobile:py-6 mobile:px-8
     "
     >
@@ -44,14 +44,10 @@ const Footer = () => {
         {links.map((link, index) => {
           const { name, url, icon } = link;
           return (
-            <Link
-              key={index}
-              href={url}
-              target="_blank"
-              className="fill-black dark:fill-white"
-            >
+            <Link key={index} href={url} target="_blank" className="fill-white">
               {icon({
-                className: "h-5 w-5 align-middle mr-9",
+                className:
+                  "h-5 w-5 align-middle mr-9 fill-white",
               })}
             </Link>
           );

@@ -25,39 +25,39 @@ const Experience = (props: ExperienceProps) => {
   } = props;
 
   return (
-    <div className="slide-enter-content flex h-min p-8 text-lg rounded-md w-full transition-all duration-300 ease-in-out bg-bg-light border border-solid border-border-light dark:bg-bg-dark dark:border-border-dark hover:scale-101 hover:border-black hover:dark:border-white mobile:ml-0 mobile:py-5 mobile:px-[18px]">
+    <div className="slide-enter-content flex h-min p-8 text-lg rounded-md w-full transition-all duration-300 ease-in-out bg-bg-dark border border-solid border-border-dark hover:scale-101 hover:border-white mobile:ml-0 mobile:py-5 mobile:px-[18px]">
       <div className="mr-6 mobile:hidden ">
-        <Link href={url} target="_blank" className="fill-black dark:fill-white">
+        <Link href={url} target="_blank" className="fill-white">
           {logo()}
         </Link>
       </div>
-      <div className="w-full float-right flex-col ">
+      <div className="w-full float-right flex-col">
         <div className="flex justify-between items-center">
           <div className="text-left">
             <Link
               href={url}
               target="_blank"
-              className="text-lg font-semibold mobile:text-lg text-light-primary dark:text-dark-primary"
+              className="text-lg font-semibold mobile:text-lg text-dark-primary"
             >
               {company}
             </Link>
-            <p className="text-lg font-medium text-light-secondary dark:text-dark-secondary mobile:text-base">
+            <p className="text-lg font-medium text-dark-secondary mobile:text-base">
               {role}
             </p>
           </div>
           <div className="text-right">
-            <p className="text-lg font-semibold mobile:text-lg text-light-primary dark:text-dark-primary mobile:hidden">
+            <p className="text-lg font-semibold mobile:text-lg text-dark-primary mobile:hidden">
               {duration}
             </p>
-            <p className="desktop:hidden mobile:text-lg text-light-primary dark:text-dark-primary font-medium">
+            <p className="desktop:hidden mobile:text-lg text-dark-primary font-medium">
               {shortDuration}
             </p>
-            <p className="text-lg text-light-secondary dark:text-dark-secondary mobile:text-base font-medium">
+            <p className="text-lg text-dark-secondary mobile:text-base font-medium">
               {location}
             </p>
           </div>
         </div>
-        <div className="mt-6 text-lg text-light-secondary dark:text-dark-secondary mobile:mt-4 mobile:text-base">
+        <div className="mt-6 text-lg text-dark-secondary mobile:mt-4 mobile:text-base">
           <p>{description}</p>
         </div>
       </div>

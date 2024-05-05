@@ -3,7 +3,7 @@ import Link from "next/link";
 const hardware = [
   {
     key: "Laptop (work)",
-    name: 'Macbook Pro M1 Pro 16"',
+    name: 'Macbook Pro M1 16"',
     link: "https://www.apple.com/macbook-pro-13/",
     icon: "💻",
   },
@@ -88,7 +88,7 @@ export default async function Uses() {
   return (
     <main
       className="flex justify-start items-start flex-col break-words text-xl text-left 
-    mt-20 mb-16 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 
+    mt-20 mb-16 flex-1 text-dark-primary mobile:py-6 mobile:px-4 
     mobile:mt-6 mobile:mb-10 mobile:text-base"
     >
       <p className="animate-fadeInUp text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4 slide-enter-content">
@@ -96,14 +96,43 @@ export default async function Uses() {
       </p>
 
       <div className="my-12 mobile:my-8 last:mb-0">
-        <h2 className="animate-fadeInUp mb-4 text-3xl font-semibold">Hardware</h2>
+        <h2 className="animate-fadeInUp mb-4 text-3xl font-semibold">
+          Hardware
+        </h2>
         <div className="slide-enter-content my-10 flex justify-start items-center flex-wrap mobile:my-8 w-full">
           {hardware.map((item) => {
             const { key, name, link, icon } = item;
             return (
               <Link
                 key={key}
-                className="flex mr-8 mb-8 rounded-lg w-[calc(50%-16px)] p-[18px] bg-bg-light border border-solid border-border-light dark:bg-bg-dark dark:border-border-dark hover:scale-101 hover:transition-all hover:duration-300 hover:ease-in-out hover:dark:border-white even:mr-0 mobile:my-2 mobile:w-full mobile:mr-0"
+                className="flex mr-8 mb-8 rounded-lg w-[calc(50%-16px)] p-[18px] border border-solid bg-bg-dark border-border-dark hover:scale-101 hover:transition-all hover:duration-300 hover:ease-in-out hover:border-white even:mr-0 mobile:my-2 mobile:w-full mobile:mr-0"
+                href={link}
+                target="_blank"
+              >
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-4">
+                    {/* {icon} */}
+                    <span className="text-dark-primary font-medium text-lg">
+                      {key}
+                    </span>
+                  </div>
+                  <span className="text-dark-secondary text-base">{name}</span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        <h2 className="animate-fadeInUp mb-4 text-3xl font-semibold">
+          Software
+        </h2>
+        <div className="slide-enter-content my-10 flex justify-start items-center flex-wrap mobile:my-8 w-full">
+          {software.map((item) => {
+            const { key, name, link, icon } = item;
+            return (
+              <Link
+                key={key}
+                className="flex mr-8 mb-8 rounded-lg w-[calc(50%-16px)] p-[18px] border border-solid bg-bg-dark border-border-dark hover:scale-101 hover:transition-all hover:duration-300 hover:ease-in-out hover:border-white even:mr-0 mobile:my-2 mobile:w-full mobile:mr-0"
                 href={link}
                 target="_blank"
               >
