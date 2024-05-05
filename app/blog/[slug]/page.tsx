@@ -22,7 +22,7 @@ const PostLayout = ({ params }: any) => {
   return (
     <main
       className="flex flex-col justify-center break-words relative flex-1 
-      text-xl my-14 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 mobile:my-12 mobile:text-lg "
+      text-xl my-14 text-dark-primary mobile:py-6 mobile:px-4 mobile:my-12 mobile:text-lg "
     >
       <BlurImage
         width={760}
@@ -37,7 +37,7 @@ const PostLayout = ({ params }: any) => {
         <p className="text-6xl font-extrabold mobile:text-4xl mobile:font-bold">
           <Balancer>{post.title}</Balancer>
         </p>
-        <div className="mt-3 w-full flex justify-between items-center text-light-secondary dark:text-dark-secondary mobile:flex-col mobile:justify-start mobile:items-start">
+        <div className="mt-3 w-full flex justify-between items-center text-dark-secondary mobile:flex-col mobile:justify-start mobile:items-start">
           <time
             dateTime={post.date}
             className="text-lg font-semibold mobile:text-base"

@@ -3,7 +3,7 @@ import Link from "next/link";
 const Home = () => (
   <main
     className="slide-enter-content flex justify-start items-start flex-col break-words text-xl text-left 
-    mt-20 mb-16 flex-1 text-light-primary dark:text-dark-primary mobile:py-6 mobile:px-4 
+    mt-20 mb-16 flex-1 text-dark-primary mobile:py-6 mobile:px-4 
     mobile:mt-6 mobile:mb-10 mobile:text-base"
   >
     <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4">
@@ -11,7 +11,7 @@ const Home = () => (
     </p>
     <div
       className="slide-enter-content flex justify-center items-start flex-col leading-9 mobile:text-lg
-     break-words text-light-secondary dark:text-dark-secondary
+     break-words text-dark-secondary
     "
     >
       <Paragraph>

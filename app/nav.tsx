@@ -1,5 +1,4 @@
 "use client";
-import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -19,8 +18,8 @@ const NavItem = ({ href, text, shallow }: NavItemProps) => {
       href={href}
       className={
         isActive
-          ? "bg-bg-dark dark:border-border-dark px-3.5 py-1.5 mobile:px-2 mobile:py-1 rounded-sm font-medium text-light-primary z-2 border border-solid border-transparent dark:text-dark-primary hover:text-light-primary hover:transition-all hover:duration-300 hover:ease-in-out dark:hover:text-dark-primary text-base mobile:text-sm"
-          : "px-3.5 py-1.5 mobile:px-2 mobile:py-1 font-medium text-light-secondary z-2 border border-solid rounded-sm border-transparent dark:text-dark-secondary hover:text-light-primary transition-all hover:dark:text-dark-primary text-base mobile:text-sm"
+          ? "border-border-dark px-3.5 py-1.5 mobile:px-2 mobile:py-1 rounded-sm font-medium z-2 border border-solid border-transparenttext-dark-primary hover:transition-all hover:duration-300 hover:ease-in-out hover:text-dark-primary text-base mobile:text-sm"
+          : "px-3.5 py-1.5 mobile:px-2 mobile:py-1 font-medium z-2 border border-solid rounded-sm border-transparent text-dark-secondary  transition-all hover:text-dark-primary text-base mobile:text-sm"
       }
       shallow={shallow}
     >
@@ -31,7 +30,7 @@ const NavItem = ({ href, text, shallow }: NavItemProps) => {
 
 const Navbar = () => {
   return (
-    <nav className="ease-in-out z-10 flex items-center sticky justify-between px-2 py-4 border-b bg-light dark:bg-dark border-transparent transition-all text-lg text-light-primary dark:text-dark-secondary mobile:top-0 mobile:p-4 mobile:border-b-[1px] rounded-none mobile:text-lg mobile:z-[2] desktop:pl-0 top-0 border-border-light dark:border-border-dark bg-white dark:bg-black backdrop-blur-md">
+    <nav className="ease-in-out z-10 flex items-center sticky justify-between px-2 py-4 border-b bg-dark transition-all text-lg text-dark-secondary mobile:top-0 mobile:p-4 mobile:border-b-[1px] rounded-none mobile:text-lg mobile:z-[2] desktop:pl-0 top-0 border-border-dark bg-black backdrop-blur-md">
       <div className="flex justify-between mobile:p-0 desktop:w-[760px] mx-auto w-full items-center">
         <Link
           className="border border-solid border-transparent font-semibold hover:bg-bg-dark rounded-md transition-all"
