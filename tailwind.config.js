@@ -35,7 +35,7 @@ module.exports = {
       },
       backgroundImage: {
         foo: "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
-        dark: "linear-gradient(rgba(45, 52, 64, 0.5) 0px, transparent 0),linear-gradient(90deg, rgba(45, 52, 64, 0.5) 0px, #0b0d0f 0)",
+        // dark: "linear-gradient(rgba(45, 52, 64, 0.5) 0px, transparent 0),linear-gradient(90deg, rgba(45, 52, 64, 0.5) 0px, #0b0d0f 0)",
       },
       scale: {
         101: "1.01",
