@@ -35,7 +35,7 @@ const Home = () => (
     </Section>
 
     <Section subtitle="Work">
-      <ol className="relative border-s border-zinc-600">
+      {/* <ol className="relative border-s border-zinc-600">
         <li className="mb-10 ms-4">
           <div className="absolute w-3 h-3 rounded-full mt-8 -start-1.5 border border-zinc-900 bg-green-500"></div>
           <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -76,7 +76,7 @@ const Home = () => (
             built on top of Tailwind CSS.
           </p>
         </li>
-      </ol>
+      </ol> */}
       <div className="w-[100%] flex flex-col justify-start my-12 mobile:mt-8 mobile:p-0 gap-6">
         {work.map((experience, index) => (
           <Experience {...experience} key={index} />
