@@ -14,7 +14,7 @@ const BlurImage = (props: any) => {
         props.customStyles,
         "duration-700 ease-in-out rounded-md mobile:rounded-sm" ,
         isLoading
-          ? "grayscale blur-xl scale-105"
+          ? "grayscale blur-xl scale-100"
           : "grayscale-0 blur-0 scale-100"
       )}
       onLoadingComplete={() => setIsLoading(false)}

@@ -1,3 +1,6 @@
+import CustomLink from "@components/CustomLink";
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <main className="flex-1 flex items-center justify-center break-words text-xl flex-col text-left mt-24 mb-20 text-dark-primary mobile:py-12 mobile:px-4 mobile:my-0">
@@ -9,29 +12,17 @@ const Hero = () => {
           Adarsh Sulegai
         </p>
 
-        <div className="slide-enter-content">
-          <p className="text-left mt-4 w-[90%] text-xl leading-9 font-medium text-dark-secondary mobile:text-lg mobile:leading-8 mobile:w-[100%]">
-            A frontend developer who loves crafting rich and seamless
-            experiences for the web. I'm currently working as an SDE 1 at{" "}
-            <a
-              href="https://www.cloudsek.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              CloudSEK
-            </a>
-            .<br /> Previously, did frontend at{" "}
-            <a
-              href="https://www.mydukaan.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              Dukaan.
-            </a>
-          </p>
-        </div>
+        <p className="slide-enter-content text-balance text-left mt-4 text-xl leading-9 font-normal text-dark-primary mobile:text-lg mobile:leading-8 mobile:w-[100%]">
+          A frontend developer who loves crafting rich and seamless experiences
+          for the web. I'm currently working as an SDE 1 at{" "}
+          <Link
+            href="https://www.cloudsek.com/"
+            target="_blank"
+            className="font-medium underline decoration-zinc-800 underline-offset-6 hover:decoration-zinc-300 hover:underline-offset-4 transition-all duration-300 ease-in-out und"
+          >
+            CloudSEK
+          </Link>
+        </p>
       </div>
     </main>
   );

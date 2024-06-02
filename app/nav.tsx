@@ -18,7 +18,7 @@ const NavItem = ({ href, text, shallow }: NavItemProps) => {
       href={href}
       className={
         isActive
-          ? "border-border-dark px-3.5 py-1.5 mobile:px-2 mobile:py-1 rounded-sm font-medium z-2 border border-solid border-transparenttext-dark-primary hover:transition-all hover:duration-300 hover:ease-in-out hover:text-dark-primary text-base mobile:text-sm"
+          ? "text-dark-primary border-border-dark px-3.5 py-1.5 mobile:px-2 mobile:py-1 rounded-sm font-medium z-2 border border-solid border-transparent hover:transition-all hover:duration-300 hover:ease-in-out hover:text-dark-primary text-base mobile:text-sm"
           : "px-3.5 py-1.5 mobile:px-2 mobile:py-1 font-medium z-2 border border-solid rounded-sm border-transparent text-dark-secondary  transition-all hover:text-dark-primary text-base mobile:text-sm"
       }
       shallow={shallow}

@@ -19,12 +19,17 @@ module.exports = {
       "400%": "400%",
     },
     extend: {
+      textUnderlineOffset: {
+        3: "3px",
+        5: "5px",
+        6: "6px",
+      },
       colors: {
         link: "#52a9ff",
         "light-primary": "#000000",
         "light-secondary": "#4d4d4d",
         "dark-primary": "#ffffff",
-        "dark-secondary": "#ffffffcc",
+        "dark-secondary": "#d6d3d1",
         "bg-dark": "#11111180",
         "bg-light": "#f0f0f081",
         "border-light": "#dedede",
