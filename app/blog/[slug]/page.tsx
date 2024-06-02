@@ -26,7 +26,7 @@ const PostLayout = ({ params }: any) => {
     >
       <BlurImage
         width={760}
-        height={300}
+        height={400}
         src={thumbnailPath}
         alt="thumbnail"
         aspectRatio="auto 1042 / 401"
