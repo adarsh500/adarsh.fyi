@@ -1,13 +1,10 @@
 import ClientWrapper from "@components/ClientWrapper";
+import Footer from "@components/Footer";
 import { GeistSans } from "geist/font/sans";
-import dynamic from "next/dynamic";
 import { Metadata } from "next/types";
 import { Suspense } from "react";
 import "../styles/globals.scss";
 import Navbar from "./nav";
-const Footer = dynamic(() => import("@components/Footer"), {
-  ssr: true,
-});
 
 type LayoutProps = {
   children: React.ReactNode;

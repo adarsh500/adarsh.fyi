@@ -1,4 +1,3 @@
-import CustomLink from "@components/CustomLink";
 import Link from "next/link";
 
 const Hero = () => {

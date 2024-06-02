@@ -1,5 +1,3 @@
-import React from "react";
-
 const Snippets = () => {
   return (
     <main className="slide-enter-content flex justify-start items-start flex-col break-words text-xl text-left mt-32 mb-24 flex-1 text-dark-primary mobile:py-6 mobile:px-4 mobile:mt-12 mobile:mb-20 mobile:text-base">
