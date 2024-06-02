@@ -49,9 +49,9 @@ module.exports = {
         m: "10px",
       },
       borderRadius: {
-        sm: "6px",
-        md: "8px",
-        lg: "10px",
+        sm: "4px",
+        md: "6px",
+        lg: "8px",
       },
       keyframes: {
         fadeInDown: {

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Section = (props: { children: React.ReactElement; subtitle: string }) => {
   return (
     <div className="slide-enter-content flex flex-col justify-center align-top my-12 slide-enter-content mobile:my-6 mobile:mx-4 last:mb-16">

@@ -1,4 +1,3 @@
-import React from "react";
 import MusicBars from "@components/MusicBars";
 import { SiSpotify } from "react-icons/si";
 import { getNowPlaying } from "@utils/spotify";
@@ -14,9 +13,7 @@ const NowPlaying = async () => {
         id="not-playing"
       >
         <SiSpotify className="w-6 h-6 mobile:w-5 mobile:h-5 fill-white" />
-        <p className="text-lg text-center text-dark-primary">
-          Not listening
-        </p>
+        <p className="text-lg text-center text-dark-primary">Not listening</p>
       </div>
     );
   }

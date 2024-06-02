@@ -14,9 +14,4 @@ export const more = [
     href: "/more/snippets",
     icon: <FaCode className="h-8 w-8" />,
   },
-  // {
-  //   title: "Timeline",
-  //   description: "Timeline of my life",
-  //   href: "/more/timeline",
-  // },
 ];
