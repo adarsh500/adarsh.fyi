@@ -51,20 +51,23 @@
 
   ul {
     margin: 1.5rem 0;
-    padding-left: 1.75rem;
+    padding-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
     color: #ffffffcc;
   }
 
   li {
-    list-style-type: disc;
-    &::marker {
-      margin-left: 1rem;
+    &::before {
+      content: "-";
+      margin-right: 0.5rem;
     }
   }
 
   h1 {
     @include font-size-weight(30, 36, 700);
-    margin: 1.5rem 0;
+    margin: 2rem 0;
     color: var(--light-text-primary);
     @include dark-mode {
       color: var(--dark-text-primary);
@@ -73,7 +76,7 @@
 
   h2 {
     @include font-size-weight(26, 34, 600);
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     color: var(--light-text-primary);
     @include dark-mode {
       color: var(--dark-text-primary);
@@ -82,7 +85,7 @@
 
   h3 {
     @include font-size-weight(22, 28, 600);
-    margin: 0.75rem 0;
+    margin: 1rem 0;
     color: var(--light-text-primary);
     @include dark-mode {
       color: var(--dark-text-primary);
@@ -141,7 +144,6 @@
   }
 
   code {
-    // padding: 0.25rem 0.5rem;
     border-radius: 0.25rem !important;
     padding: 0.2rem 0.3rem !important;
     border-radius: var(--border-radius-medium);

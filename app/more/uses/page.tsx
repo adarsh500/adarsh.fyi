@@ -1,17 +1,32 @@
 import LinkWithAnimation from "@components/CustomLink";
 import { HARDWARE, SOFTWARE } from "constants/uses";
 
-const ToolsList = (props) => {
+type Tool = {
+  key: string;
+  name: string;
+  link: string;
+  description: string;
+};
+
+type ToolsListProps = {
+  subTitle: string;
+  items: Array<Tool>;
+};
+
+const ToolsList = (props: ToolsListProps) => {
   const { subTitle, items } = props;
   return (
     <div>
       <h2 className="animate-fadeInUp text-2xl font-semibold">{subTitle}</h2>
-      <ul className="slide-enter-content ml-4 my-6 flex flex-col justify-start gap-4 mobile:my-8 w-full list-disc marker:text-zinc-500 text-xl">
+      <ul className="slide-enter-content ml-4 my-6 flex flex-col justify-start gap-4 mobile:my-8 w-full list-none marker:text-zinc-500 text-xl">
         {items.map((item) => {
           const { key, name, link, description } = item;
 
           return (
-            <li key={key} className="flex gap-2">
+            <li
+              key={key}
+              className="flex gap-2 before:content-['-'] before:text-zinc-200 before:mr-2"
+            >
               <LinkWithAnimation
                 name={name}
                 link={link}
