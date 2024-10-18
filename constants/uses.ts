@@ -30,10 +30,16 @@ const HARDWARE = [
     link: "https://www.sony.com/electronics/headband-headphones/wh-1000xm4",
   },
   {
-    key: "Mouse",
+    key: "Mice",
     name: "Apple magic mouse 2",
     description: "These have magical gestures",
     link: "https://www.amazon.in/Apple-Magic-Mouse-Bluetooth-Enabled-iPadOS/dp/B09BTNQ6MM/ref=sr_1_1?crid=33M7V0RVX2KGK&dib=eyJ2IjoiMSJ9.Ag0hfEY36nlJIGg4h_pmRuq4bxp7UqOsSumHQUJzbMGX2GNzrQzJGDt9yWt9nSQpnSvjXGC_Fj-ITSUQRNUVHSKwqU0wTnHxSqiRzhb9ZFBWuX_rnzayBHo9CVJ-pB6KgOsbiaVaWcGqew9YEVVijvsFMt4ZdDjklOHL9bC_qMZrowVSwl2QrygFe4u5dF1t1XkO9zpipVC5veIrgrxiPEWDDr50WY_sGgP0ZEJ60Hk.BDJK8WLrVEtWCksaCli2alQvAKo2qRe8-rdHCAJjfHs&dib_tag=se&keywords=magic+mouse+2&qid=1705736659&sprefix=magic+mouse+%2Caps%2C184&sr=8-1",
+  },
+  {
+    key: "Mice",
+    name: "MX Master 3S",
+    description: "A super fucntional and ergonomic mouse",
+    link: "https://www.logitech.com/en-in/products/mice/mx-master-3s.html",
   },
   {
     key: "Keyboard",
@@ -52,6 +58,18 @@ const HARDWARE = [
     name: "Amazon Echo Dot 3rd Gen",
     description: "I don't know why i have this",
     link: "https://www.amazon.com/Echo-Dot-3rd-Gen-Smart-speaker-with-Alexa-Charcoal/dp/B07FZ8S74R",
+  },
+  {
+    key: "Monitor Light Bar",
+    name: "Quntis ML214",
+    description: "Adds vibes✨ to my setup",
+    link: "https://www.amazon.in/dp/B0CRZ4NCQL?ref=ppx_pop_mob_ap_share",
+  },
+  {
+    key: "Gaming",
+    name: "PS5 slim",
+    description: "Too OP",
+    link: "https://www.amazon.in/Sony-CFI-2008A01X-PlayStation%C2%AE5-Console-slim/dp/B0CY5HVDS2",
   },
   {
     key: "Watch",
