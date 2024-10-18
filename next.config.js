@@ -7,18 +7,19 @@ const nextConfig = {
   },
   optimizeFonts: true,
   experimental: {
-    turbo: {
-      resolveExtensions: [
-        ".mdx",
-        ".tsx",
-        ".ts",
-        ".jsx",
-        ".js",
-        ".mjs",
-        ".json",
-      ],
-    },
+    // turbo: {
+    //   resolveExtensions: [
+    //     ".mdx",
+    //     ".tsx",
+    //     ".ts",
+    //     ".jsx",
+    //     ".js",
+    //     ".mjs",
+    //     ".json",
+    //   ],
+    // },
   },
+  output: "standalone",
   typescript: {
     ignoreBuildErrors: true,
   },

@@ -1,3 +1,4 @@
+import WorkerClient from "@components/WorkerClient";
 import Link from "next/link";
 
 const Home = () => (
@@ -55,6 +56,7 @@ const Home = () => (
         hackathon or just want to say hi, feel free to reach out to me via my
         socials or through my mail.
       </Paragraph>
+
 
       {/* <Paragraph>
         If you want to know more about my work, you can check out my{" "}
