@@ -1,7 +1,7 @@
 const HARDWARE = [
   {
     key: "Laptop (work)",
-    name: 'Macbook Pro M1 16"',
+    name: 'Macbook Pro M3 Pro 16"',
     description: "A money minting machine",
     link: "https://www.apple.com/macbook-pro-13/",
   },
@@ -139,6 +139,21 @@ const SOFTWARE = [
     name: "Supermaven",
     description: "A blazding fast code completion tool",
     link: "https://supermaven.com/",
+  },
+];
+
+const DOTFILES = [
+  {
+    key: "IDE",
+    name: "VS Code",
+    description: "The current editor of choice, might switch to neovim",
+    link: "https://code.visualstudio.com/",
+  },
+  {
+    key: "IDE-2",
+    name: "Zed",
+    description: "I use this when VS Code gets too slow",
+    link: "https://zed.co/",
   },
 ];
 

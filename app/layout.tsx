@@ -21,7 +21,7 @@ export default function RootLayout(props: LayoutProps) {
         </Suspense>
         <div className="text-left flex flex-col h-full flex-1 mobile:p-0 desktop:w-[760px] mt-[20] mx-auto mb-0">
           {props.children}
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </body>
     </html>
