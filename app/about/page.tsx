@@ -45,7 +45,7 @@ const Home = () => (
 
       <Paragraph>
         I tend to spend my free time working on some hobby projects like
-        thissite or{" "}
+        this site or{" "}
         <CustomLink href="https://mark3.vercel.app">Mark</CustomLink> or
         contributing to open source or reading tech blogs.
       </Paragraph>
