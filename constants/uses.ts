@@ -3,7 +3,7 @@ const HARDWARE = [
     key: "Laptop (work)",
     name: 'Macbook Pro M3 Pro 16"',
     description: "A money minting machine",
-    link: "https://www.apple.com/macbook-pro-13/",
+    link: "https://www.apple.com/macbook-pro-16/",
   },
   {
     key: "Laptop (personal)",

@@ -1,8 +1,6 @@
-import { VscGithubInverted } from "react-icons/vsc";
-import { GrLinkNext } from "react-icons/gr";
-import Link from "next/link";
 import LinkWithHover from "@components/LinkWithHover";
 import { LuExternalLink } from "react-icons/lu";
+import { VscGithubInverted } from "react-icons/vsc";
 
 type ProjectProps = {
   title: string;
@@ -29,7 +27,7 @@ const ProjectCard = (props: ProjectProps) => {
         <p className="mt-4 text-lg mobile:text-base line-clamp-3 text-dark-secondary mobile:mt-2">
           {description}
         </p>
-        <div className="mt-4 text-base flex justify-start items-center gap-4">
+        <div className="mt-4 text-base flex justify-start items-center gap-6">
           <LinkWithHover
             href={link}
             className="text-lg flex gap-2 items-center mobile:text-base font-normal underline-offset-8"
@@ -38,7 +36,7 @@ const ProjectCard = (props: ProjectProps) => {
             live
           </LinkWithHover>
           <LinkWithHover
-            href={link}
+            href={githubUrl}
             className="text-lg flex gap-2 items-center mobile:text-base font-normal underline-offset-8"
           >
             <VscGithubInverted className="align-middle text-border-dark" />

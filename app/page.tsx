@@ -1,7 +1,6 @@
 import { projects } from "@components/Content/projects";
 import { work } from "@components/Content/work";
 import Hero from "@components/Hero";
-
 import BlogCard from "@components/BlogCard";
 import Experience from "@components/Experience";
 import NowPlaying from "@components/NowPlaying";
