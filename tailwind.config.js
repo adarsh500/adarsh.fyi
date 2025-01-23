@@ -24,6 +24,9 @@ module.exports = {
         5: "5px",
         6: "6px",
       },
+      margin: {
+        22: "88px",
+      },
       colors: {
         link: "#52a9ff",
         "light-primary": "#000000",

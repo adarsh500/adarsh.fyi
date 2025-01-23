@@ -1,13 +1,27 @@
 import Dukaan from "assets/icons/Dukaan";
 import CloudSEK from "assets/icons/CloudSEK";
+import Rubrik from "@icons/Rubrik";
+// import Image from '../../assets/images/'
 
 export const work = [
   {
-    company: "CloudSEK",
-    role: "SDE 1",
+    company: "Rubrik",
+    role: "SDE 1 (frontend)",
     location: "Bangalore",
-    duration: "Oct 2023 - Present",
-    shortDuration: `Nov - Present`,
+    duration: "Oct '24 - Present",
+    shortDuration: `Oct '24 - Present`,
+    url: "https://rubrik.com/",
+    logo: Rubrik,
+    description: [
+      `Working as an frontend engineer on the core UI team which builds the Rubrik Security Cloud Platform`,
+    ],
+  },
+  {
+    company: "CloudSEK",
+    role: "SDE 1 (frontend)",
+    location: "Bangalore",
+    duration: "Oct '23 - Oct '24",
+    shortDuration: "Oct '23 - Oct '24",
     url: "https://cloudsek.com/",
     logo: CloudSEK,
     description: [
@@ -19,8 +33,8 @@ export const work = [
     company: "CloudSEK",
     role: "SDE Intern",
     location: "Bangalore",
-    duration: "Nov 2022 - Oct 2023",
-    shortDuration: `Nov - Present`,
+    duration: "Nov '22 - Oct '23",
+    shortDuration: "Nov '22 - Oct '23",
     url: "https://cloudsek.com/",
     logo: CloudSEK,
     description: [
@@ -32,8 +46,8 @@ export const work = [
     company: "Dukaan",
     role: "Frontend Intern",
     location: "Bangalore",
-    duration: "Apr 2022 - June 2022",
-    shortDuration: `Apr - June '22`,
+    duration: "Apr '22 - June '22",
+    shortDuration: `Apr '22- June '22`,
     url: "https://mydukaan.io/",
     logo: Dukaan,
     description: [

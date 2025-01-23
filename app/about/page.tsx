@@ -15,9 +15,9 @@ const Home = () => (
     "
     >
       <Paragraph>
-        I'm a 21 y/o frontend engineer from Bangalore, India. I'm currently
+        I'm a 22 y/o frontend engineer from Bangalore, India. I'm currently
         studying at DSCE and I'm working as a Software Development Engineer 1 at{" "}
-        <CustomLink href="https://cloudsek.com/">CloudSEK</CustomLink>.
+        <CustomLink href="https://rubrik.com/">Rubrik</CustomLink>.
       </Paragraph>
 
       <p className="mt-8">
@@ -45,7 +45,7 @@ const Home = () => (
 
       <Paragraph>
         I tend to spend my free time working on some hobby projects like
-        thissite or{" "}
+        this site or{" "}
         <CustomLink href="https://mark3.vercel.app">Mark</CustomLink> or
         contributing to open source or reading tech blogs.
       </Paragraph>

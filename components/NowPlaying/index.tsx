@@ -34,7 +34,6 @@ const NowPlaying = async () => {
           {artist}
         </p>
       </div>
-
       <MusicBars />
     </div>
   );

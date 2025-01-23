@@ -1,11 +1,11 @@
-import { VscGithubInverted, VscTwitter } from "react-icons/vsc";
-import { FaLinkedinIn } from "react-icons/fa";
-import { SiInstagram } from "react-icons/si";
-import { MdMail } from "react-icons/md";
 import NowPlaying from "@components/NowPlaying";
 import Link from "next/link";
+import { FaLinkedinIn } from "react-icons/fa";
+import { MdMail } from "react-icons/md";
+import { RiTwitterXLine } from "react-icons/ri";
+import { VscGithubInverted } from "react-icons/vsc";
 
-const links = [
+export const links = [
   {
     name: "Github",
     url: "https://github.com/adarsh500",
@@ -19,17 +19,12 @@ const links = [
   {
     name: "Twitter",
     url: "https://twitter.com/adarshsulegai50",
-    icon: VscTwitter,
+    icon: RiTwitterXLine,
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/adarsh-sulegai/",
     icon: FaLinkedinIn,
-  },
-  {
-    name: "Instagram",
-    url: "https://www.instagram.com/adarsh_sulegai/",
-    icon: SiInstagram,
   },
 ];
 
@@ -46,8 +41,7 @@ const Footer = () => {
           return (
             <Link key={index} href={url} target="_blank" className="fill-white">
               {icon({
-                className:
-                  "h-5 w-5 align-middle mr-9 fill-white",
+                className: "h-5 w-5 align-middle mr-9 fill-white",
               })}
             </Link>
           );
