@@ -15,7 +15,7 @@ const Home = () => (
     "
     >
       <Paragraph>
-        I'm a 21 y/o frontend engineer from Bangalore, India. I'm currently
+        I'm a 22 y/o frontend engineer from Bangalore, India. I'm currently
         studying at DSCE and I'm working as a Software Development Engineer 1 at{" "}
         <CustomLink href="https://rubrik.com/">Rubrik</CustomLink>.
       </Paragraph>
