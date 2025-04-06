@@ -54,6 +54,12 @@ const HARDWARE = [
     link: "https://www.gigabyte.com/Monitor/G27F#kf",
   },
   {
+    key: "Monitor",
+    name: "MSI MAG QRF E2 QD",
+    description: 'A 1080p 27" monitor with height adjustment',
+    link: "https://www.msi.com/Monitor/MAG-274QRF-QD-E2",
+  },
+  {
     key: "Speakers",
     name: "Amazon Echo Dot 3rd Gen",
     description: "I don't know why i have this",
@@ -66,10 +72,28 @@ const HARDWARE = [
     link: "https://www.amazon.in/dp/B0CRZ4NCQL?ref=ppx_pop_mob_ap_share",
   },
   {
+    key: "Monitor Light Bar",
+    name: "Quntis HY214 Pro",
+    description: "Adds vibes✨ to my setup",
+    link: "https://www.amazon.in/Quntis-Backlight-Weighted-Adjustable-Stepless/dp/B0CZLBG794?crid=2E0ADLN0MLEFS&dib=eyJ2IjoiMSJ9.EmzIU93U_iGYPEn9jjRVmuaV_aFEg14axqgaO10EW0XxU3MC16U_X4tw-I9iFlJ6BmhcqxKSlOj7Yrmkj-98Mb0iJ4jSM3LgIbhFymnzLRmADoBsIiNzqRpPNpidRFgGTaSVEB6W1eACbzBb1hHkWWuC-BtF01IPp35Mra5Dl2ZgN8rDDVK82jElm4RcXX5xWjZcYiVMgsZzkWNScpMHnY_-ekgD84WdxXA0ddqxdBWEArreI_WJaSRlk7T_PWolvGCDJQVg6uILwiEjW1PQpEMCD6_3QdNdt5se-M1RsFs.FikA3TLaX-mOfuliLYMWkJ47dI6ht6JH6ylbGpQnj70&dib_tag=se&keywords=quntis%2Bmonitor%2Blight&nsdOptOutParam=true&qid=1743961944&sprefix=quntis%2Bmon%2Caps%2C219&sr=8-5&th=1",
+  },
+  {
     key: "Gaming",
     name: "PS5 slim",
     description: "Too OP",
     link: "https://www.amazon.in/Sony-CFI-2008A01X-PlayStation%C2%AE5-Console-slim/dp/B0CY5HVDS2",
+  },
+  {
+    key: "Monitor arm",
+    name: "Jin office dual monitor arm",
+    description: "Too OP",
+    link: "https://www.jin.net.in/product/dual-monitor-table-stand/",
+  },
+  {
+    key: "Desk",
+    name: "Ergo You sit-stand desk",
+    description: "Too OP",
+    link: "https://www.ergoyou.in/products/ergoyou-height-adjustable-desk-with-wood-grain-table-top-dual-motor-3-stage",
   },
   {
     key: "Watch",
@@ -87,16 +111,10 @@ const SOFTWARE = [
     link: "https://code.visualstudio.com/",
   },
   {
-    key: "IDE-2",
-    name: "Zed",
-    description: "I use this when VS Code gets too slow",
-    link: "https://zed.co/",
-  },
-  {
     key: "Terminal",
-    name: "iTerm2",
+    name: "Warp",
     description: "Best terminal for MacOS",
-    link: "https://iterm2.com/",
+    link: "https://www.warp.dev/",
   },
   {
     key: "Browser",
@@ -142,19 +160,13 @@ const SOFTWARE = [
   },
 ];
 
-const DOTFILES = [
+const CONFIGS = [
   {
-    key: "IDE",
-    name: "VS Code",
-    description: "The current editor of choice, might switch to neovim",
-    link: "https://code.visualstudio.com/",
-  },
-  {
-    key: "IDE-2",
-    name: "Zed",
-    description: "I use this when VS Code gets too slow",
-    link: "https://zed.co/",
+    key: "dotfiles",
+    name: "Dotfiles",
+    description: "Dotfiles",
+    link: "https://github.com/adarsh500/dotfiles",
   },
 ];
 
-export { HARDWARE, SOFTWARE };
+export { HARDWARE, SOFTWARE, CONFIGS };

@@ -23,14 +23,18 @@ const Home = () => (
 
     <Section subtitle="Latest Blogs">
       <div className="flex justify-center items-start flex-col my-6 mobile:mt-4 mobile:mb-2">
-        {allPosts.map((post: any, index: number) => (
-          <BlogCard
-            key={index}
-            {...post}
-            slug={post.url}
-            readingTime={post.readingTime}
-          />
-        ))}
+        {allPosts
+          .sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+          )
+          .map((post: any, index: number) => (
+            <BlogCard
+              key={index}
+              {...post}
+              slug={post.url}
+              readingTime={post.readingTime}
+            />
+          ))}
       </div>
     </Section>
 
