@@ -13,7 +13,7 @@
     "@vercel/speed-insights": "^1.0.5",
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.4",
-    "date-fns": "^2.29.3",
+    "date-fns": "^2.30.0",
     "geist": "^1.0.0",
     "next": "14.2",
     "next-contentlayer": "^0.3.4",
@@ -29,6 +29,7 @@
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
     "sass": "^1.53.0",
+    "sharp": "^0.33.5",
     "shiki": "^0.14.1"
   },
   "devDependencies": {

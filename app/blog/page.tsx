@@ -13,14 +13,18 @@ export default function Blog() {
       </p>
 
       <div className="slide-enter-content flex justify-center items-start flex-col w-full mb-6 mobile:mb-4">
-        {allPosts.map((post: any, index: number) => (
-          <BlogCard
-            key={index}
-            {...post}
-            slug={post.url}
-            readingTime={post.readingTime}
-          />
-        ))}
+        {allPosts
+          .sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+          )
+          .map((post: any, index: number) => (
+            <BlogCard
+              key={index}
+              {...post}
+              slug={post.url}
+              readingTime={post.readingTime}
+            />
+          ))}
       </div>
     </main>
   );

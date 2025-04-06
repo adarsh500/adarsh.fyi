@@ -1,7 +1,7 @@
 import BlurImage from "@components/BlurImage";
 import LinkWithAnimation from "@components/CustomLink";
-import { HARDWARE, SOFTWARE } from "constants/uses";
-import image from "../../../assets/images/setup.webp";
+import { CONFIGS, DOTFILES, HARDWARE, SOFTWARE } from "constants/uses";
+import image from "../../../assets/images/setup.jpg";
 
 type Tool = {
   key: string;
@@ -32,7 +32,7 @@ const ToolsList = (props: ToolsListProps) => {
               <LinkWithAnimation
                 name={name}
                 link={link}
-                description={description}
+                // description={description}
               />
             </li>
           );
@@ -50,16 +50,17 @@ export default async function Uses() {
     mobile:mt-6 mobile:mb-10 mobile:text-base"
     >
       <p className="animate-fadeInUp text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4 slide-enter-content">
-        Tech that i use (🛠️ WIP)
+        Tech that i use
       </p>
-      <p className="animate-fadeInUp text-xl my-4 text-dark-secondary">
+      <p className="animate-fadeInUp text-xl my-4 mb-8 text-dark-secondary">
         A growing collection of things i use everyday as a software engineer
       </p>
 
       <BlurImage src={image} alt="uses" height={400} width={760} />
       <div className="flex flex-col my-8 mobile:my-6 gap-6">
-        <ToolsList subTitle="Gear" items={HARDWARE} />
+        <ToolsList subTitle="On my desk" items={HARDWARE} />
         <ToolsList subTitle="Software" items={SOFTWARE} />
+        <ToolsList subTitle="Config" items={CONFIGS} />
       </div>
     </main>
   );

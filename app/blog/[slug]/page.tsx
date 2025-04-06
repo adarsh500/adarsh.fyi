@@ -11,7 +11,7 @@ export const dynamic = "force-static";
 
 const PostLayout = ({ params }: any) => {
   const post = allPosts.find((post) => post.slug === params.slug);
-  const thumbnailPath = `/${params.slug}/${params.slug}.png`;
+  const thumbnailPath = post?.image ? `/${params.slug}/${params.slug}.png` : "";
 
   if (!post) {
     return notFound();
@@ -24,15 +24,17 @@ const PostLayout = ({ params }: any) => {
       className="flex flex-col justify-center break-words relative flex-1 
       text-xl my-14 text-dark-primary mobile:py-6 mobile:px-4 mobile:my-12 mobile:text-lg "
     >
-      <BlurImage
-        width={760}
-        height={400}
-        src={thumbnailPath}
-        alt="thumbnail"
-        aspectRatio="auto 1042 / 401"
-        priority
-        loading="eager"
-      />
+      {!!thumbnailPath.length ? (
+        <BlurImage
+          width={760}
+          height={400}
+          src={thumbnailPath}
+          alt="thumbnail"
+          aspectRatio="auto 1042 / 401"
+          priority
+          loading="eager"
+        />
+      ) : null}
       <article className="flex flex-1 mt-8 justify-start items-start flex-col">
         <p className="text-6xl font-extrabold mobile:text-4xl mobile:font-bold">
           <Balancer>{post.title}</Balancer>
