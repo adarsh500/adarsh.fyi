@@ -1,6 +1,6 @@
 import BlurImage from "@components/BlurImage";
 import LinkWithAnimation from "@components/CustomLink";
-import { CONFIGS, DOTFILES, HARDWARE, SOFTWARE } from "constants/uses";
+import { CONFIGS, HARDWARE, SOFTWARE } from "constants/uses";
 import image from "../../../assets/images/setup.jpg";
 
 type Tool = {
@@ -22,18 +22,14 @@ const ToolsList = (props: ToolsListProps) => {
       <h2 className="animate-fadeInUp text-2xl font-semibold">{subTitle}</h2>
       <ul className="slide-enter-content ml-4 my-6 mobile:ml-2 flex flex-col justify-start gap-4 mobile:gap-2 mobile:my-8 w-full list-none marker:text-zinc-500 text-xl">
         {items.map((item) => {
-          const { key, name, link, description } = item;
+          const { key, name, link } = item;
 
           return (
             <li
               key={key}
               className="flex gap-2 mobile:gap-1 before:content-['-'] before:text-zinc-200 before:mr-2"
             >
-              <LinkWithAnimation
-                name={name}
-                link={link}
-                // description={description}
-              />
+              <LinkWithAnimation name={name} link={link} />
             </li>
           );
         })}
