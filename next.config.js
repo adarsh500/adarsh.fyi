@@ -7,6 +7,7 @@ const nextConfig = {
   },
   optimizeFonts: true,
   experimental: {
+    cssChunking: "strict",
     turbo: {
       resolveExtensions: [
         ".mdx",
@@ -22,8 +23,14 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
   reactStrictMode: true,
   swcMinify: true,
+  optimizeFonts: true,
 };
 
 module.exports = withContentlayer(nextConfig);
