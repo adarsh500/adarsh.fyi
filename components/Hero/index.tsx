@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Ambient backgrounds */}
       <span
         aria-hidden
-        className="pointer-events-none absolute -top-2 -left-10 h-32 w-[520px] rounded-full bg-foo opacity-30 blur-3xl bg-[length:400%_400%] animate-gradient -z-10"
+        className="pointer-events-none absolute top-6 -left-10 h-16 w-[470px] rounded-full bg-foo opacity-40 blur-3xl bg-[length:400%_400%] animate-gradient -z-10"
       />
 
       <main className="flex-1 flex items-center justify-center break-words text-xl flex-col text-left text-dark-primary">
@@ -21,8 +21,7 @@ const Hero = () => {
           </p>
           <p className="slide-enter-content text-balance mobile:text-wrap text-left mt-4 text-xl leading-9 font-normal text-dark-primary/90 mobile:text-lg mobile:leading-8 mobile:w-[100%]">
             A frontend developer who loves crafting rich and seamless
-            experiences for the web. Currently working as a frontend
-            engineer at{" "}
+            experiences for the web. Currently working as a frontend engineer at{" "}
             <LinkWithHover href="https://www.rubrik.com/">Rubrik</LinkWithHover>
           </p>
         </div>
@@ -37,11 +36,11 @@ const Hero = () => {
               href={url}
               target="_blank"
               aria-label={name}
-              className="group outline-none inline-flex items-center justify-center h-9 w-9 rounded-md ring-1 ring-white/10 bg-white/5 hover:bg-white/10 hover:ring-white/20 hover:shadow-glow-brand focus-visible:ring-2 focus-visible:ring-brand transition"
+              className="group outline-none inline-flex items-center justify-center h-9 w-9 rounded-md ring-1 ring-white/10 bg-white/5 hover:bg-accent-orange/10 hover:ring-accent-orange/40 hover:shadow-glow-orange focus-visible:ring-2 focus-visible:ring-accent transition"
             >
               {icon({
                 className:
-                  "h-5 w-5 align-middle fill-white opacity-90 transition-transform group-hover:opacity-100 group-hover:scale-101 focus-visible:scale-101",
+                  "h-5 w-5 align-middle fill-white opacity-90 transition-all group-hover:opacity-100 group-hover:scale-110 group-hover:fill-accent-orange focus-visible:scale-101",
               })}
               <span className="sr-only">{name}</span>
             </Link>

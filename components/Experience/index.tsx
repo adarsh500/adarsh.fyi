@@ -37,7 +37,7 @@ const Experience = (props: ExperienceProps) => {
             <Link
               href={url}
               target="_blank"
-              className="text-lg font-semibold mobile:text-lg text-dark-primary"
+              className="text-lg font-semibold mobile:text-lg text-dark-primary group-hover:text-accent-orange transition-colors duration-300"
             >
               {company}
             </Link>

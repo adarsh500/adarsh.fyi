@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageLayout from "@components/PageLayout";
+import LinkWithHover from "@components/LinkWithHover";
 
 const Home = () => (
   <PageLayout title="About Me">
@@ -10,8 +11,8 @@ const Home = () => (
     >
       <Paragraph>
         I'm a 23 y/o frontend engineer from Bangalore, India. I'm currently
-        studying at DSCE and I'm working as a Software Development Engineer 1 at{" "}
-        <CustomLink href="https://rubrik.com/">Rubrik</CustomLink>.
+        working as a Software Development Engineer 1 at{" "}
+        <LinkWithHover href="https://rubrik.com/">Rubrik</LinkWithHover>.
       </Paragraph>
 
       <p className="mt-8">
@@ -46,7 +47,8 @@ const Home = () => (
 
       <Paragraph>
         I tend to spend my free time working on some hobby projects like this
-        site or <CustomLink href="https://mark3.vercel.app">Mark</CustomLink> or
+        site or{" "}
+        <LinkWithHover href="https://mark3.vercel.app">Mark</LinkWithHover>{" "}
         contributing to open source or reading tech blogs.
       </Paragraph>
 

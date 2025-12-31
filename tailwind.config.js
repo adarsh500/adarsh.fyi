@@ -67,6 +67,13 @@ module.exports = {
         transparent: "transparent",
         black: "#000",
         white: "#fff",
+        // Accent colors
+        accent: {
+          orange: "#ff6b35",
+          "orange-light": "#ff8c5a",
+          "orange-dark": "#e55a2b",
+          white: "#ffffff",
+        },
       },
       backgroundImage: {
         foo: "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
@@ -178,6 +185,7 @@ module.exports = {
       ringColor: ({ theme }) => ({
         ...theme("colors"),
         brand: "#7c3aed",
+        accent: "#ff6b35",
       }),
     },
   },
