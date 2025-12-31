@@ -25,7 +25,7 @@ const Experience = (props: ExperienceProps) => {
   } = props;
 
   return (
-    <div className="slide-enter-content flex h-min p-8 text-lg rounded-md w-full transition-all duration-300 ease-in-out bg-bg-dark border border-solid border-border-dark hover:scale-101 hover:border-white mobile:ml-0 mobile:py-5 mobile:px-[18px]">
+    <div className="slide-enter-content flex h-min p-8 text-lg rounded-md w-full transition-all duration-300 ease-in-out bg-bg-dark border border-solid border-border-dark shadow-soft-elev ring-1 ring-white/5 hover:ring-white/15 hover:scale-101 hover:border-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand mobile:ml-0 mobile:py-5 mobile:px-[18px]">
       <div className="mr-6 mobile:hidden ">
         <Link href={url} target="_blank" className="fill-white">
           {logo()}

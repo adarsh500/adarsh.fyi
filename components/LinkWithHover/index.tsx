@@ -17,7 +17,7 @@ const LinkWithHover = <R extends string>(props: Props<R>) => {
       {...props}
       target="_blank"
       className={clsx(
-        "font-medium underline decoration-zinc-700 underline-offset-6 hover:decoration-zinc-300 hover:underline-offset-4 transition-all duration-300 ease-in-out",
+        "font-medium underline decoration-white/20 underline-offset-6 [text-underline-position:from-font] hover:decoration-white/40 hover:underline-offset-4 transition-all duration-300 ease-in-out",
         props.className
       )}
     >

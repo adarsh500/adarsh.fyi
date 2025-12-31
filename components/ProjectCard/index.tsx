@@ -15,7 +15,7 @@ const ProjectCard = (props: ProjectProps) => {
   const { title, link, description, githubUrl } = props;
 
   return (
-    <div className="slide-enter-content group flex flex-col mr-9 min-h-min w-[calc(50%-18px)] rounded-md border border-solid border-border-dark z-[1] bg-bg-dark  mobile:w-full mobile:flex-row mobile:mr-0 mobile:mb-8 even:mr-0 hover:transition-all hover:duration-300 hover:ease-in-out">
+    <div className="slide-enter-content group flex flex-col mr-9 min-h-min w-[calc(50%-18px)] rounded-md border border-solid border-border-dark bg-bg-dark shadow-soft-elev ring-1 ring-white/5 hover:ring-white/15 z-[1] mobile:w-full mobile:flex-row mobile:mr-0 mobile:mb-8 even:mr-0 hover:transition-all hover:duration-300 hover:ease-in-out">
       <div className="flex-col justify-end py-7 px-[18px] mobile:p-5 mobile ">
         <div className="flex justify-between items-center">
           <div className="flex justify-between items-center w-full">
