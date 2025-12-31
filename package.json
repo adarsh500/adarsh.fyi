@@ -2,7 +2,6 @@
   "name": "portfolio",
   "version": "2.0.0",
   "private": true,
-  "sideEffects": false,
   "scripts": {
     "dev": "next dev --turbo --port=4000",
     "build": "next build",
