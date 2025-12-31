@@ -19,10 +19,10 @@ const BlogCard = (props: Blog) => {
   return (
     <Link
       href={slug}
-      className="slide-enter-content flex justify-between pb-8 mt-6 mobile:mt-2 mobile:pb-6 border-b-[1px] border-solid border-border-dark w-full mobile:my-8"
+      className="slide-enter-content flex justify-between pb-8 mt-6 mobile:mt-2 mobile:pb-6 border-b-[1px] border-solid border-border-dark w-full mobile:my-8 group transition-all duration-300"
     >
       <div className="flex flex-col">
-        <h3 className="text-xl font-semibold line-clamp-1 mobile:text-lg text-dark-primary">
+        <h3 className="text-xl font-semibold line-clamp-1 mobile:text-lg text-dark-primary  transition-colors duration-300">
           {title}
         </h3>
         <p className="mt-2 text-lg line-clamp-2 text-dark-secondary mobile:leading-6">

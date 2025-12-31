@@ -1,27 +1,22 @@
 import Link from "next/link";
+import PageLayout from "@components/PageLayout";
+import LinkWithHover from "@components/LinkWithHover";
 
 const Home = () => (
-  <main
-    className="slide-enter-content flex justify-start items-start flex-col break-words text-xl text-left 
-    mt-20 mb-16 flex-1 text-dark-primary mobile:py-6 mobile:px-4 
-    mobile:mt-6 mobile:mb-10 mobile:text-base"
-  >
-    <p className="text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4">
-      About Me
-    </p>
+  <PageLayout title="About Me">
     <div
       className="slide-enter-content flex justify-center items-start flex-col leading-9 mobile:text-lg
      break-words text-dark-secondary
     "
     >
       <Paragraph>
-        I'm a 22 y/o frontend engineer from Bangalore, India. I'm currently
-        studying at DSCE and I'm working as a Software Development Engineer 1 at{" "}
-        <CustomLink href="https://rubrik.com/">Rubrik</CustomLink>.
+        I'm a 23 y/o frontend engineer from Bangalore, India. I'm currently
+        working as a Software Development Engineer 1 at{" "}
+        <LinkWithHover href="https://rubrik.com/">Rubrik</LinkWithHover>.
       </Paragraph>
 
       <p className="mt-8">
-        There are quite a few niche domains that i'm interested in besides tech.
+        There are a bunch of things that i'm interested in besides tech.
       </p>
       <ul className="list-none ml-2 mt-4">
         <li className="flex gap-2 before:content-['-'] before:text-zinc-200 before:mr-2">
@@ -41,12 +36,19 @@ const Home = () => (
           plan to build a custom keyboard soon. Also no, i'm not a sociopath, i
           don't use blue switches.
         </li>
+        <li className="flex gap-2 before:content-['-'] before:text-zinc-200 before:mr-2">
+          I do cook occasionally, you can call me sasta Gordon Ramsay.
+        </li>
+        <li className="flex gap-2 before:content-['-'] before:text-zinc-200 before:mr-2">
+          When i'm not doing any of these, you'll either find me running or
+          skateboarding at cubbon park or lifting weights at the gym.
+        </li>
       </ul>
 
       <Paragraph>
-        I tend to spend my free time working on some hobby projects like
-        this site or{" "}
-        <CustomLink href="https://mark3.vercel.app">Mark</CustomLink> or
+        I tend to spend my free time working on some hobby projects like this
+        site or{" "}
+        <LinkWithHover href="https://mark3.vercel.app">Mark</LinkWithHover>{" "}
         contributing to open source or reading tech blogs.
       </Paragraph>
 
@@ -64,7 +66,7 @@ const Home = () => (
         .
       </Paragraph> */}
     </div>
-  </main>
+  </PageLayout>
 );
 
 const Paragraph = (props: any) => {

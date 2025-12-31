@@ -1,6 +1,5 @@
 import ClientWrapper from "@components/ClientWrapper";
-import Footer from "@components/Footer";
-import { GeistSans } from "geist/font/sans";
+import { Manrope } from "next/font/google";
 import { Metadata } from "next/types";
 import { Suspense } from "react";
 import "../styles/globals.scss";
@@ -11,9 +10,11 @@ type LayoutProps = {
   params?: string;
 };
 
+const manrope = Manrope({ subsets: ["latin"] });
+
 export default function RootLayout(props: LayoutProps) {
   return (
-    <html lang="en" className={GeistSans.className}>
+    <html lang="en" className={manrope.className}>
       <body suppressHydrationWarning={true} className="bg-dark">
         <Suspense fallback={<></>}>
           <ClientWrapper />
