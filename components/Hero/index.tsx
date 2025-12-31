@@ -2,8 +2,6 @@ import { links } from "@components/Footer";
 import LinkWithHover from "@components/LinkWithHover";
 import Link from "next/link";
 
-//the hero section of this website looks a little bland, help me make it more elegant and appealing
-
 const Hero = () => {
   return (
     <section className="relative flex flex-col gap-8 mt-24 mb-24 mobile:py-12 mobile:px-4 mobile:my-0">
@@ -16,21 +14,21 @@ const Hero = () => {
       <main className="flex-1 flex items-center justify-center break-words text-xl flex-col text-left text-dark-primary">
         <div className="flex items-start justify-center flex-col">
           <p
-            className="text-6xl leading-tight font-extrabold tracking-tight bg-[length:400%_400%] animate-gradientBlur bg-foo transition-all duration-300 ease-in-out text-transparent bg-clip-text mobile:text-[36px]"
+            className="text-6xl leading-tight tracking-tight bg-[length:400%_400%] animate-gradientBlur bg-foo transition-all duration-300 ease-in-out text-transparent bg-clip-text mobile:text-[36px] font-extrabold"
             id="hero-text"
           >
             Adarsh Sulegai
           </p>
           <p className="slide-enter-content text-balance mobile:text-wrap text-left mt-4 text-xl leading-9 font-normal text-dark-primary/90 mobile:text-lg mobile:leading-8 mobile:w-[100%]">
             A frontend developer who loves crafting rich and seamless
-            experiences for the web. I'm currently working as a frontend
+            experiences for the web. Currently working as a frontend
             engineer at{" "}
             <LinkWithHover href="https://www.rubrik.com/">Rubrik</LinkWithHover>
           </p>
         </div>
       </main>
 
-      <div className="flex justify-start items-center gap-3">
+      <div className="flex justify-start items-center gap-4">
         {links.map((link, index) => {
           const { name, url, icon } = link;
           return (

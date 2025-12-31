@@ -25,15 +25,9 @@ const HARDWARE = [
   },
   {
     key: "Earphones",
-    name: "Nothing Ear(2)",
+    name: "AirPods Pro 2",
     description: "I use these when my headphones die",
-    link: "https://www.sony.com/electronics/headband-headphones/wh-1000xm4",
-  },
-  {
-    key: "Mice",
-    name: "Apple magic mouse 2",
-    description: "These have magical gestures",
-    link: "https://www.amazon.in/Apple-Magic-Mouse-Bluetooth-Enabled-iPadOS/dp/B09BTNQ6MM/ref=sr_1_1?crid=33M7V0RVX2KGK&dib=eyJ2IjoiMSJ9.Ag0hfEY36nlJIGg4h_pmRuq4bxp7UqOsSumHQUJzbMGX2GNzrQzJGDt9yWt9nSQpnSvjXGC_Fj-ITSUQRNUVHSKwqU0wTnHxSqiRzhb9ZFBWuX_rnzayBHo9CVJ-pB6KgOsbiaVaWcGqew9YEVVijvsFMt4ZdDjklOHL9bC_qMZrowVSwl2QrygFe4u5dF1t1XkO9zpipVC5veIrgrxiPEWDDr50WY_sGgP0ZEJ60Hk.BDJK8WLrVEtWCksaCli2alQvAKo2qRe8-rdHCAJjfHs&dib_tag=se&keywords=magic+mouse+2&qid=1705736659&sprefix=magic+mouse+%2Caps%2C184&sr=8-1",
+    link: "https://www.apple.com/airpods-pro/",
   },
   {
     key: "Mice",

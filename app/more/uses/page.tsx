@@ -1,5 +1,6 @@
 import BlurImage from "@components/BlurImage";
 import LinkWithAnimation from "@components/CustomLink";
+import PageLayout from "@components/PageLayout";
 import { CONFIGS, HARDWARE, SOFTWARE } from "constants/uses";
 import image from "../../../assets/images/setup.jpg";
 
@@ -40,14 +41,7 @@ const ToolsList = (props: ToolsListProps) => {
 
 export default async function Uses() {
   return (
-    <main
-      className="flex justify-start items-start flex-col break-words text-xl text-left 
-    mt-20 mb-16 flex-1 text-dark-primary mobile:py-6 mobile:px-4 
-    mobile:mt-6 mobile:mb-10 mobile:text-base"
-    >
-      <p className="animate-fadeInUp text-5xl font-extrabold mobile:text-4xl mobile:font-bold mb-4 slide-enter-content">
-        Tech that i use
-      </p>
+    <PageLayout title="Tech that i use">
       <p className="animate-fadeInUp text-xl my-4 mb-8 text-dark-secondary">
         A growing collection of things i use everyday as a software engineer
       </p>
@@ -58,6 +52,6 @@ export default async function Uses() {
         <ToolsList subTitle="Software" items={SOFTWARE} />
         <ToolsList subTitle="Config" items={CONFIGS} />
       </div>
-    </main>
+    </PageLayout>
   );
 }
