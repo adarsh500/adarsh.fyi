@@ -1,4 +1,5 @@
 import BlurImage from "@components/BlurImage";
+import ViewCounter from "@components/ViewCounter";
 import { allPosts } from "contentlayer/generated";
 import { format, parseISO } from "date-fns";
 import { Metadata } from "next";
@@ -47,7 +48,7 @@ const PostLayout = ({ params }: any) => {
             Adarsh Sulegai / {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
           <p className="text-lg font-normal mobile:text-base">
-            {post.readingTime.text}
+            {post.readingTime.text} · <ViewCounter slug={params.slug} increment />
           </p>
         </div>
         <div className="flex gap-3 justify-start items-center mt-4 flex-wrap">
