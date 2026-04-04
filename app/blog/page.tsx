@@ -15,6 +15,7 @@ export default function Blog() {
               key={index}
               {...post}
               slug={post.url}
+              rawSlug={post.slug}
               readingTime={post.readingTime}
             />
           ))}

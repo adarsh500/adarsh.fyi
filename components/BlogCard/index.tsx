@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
+import ViewCounter from "@components/ViewCounter";
 
 type Blog = {
   title: string;
@@ -8,13 +9,14 @@ type Blog = {
   thumbnail: string;
   tags: string[];
   slug: string;
+  rawSlug: string;
   readingTime: {
     text: string;
   };
 };
 
 const BlogCard = (props: Blog) => {
-  const { title, date, description, slug, readingTime } = props;
+  const { title, date, description, slug, rawSlug, readingTime } = props;
 
   return (
     <Link
@@ -32,6 +34,8 @@ const BlogCard = (props: Blog) => {
           {format(parseISO(date), "LLLL d, yyyy")}
           &nbsp;&#8901;&nbsp;
           {readingTime.text}
+          &nbsp;&#8901;&nbsp;
+          <ViewCounter slug={rawSlug} />
         </p>
       </div>
     </Link>
